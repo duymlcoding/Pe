@@ -1,0 +1,1869 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Fluid Mechanics &#8212; Chemical Engineering PE Exam Study Guide</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=c73c0f3e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]], "processEscapes": true, "processEnvironments": true, "macros": {"\\N": "\\mathbb{N}", "\\Z": "\\mathbb{Z}", "\\Q": "\\mathbb{Q}", "\\R": "\\mathbb{R}", "\\C": "\\mathbb{C}", "\\E": "\\mathbb{E}", "\\Var": "\\mathrm{Var}", "\\Cov": "\\mathrm{Cov}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/fluidmechanics';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Complete Heat Transfer Fundamentals" href="heattransfer.html" />
+    <link rel="prev" title="Basic Thermodynamics" href="thermodynamics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Chemical Engineering PE</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="massandenergybalance.html">Chemical Engineering PE Exam</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="thermodynamics.html">Basic Thermodynamics</a></li>
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Fluid Mechanics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="heattransfer.html">Heat Transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="masstransfer.html">Mass Transfer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chemicalreactionengineering.html">Chemical Reaction Engineering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chemicalandphaseequilibria.html">Chemical Equilibria</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/duymlcoding/Pe" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/duymlcoding/Pe/edit/main/chapters/fluidmechanics.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/duymlcoding/Pe/issues/new?title=Issue%20on%20page%20%2Fchapters/fluidmechanics.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chapters/fluidmechanics.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Fluid Mechanics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanical-energy-balance">Mechanical Energy Balance</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamental-equations">Fundamental Equations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-from-the-first-law-of-thermodynamics">Derivation from the First Law of Thermodynamics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-flow-from-a-coffee-urn">Example: Flow from a Coffee Urn</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-vertical-water-jet">Example: Vertical Water Jet</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-bernoulli-equation-a-force-balance-approach">The Bernoulli Equation: A Force Balance Approach</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Fundamental Equations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-the-bernoulli-equation">Derivation of the Bernoulli Equation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-the-bernoulli-equation">Applications of the Bernoulli Equation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensionless-groups">Dimensionless Groups</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-reynolds-number-re">The Reynolds Number (Re)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-calculating-the-reynolds-number">Example: Calculating the Reynolds Number</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-important-dimensionless-groups-in-chemical-engineering">Other Important Dimensionless Groups in Chemical Engineering</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fluid-pressure-vs-elevation-incompressible-vs-compressible-cases">Fluid Pressure vs. Elevation (Incompressible vs. Compressible Cases)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fundamental-equation-of-fluid-statics">The Fundamental Equation of Fluid Statics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#case-1-the-incompressible-fluid">Case 1: The Incompressible Fluid</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#case-2-the-compressible-fluid-isothermal-ideal-gas">Case 2: The Compressible Fluid (Isothermal Ideal Gas)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-pressure-calculation-at-high-altitude">Example: Pressure Calculation at High Altitude</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pipe-flow-determining-pumping-power">Pipe Flow: Determining Pumping Power</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-pumping-water-for-a-ski-resort">Example: Pumping Water for a Ski Resort</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#air-flow-through-a-constriction">Air Flow Through a Constriction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-velocity-in-a-constriction-venturi-effect">Example: Velocity in a Constriction (Venturi Effect)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manometry">Manometry</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-principle-of-hydrostatic-head">The Principle of Hydrostatic Head</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-simple-u-tube-manometer">The Simple U-Tube Manometer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-manometry-equations-from-first-principles">Applying Manometry Equations from First Principles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-hydrostatic-balance-in-an-inclined-manometer">Example: Hydrostatic Balance in an Inclined Manometer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscosity-and-shear-stress">Viscosity and Shear Stress</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamental-equations-and-definitions">Fundamental Equations and Definitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-framework">Conceptual Framework</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#newtonian-and-non-newtonian-fluids">Newtonian and Non-Newtonian Fluids</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-film-flow-down-an-inclined-surface">Example: Film Flow Down an Inclined Surface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-determining-viscosity-experimentally">Example: Determining Viscosity Experimentally</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="fluid-mechanics">
+<h1>Fluid Mechanics<a class="headerlink" href="#fluid-mechanics" title="Link to this heading">#</a></h1>
+<section id="mechanical-energy-balance">
+<h2>Mechanical Energy Balance<a class="headerlink" href="#mechanical-energy-balance" title="Link to this heading">#</a></h2>
+<p>The Mechanical Energy Balance is a fundamental tool in fluid dynamics, derived from the first law of thermodynamics. It is used to analyze systems where mechanical forms of energy are of primary interest, such as in pipe flow, pumps, and turbines.</p>
+<section id="fundamental-equations">
+<h3>Fundamental Equations<a class="headerlink" href="#fundamental-equations" title="Link to this heading">#</a></h3>
+<div class="admonition-key-variables-definitions admonition">
+<p class="admonition-title">Key Variables &amp; Definitions</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Delta P\)</span>: Change in pressure (<span class="math notranslate nohighlight">\(P_{out} - P_{in}\)</span>) [Pa].</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span>: Fluid density [kg/m<span class="math notranslate nohighlight">\(^3\)</span>].</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta u^2\)</span>: Change in the square of the average fluid velocity (<span class="math notranslate nohighlight">\(u_{out}^2 - u_{in}^2\)</span>) [m<span class="math notranslate nohighlight">\(^2\)</span>/s<span class="math notranslate nohighlight">\(^2\)</span>].</p></li>
+<li><p><span class="math notranslate nohighlight">\(g\)</span>: Gravitational constant (9.81 m/s<span class="math notranslate nohighlight">\(^2\)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta z\)</span>: Change in elevation (<span class="math notranslate nohighlight">\(z_{out} - z_{in}\)</span>) [m].</p></li>
+<li><p><span class="math notranslate nohighlight">\(\dot{W}_s\)</span>: Rate of shaft work added to the fluid (by a pump) or removed from the fluid (by a turbine) [J/s or W].</p></li>
+<li><p><span class="math notranslate nohighlight">\(\dot{m}\)</span>: Mass flow rate of the fluid [kg/s].</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{F}\)</span>: Frictional energy loss per unit mass [J/kg]. This term is always positive.</p></li>
+</ul>
+</div>
+<div class="admonition-important-formula admonition">
+<p class="admonition-title">Important Formula</p>
+<p><strong>Mechanical Energy Balance (with Friction):</strong>
+This is the most common form used for real fluids. The term <span class="math notranslate nohighlight">\(\hat{F}\)</span> accounts for the conversion of mechanical energy into thermal energy due to viscous dissipation (friction).</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\Delta P}{\rho} + \frac{\Delta u^2}{2} + g\Delta z + \hat{F} = \frac{\dot{W}_s}{\dot{m}}
+\]</div>
+</div>
+<div class="admonition-important-formula admonition">
+<p class="admonition-title">Important Formula</p>
+<p><strong>The Bernoulli Equation (Ideal Fluid):</strong>
+This is a simplified form for a system with no shaft work (<span class="math notranslate nohighlight">\(\dot{W}_s=0\)</span>) and no frictional losses (<span class="math notranslate nohighlight">\(\hat{F}=0\)</span>). It applies to ideal, inviscid fluid flow.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\Delta P}{\rho} + \frac{\Delta u^2}{2} + g\Delta z = 0
+\]</div>
+</div>
+</section>
+<section id="derivation-from-the-first-law-of-thermodynamics">
+<h3>Derivation from the First Law of Thermodynamics<a class="headerlink" href="#derivation-from-the-first-law-of-thermodynamics" title="Link to this heading">#</a></h3>
+<p>The Mechanical Energy Balance is a practical rearrangement of the First Law of Thermodynamics for a steady-state, open system.</p>
+<div class="admonition-solution-steps admonition">
+<p class="admonition-title">Solution Steps</p>
+<p><strong>Derivation of the Mechanical Energy Balance</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Start with the General Energy Balance:</strong> The first law for a steady-state, open system is:
+$<span class="math notranslate nohighlight">\(\dot{m} \left( \Delta h + \frac{\Delta u^2}{2} + g\Delta z \right) = \dot{Q} + \dot{W}_s\)</span><span class="math notranslate nohighlight">\(
+where \)</span>\Delta h<span class="math notranslate nohighlight">\( is the change in specific enthalpy (\)</span>h_{out} - h_{in}$).</p></li>
+<li><p><strong>Introduce the Definition of Enthalpy:</strong> Substitute the definition of specific enthalpy, <span class="math notranslate nohighlight">\(h = \bar{U} + Pv\)</span>, where <span class="math notranslate nohighlight">\(\bar{U}\)</span> is specific internal energy and <span class="math notranslate nohighlight">\(v\)</span> is specific volume (<span class="math notranslate nohighlight">\(v=1/\rho\)</span>):
+$<span class="math notranslate nohighlight">\(\dot{m} \left( \Delta \bar{U} + \Delta(Pv) + \frac{\Delta u^2}{2} + g\Delta z \right) = \dot{Q} + \dot{W}_s\)</span>$</p></li>
+<li><p><strong>Apply the Incompressible Fluid Assumption:</strong> For liquids, we can assume the fluid is incompressible, meaning its density <span class="math notranslate nohighlight">\(\rho\)</span> (and specific volume <span class="math notranslate nohighlight">\(v\)</span>) is constant. This simplifies the pressure-volume term:
+$<span class="math notranslate nohighlight">\(\Delta(Pv) = P_{out}v - P_{in}v = v(P_{out} - P_{in}) = v\Delta P = \frac{\Delta P}{\rho}\)</span>$</p></li>
+<li><p><strong>Rearrange and Define Frictional Loss:</strong> Substitute the simplified pressure term and divide the entire equation by the mass flow rate <span class="math notranslate nohighlight">\(\dot{m}\)</span>:
+$<span class="math notranslate nohighlight">\(\Delta \bar{U} + \frac{\Delta P}{\rho} + \frac{\Delta u^2}{2} + g\Delta z = \frac{\dot{Q}}{\dot{m}} + \frac{\dot{W}_s}{\dot{m}}\)</span><span class="math notranslate nohighlight">\(
+Moving the internal energy and heat transfer terms to the left side isolates the mechanical terms:
+\)</span><span class="math notranslate nohighlight">\(\frac{\Delta P}{\rho} + \frac{\Delta u^2}{2} + g\Delta z + \left( \Delta \bar{U} - \frac{\dot{Q}}{\dot{m}} \right) = \frac{\dot{W}_s}{\dot{m}}\)</span><span class="math notranslate nohighlight">\(
+The term \)</span>(\Delta \bar{U} - \dot{Q}/\dot{m})<span class="math notranslate nohighlight">\( represents the irreversible loss of mechanical energy to friction. We define this group as the frictional loss term, \)</span>\hat{F}$, which gives the final form of the balance.</p></li>
+</ol>
+</div>
+</section>
+<section id="example-flow-from-a-coffee-urn">
+<h3>Example: Flow from a Coffee Urn<a class="headerlink" href="#example-flow-from-a-coffee-urn" title="Link to this heading">#</a></h3>
+<div class="proof example admonition" id="example-0">
+<p class="admonition-title"><span class="caption-number">Example 45 </span> (Calculating Flow from a Coffee Urn)</p>
+<section class="example-content" id="proof-content">
+<p><strong>Question:</strong> A 60-cm tall coffee urn is filled to the top. It dispenses coffee through a 0.7-cm diameter nozzle that is 12 cm above the table surface. How long does it take to pour a 200-mL cup of coffee?</p>
+</section>
+</div><div class="admonition-solution-steps admonition">
+<p class="admonition-title">Solution Steps</p>
+<p><strong>Step 1: Strategy and Assumptions:</strong>
+We can model this using the Bernoulli equation, which is appropriate for low-viscosity fluids with negligible friction over short distances. We apply the equation between the top surface of the coffee (point 1) at height <span class="math notranslate nohighlight">\(z_1 = 0.60\)</span> m and the nozzle exit (point 2) at height <span class="math notranslate nohighlight">\(z_2 = 0.12\)</span> m. We assume no friction and no shaft work.</p>
+<p><strong>Step 2: Analyze the Bernoulli Equation Terms:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{P_2 - P_1}{\rho} + \frac{u_2^2 - u_1^2}{2} + g(z_2 - z_1) = 0
+\]</div>
+<p>Pressure: Both the top surface and nozzle exit are open to atmosphere, so <span class="math notranslate nohighlight">\(P_1 = P_2\)</span> and <span class="math notranslate nohighlight">\(\Delta P = 0\)</span>.
+Velocity: The urn diameter is much larger than the nozzle, so the liquid level drops slowly and <span class="math notranslate nohighlight">\(u_1 \approx 0\)</span>. We solve for the exit velocity <span class="math notranslate nohighlight">\(u_2\)</span>.
+Potential Energy: The height change is <span class="math notranslate nohighlight">\(z_2 - z_1 = 0.12 - 0.60 = -0.48\)</span> m.</p>
+<p><strong>Step 3: Solve for Exit Velocity (<span class="math notranslate nohighlight">\(u_2\)</span>):</strong>
+The Bernoulli equation simplifies to Torricelli’s Law:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{u_2^2}{2} + g(-0.48 \, \text{m}) = 0 \implies u_2 = \sqrt{2 \cdot g \cdot (0.48 \, \text{m})}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+u_2 = \sqrt{2 \cdot (9.81 \, \text{m/s}^2) \cdot (0.48 \, \text{m})} = \sqrt{9.4176 \, \text{m}^2/\text{s}^2} = 3.069 \, \text{m/s}
+\]</div>
+<p><strong>Step 4: Calculate Time to Fill Cup:</strong>
+Find the volumetric flow rate through the nozzle. The nozzle area is <span class="math notranslate nohighlight">\(A_2 = \frac{\pi d^2}{4} = \frac{\pi (0.007)^2}{4} = 3.848 \times 10^{-5} \, \text{m}^2\)</span>.
+The volumetric flow rate is <span class="math notranslate nohighlight">\(v = A_2 \cdot u_2 = (3.848 \times 10^{-5}) \cdot (3.069) = 1.181 \times 10^{-4} \, \text{m}^3/\text{s}\)</span>.
+For a 200 mL cup (<span class="math notranslate nohighlight">\(2 \times 10^{-4} \, \text{m}^3\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+\text{Time} = \frac{2 \times 10^{-4}}{1.181 \times 10^{-4}} = 1.69 \, \text{s}
+\]</div>
+<p>The time required is approximately <strong>1.7 seconds</strong>.</p>
+</div>
+</section>
+<section id="example-vertical-water-jet">
+<h3>Example: Vertical Water Jet<a class="headerlink" href="#example-vertical-water-jet" title="Link to this heading">#</a></h3>
+<div class="proof example admonition" id="example-1">
+<p class="admonition-title"><span class="caption-number">Example 46 </span> (Calculating the Height of a Vertical Water Jet)</p>
+<section class="example-content" id="proof-content">
+<p><strong>Question:</strong> Water flows through a 2.5-cm ID pipe at 115 L/min and 0.15-bar gauge pressure. It vents vertically 1.0 m above the pipe. How high will the water shoot from the vent? Assume no frictional losses.</p>
+</section>
+</div><div class="admonition-solution-steps admonition">
+<p class="admonition-title">Solution Steps</p>
+<p><strong>Step 1: Strategy and Coordinate System:</strong>
+We will apply the Bernoulli equation between a point inside the pipe just before the vent (point 1) and the highest point of the water jet (point 2). We assume no friction and steady state. Let the centerline of the pipe be the reference height, so <span class="math notranslate nohighlight">\(z_1 = 0\)</span>. Point 2 is the peak of the jet’s trajectory at height <span class="math notranslate nohighlight">\(z_2 = 1.0 \, \text{m} + H\)</span>, where <span class="math notranslate nohighlight">\(H\)</span> is the height above the vent.</p>
+<p><strong>Step 2: Analyze the Bernoulli Equation Terms:</strong>
+The Bernoulli equation states that the total mechanical energy is conserved between points 1 and 2.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{P_1}{\rho} + \frac{u_1^2}{2} + gz_1 = \frac{P_2}{\rho} + \frac{u_2^2}{2} + gz_2
+\]</div>
+<p>Given: <span class="math notranslate nohighlight">\(P_1 = 0.15\)</span> bar (gauge), <span class="math notranslate nohighlight">\(P_2 = 0\)</span> bar (gauge) at atmospheric pressure, <span class="math notranslate nohighlight">\(u_2 = 0\)</span> m/s at maximum height, <span class="math notranslate nohighlight">\(z_1 = 0\)</span> m and <span class="math notranslate nohighlight">\(z_2 = 1.0 + H\)</span>.</p>
+<p><strong>Step 3: Calculate Inlet Velocity (<span class="math notranslate nohighlight">\(u_1\)</span>):</strong>
+Convert the volumetric flow rate to SI units:</p>
+<div class="math notranslate nohighlight">
+\[
+v = 115 \frac{\text{L}}{\text{min}} \times \frac{1 \, \text{m}^3}{1000 \, \text{L}} \times \frac{1 \, \text{min}}{60 \, \text{s}} = 0.001917 \, \text{m}^3/\text{s}
+\]</div>
+<p>The pipe area is <span class="math notranslate nohighlight">\(A_1 = \frac{\pi d^2}{4} = \frac{\pi (0.025 \, \text{m})^2}{4} = 0.0004909 \, \text{m}^2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+u_1 = \frac{v}{A_1} = \frac{0.001917 \, \text{m}^3/\text{s}}{0.0004909 \, \text{m}^2} = 3.905 \, \text{m/s}
+\]</div>
+<p><strong>Step 4: Solve for Height (<span class="math notranslate nohighlight">\(H\)</span>):</strong>
+Substitute the known values into the Bernoulli equation using SI units. Convert <span class="math notranslate nohighlight">\(P_1 = 0.15 \, \text{bar} = 15,000 \, \text{Pa}\)</span> and use <span class="math notranslate nohighlight">\(\rho_{water} = 1000\)</span> kg/m<span class="math notranslate nohighlight">\(^3\)</span> and <span class="math notranslate nohighlight">\(g = 9.81\)</span> m/s<span class="math notranslate nohighlight">\(^2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{15000}{1000} + \frac{(3.905)^2}{2} + 0 = 0 + 0 + 9.81 \cdot (1.0 + H)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+15.0 + 7.625 = 9.81 \cdot (1.0 + H)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+H = \frac{22.625}{9.81} - 1.0 = 2.306 - 1.0 = 1.306 \, \text{m}
+\]</div>
+<p>The water will shoot approximately <strong>1.3 meters</strong> above the vent.</p>
+</div>
+</section>
+</section>
+<section id="the-bernoulli-equation-a-force-balance-approach">
+<h2>The Bernoulli Equation: A Force Balance Approach<a class="headerlink" href="#the-bernoulli-equation-a-force-balance-approach" title="Link to this heading">#</a></h2>
+<p>While the Mechanical Energy Balance is derived from thermodynamics (an energy balance), the famous Bernoulli equation can also be understood from first principles using Newton’s second law (<span class="math notranslate nohighlight">\(\vec{F}=m\vec{a}\)</span>), which is a force balance. This approach provides a deeper physical intuition for how pressure, velocity, and elevation are related in a moving fluid.</p>
+<section id="id1">
+<h3>Fundamental Equations<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>The derivation begins with a force balance on a tiny fluid element and, after several key simplifying assumptions, results in the well-known algebraic form of the Bernoulli equation.</p>
+<div class="admonition-key-variables-definitions admonition">
+<p class="admonition-title">Key Variables &amp; Definitions</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\nu\)</span>: Fluid velocity along a streamline [m/s]. (Note: We use <span class="math notranslate nohighlight">\(\nu\)</span> here to distinguish it from reactor volume <span class="math notranslate nohighlight">\(V\)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(P\)</span>: Static pressure, the pressure you would feel if you were moving with the fluid [Pa or N/m<span class="math notranslate nohighlight">\(^2\)</span>].</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span>: Fluid density [kg/m<span class="math notranslate nohighlight">\(^3\)</span>].</p></li>
+<li><p><span class="math notranslate nohighlight">\(g\)</span>: Acceleration due to gravity (9.81 m/s<span class="math notranslate nohighlight">\(^2\)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\gamma\)</span>: Specific weight of the fluid, defined as <span class="math notranslate nohighlight">\(\gamma = \rho g\)</span> [N/m<span class="math notranslate nohighlight">\(^3\)</span>].</p></li>
+<li><p><span class="math notranslate nohighlight">\(z\)</span>: Elevation height, measured vertically from a reference point [m].</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span>: Cross-sectional area of flow [m<span class="math notranslate nohighlight">\(^2\)</span>].</p></li>
+<li><p><span class="math notranslate nohighlight">\(s\)</span>: A coordinate that follows the path of the fluid streamline.</p></li>
+</ul>
+</div>
+<div class="admonition-important-formula admonition">
+<p class="admonition-title">Important Formula</p>
+<p><strong>Euler’s Equation: The Equation of Motion</strong>
+This is the differential equation resulting directly from the force balance on a fluid element, before integration. It relates the change in velocity, elevation, and pressure along a streamline.</p>
+<div class="math notranslate nohighlight">
+\[
+\rho\nu \frac{d\nu}{ds} + \rho g \frac{dz}{ds} + \frac{dP}{ds} = 0
+\]</div>
+</div>
+<div class="admonition-important-formula admonition">
+<p class="admonition-title">Important Formula</p>
+<p><strong>The Bernoulli Equation: The Integrated Form</strong>
+After integrating Euler’s Equation and assuming the fluid is incompressible, we get the classic Bernoulli equation. It states that the sum of the pressure head, velocity head, and elevation head is constant along a single streamline for an ideal fluid.</p>
+<div class="math notranslate nohighlight">
+\[
+P + \frac{1}{2}\rho\nu^2 + \rho gz = \text{constant}
+\]</div>
+</div>
+</section>
+<section id="derivation-of-the-bernoulli-equation">
+<h3>Derivation of the Bernoulli Equation<a class="headerlink" href="#derivation-of-the-bernoulli-equation" title="Link to this heading">#</a></h3>
+<p>This derivation shows how applying a simple force balance to a small fluid element leads directly to the Bernoulli equation.</p>
+<div class="admonition-solution-steps admonition">
+<p class="admonition-title">Solution Steps</p>
+<p><strong>Derivation from Newton’s Second Law</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Define a Fluid Element and its Acceleration:</strong>
+Imagine a tiny, cylindrical “packet” of fluid moving along a path called a streamline. According to Newton’s second law, the sum of the forces on this element (<span class="math notranslate nohighlight">\(\sum \delta F_s\)</span>) must equal its mass (<span class="math notranslate nohighlight">\(\delta m\)</span>) times its acceleration (<span class="math notranslate nohighlight">\(a_s\)</span>) in the direction of the streamline.
+$<span class="math notranslate nohighlight">\(\sum \delta F_s = (\delta m) a_s\)</span><span class="math notranslate nohighlight">\(
+The acceleration \)</span>a_s = \frac{d\nu}{dt}<span class="math notranslate nohighlight">\( can be rewritten using the chain rule as \)</span>a_s = \frac{d\nu}{ds} \frac{ds}{dt}<span class="math notranslate nohighlight">\(. Since velocity is the rate of change of position (\)</span>\nu = \frac{ds}{dt}<span class="math notranslate nohighlight">\(), the acceleration becomes \)</span>a_s = \nu \frac{d\nu}{ds}$.</p></li>
+<li><p><strong>Analyze the Forces (with a Key Assumption):</strong>
+<strong>Crucial Assumption: Inviscid Flow</strong>
+To simplify the force analysis, we make our first major assumption: the fluid is <strong>inviscid</strong>, meaning it has zero viscosity. This implies that there are no frictional (shear) forces between fluid layers or between the fluid and the pipe walls. The only forces we consider are pressure and gravity.</p>
+<ul class="simple">
+<li><p><strong>Gravity Force:</strong> The weight of the element is its specific weight times its volume, <span class="math notranslate nohighlight">\(\delta W = \gamma \cdot \delta V\)</span>. The component of this force acting along the streamline (opposing the motion) is <span class="math notranslate nohighlight">\(-\delta W \sin\theta = -(\gamma \sin\theta) \delta V\)</span>.</p></li>
+<li><p><strong>Pressure Force:</strong> If the pressure changes along the streamline, there will be a net force. The net pressure force is caused by the pressure gradient and is given by <span class="math notranslate nohighlight">\(\delta F_{ps} = -\frac{dP}{ds} \delta V\)</span>.</p></li>
+</ul>
+</li>
+<li><p><strong>Form the Equation of Motion:</strong>
+Now we plug the forces and the acceleration term back into Newton’s law:
+$<span class="math notranslate nohighlight">\(\left(-\gamma \sin\theta - \frac{dP}{ds}\right)\delta V = (\rho \delta V) \left(\nu \frac{d\nu}{ds}\right)\)</span><span class="math notranslate nohighlight">\(
+The differential volume element \)</span>\delta V<span class="math notranslate nohighlight">\( cancels from all terms, giving Euler's equation of motion. We can also substitute \)</span>\gamma = \rho g<span class="math notranslate nohighlight">\( and, from trigonometry, recognize that \)</span>\sin\theta = \frac{dz}{ds}<span class="math notranslate nohighlight">\( (the change in height over the change in path length).
+\)</span><span class="math notranslate nohighlight">\(-\rho g \frac{dz}{ds} - \frac{dP}{ds} = \rho\nu \frac{d\nu}{ds}\)</span>$</p></li>
+<li><p><strong>Integrate Along the Streamline:</strong>
+To get from this differential equation to an algebraic one, we make another key assumption: the flow is <strong>steady</strong> (it doesn’t change with time). We can then multiply the entire equation by <span class="math notranslate nohighlight">\(ds\)</span> and integrate each term along the streamline:
+$<span class="math notranslate nohighlight">\(\int dP + \int \rho\nu d\nu + \int \rho g dz = \text{constant}\)</span>$</p></li>
+<li><p><strong>Apply the Incompressible Assumption:</strong>
+To solve the integrals, we make our final key assumption: the fluid is <strong>incompressible</strong>, meaning its density <span class="math notranslate nohighlight">\(\rho\)</span> is constant. The terms can now be integrated easily:
+$<span class="math notranslate nohighlight">\(P + \frac{1}{2}\rho\nu^2 + \rho g z = \text{constant}\)</span>$
+This is the Bernoulli equation, which holds for any two points along the same streamline in a steady, inviscid, incompressible flow.</p></li>
+</ol>
+</div>
+</section>
+<section id="applications-of-the-bernoulli-equation">
+<h3>Applications of the Bernoulli Equation<a class="headerlink" href="#applications-of-the-bernoulli-equation" title="Link to this heading">#</a></h3>
+<div class="proof example admonition" id="example-2">
+<p class="admonition-title"><span class="caption-number">Example 47 </span> (Flow Through a Horizontal Nozzle)</p>
+<section class="example-content" id="proof-content">
+<p><strong>Question:</strong> Air flows steadily through a horizontal pipe of 10 cm diameter. It exits into the atmosphere through an 8 cm diameter nozzle. The gauge pressure in the pipe is 800 Pa. Assuming air is incompressible with a density of 1.23 kg/m<span class="math notranslate nohighlight">\(^3\)</span>, what is the velocity of the air at the exit?</p>
+</section>
+</div><div class="admonition-solution-steps admonition">
+<p class="admonition-title">Solution Steps</p>
+<p><strong>Step 1: Strategy: Using Two Equations for Two Unknowns</strong>
+This problem involves two unknown velocities: the velocity inside the pipe (<span class="math notranslate nohighlight">\(\nu_1\)</span>) and the velocity at the nozzle exit (<span class="math notranslate nohighlight">\(\nu_2\)</span>). To solve for two unknowns, we need two independent equations. We will use:</p>
+<ol class="arabic simple">
+<li><p>The <strong>Bernoulli Equation</strong>, which relates pressure and velocity changes (an energy relationship).</p></li>
+<li><p>The <strong>Continuity Equation</strong>, which relates velocities and areas (a mass balance).
+We apply these equations between point 1 (inside the pipe) and point 2 (at the nozzle exit).</p></li>
+</ol>
+<p><strong>Step 2: Apply the Bernoulli Equation:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{P_1}{\rho} + \frac{\nu_1^2}{2} + gz_1 = \frac{P_2}{\rho} + \frac{\nu_2^2}{2} + gz_2
+\]</div>
+<p>We simplify this equation based on the problem statement:</p>
+<ul class="simple">
+<li><p><strong>Potential Energy:</strong> The pipe is horizontal, so the elevation is constant (<span class="math notranslate nohighlight">\(z_1 = z_2\)</span>). The <span class="math notranslate nohighlight">\(gz\)</span> terms cancel out.</p></li>
+<li><p><strong>Pressure:</strong> We are given gauge pressures (pressure above atmospheric). <span class="math notranslate nohighlight">\(P_1 = 800\)</span> Pa. The nozzle exits to the atmosphere, so its gauge pressure is <span class="math notranslate nohighlight">\(P_2 = 0\)</span> Pa.</p></li>
+</ul>
+<p>The simplified equation becomes: <span class="math notranslate nohighlight">\(\frac{P_1}{\rho} + \frac{\nu_1^2}{2} = \frac{\nu_2^2}{2}\)</span>. Rearranging gives our first main equation:</p>
+<div class="math notranslate nohighlight">
+\[
+P_1 = \frac{1}{2}\rho (\nu_2^2 - \nu_1^2)
+\]</div>
+<p><strong>Step 3: Apply the Continuity Equation:</strong>
+The continuity equation is a statement of mass conservation. For an incompressible fluid (<span class="math notranslate nohighlight">\(\rho = \text{constant}\)</span>), it simplifies to the volumetric flow rate being constant: <span class="math notranslate nohighlight">\(A_1 \nu_1 = A_2 \nu_2\)</span>. We can express <span class="math notranslate nohighlight">\(\nu_1\)</span> in terms of <span class="math notranslate nohighlight">\(\nu_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\nu_1 = \nu_2 \left( \frac{A_2}{A_1} \right) = \nu_2 \left( \frac{\pi d_2^2 / 4}{\pi d_1^2 / 4} \right) = \nu_2 \left( \frac{d_2}{d_1} \right)^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\nu_1 = \nu_2 \left( \frac{8 \, \text{cm}}{10 \, \text{cm}} \right)^2 = \nu_2 (0.8)^2 = 0.64 \nu_2
+\]</div>
+<p>This is our second main equation.</p>
+<p><strong>Step 4: Solve the System of Equations:</strong>
+Now we substitute the expression for <span class="math notranslate nohighlight">\(\nu_1\)</span> from Step 3 into the equation from Step 2:</p>
+<div class="math notranslate nohighlight">
+\[
+P_1 = \frac{1}{2}\rho (\nu_2^2 - (0.64\nu_2)^2) = \frac{1}{2}\rho (\nu_2^2 - 0.4096\nu_2^2) = \frac{1}{2}\rho (0.5904 \nu_2^2)
+\]</div>
+<p>Finally, we plug in the known values for <span class="math notranslate nohighlight">\(P_1\)</span> and <span class="math notranslate nohighlight">\(\rho\)</span> and solve for our target variable, <span class="math notranslate nohighlight">\(\nu_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+800 \, \text{Pa} = \frac{1}{2} (1.23 \, \text{kg/m}^3) (0.5904 \nu_2^2)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+800 = (0.615 \, \text{kg/m}^3) (0.5904 \nu_2^2) = 0.363 \cdot \nu_2^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\nu_2^2 = \frac{800}{0.363} = 2203.8 \implies \nu_2 = \sqrt{2203.8} = 46.94 \, \text{m/s}
+\]</div>
+<p>The velocity at the exit is approximately <strong>47 m/s</strong>.</p>
+<p><strong>Step 5: Check the Incompressible Assumption:</strong>
+Is it valid to treat air as incompressible? The rule of thumb is that this assumption is reasonable if the fluid’s velocity is less than 30% of the speed of sound (Mach number <span class="math notranslate nohighlight">\(&lt; 0.3\)</span>). The speed of sound in air is about 343 m/s. Here, <span class="math notranslate nohighlight">\(M \approx 47/343 \approx 0.14\)</span>, which is well below 0.3. The assumption is justified.</p>
+</div>
+<div class="proof example admonition" id="example-3">
+<p class="admonition-title"><span class="caption-number">Example 48 </span> (Torricelli’s Law: Flow from a Tank)</p>
+<section class="example-content" id="proof-content">
+<p><strong>Question:</strong> A 60-cm tall coffee urn is filled to the top. It dispenses coffee through a 0.7-cm diameter nozzle that is 12 cm above the table surface. How long does it take to pour a 200-mL cup of coffee?</p>
+</section>
+</div><div class="admonition-solution-steps admonition">
+<p class="admonition-title">Solution Steps</p>
+<p><strong>Step 1: Strategy and Assumptions:</strong>
+We apply the Bernoulli equation between the top surface of the coffee (point 1) at height <span class="math notranslate nohighlight">\(z_1 = 0.60\)</span> m and the nozzle exit (point 2) at height <span class="math notranslate nohighlight">\(z_2 = 0.12\)</span> m. We assume ideal flow: inviscid, steady, and incompressible.</p>
+<p><strong>Step 2: Apply the Bernoulli Equation:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{P_1}{\rho} + \frac{\nu_1^2}{2} + gz_1 = \frac{P_2}{\rho} + \frac{\nu_2^2}{2} + gz_2
+\]</div>
+<p>We simplify each term based on the physical situation. For pressure, both the top surface and nozzle exit are open to atmosphere, so <span class="math notranslate nohighlight">\(P_1 = P_2 = 0\)</span> gauge and the pressure term cancels. For velocity, the urn’s diameter is much larger than the nozzle’s, so the surface level drops slowly and <span class="math notranslate nohighlight">\(\nu_1 \approx 0\)</span>. The height change is <span class="math notranslate nohighlight">\(\Delta z = z_2 - z_1 = 0.12 - 0.60 = -0.48\)</span> m.</p>
+<p><strong>Step 3: Solve for Exit Velocity (<span class="math notranslate nohighlight">\(\nu_2\)</span>):</strong>
+The Bernoulli equation simplifies significantly:</p>
+<div class="math notranslate nohighlight">
+\[
+0 + 0 + gz_1 = 0 + \frac{\nu_2^2}{2} + gz_2 \implies \frac{\nu_2^2}{2} = g(z_1 - z_2)
+\]</div>
+<p>This result is known as <strong>Torricelli’s Law</strong>. It shows that the exit velocity depends only on the height difference between the surface and the outlet.</p>
+<div class="math notranslate nohighlight">
+\[
+\nu_2 = \sqrt{2g(z_1 - z_2)} = \sqrt{2 \cdot (9.81 \, \text{m/s}^2) \cdot (0.48 \, \text{m})} = 3.069 \, \text{m/s}
+\]</div>
+<p><strong>Step 4: Calculate Time to Fill Cup:</strong>
+Find the volumetric flow rate through the nozzle. Converting the exit velocity to cm/s gives <span class="math notranslate nohighlight">\(306.9 \, \text{cm/s}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+v_{flow} = A_2 \cdot \nu_2 = \left(\frac{\pi (0.7 \, \text{cm})^2}{4}\right) \cdot (306.9 \, \text{cm/s}) = (0.3848 \, \text{cm}^2) \cdot (306.9 \, \text{cm/s}) = 118.1 \, \text{cm}^3/\text{s}
+\]</div>
+<p>For a 200 mL cup:</p>
+<div class="math notranslate nohighlight">
+\[
+\text{Time} = \frac{200 \, \text{cm}^3}{118.1 \, \text{cm}^3/\text{s}} = 1.69 \, \text{s}
+\]</div>
+<p>The time required is approximately <strong>1.7 seconds</strong>.</p>
+</div>
+<div class="proof example admonition" id="example-4">
+<p class="admonition-title"><span class="caption-number">Example 49 </span> (Measuring Velocity with a Pitot Tube)</p>
+<section class="example-content" id="proof-content">
+<p><strong>Question:</strong> A pitot-static tube is placed on the nose of a plane traveling 100 m/s at an elevation of 4000 m. What is the pressure difference measured by the device? Assume the density of air is 0.8194 kg/m<span class="math notranslate nohighlight">\(^3\)</span> at this elevation.</p>
+</section>
+</div><div class="admonition-solution-steps admonition">
+<p class="admonition-title">Solution Steps</p>
+<p><strong>Step 1: Principle of the Pitot Tube:</strong>
+A Pitot tube is a pressure-measurement instrument used to measure fluid flow velocity. It works by creating a <strong>stagnation point</strong>, a point in a fluid flow where the local velocity has been brought to zero. By converting the fluid’s kinetic energy entirely into pressure energy at this single point, we can deduce the original velocity.</p>
+<p><strong>Step 2: Strategy and Assumptions:</strong>
+We apply the Bernoulli equation between a point in the undisturbed free stream far from the plane (point 1) and the stagnation point at the very tip of the Pitot tube (point 2). We assume steady, inviscid, incompressible flow relative to the moving plane.</p>
+<p><strong>Step 3: Apply the Bernoulli Equation:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{P_1}{\rho} + \frac{\nu_1^2}{2} + gz_1 = \frac{P_2}{\rho} + \frac{\nu_2^2}{2} + gz_2
+\]</div>
+<p>We simplify the terms for this application. For potential energy, the measurement is made over negligible elevation change, so <span class="math notranslate nohighlight">\(z_1 \approx z_2\)</span> and the <span class="math notranslate nohighlight">\(gz\)</span> terms cancel. For velocity, the free stream velocity is <span class="math notranslate nohighlight">\(\nu_1 = 100\)</span> m/s and the stagnation point has <span class="math notranslate nohighlight">\(\nu_2 = 0\)</span> m/s. For pressure, <span class="math notranslate nohighlight">\(P_1\)</span> is the static pressure and <span class="math notranslate nohighlight">\(P_2\)</span> is the stagnation pressure, with <span class="math notranslate nohighlight">\(\Delta P = P_2 - P_1\)</span>.</p>
+<p><strong>Step 4: Solve for the Pressure Difference:</strong>
+The Bernoulli equation simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{P_1}{\rho} + \frac{\nu_1^2}{2} = \frac{P_2}{\rho}
+\]</div>
+<p>Rearranging gives the dynamic pressure formula:</p>
+<p><strong>Dynamic Pressure</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\Delta P = P_2 - P_1 = \frac{1}{2}\rho \nu_1^2
+\]</div>
+<p>Substituting the given values:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta P = \frac{1}{2} (0.8194 \, \text{kg/m}^3) (100 \, \text{m/s})^2 = \frac{1}{2} (0.8194) (10000) = 4097 \, \text{Pa}
+\]</div>
+<p>The pressure difference measured by the device is approximately <strong>4.1 kPa</strong>.</p>
+</div>
+</section>
+</section>
+<section id="dimensionless-groups">
+<h2>Dimensionless Groups<a class="headerlink" href="#dimensionless-groups" title="Link to this heading">#</a></h2>
+<p>In the study of fluid mechanics, heat transfer, and mass transfer, we often encounter complex phenomena that are difficult to describe with simple equations. Dimensionless groups are powerful tools that help engineers simplify these complex problems, allowing us to scale experiments and generalize results across a wide range of conditions.</p>
+<div class="admonition-key-concept admonition">
+<p class="admonition-title">Key Concept</p>
+<p><strong>The Power of Dimensionless Groups</strong>
+A <strong>dimensionless group</strong> (or dimensionless number) is a quantity that has no physical units. It is formed by creating a ratio of two competing physical quantities, such as different types of forces, rates of energy transport, or time scales. Because the units in the numerator and denominator are designed to cancel out, the result is a pure number.</p>
+<ul class="simple">
+<li><p><strong>Simplifying Complexity:</strong> They reduce the number of variables in a problem. Instead of studying how a fluid’s behavior changes with density, velocity, diameter, and viscosity separately, we can combine them into a single variable: the Reynolds number. This makes analysis much more manageable.</p></li>
+<li><p><strong>Dynamic Similitude and Scaling:</strong> They are the key to making small-scale experiments relevant to large-scale reality. If you can match the key dimensionless numbers for a model airplane in a wind tunnel to those of a real airplane in flight, the flow patterns will be similar. This principle of “dynamic similitude” allows for cost-effective design and testing.</p></li>
+<li><p><strong>Generalizing Results:</strong> Dimensionless groups allow for the creation of universal correlations and charts. For example, the Moody chart, which describes friction in pipes, plots the friction factor against the Reynolds number. This single chart works for water, oil, air, or any other common fluid, regardless of the pipe size.</p></li>
+</ul>
+</div>
+<section id="the-reynolds-number-re">
+<h3>The Reynolds Number (Re)<a class="headerlink" href="#the-reynolds-number-re" title="Link to this heading">#</a></h3>
+<p>The most famous and fundamental dimensionless group in fluid mechanics is the Reynolds number. Its value tells us about the fundamental nature or “regime” of a fluid’s flow.</p>
+<div class="admonition-important-formula admonition">
+<p class="admonition-title">Important Formula</p>
+<p><strong>Reynolds Number for Flow in a Pipe</strong></p>
+<div class="math notranslate nohighlight">
+\[
+Re = \frac{\rho \nu D}{\mu}
+\]</div>
+</div>
+<div class="admonition-key-concept admonition">
+<p class="admonition-title">Key Concept</p>
+<p><strong>Physical Meaning: A Ratio of Competing Forces</strong>
+The Reynolds number represents the ratio of <strong>inertial forces</strong> to <strong>viscous forces</strong> acting on a fluid. You can think of it as a battle between forces promoting chaos and forces promoting order.</p>
+<div class="math notranslate nohighlight">
+\[
+Re = \frac{\text{Inertial Forces (tend to cause turbulence)}}{\text{Viscous Forces (tend to resist motion and keep it smooth)}}
+\]</div>
+<ul class="simple">
+<li><p><strong>Inertial Forces</strong> (represented by the numerator, <span class="math notranslate nohighlight">\(\rho \nu D\)</span>): These forces are related to the fluid’s momentum, its tendency to keep moving in a straight line. High density, high velocity, and large pipe diameters contribute to high inertia. At high levels, inertia causes any small disturbance in the flow to grow, leading to chaotic, unpredictable motion.</p></li>
+<li><p><strong>Viscous Forces</strong> (represented by the denominator, <span class="math notranslate nohighlight">\(\mu\)</span>): These are the forces of internal friction within fluid. Viscosity acts to resist motion and dampen out disturbances, keeping the flow smooth and orderly. Honey has high viscous forces; air has low viscous forces.</p></li>
+</ul>
+</div>
+<div class="admonition-key-variables-definitions admonition">
+<p class="admonition-title">Key Variables &amp; Definitions</p>
+<p><strong>Interpreting the Reynolds Number for Pipe Flow</strong>
+The value of the Reynolds number tells us which force is winning the “battle” and thus determines the character of the flow.</p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(Re &lt; 2100\)</span> (Laminar Flow):</strong> At low Reynolds numbers, viscous forces dominate. They are strong enough to suppress any disturbances, and the fluid flows in smooth, parallel layers (or “laminae”) with no mixing between them. The flow is orderly, silent, and predictable.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(Re &gt; 4000\)</span> (Turbulent Flow):</strong> At high Reynolds numbers, inertial forces dominate. They overwhelm the viscous forces, and any small disturbance grows into large, chaotic eddies and swirls. The flow path of any individual particle is unpredictable. Turbulent flow is associated with high energy dissipation and efficient mixing.</p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(2100 &lt; Re &lt; 4000\)</span> (Transitional Flow):</strong> This is an unstable region where the flow can fluctuate between laminar and turbulent behavior. It is generally avoided in engineering design.</p></li>
+</ul>
+</div>
+</section>
+<section id="example-calculating-the-reynolds-number">
+<h3>Example: Calculating the Reynolds Number<a class="headerlink" href="#example-calculating-the-reynolds-number" title="Link to this heading">#</a></h3>
+<div class="proof example admonition" id="example-5">
+<p class="admonition-title"><span class="caption-number">Example 50 </span> (Flow Regime in a Water Pipe)</p>
+<section class="example-content" id="proof-content">
+<p><strong>Question:</strong> Water flows through a large pipe with a diameter of 1.0 meter at a velocity of 100 cm/s. The density of water is 1.0 g/cm<span class="math notranslate nohighlight">\(^3\)</span> and its viscosity is 1.0 centipoise (cP). Calculate the Reynolds number and determine the flow regime.</p>
+</section>
+</div><div class="admonition-solution-steps admonition">
+<p class="admonition-title">Solution Steps</p>
+<p><strong>Step 1: Strategy: The Importance of Consistent Units</strong>
+<strong>The Golden Rule of Dimensionless Numbers:</strong> The single most important step in calculating any dimensionless number is to ensure all physical parameters are expressed in a <strong>consistent set of base units</strong> before they are plugged into the formula. Mixing units (e.g., meters and centimeters, or different units of viscosity) is the most common source of error. You can use SI (Meter-Kilogram-Second) or CGS (Centimeter-Gram-Second) or any other consistent system, but you cannot mix them.</p>
+<p><strong>Step 2: Convert All Parameters to the CGS System:</strong>
+Let’s check each parameter and convert it if necessary.
+Density (<span class="math notranslate nohighlight">\(\rho\)</span>): Given as <span class="math notranslate nohighlight">\(1.0 \, \text{g/cm}^3\)</span>, already in CGS units.
+Velocity (<span class="math notranslate nohighlight">\(\nu\)</span>): Given as <span class="math notranslate nohighlight">\(100 \, \text{cm/s}\)</span>, already in CGS units.
+Diameter (<span class="math notranslate nohighlight">\(D\)</span>): Given as <span class="math notranslate nohighlight">\(1.0 \, \text{m}\)</span>, convert to cm: <span class="math notranslate nohighlight">\(D = 1.0 \, \text{m} \times \frac{100 \, \text{cm}}{1 \, \text{m}} = 100 \, \text{cm}\)</span>.
+Viscosity (<span class="math notranslate nohighlight">\(\mu\)</span>): Given as <span class="math notranslate nohighlight">\(1.0 \, \text{centipoise (cP)}\)</span>. The base unit in CGS is the poise, where 1 poise = 1 g/(cm<span class="math notranslate nohighlight">\(\cdot\)</span>s), so <span class="math notranslate nohighlight">\(\mu = 1.0 \, \text{cP} = 0.01 \, \text{poise} = 0.01 \, \frac{\text{g}}{\text{cm}\cdot\text{s}}\)</span>.</p>
+<p><strong>Step 3: Calculate the Reynolds Number:</strong>
+Substitute the consistent CGS values into the formula. First, verify that units cancel correctly:</p>
+<div class="math notranslate nohighlight">
+\[
+Re = \frac{\rho \nu D}{\mu} \implies \text{Units} = \frac{(\frac{\text{g}}{\text{cm}^3}) \cdot (\frac{\text{cm}}{\text{s}}) \cdot (\text{cm})}{\frac{\text{g}}{\text{cm}\cdot\text{s}}} = \text{Unitless}
+\]</div>
+<p>Now perform the numerical calculation:</p>
+<p><strong>Reynolds Number Calculation</strong></p>
+<div class="math notranslate nohighlight">
+\[
+Re = \frac{(1.0 \, \text{g/cm}^3) \cdot (100 \, \text{cm/s}) \cdot (100 \, \text{cm})}{0.01 \, \text{g/(cm}\cdot\text{s)}} = \frac{10000}{0.01} = 1,000,000
+\]</div>
+<p><strong>Step 4: Conclusion: Determine the Flow Regime</strong>
+The calculated Reynolds number is <span class="math notranslate nohighlight">\(Re = 1 \times 10^6\)</span>. Since <span class="math notranslate nohighlight">\(1,000,000 &gt; 4000\)</span> (the critical value for pipe flow), the flow is definitively <strong>turbulent</strong>.</p>
+</div>
+</section>
+<section id="other-important-dimensionless-groups-in-chemical-engineering">
+<h3>Other Important Dimensionless Groups in Chemical Engineering<a class="headerlink" href="#other-important-dimensionless-groups-in-chemical-engineering" title="Link to this heading">#</a></h3>
+<div class="admonition-key-variables-definitions admonition">
+<p class="admonition-title">Key Variables &amp; Definitions</p>
+<p><strong>Key Dimensionless Groups in Transport Phenomena</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p><strong>Name (Symbol)</strong></p></th>
+<th class="head text-left"><p><strong>Formula &amp; Physical Meaning</strong></p></th>
+<th class="head text-left"><p><strong>Application &amp; Significance</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><strong>Prandtl Number (<span class="math notranslate nohighlight">\(Pr\)</span>)</strong></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(Pr = \frac{\text{Momentum Diffusivity}}{\text{Thermal Diffusivity}} = \frac{\nu}{\alpha} = \frac{C_p \mu}{k}\)</span> <br> <span class="math notranslate nohighlight">\(\nu\)</span>: kinematic viscosity, <span class="math notranslate nohighlight">\(\alpha\)</span>: thermal diffusivity, <span class="math notranslate nohighlight">\(C_p\)</span>: specific heat, <span class="math notranslate nohighlight">\(\mu\)</span>: dynamic viscosity, <span class="math notranslate nohighlight">\(k\)</span>: thermal conductivity.</p></td>
+<td class="text-left"><p>Relates the thickness of the velocity boundary layer to the thermal boundary layer. It is a fluid property that connects how momentum and heat move through the fluid.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Nusselt Number (<span class="math notranslate nohighlight">\(Nu\)</span>)</strong></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(Nu = \frac{\text{Convective Heat Transfer}}{\text{Conductive Heat Transfer}} = \frac{hL}{k}\)</span> <br> <span class="math notranslate nohighlight">\(h\)</span>: heat transfer coefficient, <span class="math notranslate nohighlight">\(L\)</span>: characteristic length, <span class="math notranslate nohighlight">\(k\)</span>: thermal conductivity.</p></td>
+<td class="text-left"><p>Measures how much heat transfer is enhanced by fluid motion (convection). <span class="math notranslate nohighlight">\(Nu=1\)</span> signifies heat transfer by pure conduction only. It is the target variable in most heat transfer correlations.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Schmidt Number (<span class="math notranslate nohighlight">\(Sc\)</span>)</strong></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(Sc = \frac{\text{Momentum Diffusivity}}{\text{Mass Diffusivity}} = \frac{\nu}{D_{AB}} = \frac{\mu}{\rho D_{AB}}\)</span> <br> <span class="math notranslate nohighlight">\(D_{AB}\)</span>: mass diffusivity.</p></td>
+<td class="text-left"><p>The direct mass transfer analog of the Prandtl number. It relates the thickness of the velocity boundary layer to the mass (concentration) boundary layer.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Sherwood Number (<span class="math notranslate nohighlight">\(Sh\)</span>)</strong></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(Sh = \frac{\text{Convective Mass Transfer}}{\text{Diffusive Mass Transfer}} = \frac{k_c L}{D_{AB}}\)</span> <br> <span class="math notranslate nohighlight">\(k_c\)</span>: mass transfer coefficient.</p></td>
+<td class="text-left"><p>The direct mass transfer analog of the Nusselt number. It measures how much mass transfer is enhanced by fluid motion. It is the target variable in most mass transfer correlations.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><strong>Peclet Number (<span class="math notranslate nohighlight">\(Pe\)</span>)</strong></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(Pe = \frac{\text{Advective (Bulk) Transport}}{\text{Diffusive Transport}} = \frac{Lv}{D}\)</span> <br> <span class="math notranslate nohighlight">\(L\)</span>: length, <span class="math notranslate nohighlight">\(v\)</span>: velocity, <span class="math notranslate nohighlight">\(D\)</span>: diffusion coefficient.</p></td>
+<td class="text-left"><p>Can be written as <span class="math notranslate nohighlight">\(Pe_{heat} = Re \cdot Pr\)</span> or <span class="math notranslate nohighlight">\(Pe_{mass} = Re \cdot Sc\)</span>. In reactor design, it determines if a reactor behaves like an ideal PFR (high Pe, bulk flow dominates) or an ideal CSTR (low Pe, diffusion/mixing dominates).</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><strong>Froude Number (<span class="math notranslate nohighlight">\(Fr\)</span>)</strong></p></td>
+<td class="text-left"><p><span class="math notranslate nohighlight">\(Fr^2 = \frac{\text{Inertial Forces}}{\text{Gravitational Forces}} = \frac{v^2}{gL}\)</span> <br> <span class="math notranslate nohighlight">\(v\)</span>: velocity, <span class="math notranslate nohighlight">\(g\)</span>: gravity, <span class="math notranslate nohighlight">\(L\)</span>: length.</p></td>
+<td class="text-left"><p>Crucial in systems with a free surface, like flow in open channels (rivers), flow over dams, and agitated tanks. It helps predict wave formation and surface behavior.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+<section id="fluid-pressure-vs-elevation-incompressible-vs-compressible-cases">
+<h2>Fluid Pressure vs. Elevation (Incompressible vs. Compressible Cases)<a class="headerlink" href="#fluid-pressure-vs-elevation-incompressible-vs-compressible-cases" title="Link to this heading">#</a></h2>
+<p>One of the most fundamental concepts in fluid statics (the study of fluids at rest) is understanding how pressure changes with depth or altitude. The method for calculating this change depends entirely on a crucial property of the fluid: its compressibility. This section will derive the governing equations for both incompressible and compressible fluids and compare the results to a real-world example.</p>
+<section id="the-fundamental-equation-of-fluid-statics">
+<h3>The Fundamental Equation of Fluid Statics<a class="headerlink" href="#the-fundamental-equation-of-fluid-statics" title="Link to this heading">#</a></h3>
+<div class="admonition-key-concept admonition">
+<p class="admonition-title">Key Concept</p>
+<p><strong>Why Pressure Changes with Depth</strong>
+Imagine a column of fluid at rest, like the water in a swimming pool. A small “packet” or element of fluid within this column is not moving, which means the net force on it must be zero (Newton’s First Law). There are three vertical forces acting on this element:</p>
+<ol class="arabic simple">
+<li><p>A downward force from the pressure of the fluid <em>above</em> it.</p></li>
+<li><p>An upward force from the pressure of the fluid <em>below</em> it.</p></li>
+<li><p>A downward force due to its own <strong>weight</strong>.</p></li>
+</ol>
+<p>For the element to be stationary, the upward pressure force must perfectly balance the downward pressure force plus the element’s weight. This means the pressure below must be slightly greater than the pressure above. This small difference, when summed up over the entire depth, leads to the large pressure changes we experience.</p>
+</div>
+<div class="admonition-important-formula admonition">
+<p class="admonition-title">Important Formula</p>
+<p><strong>The Differential Equation of Fluid Statics</strong>
+A formal force balance on a differential fluid element yields the fundamental equation that governs all of fluid statics:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dP}{dz} = -\gamma = -\rho g
+\]</div>
+</div>
+<div class="admonition-key-variables-definitions admonition">
+<p class="admonition-title">Key Variables &amp; Definitions</p>
+<p><strong>Variable Definitions</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P\)</span>: The absolute pressure at a given point in the fluid.</p></li>
+<li><p><span class="math notranslate nohighlight">\(z\)</span>: The vertical coordinate, or elevation. By convention, <span class="math notranslate nohighlight">\(z\)</span> is defined as positive in the <strong>upward</strong> direction.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\gamma\)</span>: The <strong>specific weight</strong> of the fluid, which is its weight per unit volume. For a fluid with density <span class="math notranslate nohighlight">\(\rho\)</span> in a gravitational field <span class="math notranslate nohighlight">\(g\)</span>, <span class="math notranslate nohighlight">\(\gamma = \rho g\)</span>.</p></li>
+<li><p>The negative sign in the equation is crucial: it means that as elevation (<span class="math notranslate nohighlight">\(z\)</span>) <strong>increases</strong>, pressure (<span class="math notranslate nohighlight">\(P\)</span>) <strong>decreases</strong>.</p></li>
+</ul>
+</div>
+</section>
+<section id="case-1-the-incompressible-fluid">
+<h3>Case 1: The Incompressible Fluid<a class="headerlink" href="#case-1-the-incompressible-fluid" title="Link to this heading">#</a></h3>
+<div class="admonition-key-concept admonition">
+<p class="admonition-title">Key Concept</p>
+<p><strong>The Incompressible Fluid Model</strong>
+An incompressible fluid is one whose density, <span class="math notranslate nohighlight">\(\rho\)</span>, is assumed to be constant, regardless of changes in pressure. This is an excellent assumption for most <strong>liquids</strong> (like water or oil) and is a reasonable assumption for gases over very small changes in elevation where the pressure change is minimal.</p>
+</div>
+<p>The derivation is straightforward because if <span class="math notranslate nohighlight">\(\rho\)</span> is constant, then the specific weight <span class="math notranslate nohighlight">\(\gamma = \rho g\)</span> is also constant. We can solve the fundamental equation by direct integration:</p>
+<div class="math notranslate nohighlight">
+\[
+dP = -\gamma dz \implies \int_{P_1}^{P_2} dP = \int_{z_1}^{z_2} -\gamma dz \implies P_2 - P_1 = -\gamma (z_2 - z_1)
+\]</div>
+<p>It is often more intuitive to talk about depth. If we let point 2 be at a depth <span class="math notranslate nohighlight">\(h\)</span> below point 1, then <span class="math notranslate nohighlight">\(h = z_1 - z_2\)</span>. The equation becomes:</p>
+<div class="admonition-important-formula admonition">
+<p class="admonition-title">Important Formula</p>
+<p><strong>Pressure in an Incompressible Fluid</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\Delta P = P_2 - P_1 = \gamma h = \rho g h
+\]</div>
+<p><strong>Conclusion:</strong> For an incompressible fluid at rest, pressure increases <strong>linearly</strong> with depth.</p>
+</div>
+</section>
+<section id="case-2-the-compressible-fluid-isothermal-ideal-gas">
+<h3>Case 2: The Compressible Fluid (Isothermal Ideal Gas)<a class="headerlink" href="#case-2-the-compressible-fluid-isothermal-ideal-gas" title="Link to this heading">#</a></h3>
+<div class="admonition-key-concept admonition">
+<p class="admonition-title">Key Concept</p>
+<p><strong>The Compressible Fluid Model</strong>
+A compressible fluid is one whose density changes significantly with pressure. All <strong>gases</strong> are compressible. To solve the static equation, we can no longer treat <span class="math notranslate nohighlight">\(\rho\)</span> as a constant. We need an “equation of state” that relates density and pressure. The simplest is the Ideal Gas Law. In this first case, we will also assume the temperature is constant (<strong>isothermal</strong>).</p>
+</div>
+<p>The derivation requires separating variables before integrating:</p>
+<ol class="arabic simple">
+<li><p>Start with the fundamental equation: <span class="math notranslate nohighlight">\(\frac{dP}{dz} = -\rho g\)</span>.</p></li>
+<li><p>Use the Ideal Gas Law to substitute for density: <span class="math notranslate nohighlight">\(\rho = \frac{P}{RT}\)</span>, where <span class="math notranslate nohighlight">\(R\)</span> is the specific gas constant for the fluid.</p></li>
+<li><p>The equation becomes a separable differential equation: <span class="math notranslate nohighlight">\(\frac{dP}{dz} = -\frac{Pg}{RT} \implies \frac{dP}{P} = -\frac{g}{RT} dz\)</span>.</p></li>
+<li><p>Integrate both sides from state 1 to state 2. Since we assume T is constant, all terms on the right are constant and can be taken out of the integral:
+$<span class="math notranslate nohighlight">\( \int_{P_1}^{P_2} \frac{dP}{P} = -\frac{g}{RT} \int_{z_1}^{z_2} dz \implies \ln\left(\frac{P_2}{P_1}\right) = -\frac{g(z_2 - z_1)}{RT} \)</span>$</p></li>
+</ol>
+<div class="admonition-important-formula admonition">
+<p class="admonition-title">Important Formula</p>
+<p><strong>Pressure in an Isothermal Compressible Fluid</strong>
+To solve for pressure directly, we exponentiate both sides:</p>
+<div class="math notranslate nohighlight">
+\[
+P_2 = P_1 \exp\left[-\frac{g(z_2-z_1)}{RT}\right]
+\]</div>
+<p><strong>Conclusion:</strong> For an isothermal, compressible ideal gas, pressure decreases <strong>exponentially</strong> with altitude.</p>
+</div>
+</section>
+<section id="example-pressure-calculation-at-high-altitude">
+<h3>Example: Pressure Calculation at High Altitude<a class="headerlink" href="#example-pressure-calculation-at-high-altitude" title="Link to this heading">#</a></h3>
+<div class="proof example admonition" id="example-6">
+<p class="admonition-title"><span class="caption-number">Example 51 </span> (Atmospheric Pressure at 40,000 Feet)</p>
+<section class="example-content" id="proof-content">
+<p><strong>Question:</strong> Calculate the air pressure at an altitude of 40,000 feet above sea level using three different physical models: (1) incompressible, (2) compressible isothermal, and (3) compressible non-isothermal. Compare the results to the standard atmospheric value of 18.7 kPa.</p>
+</section>
+</div><div class="admonition-key-variables-definitions admonition">
+<p class="admonition-title">Key Variables &amp; Definitions</p>
+<p><strong>Given Information and Constants</strong></p>
+<ul class="simple">
+<li><p><strong>Altitude:</strong> <span class="math notranslate nohighlight">\(z_2 = 40,000 \, \text{ft} \times \frac{0.3048 \, \text{m}}{1 \, \text{ft}} = 12,192\)</span> m.</p></li>
+<li><p><strong>Sea Level (Point 1):</strong> <span class="math notranslate nohighlight">\(z_1 = 0\)</span> m, <span class="math notranslate nohighlight">\(P_1 = 101.33\)</span> kPa = 101,330 Pa, <span class="math notranslate nohighlight">\(T_1 = T_0 = 15^\circ\text{C} = 288.15\)</span> K.</p></li>
+<li><p><strong>Constants:</strong> <span class="math notranslate nohighlight">\(g = 9.807\)</span> m/s<span class="math notranslate nohighlight">\(^2\)</span>. Gas constant for air, <span class="math notranslate nohighlight">\(R = 286.9\)</span> J/(kg<span class="math notranslate nohighlight">\(\cdot\)</span>K).</p></li>
+<li><p><strong>Model 1 Data:</strong> Specific weight of air at sea level, <span class="math notranslate nohighlight">\(\gamma = 12.014\)</span> N/m<span class="math notranslate nohighlight">\(^3\)</span>.</p></li>
+<li><p><strong>Model 3 Data:</strong> Standard atmospheric temperature lapse rate, <span class="math notranslate nohighlight">\(\beta = 0.00650\)</span> K/m.</p></li>
+</ul>
+</div>
+<div class="admonition-solution-steps admonition">
+<p class="admonition-title">Solution Steps</p>
+<p><strong>Solution: Model 1 Incompressible Fluid</strong>
+This model assumes the density (and specific weight) of air remains constant at its sea-level value all the way up to 40,000 feet.</p>
+<p><strong>Incompressible Formula</strong></p>
+<div class="math notranslate nohighlight">
+\[
+P_2 = P_1 - \gamma (z_2 - z_1)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+P_2 = 101,330 \, \text{Pa} - (12.014 \, \text{N/m}^3)(12,192 \, \text{m} - 0 \, \text{m})
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+P_2 = 101,330 \, \text{Pa} - 146,465 \, \text{Pa} = -45,135 \, \text{Pa} = \textbf{-45.1 kPa}
+\]</div>
+<p><strong>Analysis of Model 1</strong>
+The result of a negative absolute pressure is <strong>physically impossible</strong>. This demonstrates that the incompressible fluid model is completely inappropriate for gases over large changes in altitude. The density of air decreases significantly with altitude, so assuming it is constant vastly overestimates the weight of the air column, leading to this nonsensical result.</p>
+</div>
+<div class="admonition-solution-steps admonition">
+<p class="admonition-title">Solution Steps</p>
+<p><strong>Solution: Model 2 Compressible Isothermal Fluid</strong>
+This model accounts for the fact that density changes with pressure, but assumes the temperature remains constant at its sea-level value of 15<span class="math notranslate nohighlight">\(^\circ\)</span>C.</p>
+<p><strong>Isothermal Compressible Formula</strong></p>
+<div class="math notranslate nohighlight">
+\[
+P_2 = P_1 \exp\left[-\frac{g(z_2-z_1)}{RT_0}\right]
+\]</div>
+<p>First, let’s calculate the value of the dimensionless group in the exponent:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{g(z_2-z_1)}{RT_0} = \frac{(9.807 \, \text{m/s}^2)(12,192 \, \text{m})}{(286.9 \, \text{J/(kg}\cdot\text{K)})(288.15 \, \text{K})} = \frac{119,560}{82,665} = 1.446
+\]</div>
+<p>Now, calculate the pressure:</p>
+<div class="math notranslate nohighlight">
+\[
+P_2 = (101.33 \, \text{kPa}) \cdot \exp(-1.446) = (101.33) \cdot (0.2355) = \textbf{23.9 kPa}
+\]</div>
+<p><strong>Analysis of Model 2</strong>
+This result is physically realistic—a positive pressure that is much lower than sea-level pressure. However, it is still significantly different from the true value. This is because the atmosphere is not isothermal; it gets much colder at high altitudes. Assuming a constant warm temperature underestimates the density of the air aloft, which in turn underestimates the weight of the air column and results in a predicted pressure that is too high.</p>
+</div>
+<div class="admonition-solution-steps admonition">
+<p class="admonition-title">Solution Steps</p>
+<p><strong>Solution: Model 3 Compressible NonIsothermal Fluid</strong>
+This is the most realistic model. It accounts for density changing with pressure and also models the fact that temperature decreases linearly with altitude in the troposphere. The pressure formula for a linear temperature lapse rate is:</p>
+<p><strong>Non-Isothermal Compressible Formula</strong></p>
+<div class="math notranslate nohighlight">
+\[
+P_2 = P_1 \left[ \frac{T_0 - \beta z_2}{T_0 - \beta z_1} \right]^{\frac{g}{R\beta}}
+\]</div>
+<p>First, let’s calculate the value of the exponent:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{g}{R\beta} = \frac{9.807 \, \text{m/s}^2}{(286.9 \, \text{J/(kg}\cdot\text{K)})(0.00650 \, \text{K/m})} = 5.259
+\]</div>
+<p>Now, calculate the pressure. Note that at sea level, <span class="math notranslate nohighlight">\(z_1=0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+P_2 = (101.33 \, \text{kPa}) \left[ \frac{288.15 - (0.00650)(12192)}{288.15 - 0} \right]^{5.259}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+P_2 = (101.33) \left[ \frac{288.15 - 79.25}{288.15} \right]^{5.259} = (101.33) \left[ \frac{208.9}{288.15} \right]^{5.259} = (101.33) \left[ 0.725 \right]^{5.259}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+P_2 = (101.33) \cdot (0.1842) = \textbf{18.67 kPa}
+\]</div>
+<p><strong>Analysis of Model 3</strong>
+This result is extremely close to the standard tabulated value of 18.7 kPa. This demonstrates that using a more realistic physical model—one that accounts for both compressibility and the actual temperature profile of the atmosphere.</p>
+</div>
+<div class="admonition-key-variables-definitions admonition">
+<p class="admonition-title">Key Variables &amp; Definitions</p>
+<p><strong>Final Comparison and Key Takeaway</strong>
+Let’s summarize the results and see how they compare to the actual value.</p>
+<ul class="simple">
+<li><p><strong>Incompressible Model:</strong> -45.1 kPa (Physically Impossible, <span class="math notranslate nohighlight">\(&gt;\)</span>300% error)</p></li>
+<li><p><strong>Isothermal Model:</strong> 23.9 kPa (Plausible, but has a 28% error)</p></li>
+<li><p><strong>Non-Isothermal Model:</strong> 18.7 kPa (Highly Accurate, <span class="math notranslate nohighlight">\(&lt;\)</span>1% error)</p></li>
+<li><p><strong>Actual Value:</strong> 18.7 kPa</p></li>
+</ul>
+<p><strong>Conclusion:</strong> This example clearly shows the importance of selecting the appropriate physical assumptions for a fluid statics problem. While the incompressible assumption (<span class="math notranslate nohighlight">\(\Delta P = \rho g h\)</span>) is excellent for liquids, it fails completely for gases over large elevation changes. For gases, accounting for compressibility is essential, and for the highest accuracy, one must also account for temperature variations.</p>
+</div>
+</section>
+</section>
+<section id="pipe-flow-determining-pumping-power">
+<h2>Pipe Flow: Determining Pumping Power<a class="headerlink" href="#pipe-flow-determining-pumping-power" title="Link to this heading">#</a></h2>
+<p>A common and practical problem in fluid mechanics is determining the power required to pump a fluid through a piping system. This analysis requires a comprehensive application of the energy balance, accounting for changes in pressure, velocity, and elevation.</p>
+<section id="example-pumping-water-for-a-ski-resort">
+<h3>Example: Pumping Water for a Ski Resort<a class="headerlink" href="#example-pumping-water-for-a-ski-resort" title="Link to this heading">#</a></h3>
+<div class="proof example admonition" id="example-7">
+<p class="admonition-title"><span class="caption-number">Example 52 </span> (Pumping Water for a Ski Resort)</p>
+<section class="example-content" id="proof-content">
+<p><strong>Question:</strong> A ski resort needs to pump water at 10<span class="math notranslate nohighlight">\(^\circ\)</span>C from a reservoir at an elevation of 6500 ft to a snow-making machine at 7300 ft. The water flows through 1000 ft of 2-inch diameter commercial steel pipe at a rate of 0.25 ft<span class="math notranslate nohighlight">\(^3\)</span>/s. The pressure required at the inlet of the snow machine is 20 psi (gauge). The piping system includes a sharp-edged entrance, a fully open gate valve, and two standard 90<span class="math notranslate nohighlight">\(^\circ\)</span> elbows. Determine the horsepower that must be delivered to the water by the pump.</p>
+</section>
+</div><div class="admonition-solution-steps admonition">
+<p class="admonition-title">Solution Steps</p>
+<p><strong>Step 1: Strategy: The Extended Bernoulli Equation</strong>
+<strong>Why the Simple Bernoulli Equation Is Not Enough:</strong> The simple Bernoulli equation (<span class="math notranslate nohighlight">\(P + \frac{1}{2}\rho\nu^2 + \rho gz = \text{constant}\)</span>) is a statement of energy conservation for an <em>ideal</em> fluid, where there is no friction and no external work being done. Our system is real, not ideal, because we are adding energy with a <strong>pump</strong> and losing energy to <strong>friction</strong> in the pipe and fittings. Therefore, we must use the <strong>Extended Bernoulli Equation</strong>, also known as the steady-state Mechanical Energy Balance.</p>
+<p><strong>The Extended Bernoulli Equation (in Head Form)</strong>
+We write the energy balance between point 1 (the reservoir surface) and point 2 (the snow machine inlet):</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{P_1}{\gamma} + \frac{\nu_1^2}{2g} + z_1 + h_p = \frac{P_2}{\gamma} + \frac{\nu_2^2}{2g} + z_2 + h_L
+\]</div>
+<p>The equation contains several key terms: <span class="math notranslate nohighlight">\(\frac{P}{\gamma}\)</span> represents the pressure head (energy stored due to pressure), <span class="math notranslate nohighlight">\(\frac{\nu^2}{2g}\)</span> represents the velocity head (kinetic energy), <span class="math notranslate nohighlight">\(z\)</span> represents the elevation head (potential energy due to height), <span class="math notranslate nohighlight">\(h_p\)</span> represents the pump head (energy added by the pump), and <span class="math notranslate nohighlight">\(h_L\)</span> represents the total head loss.</p>
+<p><strong>Step 2: Simplify the Energy Balance:</strong>
+Let’s analyze the conditions at points 1 and 2 to eliminate terms and create a workable equation.
+At point 1 (reservoir surface): The reservoir surface is open to atmosphere, so its gauge pressure is <span class="math notranslate nohighlight">\(P_1 = 0\)</span> psi. The reservoir is large compared to the pipe, so the velocity of the surface dropping is negligible: <span class="math notranslate nohighlight">\(\nu_1 \approx 0\)</span> ft/s. We set the reservoir elevation as our reference datum, so <span class="math notranslate nohighlight">\(z_1 = 0\)</span> ft.</p>
+<p>At point 2 (snow machine inlet): The elevation of the snow machine is <span class="math notranslate nohighlight">\(z_2 = 7300 \, \text{ft} - 6500 \, \text{ft} = 800\)</span> ft above the reservoir. The pressure at point 2 is given as <span class="math notranslate nohighlight">\(P_2 = 20\)</span> psi (gauge). The velocity at point 2, <span class="math notranslate nohighlight">\(\nu_2\)</span>, is the velocity inside the pipe, which we must calculate.
+Substituting these simplifications into the main equation:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{0}{\gamma} + \frac{0^2}{2g} + 0 + h_p = \frac{P_2}{\gamma} + \frac{\nu_2^2}{2g} + z_2 + h_L
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+h_p = \frac{P_2}{\gamma} + \frac{\nu_2^2}{2g} + z_2 + h_L
+\]</div>
+<p>This is our working equation. To solve for <span class="math notranslate nohighlight">\(h_p\)</span>, we need to calculate each term on the right side.</p>
+<p><strong>Step 3: Calculate Fluid Velocity and Flow Characteristics:</strong>
+Before we can calculate head losses, we need to determine the fluid velocity and flow regime.
+First, convert the pipe diameter to consistent units: <span class="math notranslate nohighlight">\(D = 2 \, \text{in} \times \frac{1 \, \text{ft}}{12 \, \text{in}} = 0.1667\)</span> ft.</p>
+<p>Calculate the pipe cross-sectional area: <span class="math notranslate nohighlight">\(A = \frac{\pi D^2}{4} = \frac{\pi (0.1667 \, \text{ft})^2}{4} = 0.02182\)</span> ft<span class="math notranslate nohighlight">\(^2\)</span>.
+Determine the fluid velocity: <span class="math notranslate nohighlight">\(\nu_2 = \frac{\text{Flow Rate (Q)}}{A} = \frac{0.25 \, \text{ft}^3/\text{s}}{0.02182 \, \text{ft}^2} = 11.46\)</span> ft/s.
+This velocity will be used in multiple calculations throughout our solution.
+Next, we need to determine if the flow is laminar or turbulent by calculating the Reynolds number. For water at 10°C (50°F), the kinematic viscosity is <span class="math notranslate nohighlight">\(\nu \approx 1.41 \times 10^{-5}\)</span> ft<span class="math notranslate nohighlight">\(^2\)</span>/s.</p>
+<p><strong>Reynolds Number Calculation</strong></p>
+<div class="math notranslate nohighlight">
+\[
+Re = \frac{\nu_2 D}{\nu} = \frac{(11.46 \, \text{ft/s})(0.1667 \, \text{ft})}{1.41 \times 10^{-5} \, \text{ft}^2/\text{s}} = 1.35 \times 10^5
+\]</div>
+<p>Since <span class="math notranslate nohighlight">\(Re = 135,000 &gt; 4000\)</span>, the flow is definitively <strong>turbulent</strong>. This is crucial information for determining the friction factor in the next step.</p>
+<p><strong>Step 4: Calculate Major Head Loss (Pipe Friction):</strong>
+<strong>The Darcy-Weisbach Equation and the Moody Chart:</strong>
+Major head loss represents the energy lost due to friction as fluid flows along the length of a pipe. For turbulent flow in rough pipes, this loss depends on both the Reynolds number and the relative roughness of the pipe surface. We calculate it using the Darcy-Weisbach equation, where the key parameter is the <strong>friction factor, <span class="math notranslate nohighlight">\(f\)</span></strong>, which we determine from the <strong>Moody Chart</strong>.</p>
+<p><strong>Darcy-Weisbach Equation</strong></p>
+<div class="math notranslate nohighlight">
+\[
+h_{L,major} = f \frac{L}{D} \frac{\nu_2^2}{2g}
+\]</div>
+<p>To find the friction factor <span class="math notranslate nohighlight">\(f\)</span>, we need the relative roughness of the pipe. For commercial steel pipe, the average roughness height is <span class="math notranslate nohighlight">\(\epsilon \approx 0.00015\)</span> ft. The relative roughness is:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\epsilon}{D} = \frac{0.00015 \, \text{ft}}{0.1667 \, \text{ft}} \approx 0.0009
+\]</div>
+<p>Using the Moody Chart: Locate <span class="math notranslate nohighlight">\(Re = 1.35 \times 10^5\)</span> on the horizontal axis, move vertically up until you intersect the curve corresponding to <span class="math notranslate nohighlight">\(\epsilon/D = 0.0009\)</span>, then move horizontally left to read the friction factor from the vertical axis. This gives <span class="math notranslate nohighlight">\(f \approx 0.021\)</span>.</p>
+<p>Now calculate the major head loss:</p>
+<div class="math notranslate nohighlight">
+\[
+h_{L,major} = (0.021) \frac{1000 \, \text{ft}}{0.1667 \, \text{ft}} \frac{(11.46 \, \text{ft/s})^2}{2 \cdot (32.2 \, \text{ft/s}^2)}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+h_{L,major} = (0.021) \cdot (6000) \cdot (2.035 \, \text{ft}) = 126 \cdot 2.035 = \textbf{256.4 ft}
+\]</div>
+<p><strong>Step 5: Calculate Minor Head Loss (Fittings and Components):</strong>
+Minor losses occur due to flow disruption through fittings, valves, entrances, exits, and direction changes. Each component has a specific loss coefficient.</p>
+<p><strong>Minor Loss Equation</strong></p>
+<div class="math notranslate nohighlight">
+\[
+h_{L,minor} = \sum K_L \frac{\nu_2^2}{2g}
+\]</div>
+<p>The term <span class="math notranslate nohighlight">\(K_L\)</span> is a dimensionless <strong>loss coefficient</strong> specific to each fitting, obtained from standard engineering tables:
+Sharp-edged entrance from reservoir to pipe: <span class="math notranslate nohighlight">\(K_L = 0.5\)</span>. This represents the energy lost as the fluid accelerates from essentially zero velocity in the large reservoir to the pipe velocity.
+Fully open gate valve: <span class="math notranslate nohighlight">\(K_L = 0.15\)</span>. Gate valves, when fully open, create minimal flow disruption.
+Two standard 90° elbows: <span class="math notranslate nohighlight">\(K_L = 0.9\)</span> each. Elbows cause flow separation and secondary flows, leading to energy loss.
+Total for two elbows: <span class="math notranslate nohighlight">\(2 \times 0.9 = 1.8\)</span>.</p>
+<p>Total loss coefficient: <span class="math notranslate nohighlight">\(\sum K_L = 0.5 + 0.15 + 1.8 = 2.45\)</span>.
+Calculate the minor head loss:</p>
+<div class="math notranslate nohighlight">
+\[
+h_{L,minor} = (2.45) \frac{(11.46 \, \text{ft/s})^2}{2 \cdot (32.2 \, \text{ft/s}^2)} = (2.45) \cdot (2.035 \, \text{ft}) = \textbf{5.0 ft}
+\]</div>
+<p><strong>Step 6: Calculate Total Head Loss:</strong>
+The total head loss is the sum of major and minor losses:</p>
+<div class="math notranslate nohighlight">
+\[
+h_L = h_{L,major} + h_{L,minor} = 256.4 + 5.0 = \textbf{261.4 ft}
+\]</div>
+<p>Notice that the major head loss (pipe friction) dominates in this long pipeline system, representing over 98% of the total head loss.</p>
+<p><strong>Step 7: Calculate the Total Pump Head Required:</strong>
+Now we have all components needed to solve our simplified energy balance equation from Step 2:</p>
+<div class="math notranslate nohighlight">
+\[
+h_p = \frac{P_2}{\gamma} + \frac{\nu_2^2}{2g} + z_2 + h_L
+\]</div>
+<p>Let’s calculate each term systematically:</p>
+<p><strong>Pressure Head at Point 2:</strong> We need to convert the gauge pressure at the snow machine inlet to head units. The specific weight of water is <span class="math notranslate nohighlight">\(\gamma = 62.4\)</span> lb<span class="math notranslate nohighlight">\(_f\)</span>/ft<span class="math notranslate nohighlight">\(^3\)</span>.
+First, convert pressure to consistent units: <span class="math notranslate nohighlight">\(P_2 = 20 \, \frac{\text{lb}_f}{\text{in}^2} \times \frac{144 \, \text{in}^2}{1 \, \text{ft}^2} = 2880\)</span> lb<span class="math notranslate nohighlight">\(_f\)</span>/ft<span class="math notranslate nohighlight">\(^2\)</span>.
+Then calculate pressure head: <span class="math notranslate nohighlight">\(\frac{P_2}{\gamma} = \frac{2880 \, \text{lb}_f/\text{ft}^2}{62.4 \, \text{lb}_f/\text{ft}^3} = 46.2\)</span> ft.</p>
+<p><strong>Velocity Head at Point 2:</strong> This represents the kinetic energy of the fluid at the delivery point.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\nu_2^2}{2g} = \frac{(11.46 \, \text{ft/s})^2}{2 \cdot (32.2 \, \text{ft/s}^2)} = \frac{131.3}{64.4} = 2.0 \text{ ft}
+\]</div>
+<p><strong>Elevation Head:</strong> This is the gravitational potential energy difference between the reservoir and snow machine: <span class="math notranslate nohighlight">\(z_2 = 800\)</span> ft.</p>
+<p><strong>Total Head Loss:</strong> From our previous calculation: <span class="math notranslate nohighlight">\(h_L = 261.4\)</span> ft.</p>
+<p>Substituting all values:</p>
+<div class="math notranslate nohighlight">
+\[
+h_p = 46.2 + 2.0 + 800 + 261.4 = \textbf{1109.6 ft}
+\]</div>
+<p>The pump must provide approximately <strong>1110 ft</strong> of head to the water.</p>
+<p><strong>Physical Interpretation:</strong> This means the pump must add enough energy to the water to: (1) overcome the 800 ft elevation gain, (2) provide the required 20 psi pressure at the snow machine, (3) overcome 261.4 ft of frictional losses, and (4) provide the kinetic energy for 11.46 ft/s flow velocity.</p>
+<p><strong>Step 8: Calculate the Required Pump Power:</strong>
+The hydraulic power that must be delivered to the fluid (often called “water horsepower”) is calculated using the fundamental relationship between flow rate, head, and power.</p>
+<p><strong>Fluid Power Calculation</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\text{Power}_{\text{fluid}} = \gamma Q h_p
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(\gamma\)</span> is the specific weight of the fluid, <span class="math notranslate nohighlight">\(Q\)</span> is the volumetric flow rate, and <span class="math notranslate nohighlight">\(h_p\)</span> is the pump head.
+Substituting our values:</p>
+<div class="math notranslate nohighlight">
+\[
+\text{Power}_{\text{fluid}} = (62.4 \, \text{lb}_f/\text{ft}^3) \cdot (0.25 \, \text{ft}^3/\text{s}) \cdot (1110 \, \text{ft})
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\text{Power}_{\text{fluid}} = 17,316 \, \frac{\text{ft}\cdot\text{lb}_f}{\text{s}}
+\]</div>
+<p>Convert to horsepower using the standard conversion factor (1 hp = 550 ft·lb<span class="math notranslate nohighlight">\(_f\)</span>/s):</p>
+<div class="math notranslate nohighlight">
+\[
+\text{Horsepower} = 17,316 \, \frac{\text{ft}\cdot\text{lb}_f}{\text{s}} \times \frac{1 \, \text{hp}}{550 \, \text{ft}\cdot\text{lb}_f/\text{s}} = \textbf{31.5 hp}
+\]</div>
+</div>
+<div class="admonition-key-variables-definitions admonition">
+<p class="admonition-title">Key Variables &amp; Definitions</p>
+<p><strong>Important Note on Pump Efficiency and Motor Power</strong>
+This 31.5 hp represents the <strong>hydraulic power</strong> that must be delivered to the water. However, real pumps are not 100% efficient due to mechanical friction, fluid leakage, and other losses. If the pump operates at 80% efficiency (typical for centrifugal pumps), the required shaft power would be: <span class="math notranslate nohighlight">\(31.5 / 0.80 = 39.4\)</span> hp. Additionally, the electric motor driving the pump also has efficiency losses (typically 85-95%). If the motor efficiency is 90%, the required electrical power would be: <span class="math notranslate nohighlight">\(39.4 / 0.90 = 43.8\)</span> hp. Therefore, while the theoretical minimum power to move the water is 31.5 hp, the actual electrical power consumption would likely be 40-45 hp in a real system.</p>
+</div>
+</section>
+</section>
+<section id="air-flow-through-a-constriction">
+<h2>Air Flow Through a Constriction<a class="headerlink" href="#air-flow-through-a-constriction" title="Link to this heading">#</a></h2>
+<div class="admonition-key-concept admonition">
+<p class="admonition-title">Key Concept</p>
+<p><strong>The Venturi Effect: High Velocity Means Low Pressure</strong>
+A classic application of the Bernoulli equation is analyzing flow through a constriction, such as a Venturi meter. This setup demonstrates a fundamental and often counter-intuitive principle:</p>
+<ol class="arabic simple">
+<li><p><strong>Continuity:</strong> For a fluid of constant density, the mass flow rate (<span class="math notranslate nohighlight">\(\dot{m} = \rho A \nu\)</span>) must be constant. Where the pipe area <span class="math notranslate nohighlight">\(A\)</span> gets smaller (in the “throat”), the velocity <span class="math notranslate nohighlight">\(\nu\)</span> <em>must increase</em> to maintain the same flow rate.</p></li>
+<li><p><strong>Energy Conservation (Bernoulli):</strong> The Bernoulli equation (<span class="math notranslate nohighlight">\(P + \frac{1}{2}\rho\nu^2 = \text{const}\)</span> for a horizontal pipe) is a statement of energy conservation. As the kinetic energy (<span class="math notranslate nohighlight">\(\frac{1}{2}\rho\nu^2\)</span>) increases in the high-velocity throat, the pressure energy (<span class="math notranslate nohighlight">\(P\)</span>) <em>must decrease</em> to keep the total energy constant.</p></li>
+</ol>
+<p>This phenomenon, where the pressure in the constricted section is lower than in the wider sections, is known as the <strong>Venturi effect</strong>.</p>
+</div>
+<section id="example-velocity-in-a-constriction-venturi-effect">
+<h3>Example: Velocity in a Constriction (Venturi Effect)<a class="headerlink" href="#example-velocity-in-a-constriction-venturi-effect" title="Link to this heading">#</a></h3>
+<div class="proof example admonition" id="example-8">
+<p class="admonition-title"><span class="caption-number">Example 53 </span> (Velocity in a Constriction (Venturi Effect))</p>
+<section class="example-content" id="proof-content">
+<p><strong>Question:</strong> Air with a density of 1.0 kg/m<span class="math notranslate nohighlight">\(^3\)</span> flows steadily and incompressibly through a horizontal constriction. The pressure at the wide entrance (point 1) is 10 kPa greater than the pressure at the narrow throat (point 2). The cross-sectional area at the entrance is five times the area at the throat (<span class="math notranslate nohighlight">\(A_1 = 5A_2\)</span>). What is the air speed at the throat (<span class="math notranslate nohighlight">\(\nu_2\)</span>)?</p>
+</section>
+</div><div class="admonition-solution-steps admonition">
+<p class="admonition-title">Solution Steps</p>
+<p><strong>Step 1: Strategy: Two Equations, Two Unknowns</strong>
+We have two unknown velocities, <span class="math notranslate nohighlight">\(\nu_1\)</span> and <span class="math notranslate nohighlight">\(\nu_2\)</span>. We can solve for them by setting up a system of two equations: the Bernoulli equation and the continuity equation.</p>
+<ol class="arabic simple">
+<li><p>The <strong>Bernoulli Equation</strong>, which relates pressure and velocity changes (an energy relationship).</p></li>
+<li><p>The <strong>Continuity Equation</strong>, which relates velocities and areas (a mass balance).
+We apply these equations between point 1 (inside the pipe) and point 2 (at the nozzle exit).</p></li>
+</ol>
+<p><strong>Step 2: Apply the Bernoulli Equation:</strong>
+For a horizontal pipe (<span class="math notranslate nohighlight">\(z_1 = z_2\)</span>) with no friction or shaft work:</p>
+<div class="math notranslate nohighlight">
+\[
+P_1 + \frac{1}{2}\rho\nu_1^2 = P_2 + \frac{1}{2}\rho\nu_2^2
+\]</div>
+<p>Rearranging for the known pressure difference:</p>
+<div class="math notranslate nohighlight">
+\[
+P_1 - P_2 = \frac{1}{2}\rho(\nu_2^2 - \nu_1^2)
+\]</div>
+<p><strong>Step 3: Apply the Continuity Equation:</strong>
+For an incompressible fluid, the volumetric flow rate is constant: <span class="math notranslate nohighlight">\(A_1\nu_1 = A_2\nu_2\)</span>. We can express the upstream velocity <span class="math notranslate nohighlight">\(\nu_1\)</span> in terms of the throat velocity <span class="math notranslate nohighlight">\(\nu_2\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\nu_1 = \nu_2 \left(\frac{A_2}{A_1}\right)
+\]</div>
+<p>We are given that <span class="math notranslate nohighlight">\(A_1 = 5A_2\)</span>, so the ratio <span class="math notranslate nohighlight">\(\frac{A_2}{A_1} = \frac{1}{5} = 0.2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\nu_1 = 0.2 \nu_2
+\]</div>
+<p><strong>Step 4: Solve the System of Equations:</strong>
+Substitute the expression for <span class="math notranslate nohighlight">\(\nu_1\)</span> from continuity into the Bernoulli equation:</p>
+<div class="math notranslate nohighlight">
+\[
+P_1 - P_2 = \frac{1}{2}\rho \left(\nu_2^2 - (0.2\nu_2)^2\right) = \frac{1}{2}\rho \left(\nu_2^2 - 0.04\nu_2^2\right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+P_1 - P_2 = \frac{1}{2}\rho (0.96\nu_2^2)
+\]</div>
+<p>Now, plug in the known values to solve for the unknown velocity, <span class="math notranslate nohighlight">\(\nu_2\)</span>.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P_1 - P_2 = 10 \, \text{kPa} = 10,000\)</span> Pa.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho = 1.0\)</span> kg/m<span class="math notranslate nohighlight">\(^3\)</span>.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+10,000 \, \text{Pa} = \frac{1}{2} (1.0 \, \text{kg/m}^3) (0.96\nu_2^2)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+10,000 = 0.48 \cdot \nu_2^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\nu_2^2 = \frac{10,000}{0.48} = 20,833 \, \text{m}^2/\text{s}^2
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\nu_2 = \sqrt{20,833} = 144.3 \, \text{m/s}
+\]</div>
+<p>The speed of the air at the throat is approximately <strong>140 m/s</strong>.</p>
+</div>
+</section>
+</section>
+<section id="manometry">
+<h2>Manometry<a class="headerlink" href="#manometry" title="Link to this heading">#</a></h2>
+<p>Manometry is the science of measuring pressure using liquid columns in tubes. A manometer is a simple yet powerful device that measures pressure differences by balancing the weight of a column of fluid against another pressure. Understanding how to analyze a manometer is a foundational skill in fluid mechanics and engineering, as it provides a very direct and intuitive way to think about pressure.</p>
+<section id="the-principle-of-hydrostatic-head">
+<h3>The Principle of Hydrostatic Head<a class="headerlink" href="#the-principle-of-hydrostatic-head" title="Link to this heading">#</a></h3>
+<p>The operation of every manometer is based on the principle of <strong>hydrostatic pressure</strong>, which is the pressure exerted by a fluid at rest due to the force of gravity.</p>
+<div class="admonition-key-concept admonition">
+<p class="admonition-title">Key Concept</p>
+<p><strong>Origin of Pressure in a Fluid Column</strong>
+Imagine a stationary column of water in a glass. The water has mass, and due to gravity, it has weight. This weight exerts a downward force on the bottom of the glass. The pressure at the bottom is simply this total downward force distributed over the bottom area. The deeper you go, the more water is above you, the greater the weight, and therefore the higher the pressure.</p>
+</div>
+<p>We can derive a simple formula for this pressure with a few logical steps:</p>
+<ol class="arabic simple">
+<li><p>Pressure is defined as force per unit area: <span class="math notranslate nohighlight">\(P = \frac{F}{A}\)</span>.</p></li>
+<li><p>The force exerted by the fluid column is its weight: <span class="math notranslate nohighlight">\(F = \text{mass} \cdot g\)</span>.</p></li>
+<li><p>We can express mass in terms of density (<span class="math notranslate nohighlight">\(\rho\)</span>) and volume (<span class="math notranslate nohighlight">\(V\)</span>): <span class="math notranslate nohighlight">\(\text{mass} = \rho \cdot V\)</span>.</p></li>
+<li><p>The volume of a uniform column is its cross-sectional area times its height: <span class="math notranslate nohighlight">\(V = A \cdot h\)</span>.</p></li>
+<li><p>Combining these, we substitute steps 4, 3, and 2 into step 1: <span class="math notranslate nohighlight">\(P = \frac{(\rho \cdot A \cdot h) \cdot g}{A}\)</span>.</p></li>
+</ol>
+<p>The area (<span class="math notranslate nohighlight">\(A\)</span>) of the column cancels out, leaving the fundamental hydrostatic pressure equation:</p>
+<div class="admonition-important-formula admonition">
+<p class="admonition-title">Important Formula</p>
+<p><strong>Hydrostatic Pressure Equation</strong></p>
+<div class="math notranslate nohighlight">
+\[
+P_{\text{hydrostatic}} = \rho g h
+\]</div>
+</div>
+<p>This important result tells us that the pressure exerted by a fluid column depends only on its density (<span class="math notranslate nohighlight">\(\rho\)</span>), height (<span class="math notranslate nohighlight">\(h\)</span>), and gravity (<span class="math notranslate nohighlight">\(g\)</span>)—not on the shape of the container or the total amount of fluid. The term <span class="math notranslate nohighlight">\(\rho g\)</span> is also known as the <strong>specific weight</strong>, <span class="math notranslate nohighlight">\(\gamma\)</span>. So, the equation is often written as <span class="math notranslate nohighlight">\(P = \gamma h\)</span>.</p>
+<div class="admonition-key-concept admonition">
+<p class="admonition-title">Key Concept</p>
+<p><strong>The Fundamental Rule of Manometry</strong>
+The analysis of any manometer, no matter how complex, relies on one simple, crucial rule:
+<em>The pressure at any two points at the same horizontal level in a single, continuous fluid at rest is the same.</em></p>
+<p>Why is this true? Imagine if the pressure at point A was higher than at point B on the same horizontal level. This pressure difference would create a net force, causing the fluid to flow from A to B. But a manometer contains fluid <em>at rest</em> (in static equilibrium). Therefore, there can be no net forces, and the pressures must be equal. We use this rule by drawing a horizontal “datum” line at an interface between fluids and equating the pressures on the left and right sides of that line.</p>
+</div>
+</section>
+<section id="the-simple-u-tube-manometer">
+<h3>The Simple U-Tube Manometer<a class="headerlink" href="#the-simple-u-tube-manometer" title="Link to this heading">#</a></h3>
+<p>The most common type of manometer is a U-shaped tube containing a dense liquid (often mercury or colored water), known as the manometer fluid.</p>
+<div class="admonition-key-concept admonition">
+<p class="admonition-title">Key Concept</p>
+<p><strong>Measuring the Gauge Pressure of a Gas</strong>
+Consider a U-tube manometer with one end connected to a tank of pressurized gas and the other end open to the atmosphere. The gas pushes the manometer fluid down on the left side and up on the right side. To find the pressure of the gas, we apply our fundamental rule at the lowest fluid interface (we’ll call this our datum line).
+<span class="math notranslate nohighlight">\(P_{\text{left at datum}} = P_{\text{right at datum}}\)</span></p>
+<ul class="simple">
+<li><p><strong>Pressure on the Left Side:</strong> The pressure at the datum line is simply the pressure of the gas, <span class="math notranslate nohighlight">\(P_{gas}\)</span>. We can ignore the weight of the small column of gas above the datum because the density of gas is thousands of times smaller than the density of the liquid, making its contribution negligible.</p></li>
+<li><p><strong>Pressure on the Right Side:</strong> The pressure at the datum line is the sum of two pressures: the atmospheric pressure (<span class="math notranslate nohighlight">\(P_{atm}\)</span>) pushing down on the open end, plus the hydrostatic pressure from the column of manometer fluid of height <span class="math notranslate nohighlight">\(h\)</span> that is above the datum.
+So, <span class="math notranslate nohighlight">\(P_{\text{right}} = P_{atm} + \rho_{\text{fluid}} g h\)</span>.</p></li>
+</ul>
+</div>
+<p>Equating the two sides gives the absolute pressure of the gas: <span class="math notranslate nohighlight">\(P_{gas} = P_{atm} + \rho g h\)</span>. More often, we are interested in the <strong>gauge pressure</strong>.</p>
+<div class="admonition-important-formula admonition">
+<p class="admonition-title">Important Formula</p>
+<p><strong>U-Tube Manometer Gauge Pressure</strong></p>
+<div class="math notranslate nohighlight">
+\[
+P_{gas, \text{gauge}} = P_{gas} - P_{atm} = \rho g h
+\]</div>
+</div>
+</section>
+<section id="applying-manometry-equations-from-first-principles">
+<h3>Applying Manometry Equations from First Principles<a class="headerlink" href="#applying-manometry-equations-from-first-principles" title="Link to this heading">#</a></h3>
+<div class="admonition-key-concept admonition">
+<p class="admonition-title">Key Concept</p>
+<p><strong>The “Walking” Method: A Universal Approach</strong>
+Instead of memorizing a different formula for every type of manometer, it is much more powerful to use a single, universal method. We call this the “walking” method:</p>
+<ol class="arabic simple">
+<li><p>Start at a point of known (or desired) pressure.</p></li>
+<li><p>“Walk” through the continuous fluid paths to the other end.</p></li>
+<li><p>Whenever you move <strong>down</strong> a vertical distance <span class="math notranslate nohighlight">\(h\)</span>, you <strong>add</strong> the hydrostatic pressure of that fluid column (<span class="math notranslate nohighlight">\(+\rho g h\)</span>). Whenever you move <strong>up</strong> a vertical distance <span class="math notranslate nohighlight">\(h\)</span>, you <strong>subtract</strong> the hydrostatic pressure (<span class="math notranslate nohighlight">\(-\rho g h\)</span>).</p></li>
+</ol>
+</div>
+<div class="admonition-key-variables-definitions admonition">
+<p class="admonition-title">Key Variables &amp; Definitions</p>
+<p><strong>Piezometer Tube</strong>
+This is the simplest manometer: a single vertical tube attached to a container of liquid.</p>
+<ul class="simple">
+<li><p><strong>Equation:</strong> <span class="math notranslate nohighlight">\(P_{A,gauge} = \gamma_1 h_1 = \rho_1 g h_1\)</span>.</p></li>
+<li><p><strong>Explanation:</strong> Start at the surface of the liquid in the tube, which is at atmospheric pressure (<span class="math notranslate nohighlight">\(P_{atm}\)</span>). Walk <em>down</em> a height <span class="math notranslate nohighlight">\(h_1\)</span> through the fluid to point A. This means we add pressure: <span class="math notranslate nohighlight">\(P_A = P_{atm} + \gamma_1 h_1\)</span>. The gauge pressure is therefore just <span class="math notranslate nohighlight">\(\gamma_1 h_1\)</span>. This only works for measuring liquid pressures that are greater than atmospheric.</p></li>
+</ul>
+</div>
+<div class="admonition-key-variables-definitions admonition">
+<p class="admonition-title">Key Variables &amp; Definitions</p>
+<p><strong>Inclined Manometer</strong>
+This is a variation of the differential manometer designed for measuring very small pressure differences with high precision.</p>
+<p><strong>The Principle of Amplification:</strong> The analysis is identical to the differential manometer, with one key difference. The vertical height of the manometer fluid column, <span class="math notranslate nohighlight">\(h_2\)</span>, is not measured directly. Instead, we measure the much larger displacement, <span class="math notranslate nohighlight">\(l_2\)</span>, along the inclined tube. From trigonometry, the vertical height is simply:
+$<span class="math notranslate nohighlight">\(h_2 = l_2 \sin(\theta)\)</span><span class="math notranslate nohighlight">\(
+By making the angle \)</span>\theta<span class="math notranslate nohighlight">\( small, a very small vertical change \)</span>h_2<span class="math notranslate nohighlight">\( (due to a small pressure difference) results in a large, easily readable displacement \)</span>l_2$, effectively amplifying the measurement.</p>
+<p><strong>Formula:</strong>
+$<span class="math notranslate nohighlight">\(P_A - P_B = \gamma_2 l_2 \sin(\theta) + \gamma_3 h_3 - \gamma_1 h_1\)</span>$</p>
+</div>
+<div class="admonition-key-variables-definitions admonition">
+<p class="admonition-title">Key Variables &amp; Definitions</p>
+<p><strong>Differential U-Tube Manometer</strong>
+This device is extremely useful as it measures the pressure <strong>difference</strong> between two points, A and B, which might both be at high pressure.</p>
+<p><strong>Formula:</strong>
+$<span class="math notranslate nohighlight">\(P_A - P_B = \gamma_2 h_2 + \gamma_3 h_3 - \gamma_1 h_1\)</span>$</p>
+<p><strong>Explanation using the “Walking” Method:</strong></p>
+<ol class="arabic simple">
+<li><p>Start at point A, where the pressure is <span class="math notranslate nohighlight">\(P_A\)</span>.</p></li>
+<li><p>Walk <strong>down</strong> through fluid 1 by a height <span class="math notranslate nohighlight">\(h_1\)</span>. The pressure increases: <span class="math notranslate nohighlight">\(P_A + \gamma_1 h_1\)</span>. You are now at the lowest point on the left.</p></li>
+<li><p>Move horizontally across the continuous manometer fluid (fluid 2) to the right side. The pressure does not change.</p></li>
+<li><p>Now walk <strong>up</strong> through the manometer fluid (fluid 2) by a height <span class="math notranslate nohighlight">\(h_2\)</span>. The pressure decreases: <span class="math notranslate nohighlight">\(P_A + \gamma_1 h_1 - \gamma_2 h_2\)</span>.</p></li>
+<li><p>Continue walking <strong>up</strong> through fluid 3 by a height <span class="math notranslate nohighlight">\(h_3\)</span> to get to point B. The pressure decreases again: <span class="math notranslate nohighlight">\(P_A + \gamma_1 h_1 - \gamma_2 h_2 - \gamma_3 h_3\)</span>.</p></li>
+<li><p>The expression you are left with is the pressure at point B. So, <span class="math notranslate nohighlight">\(P_B = P_A + \gamma_1 h_1 - \gamma_2 h_2 - \gamma_3 h_3\)</span>.</p></li>
+<li><p>Rearranging this equation to solve for the pressure difference, <span class="math notranslate nohighlight">\(P_A - P_B\)</span>, gives the formula above.</p></li>
+</ol>
+</div>
+</section>
+<section id="example-hydrostatic-balance-in-an-inclined-manometer">
+<h3>Example: Hydrostatic Balance in an Inclined Manometer<a class="headerlink" href="#example-hydrostatic-balance-in-an-inclined-manometer" title="Link to this heading">#</a></h3>
+<div class="proof example admonition" id="example-9">
+<p class="admonition-title"><span class="caption-number">Example 54 </span> (Pressure Change in a Multi-Fluid Inclined Manometer)</p>
+<section class="example-content" id="proof-content">
+<p><strong>Question:</strong> An inclined manometer contains water, oil (SG=0.85), and mercury (SG=13.6). The left vertical tube has an inner diameter (ID) of 2 cm, and the inclined right tube has an ID of 1 cm. Initially, the system is at equilibrium. Then, the pressure <span class="math notranslate nohighlight">\(P_1\)</span> is increased by 50 mm of mercury. What is the change in the reading along the inclined scale (<span class="math notranslate nohighlight">\(y\)</span>)? The angle of inclination is 30<span class="math notranslate nohighlight">\(^\circ\)</span>.</p>
+</section>
+</div><div class="admonition-solution-steps admonition">
+<p class="admonition-title">Solution Steps</p>
+<p><strong>Step 1: Strategy: Hydrostatic and Volume Balances</strong>
+This is a hydrostatic problem, but because the fluid levels change, we must also consider a volume (or mass) balance. The plan is:</p>
+<ol class="arabic simple">
+<li><p>Use a <strong>volume balance</strong> on the mercury to find a geometric relationship between the level drop in the left tube (<span class="math notranslate nohighlight">\(x\)</span>) and the displacement along the incline in the right tube (<span class="math notranslate nohighlight">\(y\)</span>).</p></li>
+<li><p>Use a <strong>hydrostatic pressure balance</strong> to relate the applied change in pressure (<span class="math notranslate nohighlight">\(\Delta P_1\)</span>) to the changes in the fluid column heights.</p></li>
+<li><p>Combine these two relationships to solve for the unknown displacement, <span class="math notranslate nohighlight">\(y\)</span>.</p></li>
+</ol>
+<p><strong>Step 2: Relate Displacements with a Volume Balance:</strong>
+When the pressure <span class="math notranslate nohighlight">\(P_1\)</span> increases, it pushes the mercury down in the left tube by a vertical distance <span class="math notranslate nohighlight">\(x\)</span>. This volume of mercury must move into the right tube, causing the level to rise a distance <span class="math notranslate nohighlight">\(y\)</span> along the incline. Since mercury is incompressible, the volume is conserved.
+$<span class="math notranslate nohighlight">\((\text{Volume of mercury lost from left tube}) = (\text{Volume of mercury gained in right tube})\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(A_{\text{left}} \cdot x = A_{\text{right}} \cdot y\)</span><span class="math notranslate nohighlight">\(
+Since area \)</span>A = \pi d^2 / 4<span class="math notranslate nohighlight">\(, the \)</span>\pi/4<span class="math notranslate nohighlight">\( terms cancel:
+\)</span><span class="math notranslate nohighlight">\(d_{\text{left}}^2 x = d_{\text{right}}^2 y \implies (2 \, \text{cm})^2 x = (1 \, \text{cm})^2 y \implies \textbf{y = 4x}\)</span>$
+This is a crucial geometric constraint: the displacement along the incline is four times the vertical drop in the left tube.</p>
+<p><strong>Step 3: Relate Pressure Change to Displacements via Hydrostatics:</strong>
+By writing the full hydrostatic balance equation from <span class="math notranslate nohighlight">\(P_1\)</span> to <span class="math notranslate nohighlight">\(P_2\)</span> for the initial and final states and then subtracting them, we can arrive at an equation for the <em>change</em> in pressure. The change in pressure, <span class="math notranslate nohighlight">\(\Delta P_1 = P_1' - P_1\)</span>, is balanced by the net change in the weights of the fluid columns due to the displacements <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>:
+$<span class="math notranslate nohighlight">\(\Delta P_1 = -\gamma_{\text{oil}} (y \sin\theta) + \gamma_{\text{Hg}} (y \sin\theta + x) - \gamma_{\text{water}} (x)\)</span>$</p>
+<p><strong>Step 4: Solve for the Displacements:</strong>
+Substitute the geometric constraint <span class="math notranslate nohighlight">\(y=4x\)</span> into the pressure change equation:
+$<span class="math notranslate nohighlight">\(\Delta P_1 = x \cdot [-\gamma_{\text{oil}} (4 \sin\theta) + \gamma_{\text{Hg}} (4 \sin\theta + 1) - \gamma_{\text{water}}]\)</span><span class="math notranslate nohighlight">\(
+Using SI units: \)</span>\Delta P_1 = 50 , \text{mmHg} \times 133.32 , \text{Pa/mmHg} = 6666<span class="math notranslate nohighlight">\( Pa. The specific weights are \)</span>\gamma_{\text{water}} = 1000 \times 9.81 = 9810<span class="math notranslate nohighlight">\( N/m\)</span>^3<span class="math notranslate nohighlight">\(, \)</span>\gamma_{\text{oil}} = 0.85 \times 9810 = 8338.5<span class="math notranslate nohighlight">\( N/m\)</span>^3<span class="math notranslate nohighlight">\(, \)</span>\gamma_{\text{Hg}} = 13.6 \times 9810 = 133,416<span class="math notranslate nohighlight">\( N/m\)</span>^3<span class="math notranslate nohighlight">\(, and \)</span>\sin(30^\circ) = 0.5<span class="math notranslate nohighlight">\(.
+\)</span><span class="math notranslate nohighlight">\(6666 = x \cdot [-8338.5(4 \times 0.5) + 133416(4 \times 0.5 + 1) - 9810]\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(6666 = x \cdot [-16677 + 133416(3) - 9810] = x \cdot [373,761]\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(x = \frac{6666}{373761} = 0.0178 \, \text{m} = 1.78 \, \text{cm}\)</span><span class="math notranslate nohighlight">\(
+The change in the reading on the inclined scale is:
+\)</span><span class="math notranslate nohighlight">\(y = 4x = 4 \times 1.78 = 7.12 \, \text{cm}\)</span>$
+A pressure increase of 50 mmHg causes the reading on the incline to change by <strong>7.1 cm</strong>.</p>
+</div>
+</section>
+</section>
+<section id="viscosity-and-shear-stress">
+<h2>Viscosity and Shear Stress<a class="headerlink" href="#viscosity-and-shear-stress" title="Link to this heading">#</a></h2>
+<p>Viscosity is arguably the most important property of a fluid when it comes to analyzing its motion. It describes the fluid’s inherent “thickness” or resistance to flowing. Understanding the relationship between viscosity and the forces that cause flow (shear stress) is fundamental to nearly all problems in fluid dynamics, from pumping oil through a pipe to designing aerodynamic vehicles.</p>
+<section id="fundamental-equations-and-definitions">
+<h3>Fundamental Equations and Definitions<a class="headerlink" href="#fundamental-equations-and-definitions" title="Link to this heading">#</a></h3>
+<div class="admonition-important-formula admonition">
+<p class="admonition-title">Important Formula</p>
+<p><strong>Newton’s Law of Viscosity</strong>
+For many common fluids, the relationship between the internal “smearing” force (shear stress) and the rate of fluid deformation is linear. This relationship is known as Newton’s Law of Viscosity:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau = \mu \frac{du}{dy}
+\]</div>
+</div>
+<div class="admonition-key-variables-definitions admonition">
+<p class="admonition-title">Key Variables &amp; Definitions</p>
+<p><strong>Variable Definitions</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\tau\)</span>: <strong>Shear Stress</strong> - This is the force per unit area that acts <em>parallel</em> (tangential) to a surface. Imagine spreading honey on toast; the force you apply with the knife parallel to the bread creates a shear stress in the honey. Its units are Pascals (Pa) or Newtons per square meter (N/m<span class="math notranslate nohighlight">\(^2\)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mu\)</span>: <strong>Dynamic Viscosity</strong> - This is a fluid property that measures its intrinsic resistance to flow. Honey has a high viscosity; water has a low viscosity. Its units are Pascal-seconds (Pa<span class="math notranslate nohighlight">\(\cdot\)</span>s).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span>: <strong>Velocity Gradient</strong> (or Rate of Shearing Strain) - This term describes how quickly the fluid velocity changes as you move away from a surface. A steep gradient means the velocity changes rapidly over a short distance. Its units are inverse seconds (s<span class="math notranslate nohighlight">\(^{-1}\)</span>).</p></li>
+</ul>
+</div>
+</section>
+<section id="conceptual-framework">
+<h3>Conceptual Framework<a class="headerlink" href="#conceptual-framework" title="Link to this heading">#</a></h3>
+<div class="admonition-key-concept admonition">
+<p class="admonition-title">Key Concept</p>
+<p><strong>What is Shear Stress?</strong>
+A fluid, by definition, is a substance that deforms continuously when a shear stress is applied, no matter how small. A shear stress is created when a force acts tangentially on a surface. The classic way to visualize this is to consider a fluid contained between two parallel plates. If we pull the top plate sideways, we are applying a shear stress to the fluid.</p>
+</div>
+<div class="admonition-key-concept admonition">
+<p class="admonition-title">Key Concept</p>
+<p><strong>The No-Slip Condition and the Velocity Gradient</strong>
+The scenario in Figure 1 illustrates two of the most important concepts in fluid mechanics:</p>
+<ol class="arabic simple">
+<li><p><strong>The No-Slip Condition:</strong> This is an empirical observation that a fluid in direct contact with a solid surface will “stick” to it and have the exact same velocity as that surface. In Figure 1, the fluid touching the bottom plate (<span class="math notranslate nohighlight">\(y=0\)</span>) has zero velocity, and the fluid touching the top plate (<span class="math notranslate nohighlight">\(y=H\)</span>) moves with the plate’s velocity, <span class="math notranslate nohighlight">\(U\)</span>.</p></li>
+<li><p><strong>The Velocity Gradient:</strong> Because of the no-slip condition, a velocity profile must develop within the fluid, transitioning from zero at the bottom to <span class="math notranslate nohighlight">\(U\)</span> at the top. The rate at which the velocity changes from one fluid layer to the next, <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span>, is the velocity gradient. It is this gradient that, when multiplied by the fluid’s viscosity, gives the shear stress.</p></li>
+</ol>
+</div>
+</section>
+<section id="newtonian-and-non-newtonian-fluids">
+<h3>Newtonian and Non-Newtonian Fluids<a class="headerlink" href="#newtonian-and-non-newtonian-fluids" title="Link to this heading">#</a></h3>
+<p>The relationship between shear stress (<span class="math notranslate nohighlight">\(\tau\)</span>) and the rate of strain (<span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span>) defines the type of fluid.</p>
+<div class="admonition-key-concept admonition">
+<p class="admonition-title">Key Concept</p>
+<p><strong>Newtonian Fluids</strong>
+A fluid is <strong>Newtonian</strong> if the shear stress is linearly proportional to the rate of shearing strain. For these fluids, viscosity (<span class="math notranslate nohighlight">\(\mu\)</span>) is a constant property that only depends on temperature and pressure, not on how fast the fluid is being sheared. This simple relationship, <span class="math notranslate nohighlight">\(\tau = \mu \frac{du}{dy}\)</span>, holds true for many common fluids like water, oil, gasoline, and air.</p>
+</div>
+<div class="admonition-key-concept admonition">
+<p class="admonition-title">Key Concept</p>
+<p><strong>Non-Newtonian Fluids</strong>
+Many important fluids do not follow this simple linear relationship. Their “apparent viscosity” changes depending on the applied shear rate.</p>
+<ul class="simple">
+<li><p><strong>Shear Thinning (Pseudoplastic):</strong> Apparent viscosity <em>decreases</em> as the shear rate increases. They get “thinner” the faster you stir them. This is the most common non-Newtonian behavior. Examples: paint, blood, latex.</p></li>
+<li><p><strong>Shear Thickening (Dilatant):</strong> Apparent viscosity <em>increases</em> with increasing shear rate. They get “thicker” the faster you stir them. Example: a cornstarch and water mixture (oobleck).</p></li>
+<li><p><strong>Bingham Plastics:</strong> These are materials that require a minimum stress, called a <strong>yield stress</strong> (<span class="math notranslate nohighlight">\(\tau_0\)</span>), to be applied before they begin to flow at all. Below this stress, they behave like a solid. Example: ketchup, toothpaste, mayonnaise.</p></li>
+</ul>
+</div>
+</section>
+<section id="example-film-flow-down-an-inclined-surface">
+<h3>Example: Film Flow Down an Inclined Surface<a class="headerlink" href="#example-film-flow-down-an-inclined-surface" title="Link to this heading">#</a></h3>
+<div class="proof example admonition" id="example-10">
+<p class="admonition-title"><span class="caption-number">Example 55 </span> (Shear Stress in Film Flow)</p>
+<section class="example-content" id="proof-content">
+<p><strong>Question:</strong> Crude oil with a specific gravity of 0.85 flows steadily in a thin film down a wide surface inclined 30<span class="math notranslate nohighlight">\(^\circ\)</span> below the horizontal. The film has a thickness of 0.125 inches. The velocity profile is given by the equation:</p>
+<div class="math notranslate nohighlight">
+\[
+u(y) = \frac{\rho g \sin\theta}{\mu} \left(Hy - \frac{y^2}{2}\right)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(y\)</span> is the distance perpendicular to the surface. Determine the magnitude of the shear stress that the fluid exerts on the inclined surface.</p>
+</section>
+</div><div class="admonition-solution-steps admonition">
+<p class="admonition-title">Solution Steps</p>
+<p><strong>Step 1: Strategy: Apply Newton’s Law of Viscosity</strong>
+Our goal is to find the shear stress, <span class="math notranslate nohighlight">\(\tau\)</span>, at the solid surface (<span class="math notranslate nohighlight">\(y=0\)</span>). The governing equation is <span class="math notranslate nohighlight">\(\tau = \mu \frac{du}{dy}\)</span>. The plan is to:</p>
+<ol class="arabic simple">
+<li><p>Differentiate the given velocity profile <span class="math notranslate nohighlight">\(u(y)\)</span> to find the velocity gradient, <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span>.</p></li>
+<li><p>Substitute this gradient into Newton’s law of viscosity to get an expression for shear stress, <span class="math notranslate nohighlight">\(\tau(y)\)</span>.</p></li>
+<li><p>Evaluate this expression at the surface (<span class="math notranslate nohighlight">\(y=0\)</span>) to find the specific shear stress we need.</p></li>
+</ol>
+<p><strong>Step 2: Differentiate the Velocity Profile:</strong>
+We are given <span class="math notranslate nohighlight">\(u(y)\)</span>. The terms <span class="math notranslate nohighlight">\(\rho, g, \sin\theta, \mu,\)</span> and <span class="math notranslate nohighlight">\(H\)</span> are all constants with respect to the variable <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{du}{dy} = \frac{d}{dy} \left[ \frac{\rho g \sin\theta}{\mu} \left(Hy - \frac{y^2}{2}\right) \right] = \frac{\rho g \sin\theta}{\mu} \cdot \frac{d}{dy}\left(Hy - \frac{y^2}{2}\right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\frac{du}{dy} = \frac{\rho g \sin\theta}{\mu} (H - y)
+\]</div>
+<p><strong>Step 3: Calculate the Shear Stress Expression, <span class="math notranslate nohighlight">\(\tau(y)\)</span>:</strong>
+Now, substitute the expression for <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> into the shear stress equation, <span class="math notranslate nohighlight">\(\tau(y) = \mu \frac{du}{dy}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau(y) = \mu \left[ \frac{\rho g \sin\theta}{\mu} (H - y) \right]
+\]</div>
+<p>A very interesting thing happens: the viscosity term <span class="math notranslate nohighlight">\(\mu\)</span> cancels out. This means for this specific gravity-driven film flow, the shear stress within the fluid does not depend on the fluid’s viscosity, but rather on the weight of the fluid above it.</p>
+<div class="math notranslate nohighlight">
+\[
+\tau(y) = \rho g (H - y) \sin\theta
+\]</div>
+<p><strong>Step 4: Evaluate Shear Stress at the Surface (<span class="math notranslate nohighlight">\(y=0\)</span>):</strong>
+The question asks for the shear stress acting <em>on the surface</em>. This corresponds to the position <span class="math notranslate nohighlight">\(y=0\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\tau_{\text{surface}} = \tau(0) = \rho g (H-0) \sin\theta = \rho g H \sin\theta
+\]</div>
+<p><strong>Step 5: Perform the Numerical Calculation:</strong>
+We must use a consistent set of units. The source problem uses English Engineering units, so we will use that system.</p>
+<ul class="simple">
+<li><p><strong>Density (<span class="math notranslate nohighlight">\(\rho\)</span>):</strong> <span class="math notranslate nohighlight">\(\rho = (\text{Specific Gravity}) \times \rho_{\text{water}}\)</span>. In this system, <span class="math notranslate nohighlight">\(\rho_{\text{water}} = 1.94 \, \text{slugs/ft}^3\)</span>.
+$<span class="math notranslate nohighlight">\(\rho = 0.85 \cdot (1.94 \, \text{slugs/ft}^3) = 1.649 \, \text{slugs/ft}^3\)</span>$</p></li>
+<li><p><strong>Gravity (<span class="math notranslate nohighlight">\(g\)</span>):</strong> <span class="math notranslate nohighlight">\(g = 32.2 \, \text{ft/s}^2\)</span>.</p></li>
+<li><p><strong>Film Thickness (<span class="math notranslate nohighlight">\(H\)</span>):</strong> <span class="math notranslate nohighlight">\(H = 0.125 \, \text{in} \times \frac{1 \, \text{ft}}{12 \, \text{in}} = 0.01042 \, \text{ft}\)</span>.</p></li>
+<li><p><strong>Angle (<span class="math notranslate nohighlight">\(\theta\)</span>):</strong> <span class="math notranslate nohighlight">\(\sin(30^\circ) = 0.5\)</span>.</p></li>
+</ul>
+<p>Now, substitute these values. The unit <code class="docutils literal notranslate"><span class="pre">slug</span></code> is defined such that 1 lb<span class="math notranslate nohighlight">\(_\text{f}\)</span> = 1 slug <span class="math notranslate nohighlight">\(\cdot\)</span> ft/s<span class="math notranslate nohighlight">\(^2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\tau_{\text{surface}} = (1.649 \, \frac{\text{slug}}{\text{ft}^3}) \cdot (32.2 \, \frac{\text{ft}}{\text{s}^2}) \cdot (0.01042 \, \text{ft}) \cdot (0.5)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\tau_{\text{surface}} = 0.2766 \, \frac{\text{slug} \cdot \text{ft}}{\text{ft}^2 \cdot \text{s}^2} = 0.2766 \, \frac{\text{lb}_\text{f}}{\text{ft}^2} \approx \textbf{0.277 lb\textsubscript{f}/ft\textsuperscript{2}}
+\]</div>
+</div>
+</section>
+<section id="example-determining-viscosity-experimentally">
+<h3>Example: Determining Viscosity Experimentally<a class="headerlink" href="#example-determining-viscosity-experimentally" title="Link to this heading">#</a></h3>
+<div class="proof example admonition" id="example-11">
+<p class="admonition-title"><span class="caption-number">Example 56 </span> (Viscosity Measurement in an Annulus)</p>
+<section class="example-content" id="proof-content">
+<p><strong>Question:</strong> A toothpick is placed concentrically inside a 5 mm diameter straw full of a mysterious fluid. There is a 1 mm gap between the toothpick and the straw on all sides. A length of 50 mm of the toothpick is submerged in the fluid. When a constant force of 0.1 N is used to pull the toothpick out, it moves at a constant velocity of 0.1 m/s. What is the viscosity of the fluid? Assume the fluid is Newtonian and the velocity profile in the narrow gap is linear.</p>
+</section>
+</div><div class="admonition-solution-steps admonition">
+<p class="admonition-title">Solution Steps</p>
+<p><strong>Step 1: Strategy: Rearrange Newton’s Law of Viscosity</strong>
+Our governing equation is <span class="math notranslate nohighlight">\(\tau = \mu \frac{du}{dy}\)</span>. We want to find the viscosity, <span class="math notranslate nohighlight">\(\mu\)</span>. We can rearrange the equation to solve for it:
+$<span class="math notranslate nohighlight">\(\mu = \frac{\tau}{du/dy}\)</span><span class="math notranslate nohighlight">\(
+Our plan is to calculate the shear stress (\)</span>\tau<span class="math notranslate nohighlight">\() and the velocity gradient (\)</span>\frac{du}{dy}$) from the information given in the problem.</p>
+<p><strong>Step 2: Calculate the Shear Stress (<span class="math notranslate nohighlight">\(\tau\)</span>):</strong>
+Shear stress is the tangential force applied divided by the surface area over which it acts.
+$<span class="math notranslate nohighlight">\(\tau = \frac{F}{A}\)</span>$</p>
+<ul class="simple">
+<li><p><strong>Force (<span class="math notranslate nohighlight">\(F\)</span>):</strong> The problem states a constant pulling force of <span class="math notranslate nohighlight">\(F = 0.1\)</span> N.</p></li>
+<li><p><strong>Area (<span class="math notranslate nohighlight">\(A\)</span>):</strong> This is the cylindrical surface area of the toothpick that is in contact with the fluid.</p>
+<ul>
+<li><p>The straw has a 5 mm diameter. The annular gap is 1 mm on each side.</p></li>
+<li><p>Toothpick diameter <span class="math notranslate nohighlight">\(d_{\text{toothpick}} = d_{\text{straw}} - 2 \cdot (\text{gap}) = 5 \, \text{mm} - 2(1 \, \text{mm}) = 3 \, \text{mm} = 0.003 \, \text{m}\)</span>.</p></li>
+<li><p>Length in fluid <span class="math notranslate nohighlight">\(L = 50\)</span> mm = 0.050 m.
+$<span class="math notranslate nohighlight">\(A = (\text{circumference}) \times (\text{length}) = \pi d_{\text{toothpick}} L\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(= \pi \cdot (0.003 \, \text{m}) \cdot (0.050 \, \text{m}) = 0.0004712 \, \text{m}^2\)</span>$</p></li>
+</ul>
+</li>
+</ul>
+<p>Now we can calculate the shear stress:
+$<span class="math notranslate nohighlight">\(\tau = \frac{0.1 \, \text{N}}{0.0004712 \, \text{m}^2} = 212.2 \, \text{N/m}^2 = \textbf{212.2 Pa}\)</span>$</p>
+<p><strong>Step 3: Calculate the Velocity Gradient (<span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span>):</strong>
+<strong>The Linear Velocity Profile Assumption:</strong> For fluid flow in a very narrow gap (an annulus), it is often a very good approximation to assume the velocity changes linearly across the gap. This means we can approximate the differential term <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> with the difference term <span class="math notranslate nohighlight">\(\frac{\Delta u}{\Delta y}\)</span>.</p>
+<ul class="simple">
+<li><p>The change in velocity, <span class="math notranslate nohighlight">\(\Delta u\)</span>, is the difference between the toothpick’s velocity (0.1 m/s) and the stationary straw’s velocity (0 m/s). So, <span class="math notranslate nohighlight">\(\Delta u = 0.1 \, \text{m/s}\)</span>.</p></li>
+<li><p>The distance over which this change occurs, <span class="math notranslate nohighlight">\(\Delta y\)</span>, is the size of the gap: <span class="math notranslate nohighlight">\(1 \, \text{mm} = 0.001 \, \text{m}\)</span>.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{du}{dy} \approx \frac{\Delta u}{\Delta y} = \frac{0.1 \, \text{m/s}}{0.001 \, \text{m}} = \textbf{100 s\textsuperscript{-1}}
+\]</div>
+<p><strong>Step 4: Solve for Viscosity (<span class="math notranslate nohighlight">\(\mu\)</span>):</strong>
+Now we can substitute our calculated values for <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> into our rearranged equation from Step 1.</p>
+<p><strong>Calculating Viscosity</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\mu = \frac{\tau}{du/dy} = \frac{212.2 \, \text{Pa}}{100 \, \text{s}^{-1}} = 2.122 \, \text{Pa}\cdot\text{s}
+\]</div>
+<p><strong>Step 5: Interpret the Result:</strong>
+The standard SI unit for viscosity is the Pascal-second (Pa<span class="math notranslate nohighlight">\(\cdot\)</span>s). A more common unit in practice is the centipoise (cP), where 1 Pa<span class="math notranslate nohighlight">\(\cdot\)</span>s = 1000 cP.</p>
+<div class="math notranslate nohighlight">
+\[
+\mu = 2.122 \, \text{Pa}\cdot\text{s} \times \frac{1000 \, \text{cP}}{1 \, \text{Pa}\cdot\text{s}} = 2122 \, \text{cP}
+\]</div>
+<p>For context, the viscosity of water at room temperature is about 1 cP, olive oil is about 80 cP, and honey is around 2,000-10,000 cP. The mysterious fluid has a viscosity similar to that of honey or a thick syrup.</p>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="thermodynamics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Basic Thermodynamics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="heattransfer.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Complete Heat Transfer Fundamentals</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mechanical-energy-balance">Mechanical Energy Balance</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamental-equations">Fundamental Equations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-from-the-first-law-of-thermodynamics">Derivation from the First Law of Thermodynamics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-flow-from-a-coffee-urn">Example: Flow from a Coffee Urn</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-vertical-water-jet">Example: Vertical Water Jet</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-bernoulli-equation-a-force-balance-approach">The Bernoulli Equation: A Force Balance Approach</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Fundamental Equations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation-of-the-bernoulli-equation">Derivation of the Bernoulli Equation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-the-bernoulli-equation">Applications of the Bernoulli Equation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensionless-groups">Dimensionless Groups</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-reynolds-number-re">The Reynolds Number (Re)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-calculating-the-reynolds-number">Example: Calculating the Reynolds Number</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-important-dimensionless-groups-in-chemical-engineering">Other Important Dimensionless Groups in Chemical Engineering</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fluid-pressure-vs-elevation-incompressible-vs-compressible-cases">Fluid Pressure vs. Elevation (Incompressible vs. Compressible Cases)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fundamental-equation-of-fluid-statics">The Fundamental Equation of Fluid Statics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#case-1-the-incompressible-fluid">Case 1: The Incompressible Fluid</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#case-2-the-compressible-fluid-isothermal-ideal-gas">Case 2: The Compressible Fluid (Isothermal Ideal Gas)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-pressure-calculation-at-high-altitude">Example: Pressure Calculation at High Altitude</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pipe-flow-determining-pumping-power">Pipe Flow: Determining Pumping Power</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-pumping-water-for-a-ski-resort">Example: Pumping Water for a Ski Resort</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#air-flow-through-a-constriction">Air Flow Through a Constriction</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-velocity-in-a-constriction-venturi-effect">Example: Velocity in a Constriction (Venturi Effect)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manometry">Manometry</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-principle-of-hydrostatic-head">The Principle of Hydrostatic Head</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-simple-u-tube-manometer">The Simple U-Tube Manometer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-manometry-equations-from-first-principles">Applying Manometry Equations from First Principles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-hydrostatic-balance-in-an-inclined-manometer">Example: Hydrostatic Balance in an Inclined Manometer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viscosity-and-shear-stress">Viscosity and Shear Stress</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fundamental-equations-and-definitions">Fundamental Equations and Definitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conceptual-framework">Conceptual Framework</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#newtonian-and-non-newtonian-fluids">Newtonian and Non-Newtonian Fluids</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-film-flow-down-an-inclined-surface">Example: Film Flow Down an Inclined Surface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-determining-viscosity-experimentally">Example: Determining Viscosity Experimentally</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By PE Exam Preparation
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

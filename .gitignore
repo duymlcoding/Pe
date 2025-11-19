@@ -1,7 +1,11 @@
 # Jupyter Book build files
-mynotes/_build/
-_build/
+# Allow built HTML to be committed
+# mynotes/_build/
+# _build/
 .jupyter_cache/
+.doctrees/
+**/build/.doctrees/
+**/_build/.doctrees/
 
 # Python
 __pycache__/
