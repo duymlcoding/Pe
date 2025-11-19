@@ -1,0 +1,117 @@
+# Book settings
+# =============
+title: "Chemical Engineering PE Exam Study Guide"
+author: "PE Exam Preparation"
+copyright: "2025"
+logo: ""
+
+# Repository settings
+# ===================
+repository:
+  url: https://github.com/duymlcoding/Pe
+  path_to_book: mynotes
+  branch: main
+
+# HTML output settings
+# ====================
+html:
+  favicon: ""
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
+  home_page_in_navbar: true
+  baseurl: ""
+  extra_footer: |
+    <div>
+      Built with <a href="https://jupyterbook.org">Jupyter Book</a>
+    </div>
+
+# Execution settings
+# ==================
+execute:
+  execute_notebooks: "off"
+  timeout: 300
+
+# Parse settings
+# ==============
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+    - tasklist
+
+# LaTeX settings
+# ==============
+latex:
+  latex_engine: pdflatex
+  latex_documents:
+    targetname: book.tex
+
+# Sphinx configuration
+# ====================
+sphinx:
+  extra_extensions:
+    - sphinx_proof
+    - sphinx_togglebutton
+    - sphinx_copybutton
+  config:
+    html_theme: sphinx_book_theme
+    html_theme_options:
+      repository_url: https://github.com/duymlcoding/Pe
+      use_repository_button: true
+      use_issues_button: true
+      use_edit_page_button: true
+      home_page_in_navbar: true
+      navigation_with_keys: true
+      show_toc_level: 2
+      logo:
+        text: "Chemical Engineering PE"
+    html_title: "Chemical Engineering PE Exam Study Guide"
+    html_static_path:
+      - _static
+
+    # MathJax configuration for math rendering
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    mathjax3_config:
+      tex:
+        inlineMath:
+          - ['$', '$']
+          - ['\(', '\)']
+        displayMath:
+          - ['$$', '$$']
+          - ['\[', '\]']
+        processEscapes: true
+        processEnvironments: true
+        macros:
+          "\\N": "\\mathbb{N}"
+          "\\Z": "\\mathbb{Z}"
+          "\\Q": "\\mathbb{Q}"
+          "\\R": "\\mathbb{R}"
+          "\\C": "\\mathbb{C}"
+          "\\E": "\\mathbb{E}"
+          "\\Var": "\\mathrm{Var}"
+          "\\Cov": "\\mathrm{Cov}"
+
+# Bibliography settings (optional)
+# =================================
+bibtex_bibfiles:
+  - references.bib
+
+# Exclude patterns
+# ================
+exclude_patterns:
+  - _build
+  - Thumbs.db
+  - .DS_Store
+  - "**.ipynb_checkpoints"
+  - ".git"
+  - ".gitignore"
+  - "README.md"

@@ -1,0 +1,25 @@
+format: jb-book
+root: index
+title: Home
+
+chapters:
+  - file: chapters/massandenergybalance
+    title: "Mass and Energy Balance"
+
+  - file: chapters/thermodynamics
+    title: "Thermodynamics"
+
+  - file: chapters/fluidmechanics
+    title: "Fluid Mechanics"
+
+  - file: chapters/heattransfer
+    title: "Heat Transfer"
+
+  - file: chapters/masstransfer
+    title: "Mass Transfer"
+
+  - file: chapters/chemicalreactionengineering
+    title: "Chemical Reaction Engineering"
+
+  - file: chapters/chemicalandphaseequilibria
+    title: "Chemical and Phase Equilibria"
