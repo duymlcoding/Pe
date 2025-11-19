@@ -1,6 +1,6 @@
 # Book settings
 # =============
-title: "Chemical Engineering PE Exam Study Guide"
+title: "Introduction to Process Fundamentals"
 author: "PE Exam Preparation"
 copyright: "2025"
 logo: ""
@@ -73,8 +73,8 @@ sphinx:
       navigation_with_keys: true
       show_toc_level: 2
       logo:
-        text: "Chemical Engineering PE"
-    html_title: "Chemical Engineering PE Exam Study Guide"
+        text: "Process Fundamentals"
+    html_title: "Introduction to Process Fundamentals"
     html_static_path:
       - _static
 

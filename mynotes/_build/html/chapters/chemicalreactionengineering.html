@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Chemical Reaction Engineering &#8212; Chemical Engineering PE Exam Study Guide</title>
+    <title>Chemical Reaction Engineering &#8212; Introduction to Process Fundamentals</title>
   
   
   
@@ -152,7 +152,7 @@
   
   
   
-    <p class="title logo__title">Chemical Engineering PE</p>
+    <p class="title logo__title">Process Fundamentals</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -475,8 +475,8 @@ document.write(`
 <section id="first-order-reaction-kinetics">
 <h2>First-Order Reaction Kinetics<a class="headerlink" href="#first-order-reaction-kinetics" title="Link to this heading">#</a></h2>
 <p>First-order reactions are chemical reactions where the rate of reaction is directly proportional to the concentration of only one of the reactants. Understanding their behavior is crucial for reactor design and analysis.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Half-Life:</strong> The <strong>half-life</strong> (<span class="math notranslate nohighlight">\(t_{1/2}\)</span>) of a reaction is the time it takes for the concentration of a reactant to be reduced to half of its initial value. For a first-order reaction, the half-life is constant and does not depend on the initial concentration. This means that in every half-life interval, the amount of reactant will decrease by 50%. This property is unique to first-order processes and provides a powerful conceptual tool for quick estimations.</p>
 </div>
 <section id="visualizing-half-life">
@@ -486,34 +486,35 @@ document.write(`
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> A first-order reaction, <span class="math notranslate nohighlight">\(A \rightarrow B\)</span>, starts with 16 molecules of reactant A. After 100 seconds, 8 molecules of A remain and 8 molecules of B have been formed. What will the mixture look like at 300 seconds?</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Analyze the Initial Data and Define Knowns:</strong></p>
-<p>Initial molecules of A at <span class="math notranslate nohighlight">\(t=0\)</span> s: <span class="math notranslate nohighlight">\(N_{A0} = 16\)</span>.
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Analyze the Initial Data and Define Knowns:</strong></p>
+<p class="sd-card-text">Initial molecules of A at <span class="math notranslate nohighlight">\(t=0\)</span> s: <span class="math notranslate nohighlight">\(N_{A0} = 16\)</span>.
 Molecules of A at <span class="math notranslate nohighlight">\(t=100\)</span> s: <span class="math notranslate nohighlight">\(N_A = 8\)</span>.</p>
-<p>We observe that exactly half of the initial reactant A has been consumed in the first 100 seconds.</p>
-<p><strong>Step 2: Identify the Half-Life (<span class="math notranslate nohighlight">\(t_{1/2}\)</span>):</strong></p>
-<p>Since the reactant amount dropped by exactly 50% in 100 seconds: <span class="math notranslate nohighlight">\(t_{1/2} = 100 \, \text{s} \)</span></p>
-<p><strong>Step 3: Calculate Reactant Population at Each Half-Life Interval:</strong></p>
-<p>Track the population of A by repeatedly halving it for each 100 s interval:</p>
+<p class="sd-card-text">We observe that exactly half of the initial reactant A has been consumed in the first 100 seconds.</p>
+<p class="sd-card-text"><strong>Step 2: Identify the Half-Life (<span class="math notranslate nohighlight">\(t_{1/2}\)</span>):</strong></p>
+<p class="sd-card-text">Since the reactant amount dropped by exactly 50% in 100 seconds: <span class="math notranslate nohighlight">\(t_{1/2} = 100 \, \text{s} \)</span></p>
+<p class="sd-card-text"><strong>Step 3: Calculate Reactant Population at Each Half-Life Interval:</strong></p>
+<p class="sd-card-text">Track the population of A by repeatedly halving it for each 100 s interval:</p>
 <ul class="simple">
-<li><p>At <span class="math notranslate nohighlight">\(t=0\)</span> s: <span class="math notranslate nohighlight">\(N_A = 16\)</span>.</p></li>
-<li><p>At <span class="math notranslate nohighlight">\(t=100\)</span> s (1 half-life): <span class="math notranslate nohighlight">\(N_A = 8\)</span>.</p></li>
-<li><p>At <span class="math notranslate nohighlight">\(t=200\)</span> s (2 half-lives): <span class="math notranslate nohighlight">\(N_A = 4\)</span>.</p></li>
-<li><p>At <span class="math notranslate nohighlight">\(t=300\)</span> s (3 half-lives): <span class="math notranslate nohighlight">\(N_A = 2\)</span>.</p></li>
+<li><p class="sd-card-text">At <span class="math notranslate nohighlight">\(t=0\)</span> s: <span class="math notranslate nohighlight">\(N_A = 16\)</span>.</p></li>
+<li><p class="sd-card-text">At <span class="math notranslate nohighlight">\(t=100\)</span> s (1 half-life): <span class="math notranslate nohighlight">\(N_A = 8\)</span>.</p></li>
+<li><p class="sd-card-text">At <span class="math notranslate nohighlight">\(t=200\)</span> s (2 half-lives): <span class="math notranslate nohighlight">\(N_A = 4\)</span>.</p></li>
+<li><p class="sd-card-text">At <span class="math notranslate nohighlight">\(t=300\)</span> s (3 half-lives): <span class="math notranslate nohighlight">\(N_A = 2\)</span>.</p></li>
 </ul>
-<p><strong>Step 4: Determine Final Composition:</strong></p>
-<p>The total number of molecules is conserved: <span class="math notranslate nohighlight">\(N_A + N_B = 16\)</span>.
+<p class="sd-card-text"><strong>Step 4: Determine Final Composition:</strong></p>
+<p class="sd-card-text">The total number of molecules is conserved: <span class="math notranslate nohighlight">\(N_A + N_B = 16\)</span>.
 Molecules of A remaining at 300 s: <span class="math notranslate nohighlight">\(N_A = 2\)</span>.
 Molecules of B formed at 300 s: <span class="math notranslate nohighlight">\(N_B = 16 - 2 = 14\)</span>.</p>
 </div>
-</section>
+</details></section>
 </section>
 <section id="quantitative-analysis-of-first-order-reactions">
 <h2>Quantitative Analysis of First-Order Reactions<a class="headerlink" href="#quantitative-analysis-of-first-order-reactions" title="Link to this heading">#</a></h2>
 <p>While the half-life concept is useful for estimations, precise calculations require the integrated first-order rate law. This section covers the key equations and their application.</p>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\([A]\)</span>: Concentration of reactant A at time <span class="math notranslate nohighlight">\(t\)</span> (<span class="math notranslate nohighlight">\(\text{mol/L}\)</span>).</p></li>
 <li><p><span class="math notranslate nohighlight">\([A]_0\)</span>: Initial concentration of reactant A at <span class="math notranslate nohighlight">\(t=0\)</span> (<span class="math notranslate nohighlight">\(\text{mol/L}\)</span>).</p></li>
@@ -521,43 +522,31 @@ Molecules of B formed at 300 s: <span class="math notranslate nohighlight">\(N_B
 <li><p><span class="math notranslate nohighlight">\(t\)</span>: Elapsed time.</p></li>
 </ul>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>First-Order Integrated Rate Law</strong>
 The relationship between concentration and time for a first-order process is given by:</p>
 <div class="math notranslate nohighlight">
-\[
-[A] = [A]_0 e^{-kt} \quad \text{(Equation 1)}
-\]</div>
+\[[A] = [A]_0 e^{-kt} \quad \text{(Equation 1)}\]</div>
 <p>This equation can be rearranged into a linear form by taking the natural logarithm:</p>
 <div class="math notranslate nohighlight">
-\[
-\ln\left(\frac{[A]}{[A]_0}\right) = -kt
-\]</div>
+\[\ln\left(\frac{[A]}{[A]_0}\right) = -kt\]</div>
 </div>
 <section id="relating-half-life-and-the-rate-constant">
 <h3>Relating Half-Life and the Rate Constant<a class="headerlink" href="#relating-half-life-and-the-rate-constant" title="Link to this heading">#</a></h3>
 <p>A crucial relationship can be derived by substituting the definition of half-life (<span class="math notranslate nohighlight">\(t = t_{1/2}\)</span>, <span class="math notranslate nohighlight">\([A] = 0.5[A]_0\)</span>) into the integrated rate law.</p>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>Half-Life and Rate Constant Relationship</strong></p>
 <div class="math notranslate nohighlight">
-\[
-0.5[A]_0 = [A]_0 e^{-kt_{1/2}}
-\]</div>
+\[0.5[A]_0 = [A]_0 e^{-kt_{1/2}}\]</div>
 <div class="math notranslate nohighlight">
-\[
-0.5 = e^{-kt_{1/2}}
-\]</div>
+\[0.5 = e^{-kt_{1/2}}\]</div>
 <div class="math notranslate nohighlight">
-\[
-\ln(0.5) = -kt_{1/2}
-\]</div>
+\[\ln(0.5) = -kt_{1/2}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(\ln(0.5) = -\ln(2)\)</span>, we arrive at the simple and important result:</p>
 <div class="math notranslate nohighlight">
-\[
-k = \frac{\ln(2)}{t_{1/2}} \quad \text{(Equation 2)}
-\]</div>
+\[k = \frac{\ln(2)}{t_{1/2}} \quad \text{(Equation 2)}\]</div>
 <p>Note that the initial concentration <span class="math notranslate nohighlight">\([A]_0\)</span> does not appear in the final equation.</p>
 </div>
 </section>
@@ -570,99 +559,75 @@ k = \frac{\ln(2)}{t_{1/2}} \quad \text{(Equation 2)}
 (a) What is the concentration of dimethyl ether after one hour?
 (b) How much time is required for the concentration to become 0.2 M?</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Solution (Part a): Concentration after one hour</strong></p>
-<p><strong>Step 1: Identify Knowns and Goal:</strong></p>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Solution (Part a): Concentration after one hour</strong></p>
+<p class="sd-card-text"><strong>Step 1: Identify Knowns and Goal:</strong></p>
 <ul class="simple">
-<li><p>Initial Concentration, <span class="math notranslate nohighlight">\([A]_0 = 2.0 \, \text{M}\)</span></p></li>
-<li><p>Half-life, <span class="math notranslate nohighlight">\(t_{1/2} = 2165 \, \text{s}\)</span></p></li>
-<li><p>Time, <span class="math notranslate nohighlight">\(t = 1 \, \text{hour} = 3600 \, \text{s}\)</span></p></li>
-<li><p><strong>Goal:</strong> Find final concentration, <span class="math notranslate nohighlight">\([A]\)</span>, at <span class="math notranslate nohighlight">\(t=3600\)</span> s.</p></li>
+<li><p class="sd-card-text">Initial Concentration, <span class="math notranslate nohighlight">\([A]_0 = 2.0 \, \text{M}\)</span></p></li>
+<li><p class="sd-card-text">Half-life, <span class="math notranslate nohighlight">\(t_{1/2} = 2165 \, \text{s}\)</span></p></li>
+<li><p class="sd-card-text">Time, <span class="math notranslate nohighlight">\(t = 1 \, \text{hour} = 3600 \, \text{s}\)</span></p></li>
+<li><p class="sd-card-text"><strong>Goal:</strong> Find final concentration, <span class="math notranslate nohighlight">\([A]\)</span>, at <span class="math notranslate nohighlight">\(t=3600\)</span> s.</p></li>
 </ul>
-<p><strong>Step 2: Calculate the Rate Constant (k):</strong>
+<p class="sd-card-text"><strong>Step 2: Calculate the Rate Constant (k):</strong>
 Using Equation 2, we find the rate constant from the given half-life. It is critical to use consistent units.</p>
 <div class="math notranslate nohighlight">
-\[
-k = \frac{\ln(2)}{t_{1/2}} = \frac{0.6931}{2165 \, \text{s}} = 0.0003201 \, \text{s}^{-1}
-\]</div>
-<p><strong>Step 3: Apply the First-Order Rate Equation:</strong>
+\[k = \frac{\ln(2)}{t_{1/2}} = \frac{0.6931}{2165 \, \text{s}} = 0.0003201 \, \text{s}^{-1}\]</div>
+<p class="sd-card-text"><strong>Step 3: Apply the First-Order Rate Equation:</strong>
 Using Equation 1, substitute the known values to find the concentration <span class="math notranslate nohighlight">\([A]\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-[A] = [A]_0 e^{-kt}
-\]</div>
+\[[A] = [A]_0 e^{-kt}\]</div>
 <div class="math notranslate nohighlight">
-\[
-[A] = (2.0 \, \text{M}) \exp\left(-(0.0003201 \, \text{s}^{-1})(3600 \, \text{s})\right)
-\]</div>
+\[[A] = (2.0 \, \text{M}) \exp\left(-(0.0003201 \, \text{s}^{-1})(3600 \, \text{s})\right)\]</div>
 <div class="math notranslate nohighlight">
-\[
-[A] = (2.0 \, \text{M}) \exp(-1.15236)
-\]</div>
+\[[A] = (2.0 \, \text{M}) \exp(-1.15236)\]</div>
 <div class="math notranslate nohighlight">
-\[
-[A] = (2.0 \, \text{M}) \times (0.3159) = 0.6318 \, \text{M}
-\]</div>
-<p><strong>Step 4: Conclusion for Part (a):</strong>
+\[[A] = (2.0 \, \text{M}) \times (0.3159) = 0.6318 \, \text{M}\]</div>
+<p class="sd-card-text"><strong>Step 4: Conclusion for Part (a):</strong>
 After one hour, the concentration of dimethyl ether will be approximately <strong>0.63 M</strong>.</p>
 </div>
-<div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Solution (Part b): Time to reach 0.2 M</strong></p>
-<p><strong>Step 1: Identify Knowns and Goal:</strong></p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Solution (Part b): Time to reach 0.2 M</strong></p>
+<p class="sd-card-text"><strong>Step 1: Identify Knowns and Goal:</strong></p>
 <ul class="simple">
-<li><p>Initial Concentration, <span class="math notranslate nohighlight">\([A]_0 = 2.0 \, \text{M}\)</span></p></li>
-<li><p>Final Concentration, <span class="math notranslate nohighlight">\([A] = 0.2 \, \text{M}\)</span></p></li>
-<li><p>Rate Constant, <span class="math notranslate nohighlight">\(k = 0.0003201 \, \text{s}^{-1}\)</span> (from Part a)</p></li>
-<li><p><strong>Goal:</strong> Find the time required, <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+<li><p class="sd-card-text">Initial Concentration, <span class="math notranslate nohighlight">\([A]_0 = 2.0 \, \text{M}\)</span></p></li>
+<li><p class="sd-card-text">Final Concentration, <span class="math notranslate nohighlight">\([A] = 0.2 \, \text{M}\)</span></p></li>
+<li><p class="sd-card-text">Rate Constant, <span class="math notranslate nohighlight">\(k = 0.0003201 \, \text{s}^{-1}\)</span> (from Part a)</p></li>
+<li><p class="sd-card-text"><strong>Goal:</strong> Find the time required, <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
 </ul>
-<p><strong>Step 2: Apply and Rearrange the First-Order Rate Equation:</strong>
+<p class="sd-card-text"><strong>Step 2: Apply and Rearrange the First-Order Rate Equation:</strong>
 We start with Equation 1 again, but this time we solve for the unknown time, <span class="math notranslate nohighlight">\(t\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-[A] = [A]_0 e^{-kt}
-\]</div>
+\[[A] = [A]_0 e^{-kt}\]</div>
 <div class="math notranslate nohighlight">
-\[
-\frac{[A]}{[A]_0} = e^{-kt}
-\]</div>
-<p>Take the natural logarithm of both sides to solve for the exponent:</p>
+\[\frac{[A]}{[A]_0} = e^{-kt}\]</div>
+<p class="sd-card-text">Take the natural logarithm of both sides to solve for the exponent:</p>
 <div class="math notranslate nohighlight">
-\[
-\ln\left(\frac{[A]}{[A]_0}\right) = -kt
-\]</div>
+\[\ln\left(\frac{[A]}{[A]_0}\right) = -kt\]</div>
 <div class="math notranslate nohighlight">
-\[
-t = -\frac{1}{k} \ln\left(\frac{[A]}{[A]_0}\right)
-\]</div>
-<p><strong>Step 3: Substitute Values and Calculate Time:</strong></p>
+\[t = -\frac{1}{k} \ln\left(\frac{[A]}{[A]_0}\right)\]</div>
+<p class="sd-card-text"><strong>Step 3: Substitute Values and Calculate Time:</strong></p>
 <div class="math notranslate nohighlight">
-\[
-t = -\frac{1}{0.0003201 \, \text{s}^{-1}} \ln\left(\frac{0.2 \, \text{M}}{2.0 \, \text{M}}\right)
-\]</div>
+\[t = -\frac{1}{0.0003201 \, \text{s}^{-1}} \ln\left(\frac{0.2 \, \text{M}}{2.0 \, \text{M}}\right)\]</div>
 <div class="math notranslate nohighlight">
-\[
-t = -\frac{1}{0.0003201 \, \text{s}^{-1}} \ln(0.1)
-\]</div>
+\[t = -\frac{1}{0.0003201 \, \text{s}^{-1}} \ln(0.1)\]</div>
 <div class="math notranslate nohighlight">
-\[
-t = -\frac{1}{0.0003201 \, \text{s}^{-1}} (-2.3026)
-\]</div>
+\[t = -\frac{1}{0.0003201 \, \text{s}^{-1}} (-2.3026)\]</div>
 <div class="math notranslate nohighlight">
-\[
-t = 7193.4 \, \text{s}
-\]</div>
-<p><strong>Step 4: Conclusion for Part (b):</strong>
+\[t = 7193.4 \, \text{s}\]</div>
+<p class="sd-card-text"><strong>Step 4: Conclusion for Part (b):</strong>
 It will take approximately <strong>7193 seconds</strong> (or about 2.0 hours) for the concentration to drop to 0.2 M.</p>
 </div>
-</section>
+</details></section>
 </section>
 <section id="temperature-dependence-and-reactor-design">
 <h2>Temperature Dependence and Reactor Design<a class="headerlink" href="#temperature-dependence-and-reactor-design" title="Link to this heading">#</a></h2>
 <p>The rate of reaction is highly sensitive to temperature. The <strong>Arrhenius equation</strong> describes this relationship, which is fundamental for designing reactors that operate at different temperatures.</p>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(k\)</span>: The rate constant (temperature-dependent).</p></li>
 <li><p><span class="math notranslate nohighlight">\(A\)</span>: The pre-exponential or frequency factor (same units as <span class="math notranslate nohighlight">\(k\)</span>). Assumed constant.</p></li>
@@ -671,19 +636,15 @@ It will take approximately <strong>7193 seconds</strong> (or about 2.0 hours) fo
 <li><p><span class="math notranslate nohighlight">\(T\)</span>: Absolute temperature in Kelvin (K).</p></li>
 </ul>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>The Arrhenius Equation</strong>
 The temperature dependence of the rate constant is given by:</p>
 <div class="math notranslate nohighlight">
-\[
-k = A e^{-E_a / (RT)} \quad \text{(Equation 3)}
-\]</div>
+\[k = A e^{-E_a / (RT)} \quad \text{(Equation 3)}\]</div>
 <p>To determine <span class="math notranslate nohighlight">\(E_a\)</span> from experimental data, a linearized form is used by taking the natural logarithm:</p>
 <div class="math notranslate nohighlight">
-\[
-\ln(k) = \ln(A) - \frac{E_a}{R} \left(\frac{1}{T}\right)
-\]</div>
+\[\ln(k) = \ln(A) - \frac{E_a}{R} \left(\frac{1}{T}\right)\]</div>
 <p>This equation is in the form of a straight line, <span class="math notranslate nohighlight">\(y = b + mx\)</span>, where a plot of <span class="math notranslate nohighlight">\(\ln(k)\)</span> versus <span class="math notranslate nohighlight">\(1/T\)</span> yields a slope of <span class="math notranslate nohighlight">\(m = -E_a/R\)</span>.</p>
 </div>
 <section id="activation-energy-calculation">
@@ -695,74 +656,58 @@ k = A e^{-E_a / (RT)} \quad \text{(Equation 3)}
 (a) What is the activation energy (<span class="math notranslate nohighlight">\(E_a\)</span>) for this reaction? Use <span class="math notranslate nohighlight">\(R \approx 1.99 \times 10^{-3}\)</span> kcal/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K).
 (b) Given <span class="math notranslate nohighlight">\(k_1 = 2.15 \, \text{s}^{-1}\)</span> at <span class="math notranslate nohighlight">\(T_1 = 600\)</span> K, calculate the rate constant <span class="math notranslate nohighlight">\(k_2\)</span> at <span class="math notranslate nohighlight">\(T_2 = 700\)</span> K.</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Solution (Part a): Activation Energy</strong></p>
-<p><strong>Step 1: Relate Slope to Activation Energy:</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Solution (Part a): Activation Energy</strong></p>
+<p class="sd-card-text"><strong>Step 1: Relate Slope to Activation Energy:</strong>
 From the linearized Arrhenius equation:</p>
 <div class="math notranslate nohighlight">
-\[
-\text{Slope} = -\frac{E_a}{R}
-\]</div>
-<p><strong>Step 2: Substitute Known Values and Solve for <span class="math notranslate nohighlight">\(E_a\)</span>:</strong></p>
+\[\text{Slope} = -\frac{E_a}{R}\]</div>
+<p class="sd-card-text"><strong>Step 2: Substitute Known Values and Solve for <span class="math notranslate nohighlight">\(E_a\)</span>:</strong></p>
 <div class="math notranslate nohighlight">
-\[
--18000 \, \text{K} = -\frac{E_a}{1.99 \times 10^{-3} \, \text{kcal/(mol}\cdot\text{K)}}
-\]</div>
+\[-18000 \, \text{K} = -\frac{E_a}{1.99 \times 10^{-3} \, \text{kcal/(mol}\cdot\text{K)}}\]</div>
 <div class="math notranslate nohighlight">
-\[
-E_a = (18000 \, \text{K}) \times (1.99 \times 10^{-3} \, \text{kcal/(mol}\cdot\text{K)}) = 35.82 \, \text{kcal/mol}
-\]</div>
-<p><strong>Step 3: Conclusion for Part (a):</strong>
+\[E_a = (18000 \, \text{K}) \times (1.99 \times 10^{-3} \, \text{kcal/(mol}\cdot\text{K)}) = 35.82 \, \text{kcal/mol}\]</div>
+<p class="sd-card-text"><strong>Step 3: Conclusion for Part (a):</strong>
 The activation energy is approximately <strong>36 kcal/mol</strong>.</p>
 </div>
-<div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Solution (Part b): Rate Constant at New Temperature</strong></p>
-<p><strong>Step 1: Select the Appropriate Equation Form:</strong>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Solution (Part b): Rate Constant at New Temperature</strong></p>
+<p class="sd-card-text"><strong>Step 1: Select the Appropriate Equation Form:</strong>
 Use the two-point form of the Arrhenius equation:</p>
 <div class="math notranslate nohighlight">
-\[
-\ln\left(\frac{k_2}{k_1}\right) = \frac{E_a}{R}\left(\frac{1}{T_1} - \frac{1}{T_2}\right)
-\]</div>
-<p><strong>Step 2: Substitute Known Values:</strong>
+\[\ln\left(\frac{k_2}{k_1}\right) = \frac{E_a}{R}\left(\frac{1}{T_1} - \frac{1}{T_2}\right)\]</div>
+<p class="sd-card-text"><strong>Step 2: Substitute Known Values:</strong>
 From Part (a): <span class="math notranslate nohighlight">\(\frac{E_a}{R} = 18000 \, \text{K}\)</span>. Using <span class="math notranslate nohighlight">\(T_1 = 600\)</span> K, <span class="math notranslate nohighlight">\(T_2 = 700\)</span> K, <span class="math notranslate nohighlight">\(k_1 = 2.15 \, \text{s}^{-1}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-\ln\left(\frac{k_2}{2.15 \, \text{s}^{-1}}\right) = (18000 \, \text{K}) \left(\frac{1}{600 \, \text{K}} - \frac{1}{700 \, \text{K}}\right)
-\]</div>
+\[\ln\left(\frac{k_2}{2.15 \, \text{s}^{-1}}\right) = (18000 \, \text{K}) \left(\frac{1}{600 \, \text{K}} - \frac{1}{700 \, \text{K}}\right)\]</div>
 <div class="math notranslate nohighlight">
-\[
-\ln\left(\frac{k_2}{2.15}\right) = 18000 (0.0002381) = 4.2857
-\]</div>
-<p><strong>Step 3: Solve for the New Rate Constant, <span class="math notranslate nohighlight">\(k_2\)</span>:</strong></p>
+\[\ln\left(\frac{k_2}{2.15}\right) = 18000 (0.0002381) = 4.2857\]</div>
+<p class="sd-card-text"><strong>Step 3: Solve for the New Rate Constant, <span class="math notranslate nohighlight">\(k_2\)</span>:</strong></p>
 <div class="math notranslate nohighlight">
-\[
-\frac{k_2}{2.15} = e^{4.2857} \approx 72.65
-\]</div>
+\[\frac{k_2}{2.15} = e^{4.2857} \approx 72.65\]</div>
 <div class="math notranslate nohighlight">
-\[
-k_2 = 72.65 \times 2.15 \, \text{s}^{-1} \approx 156.2 \, \text{s}^{-1}
-\]</div>
-<p><strong>Step 4: Conclusion for Part (b):</strong>
+\[k_2 = 72.65 \times 2.15 \, \text{s}^{-1} \approx 156.2 \, \text{s}^{-1}\]</div>
+<p class="sd-card-text"><strong>Step 4: Conclusion for Part (b):</strong>
 The rate constant at 700 K is approximately <strong>156 s<span class="math notranslate nohighlight">\(^{-1}\)</span></strong>.</p>
 </div>
-</section>
+</details></section>
 </section>
 <section id="cstr-design-application">
 <h2>CSTR Design Application<a class="headerlink" href="#cstr-design-application" title="Link to this heading">#</a></h2>
 <p>The principles of reaction kinetics are applied directly to design chemical reactors, such as the Continuous Stirred-Tank Reactor (CSTR).</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>CSTR Steady-State Material Balance:</strong> For a CSTR operating at steady-state, conditions inside the reactor are uniform and constant. The material balance simplifies to an algebraic equation. The general balance is: Input - Output + Generation = Accumulation. At steady state, Accumulation is zero.</p>
 <div class="math notranslate nohighlight">
-\[
-F_{A0} - F_A + r_A V = 0
-\]</div>
+\[F_{A0} - F_A + r_A V = 0\]</div>
 <p>Where <span class="math notranslate nohighlight">\(r_A\)</span> is the rate of <strong>formation</strong> of A. For a reactant, <span class="math notranslate nohighlight">\(r_A\)</span> is negative. For a first-order reaction, the rate of <strong>consumption</strong> is <span class="math notranslate nohighlight">\(-r_A = k C_A\)</span>, so the rate of formation is <span class="math notranslate nohighlight">\(r_A = -k C_A\)</span>.</p>
 </div>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(F_{A0}\)</span>: Molar flow rate of A <strong>into</strong> the reactor (<span class="math notranslate nohighlight">\(\text{mol/s}\)</span>).</p></li>
 <li><p><span class="math notranslate nohighlight">\(F_A\)</span>: Molar flow rate of A <strong>out of</strong> the reactor (<span class="math notranslate nohighlight">\(\text{mol/s}\)</span>).</p></li>
@@ -772,19 +717,15 @@ F_{A0} - F_A + r_A V = 0
 <li><p><span class="math notranslate nohighlight">\(Da\)</span>: Damköhler number (dimensionless), <span class="math notranslate nohighlight">\(Da = k\tau = kV/v_0\)</span>. Represents the ratio of reaction rate to convection rate.</p></li>
 </ul>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>CSTR Design Equation for a First-Order Reaction</strong>
 Substituting <span class="math notranslate nohighlight">\(r_A = -k C_A\)</span> and <span class="math notranslate nohighlight">\(F_A = C_A v_0\)</span> into the general balance gives:</p>
 <div class="math notranslate nohighlight">
-\[
-F_{A0} - F_A - k \left(\frac{F_A}{v_0}\right) V = 0
-\]</div>
+\[F_{A0} - F_A - k \left(\frac{F_A}{v_0}\right) V = 0\]</div>
 <p>Solving for the outlet molar flow rate, <span class="math notranslate nohighlight">\(F_A\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-F_A = \frac{F_{A0}}{1 + \frac{kV}{v_0}} = \frac{F_{A0}}{1 + Da} \quad \text{(Equation 4)}
-\]</div>
+\[F_A = \frac{F_{A0}}{1 + \frac{kV}{v_0}} = \frac{F_{A0}}{1 + Da} \quad \text{(Equation 4)}\]</div>
 </div>
 <section id="example-evaluating-cstr-performance">
 <h3>Example: Evaluating CSTR Performance<a class="headerlink" href="#example-evaluating-cstr-performance" title="Link to this heading">#</a></h3>
@@ -793,48 +734,43 @@ F_A = \frac{F_{A0}}{1 + \frac{kV}{v_0}} = \frac{F_{A0}}{1 + Da} \quad \text{(Equ
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> An existing 50 L CSTR is used for the liquid-phase reaction A <span class="math notranslate nohighlight">\(\rightarrow\)</span> Products. The reactor operates isothermally at 600 K, where <span class="math notranslate nohighlight">\(k = 2.15 \, \text{s}^{-1}\)</span>. The feed enters at <span class="math notranslate nohighlight">\(v_0 = 500\)</span> L/s with <span class="math notranslate nohighlight">\(C_{A0} = 0.4\)</span> mol/L. To be suitable, the molar flow rate of A exiting the reactor (<span class="math notranslate nohighlight">\(F_A\)</span>) must be less than 5 mol/s. Is the reactor suitable?</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: List Knowns and Goal:</strong></p>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: List Knowns and Goal:</strong></p>
 <ul class="simple">
-<li><p>Reactor Volume, <span class="math notranslate nohighlight">\(V = 50\)</span> L</p></li>
-<li><p>Rate Constant, <span class="math notranslate nohighlight">\(k = 2.15 \, \text{s}^{-1}\)</span> (at 600 K)</p></li>
-<li><p>Volumetric Flow Rate, <span class="math notranslate nohighlight">\(v_0 = 500\)</span> L/s</p></li>
-<li><p>Inlet Concentration, <span class="math notranslate nohighlight">\(C_{A0} = 0.4\)</span> mol/L</p></li>
-<li><p>Performance Target: <span class="math notranslate nohighlight">\(F_A &lt; 5\)</span> mol/s</p></li>
-<li><p><strong>Goal:</strong> Calculate outlet flow rate <span class="math notranslate nohighlight">\(F_A\)</span> and compare it to the target.</p></li>
+<li><p class="sd-card-text">Reactor Volume, <span class="math notranslate nohighlight">\(V = 50\)</span> L</p></li>
+<li><p class="sd-card-text">Rate Constant, <span class="math notranslate nohighlight">\(k = 2.15 \, \text{s}^{-1}\)</span> (at 600 K)</p></li>
+<li><p class="sd-card-text">Volumetric Flow Rate, <span class="math notranslate nohighlight">\(v_0 = 500\)</span> L/s</p></li>
+<li><p class="sd-card-text">Inlet Concentration, <span class="math notranslate nohighlight">\(C_{A0} = 0.4\)</span> mol/L</p></li>
+<li><p class="sd-card-text">Performance Target: <span class="math notranslate nohighlight">\(F_A &lt; 5\)</span> mol/s</p></li>
+<li><p class="sd-card-text"><strong>Goal:</strong> Calculate outlet flow rate <span class="math notranslate nohighlight">\(F_A\)</span> and compare it to the target.</p></li>
 </ul>
-<p><strong>Step 2: Calculate the Inlet Molar Flow Rate (<span class="math notranslate nohighlight">\(F_{A0}\)</span>):</strong></p>
+<p class="sd-card-text"><strong>Step 2: Calculate the Inlet Molar Flow Rate (<span class="math notranslate nohighlight">\(F_{A0}\)</span>):</strong></p>
 <div class="math notranslate nohighlight">
-\[
-F_{A0} = C_{A0} \times v_0 = (0.4 \, \text{mol/L}) \times (500 \, \text{L/s}) = 200 \, \text{mol/s}
-\]</div>
-<p><strong>Step 3: Calculate the Damköhler Number (Da):</strong>
+\[F_{A0} = C_{A0} \times v_0 = (0.4 \, \text{mol/L}) \times (500 \, \text{L/s}) = 200 \, \text{mol/s}\]</div>
+<p class="sd-card-text"><strong>Step 3: Calculate the Damköhler Number (Da):</strong>
 The Damköhler number is a key dimensionless group for reactor analysis.</p>
 <div class="math notranslate nohighlight">
-\[
-Da = \frac{kV}{v_0} = \frac{(2.15 \, \text{s}^{-1})(50 \, \text{L})}{500 \, \text{L/s}} = \frac{107.5}{500} = 0.215
-\]</div>
-<p>A small Da number (<span class="math notranslate nohighlight">\(Da \ll 1\)</span>) suggests that the residence time is short compared to the reaction time, leading to low conversion.</p>
-<p><strong>Step 4: Apply the CSTR Design Equation (Eq. 4) to Find <span class="math notranslate nohighlight">\(F_A\)</span>:</strong></p>
+\[Da = \frac{kV}{v_0} = \frac{(2.15 \, \text{s}^{-1})(50 \, \text{L})}{500 \, \text{L/s}} = \frac{107.5}{500} = 0.215\]</div>
+<p class="sd-card-text">A small Da number (<span class="math notranslate nohighlight">\(Da \ll 1\)</span>) suggests that the residence time is short compared to the reaction time, leading to low conversion.</p>
+<p class="sd-card-text"><strong>Step 4: Apply the CSTR Design Equation (Eq. 4) to Find <span class="math notranslate nohighlight">\(F_A\)</span>:</strong></p>
 <div class="math notranslate nohighlight">
-\[
-F_A = \frac{F_{A0}}{1 + Da} = \frac{200 \, \text{mol/s}}{1 + 0.215} = \frac{200 \, \text{mol/s}}{1.215} \approx 164.6 \, \text{mol/s}
-\]</div>
-<p><strong>Step 5: Compare Result to Requirement and Conclude:</strong>
+\[F_A = \frac{F_{A0}}{1 + Da} = \frac{200 \, \text{mol/s}}{1 + 0.215} = \frac{200 \, \text{mol/s}}{1.215} \approx 164.6 \, \text{mol/s}\]</div>
+<p class="sd-card-text"><strong>Step 5: Compare Result to Requirement and Conclude:</strong>
 The calculated outlet flow rate is <span class="math notranslate nohighlight">\(F_A \approx 165\)</span> mol/s. The requirement is <span class="math notranslate nohighlight">\(F_A &lt; 5\)</span> mol/s. Since <span class="math notranslate nohighlight">\(165 \, \text{mol/s} \gg 5 \, \text{mol/s}\)</span>, the reactor is <strong>not suitable</strong>. The conversion is far too low for the given process requirements. To meet the goal, the Damköhler number would need to be significantly increased, for example by increasing reactor volume <span class="math notranslate nohighlight">\(V\)</span> or decreasing volumetric flow rate <span class="math notranslate nohighlight">\(v_0\)</span>.</p>
 </div>
-</section>
+</details></section>
 </section>
 <section id="conversion-with-levenspiel-plots">
 <h2>Conversion with Levenspiel Plots<a class="headerlink" href="#conversion-with-levenspiel-plots" title="Link to this heading">#</a></h2>
 <p>This section explores reactor performance analysis using a <strong>Levenspiel plot</strong>, a powerful graphical method for sizing and comparing different reactor types and configurations for a specific reaction at constant temperature.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>The Levenspiel Plot:</strong> A Levenspiel plot is a graphical tool used in chemical reaction engineering to determine reactor volume. It plots a function related to the inverse reaction rate against the fractional conversion of a reactant. The area on this plot has units of volume, allowing for graphical calculation of reactor sizes.</p>
 </div>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(X\)</span>: The fractional conversion of the limiting reactant A, defined as <span class="math notranslate nohighlight">\(X = \frac{F_{A0} - F_A}{F_{A0}}\)</span>. It is a dimensionless quantity ranging from 0 to 1.</p></li>
 <li><p><span class="math notranslate nohighlight">\(r_A\)</span>: The rate of formation of reactant A (e.g., in <span class="math notranslate nohighlight">\(\text{mol/(L}\cdot\text{s)}\)</span>). Since A is a reactant being consumed, this value is negative. The rate of reaction is therefore expressed as <span class="math notranslate nohighlight">\(-r_A\)</span>, which is a positive quantity.</p></li>
@@ -845,37 +781,29 @@ The calculated outlet flow rate is <span class="math notranslate nohighlight">\(
 <section id="graphical-interpretation-of-reactor-design-equations">
 <h3>Graphical Interpretation of Reactor Design Equations<a class="headerlink" href="#graphical-interpretation-of-reactor-design-equations" title="Link to this heading">#</a></h3>
 <p>The design equations for CSTRs and PFRs correspond to distinct areas on a Levenspiel plot.</p>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>CSTR Design Equation and Graphical Area</strong>
 The algebraic design equation for a CSTR is rearranged to isolate the reactor volume, <span class="math notranslate nohighlight">\(V\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-V = \frac{F_{A0} X}{-r_A}
-\]</div>
+\[V = \frac{F_{A0} X}{-r_A}\]</div>
 <p>This can be interpreted graphically as the area of a rectangle on the Levenspiel plot:</p>
 <div class="math notranslate nohighlight">
-\[
-V = X \times \left(\frac{F_{A0}}{-r_A}\right)_{\text{at exit conversion X}}
-\]</div>
+\[V = X \times \left(\frac{F_{A0}}{-r_A}\right)_{\text{at exit conversion X}}\]</div>
 <ul class="simple">
 <li><p><strong>Height</strong>: The value of <span class="math notranslate nohighlight">\(\frac{F_{A0}}{-r_A}\)</span> evaluated at the final (exit) conversion, <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
 <li><p><strong>Width</strong>: The total conversion achieved, <span class="math notranslate nohighlight">\(X\)</span>.</p></li>
 </ul>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>PFR Design Equation and Graphical Area</strong>
 The differential design equation for a PFR is integrated to find the required volume, <span class="math notranslate nohighlight">\(V\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-V = F_{A0} \int_{0}^{X} \frac{dX}{-r_A}
-\]</div>
+\[V = F_{A0} \int_{0}^{X} \frac{dX}{-r_A}\]</div>
 <p>This corresponds to the <strong>area under the curve</strong> of the Levenspiel plot, integrated from an initial conversion (usually 0) to the final conversion, <span class="math notranslate nohighlight">\(X\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-V = \int_{0}^{X} \left(\frac{F_{A0}}{-r_A}\right) dX
-\]</div>
+\[V = \int_{0}^{X} \left(\frac{F_{A0}}{-r_A}\right) dX\]</div>
 </div>
 </section>
 <section id="example-reactor-sizing-with-a-levenspiel-plot">
@@ -887,66 +815,58 @@ V = \int_{0}^{X} \left(\frac{F_{A0}}{-r_A}\right) dX
 (a) What single reactor results in the largest conversion, and what is that conversion?
 (b) If you use two reactors in series, which two and in what order maximizes overall conversion?</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Solution (Part a): Single Reactor Performance</strong></p>
-<p><strong>Step 1: Analyze the 15 L CSTR:</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Solution (Part a): Single Reactor Performance</strong></p>
+<p class="sd-card-text"><strong>Step 1: Analyze the 15 L CSTR:</strong>
 We find the conversion <span class="math notranslate nohighlight">\(X\)</span> where the CSTR rectangle area equals 15 L. The height of the rectangle is the y-value at the exit conversion. Assume the y-value is 50 L in the relevant range.</p>
 <div class="math notranslate nohighlight">
-\[
-V_{\text{CSTR}} = X \times \left(\frac{F_{A0}}{-r_A}\right)_{\text{exit}}
-\]</div>
+\[V_{\text{CSTR}} = X \times \left(\frac{F_{A0}}{-r_A}\right)_{\text{exit}}\]</div>
 <div class="math notranslate nohighlight">
-\[
-15 \, \text{L} = X \times (50 \, \text{L}) \implies X = \frac{15}{50} = 0.3
-\]</div>
-<p>The 15 L CSTR achieves a conversion of <strong>30%</strong>.</p>
-<p><strong>Step 2: Analyze the 25 L CSTR:</strong>
+\[15 \, \text{L} = X \times (50 \, \text{L}) \implies X = \frac{15}{50} = 0.3\]</div>
+<p class="sd-card-text">The 15 L CSTR achieves a conversion of <strong>30%</strong>.</p>
+<p class="sd-card-text"><strong>Step 2: Analyze the 25 L CSTR:</strong>
 Following the same procedure for the 25 L CSTR:</p>
 <div class="math notranslate nohighlight">
-\[
-V_{\text{CSTR}} = X \times \left(\frac{F_{A0}}{-r_A}\right)_{\text{exit}}
-\]</div>
+\[V_{\text{CSTR}} = X \times \left(\frac{F_{A0}}{-r_A}\right)_{\text{exit}}\]</div>
 <div class="math notranslate nohighlight">
-\[
-25 \, \text{L} = X \times (50 \, \text{L}) \implies X = \frac{25}{50} = 0.5
-\]</div>
-<p>The 25 L CSTR achieves a conversion of <strong>50%</strong>.</p>
-<p><strong>Step 3: Analyze the 20 L PFR:</strong>
+\[25 \, \text{L} = X \times (50 \, \text{L}) \implies X = \frac{25}{50} = 0.5\]</div>
+<p class="sd-card-text">The 25 L CSTR achieves a conversion of <strong>50%</strong>.</p>
+<p class="sd-card-text"><strong>Step 3: Analyze the 20 L PFR:</strong>
 The PFR volume is the area under the curve. The source problem provides a calculation for the area up to a certain conversion, implying a more complex shape than a simple rectangle. Using the given value from the problem source:</p>
 <div class="math notranslate nohighlight">
-\[
-V_{\text{PFR}} = \text{Area under curve up to X} = 20 \, \text{L} \quad (\text{given to correspond to } X = 0.3)
-\]</div>
-<p>Therefore, the 20 L PFR achieves a conversion of <strong>30%</strong>.</p>
-<p><strong>Step 4: Conclusion for Part (a):</strong>
+\[V_{\text{PFR}} = \text{Area under curve up to X} = 20 \, \text{L} \quad (\text{given to correspond to } X = 0.3)\]</div>
+<p class="sd-card-text">Therefore, the 20 L PFR achieves a conversion of <strong>30%</strong>.</p>
+<p class="sd-card-text"><strong>Step 4: Conclusion for Part (a):</strong>
 Comparing the maximum conversion from each available reactor:</p>
 <ul class="simple">
-<li><p>15 L CSTR <span class="math notranslate nohighlight">\(\rightarrow\)</span> 30% conversion</p></li>
-<li><p>20 L PFR <span class="math notranslate nohighlight">\(\rightarrow\)</span> 30% conversion</p></li>
-<li><p><strong>25 L CSTR <span class="math notranslate nohighlight">\(\rightarrow\)</span> 50% conversion</strong></p></li>
+<li><p class="sd-card-text">15 L CSTR <span class="math notranslate nohighlight">\(\rightarrow\)</span> 30% conversion</p></li>
+<li><p class="sd-card-text">20 L PFR <span class="math notranslate nohighlight">\(\rightarrow\)</span> 30% conversion</p></li>
+<li><p class="sd-card-text"><strong>25 L CSTR <span class="math notranslate nohighlight">\(\rightarrow\)</span> 50% conversion</strong></p></li>
 </ul>
-<p>The <strong>25 L CSTR</strong> provides the highest single-reactor conversion.</p>
+<p class="sd-card-text">The <strong>25 L CSTR</strong> provides the highest single-reactor conversion.</p>
 </div>
-<div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Solution (Part b): Reactors in Series</strong></p>
-<p><strong>Step 1: Recall the Reactor Selection Heuristic:</strong>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Solution (Part b): Reactors in Series</strong></p>
+<p class="sd-card-text"><strong>Step 1: Recall the Reactor Selection Heuristic:</strong>
 The optimal reactor choice depends on the shape of the Levenspiel plot, which reflects how the reaction rate changes with conversion.</p>
 <ul class="simple">
-<li><p><strong>PFR is better</strong> where the curve is <strong>rising</strong> (rate is decreasing). A PFR minimizes the required volume in this region.</p></li>
-<li><p><strong>CSTR is better</strong> where the curve is <strong>falling</strong> (rate is increasing, e.g., in autocatalytic or some adiabatic reactions). A CSTR minimizes the required volume in this region.</p></li>
+<li><p class="sd-card-text"><strong>PFR is better</strong> where the curve is <strong>rising</strong> (rate is decreasing). A PFR minimizes the required volume in this region.</p></li>
+<li><p class="sd-card-text"><strong>CSTR is better</strong> where the curve is <strong>falling</strong> (rate is increasing, e.g., in autocatalytic or some adiabatic reactions). A CSTR minimizes the required volume in this region.</p></li>
 </ul>
-<p><strong>Step 2: Determine the Optimal Sequence:</strong>
+<p class="sd-card-text"><strong>Step 2: Determine the Optimal Sequence:</strong>
 The goal is to arrange two reactors to maximize the total area “captured” on the Levenspiel plot.</p>
 <ul class="simple">
-<li><p><strong>First Reactor:</strong> The problem implies the reaction rate is higher at intermediate conversions (the curve dips), making a CSTR more efficient for the first stage of conversion. The 25 L CSTR is the best single reactor, taking us to an initial conversion of <span class="math notranslate nohighlight">\(X=0.5\)</span>.</p></li>
-<li><p><strong>Second Reactor:</strong> After the CSTR, the feed to the second reactor is already at 50% conversion. For conversions beyond this point, the Levenspiel curve is typically rising (rate is decreasing). In this region, a PFR is more efficient. Therefore, we should place the 20 L PFR after the CSTR.</p></li>
+<li><p class="sd-card-text"><strong>First Reactor:</strong> The problem implies the reaction rate is higher at intermediate conversions (the curve dips), making a CSTR more efficient for the first stage of conversion. The 25 L CSTR is the best single reactor, taking us to an initial conversion of <span class="math notranslate nohighlight">\(X=0.5\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Second Reactor:</strong> After the CSTR, the feed to the second reactor is already at 50% conversion. For conversions beyond this point, the Levenspiel curve is typically rising (rate is decreasing). In this region, a PFR is more efficient. Therefore, we should place the 20 L PFR after the CSTR.</p></li>
 </ul>
-<p><strong>Step 3: Conclusion for Part (b):</strong>
+<p class="sd-card-text"><strong>Step 3: Conclusion for Part (b):</strong>
 To maximize overall conversion, the optimal arrangement is the <strong>25 L CSTR followed by the 20 L PFR</strong>. This sequence uses each reactor type in the conversion range where it is most volumetrically efficient.</p>
 </div>
-</section>
+</details></section>
 </section>
 <section id="isothermal-batch-reactors">
 <h2>Isothermal Batch Reactors<a class="headerlink" href="#isothermal-batch-reactors" title="Link to this heading">#</a></h2>
@@ -954,8 +874,8 @@ To maximize overall conversion, the optimal arrangement is the <strong>25 L CSTR
 <section id="introduction-and-key-concepts">
 <h3>Introduction and Key Concepts<a class="headerlink" href="#introduction-and-key-concepts" title="Link to this heading">#</a></h3>
 <p>A batch reactor is essentially a stirred tank that operates as a closed system. Reactants are charged into the vessel at the beginning of the process, and the products are removed only after the reaction has run for a specific amount of time.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Key Characteristics of a Batch Reactor</strong></p>
 <ul class="simple">
 <li><p><strong>Closed System:</strong> No mass is added or removed during the reaction phase. The total mass inside the reactor remains constant.</p></li>
@@ -963,8 +883,8 @@ To maximize overall conversion, the optimal arrangement is the <strong>25 L CSTR
 <li><p><strong>Unsteady-State Operation:</strong> While spatially uniform, the properties of the system (e.g., concentrations of each species) change with time as the reaction proceeds.</p></li>
 </ul>
 </div>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <p><strong>Common Applications and Use Cases</strong>
 Batch reactors are favored in situations where continuous flow processes are impractical or uneconomical.</p>
 <ul class="simple">
@@ -979,8 +899,8 @@ Batch reactors are favored in situations where continuous flow processes are imp
 <section id="heat-transfer-and-scale-up-considerations">
 <h3>Heat Transfer and Scale-Up Considerations<a class="headerlink" href="#heat-transfer-and-scale-up-considerations" title="Link to this heading">#</a></h3>
 <p>Managing the heat of reaction is a critical design challenge, especially when scaling a process from the lab to production.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>The Challenge of Scale-Up</strong>
 The primary difficulty in scaling up a reactor arises from the relationship between reactor volume (which determines production capacity) and the available heat transfer area.</p>
 <ul class="simple">
@@ -989,24 +909,18 @@ The primary difficulty in scaling up a reactor arises from the relationship betw
 </ul>
 <p>This means that as a reactor gets larger, its volume increases much faster than its surface area. The ratio of area to volume decreases, making it progressively harder to add or remove heat.</p>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>Geometric Scaling Relationships</strong></p>
 <div class="math notranslate nohighlight">
-\[
-\text{Volume: } V \propto D^3
-\]</div>
+\[\text{Volume: } V \propto D^3\]</div>
 <div class="math notranslate nohighlight">
-\[
-\text{Area: } A \propto D^2
-\]</div>
+\[\text{Area: } A \propto D^2\]</div>
 <div class="math notranslate nohighlight">
-\[
-\frac{\text{Heat Transfer Area}}{\text{Volume}} = \frac{A}{V} \propto \frac{D^2}{D^3} = \frac{1}{D}
-\]</div>
+\[\frac{\text{Heat Transfer Area}}{\text{Volume}} = \frac{A}{V} \propto \frac{D^2}{D^3} = \frac{1}{D}\]</div>
 </div>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <p><strong>Other Scale-Up Issues</strong></p>
 <ul class="simple">
 <li><p><strong>Mixing:</strong> Achieving uniform mixing is more difficult and energy-intensive in a large vessel. Dead zones with poor mixing can lead to non-uniform temperatures and concentrations.</p></li>
@@ -1018,17 +932,15 @@ The primary difficulty in scaling up a reactor arises from the relationship betw
 <section id="material-balances-on-tank-reactors">
 <h3>Material Balances on Tank Reactors<a class="headerlink" href="#material-balances-on-tank-reactors" title="Link to this heading">#</a></h3>
 <p>To model the behavior of a reactor, we perform a mole balance on each chemical species.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>The General Mole Balance Principle</strong>
 The fundamental principle for any species in any control volume is:</p>
 <div class="math notranslate nohighlight">
-\[
-\text{Rate of Accumulation} = \text{Rate of Inflow} - \text{Rate of Outflow} + \text{Rate of Generation by Reaction}
-\]</div>
+\[\text{Rate of Accumulation} = \text{Rate of Inflow} - \text{Rate of Outflow} + \text{Rate of Generation by Reaction}\]</div>
 </div>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(N_i\)</span>: The number of moles of component <span class="math notranslate nohighlight">\(i\)</span> within the reactor volume.</p></li>
 <li><p><span class="math notranslate nohighlight">\(F_{i0}, F_i\)</span>: Molar flow rates of component <span class="math notranslate nohighlight">\(i\)</span> <em>in</em> and <em>out</em> of the reactor (moles/time).</p></li>
@@ -1038,29 +950,23 @@ The fundamental principle for any species in any control volume is:</p>
 <li><p><span class="math notranslate nohighlight">\(X\)</span>: The fractional conversion of a reactant.</p></li>
 </ul>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>General Mole Balance Equation</strong>
 For any component A, the mole balance is written as a differential equation:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dN_A}{dt} = F_{A0} - F_A + r_A V \quad \text{(Equation 1)}
-\]</div>
+\[\frac{dN_A}{dt} = F_{A0} - F_A + r_A V \quad \text{(Equation 1)}\]</div>
 <p>This general equation is simplified for different reactor types based on their flow characteristics.</p>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>Batch Reactor Mole Balance</strong>
 In a batch reactor, there is no inflow or outflow during the reaction, so <span class="math notranslate nohighlight">\(F_{A0} = 0\)</span> and <span class="math notranslate nohighlight">\(F_A = 0\)</span>. The general mole balance (Equation 1) simplifies to:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dN_A}{dt} = r_A V
-\]</div>
+\[\frac{dN_A}{dt} = r_A V\]</div>
 <p>For liquid-phase reactions with constant volume, we can write this in terms of concentration (<span class="math notranslate nohighlight">\(N_A = C_A V\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dC_A}{dt} = r_A
-\]</div>
+\[\frac{dC_A}{dt} = r_A\]</div>
 </div>
 </section>
 <section id="example-batch-reactor-with-multiple-reactions">
@@ -1070,71 +976,50 @@ In a batch reactor, there is no inflow or outflow during the reaction, so <span 
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Consider an isothermal batch reactor where the following three liquid-phase reactions occur. The rates of reaction (<span class="math notranslate nohighlight">\(r_1, r_2, r_3\)</span>) are given in moles per liter per second. Write the mole balance equation for each species (A, B, C, D, E).</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
+\[\begin{split}\begin{align*}
     \text{Reaction 1:} \quad &amp; A + B \xrightarrow{k_1} C &amp; r_1 &amp;= k_1 C_A C_B \\
     \text{Reaction 2:} \quad &amp; C \xrightarrow{k_2} 2E &amp; r_2 &amp;= k_2 C_C \\
     \text{Reaction 3:} \quad &amp; 2A \xrightarrow{k_3} D &amp; r_3 &amp;= k_3 C_A^2
-\end{align*}
-\end{split}\]</div>
+\end{align*}\end{split}\]</div>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p>We apply the batch reactor mole balance, <span class="math notranslate nohighlight">\(\frac{dN_i}{dt} = r_i V\)</span>, to each component. The net rate of formation for a species, <span class="math notranslate nohighlight">\(r_i\)</span>, is the sum of its rates of formation in every reaction, accounting for stoichiometry (<span class="math notranslate nohighlight">\(\nu_{ij}\)</span>, which is negative for reactants and positive for products). The general form is <span class="math notranslate nohighlight">\(r_i = \sum_{j} \nu_{ij} r_j\)</span>.</p>
-<p><strong>Step 1: Mole Balance on A:</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">We apply the batch reactor mole balance, <span class="math notranslate nohighlight">\(\frac{dN_i}{dt} = r_i V\)</span>, to each component. The net rate of formation for a species, <span class="math notranslate nohighlight">\(r_i\)</span>, is the sum of its rates of formation in every reaction, accounting for stoichiometry (<span class="math notranslate nohighlight">\(\nu_{ij}\)</span>, which is negative for reactants and positive for products). The general form is <span class="math notranslate nohighlight">\(r_i = \sum_{j} \nu_{ij} r_j\)</span>.</p>
+<p class="sd-card-text"><strong>Step 1: Mole Balance on A:</strong>
 Component A is consumed in Reaction 1 (<span class="math notranslate nohighlight">\(\nu_{A1} = -1\)</span>) and Reaction 3 (<span class="math notranslate nohighlight">\(\nu_{A3} = -2\)</span>).</p>
 <div class="math notranslate nohighlight">
-\[
-r_A = (-1)r_1 + (-2)r_3 = -k_1 C_A C_B - 2k_3 C_A^2
-\]</div>
+\[r_A = (-1)r_1 + (-2)r_3 = -k_1 C_A C_B - 2k_3 C_A^2\]</div>
 <div class="math notranslate nohighlight">
-\[
-\frac{dN_A}{dt} = r_A V = (-k_1 C_A C_B - 2k_3 C_A^2) V
-\]</div>
-<p><strong>Step 2: Mole Balance on B:</strong>
+\[\frac{dN_A}{dt} = r_A V = (-k_1 C_A C_B - 2k_3 C_A^2) V\]</div>
+<p class="sd-card-text"><strong>Step 2: Mole Balance on B:</strong>
 Component B is consumed only in Reaction 1 (<span class="math notranslate nohighlight">\(\nu_{B1} = -1\)</span>).</p>
 <div class="math notranslate nohighlight">
-\[
-r_B = (-1)r_1 = -k_1 C_A C_B
-\]</div>
+\[r_B = (-1)r_1 = -k_1 C_A C_B\]</div>
 <div class="math notranslate nohighlight">
-\[
-\frac{dN_B}{dt} = r_B V = (-k_1 C_A C_B) V
-\]</div>
-<p><strong>Step 3: Mole Balance on C:</strong>
+\[\frac{dN_B}{dt} = r_B V = (-k_1 C_A C_B) V\]</div>
+<p class="sd-card-text"><strong>Step 3: Mole Balance on C:</strong>
 Component C is formed in Reaction 1 (<span class="math notranslate nohighlight">\(\nu_{C1} = +1\)</span>) and consumed in Reaction 2 (<span class="math notranslate nohighlight">\(\nu_{C2} = -1\)</span>).</p>
 <div class="math notranslate nohighlight">
-\[
-r_C = (+1)r_1 + (-1)r_2 = k_1 C_A C_B - k_2 C_C
-\]</div>
+\[r_C = (+1)r_1 + (-1)r_2 = k_1 C_A C_B - k_2 C_C\]</div>
 <div class="math notranslate nohighlight">
-\[
-\frac{dN_C}{dt} = r_C V = (k_1 C_A C_B - k_2 C_C) V
-\]</div>
-<p><strong>Step 4: Mole Balance on D:</strong>
+\[\frac{dN_C}{dt} = r_C V = (k_1 C_A C_B - k_2 C_C) V\]</div>
+<p class="sd-card-text"><strong>Step 4: Mole Balance on D:</strong>
 Component D is formed only in Reaction 3 (<span class="math notranslate nohighlight">\(\nu_{D3} = +1\)</span>).</p>
 <div class="math notranslate nohighlight">
-\[
-r_D = (+1)r_3 = k_3 C_A^2
-\]</div>
+\[r_D = (+1)r_3 = k_3 C_A^2\]</div>
 <div class="math notranslate nohighlight">
-\[
-\frac{dN_D}{dt} = r_D V = (k_3 C_A^2) V
-\]</div>
-<p><strong>Step 5: Mole Balance on E:</strong>
+\[\frac{dN_D}{dt} = r_D V = (k_3 C_A^2) V\]</div>
+<p class="sd-card-text"><strong>Step 5: Mole Balance on E:</strong>
 Component E is formed only in Reaction 2 (<span class="math notranslate nohighlight">\(\nu_{E2} = +2\)</span>).</p>
 <div class="math notranslate nohighlight">
-\[
-r_E = (+2)r_2 = 2k_2 C_C
-\]</div>
+\[r_E = (+2)r_2 = 2k_2 C_C\]</div>
 <div class="math notranslate nohighlight">
-\[
-\frac{dN_E}{dt} = r_E V = (2k_2 C_C) V
-\]</div>
-<p><strong>Step 6: Solving the System:</strong>
+\[\frac{dN_E}{dt} = r_E V = (2k_2 C_C) V\]</div>
+<p class="sd-card-text"><strong>Step 6: Solving the System:</strong>
 This gives a system of five coupled ordinary differential equations (ODEs). To find the number of moles of each species over time, this system must be solved numerically using software. The required inputs are the initial number of moles of each species (<span class="math notranslate nohighlight">\(N_{A0}, N_{B0}, N_{C0}, \dots\)</span>), the constant reactor volume (<span class="math notranslate nohighlight">\(V\)</span>), and the values of the rate constants (<span class="math notranslate nohighlight">\(k_1, k_2, k_3\)</span>) at the isothermal operating temperature.</p>
 </div>
-</section>
+</details></section>
 <section id="example-copolymerization-in-a-batch-reactor">
 <h3>Example: Copolymerization in a Batch Reactor<a class="headerlink" href="#example-copolymerization-in-a-batch-reactor" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-6">
@@ -1142,68 +1027,53 @@ This gives a system of five coupled ordinary differential equations (ODEs). To f
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Styrene (S) and butadiene (B) are copolymerized in an isothermal batch reactor. The <span class="math notranslate nohighlight">\(27 \, \text{m}^3\)</span> reactor was charged with <span class="math notranslate nohighlight">\(2,200 \, \text{kg}\)</span> of styrene and <span class="math notranslate nohighlight">\(5,000 \, \text{kg}\)</span> of butadiene. The polymerization is first order in S and first order in B, and the rate constant is <span class="math notranslate nohighlight">\(k = 0.036 \, \text{m}^3\text{/(kmol}\cdot\text{h)}\)</span>. The reaction is <span class="math notranslate nohighlight">\(S + 3.2 B \rightarrow \text{polymer}\)</span>, and constant density is assumed. What are the concentrations of S and B after 10 h?</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Analyze the Problem and Define the Goal:</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Analyze the Problem and Define the Goal:</strong>
 The core task is to model a second-order reaction (<span class="math notranslate nohighlight">\(r = -kC_SC_B\)</span>) in a constant-volume batch reactor. This requires solving a system of coupled ordinary differential equations (ODEs) that describe the change in concentration of each reactant over time. The goal is to find the concentrations <span class="math notranslate nohighlight">\(C_S\)</span> and <span class="math notranslate nohighlight">\(C_B\)</span> at <span class="math notranslate nohighlight">\(t = 10\)</span> h.</p>
-<p><strong>Step 2: Calculate Initial Moles and Concentrations:</strong>
+<p class="sd-card-text"><strong>Step 2: Calculate Initial Moles and Concentrations:</strong>
 To solve the ODEs, we first need the initial conditions (<span class="math notranslate nohighlight">\(C_{S0}\)</span>, <span class="math notranslate nohighlight">\(C_{B0}\)</span>) at <span class="math notranslate nohighlight">\(t=0\)</span>.
 Molecular Weight of Styrene (S, <span class="math notranslate nohighlight">\(C_8H_8\)</span>): <span class="math notranslate nohighlight">\(104.15 \, \text{kg/kmol}\)</span>. Molecular Weight of Butadiene (B, <span class="math notranslate nohighlight">\(C_4H_6\)</span>): <span class="math notranslate nohighlight">\(54.09 \, \text{kg/kmol}\)</span>.</p>
-<p><strong>Initial Molar Amounts</strong></p>
+<p class="sd-card-text"><strong>Initial Molar Amounts</strong></p>
 <div class="math notranslate nohighlight">
-\[
-N_{S0} = \frac{2200 \, \text{kg}}{104.15 \, \text{kg/kmol}} = 21.12 \, \text{kmol}
-\]</div>
+\[N_{S0} = \frac{2200 \, \text{kg}}{104.15 \, \text{kg/kmol}} = 21.12 \, \text{kmol}\]</div>
 <div class="math notranslate nohighlight">
-\[
-N_{B0} = \frac{5000 \, \text{kg}}{54.09 \, \text{kg/kmol}} = 92.44 \, \text{kmol}
-\]</div>
-<p><strong>Initial Concentrations</strong></p>
+\[N_{B0} = \frac{5000 \, \text{kg}}{54.09 \, \text{kg/kmol}} = 92.44 \, \text{kmol}\]</div>
+<p class="sd-card-text"><strong>Initial Concentrations</strong></p>
 <div class="math notranslate nohighlight">
-\[
-C_{S0} = \frac{N_{S0}}{V} = \frac{21.12 \, \text{kmol}}{27 \, \text{m}^3} = \textbf{0.782 kmol/m}^3
-\]</div>
+\[C_{S0} = \frac{N_{S0}}{V} = \frac{21.12 \, \text{kmol}}{27 \, \text{m}^3} = \textbf{0.782 kmol/m}^3\]</div>
 <div class="math notranslate nohighlight">
-\[
-C_{B0} = \frac{N_{B0}}{V} = \frac{92.44 \, \text{kmol}}{27 \, \text{m}^3} = \textbf{3.424 kmol/m}^3
-\]</div>
-<p><strong>Step 3: Formulate the Mole Balance Equations:</strong>
+\[C_{B0} = \frac{N_{B0}}{V} = \frac{92.44 \, \text{kmol}}{27 \, \text{m}^3} = \textbf{3.424 kmol/m}^3\]</div>
+<p class="sd-card-text"><strong>Step 3: Formulate the Mole Balance Equations:</strong>
 For a constant-volume batch reactor, the mole balance for any species <span class="math notranslate nohighlight">\(i\)</span> simplifies to <span class="math notranslate nohighlight">\(\frac{dC_i}{dt} = r_i\)</span>.
 The rate of formation of Styrene is <span class="math notranslate nohighlight">\(r_S = -k C_S C_B\)</span>.
 From the stoichiometry, 3.2 moles of B are consumed for every mole of S. Therefore, the rate of formation of Butadiene is <span class="math notranslate nohighlight">\(r_B = -3.2 (k C_S C_B)\)</span>.
 This gives us the system of ODEs to solve:</p>
-<p><strong>System of Differential Equations</strong></p>
+<p class="sd-card-text"><strong>System of Differential Equations</strong></p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dC_S}{dt} = -k C_S C_B
-\]</div>
+\[\frac{dC_S}{dt} = -k C_S C_B\]</div>
 <div class="math notranslate nohighlight">
-\[
-\frac{dC_B}{dt} = -3.2 k C_S C_B
-\]</div>
-<p><strong>Step 4: Define the Solution Approach:</strong>
+\[\frac{dC_B}{dt} = -3.2 k C_S C_B\]</div>
+<p class="sd-card-text"><strong>Step 4: Define the Solution Approach:</strong>
 The problem is now fully defined as an initial value problem. We must solve the system of ODEs with the known rate constant and initial concentrations over the specified time interval.</p>
-<p><strong>Summary for Numerical Solver</strong>
+<p class="sd-card-text"><strong>Summary for Numerical Solver</strong>
 Equations to Solve:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
+\[\begin{split}\begin{align*}
     \frac{dC_S}{dt} &amp;= -0.036 \cdot C_S \cdot C_B \\
     \frac{dC_B}{dt} &amp;= -3.2 \cdot (0.036) \cdot C_S \cdot C_B = -0.1152 \cdot C_S \cdot C_B
-\end{align*}
-\end{split}\]</div>
-<p>Initial Conditions (at <span class="math notranslate nohighlight">\(t=0\)</span>):</p>
+\end{align*}\end{split}\]</div>
+<p class="sd-card-text">Initial Conditions (at <span class="math notranslate nohighlight">\(t=0\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
+\[\begin{split}\begin{align*}
     C_S(0) &amp;= 0.782 \, \text{kmol/m}^3 \\
     C_B(0) &amp;= 3.424 \, \text{kmol/m}^3
-\end{align*}
-\end{split}\]</div>
-<p>Integration Interval: from <span class="math notranslate nohighlight">\(t=0\)</span> to <span class="math notranslate nohighlight">\(t=10\)</span> h.</p>
-<p>This system would be integrated using a numerical solver (e.g., in MATLAB, Python, or Polymath) to find the final concentrations <span class="math notranslate nohighlight">\(C_S(10)\)</span> and <span class="math notranslate nohighlight">\(C_B(10)\)</span>.</p>
+\end{align*}\end{split}\]</div>
+<p class="sd-card-text">Integration Interval: from <span class="math notranslate nohighlight">\(t=0\)</span> to <span class="math notranslate nohighlight">\(t=10\)</span> h.</p>
+<p class="sd-card-text">This system would be integrated using a numerical solver (e.g., in MATLAB, Python, or Polymath) to find the final concentrations <span class="math notranslate nohighlight">\(C_S(10)\)</span> and <span class="math notranslate nohighlight">\(C_B(10)\)</span>.</p>
 </div>
-</section>
+</details></section>
 <section id="example-pseudo-first-order-reaction">
 <h3>Example: Pseudo-First-Order Reaction<a class="headerlink" href="#example-pseudo-first-order-reaction" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-7">
@@ -1213,76 +1083,58 @@ Equations to Solve:</p>
 (a) Determine the final concentration of butylene oxide after 45 min.
 (b) A consultant suggests enhancing the rate by continuously feeding water at 25 L/min into the initial 500 L volume. Will this proposal increase, decrease, or have no effect on the time required to reach a given conversion?</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Solution (Part a): Final Concentration Calculation</strong></p>
-<p><strong>Step 1: Simplify the Rate Law via Pseudo-First-Order Approximation:</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Solution (Part a): Final Concentration Calculation</strong></p>
+<p class="sd-card-text"><strong>Step 1: Simplify the Rate Law via Pseudo-First-Order Approximation:</strong>
 When a second-order reaction (<span class="math notranslate nohighlight">\(r = -k'C_AC_B\)</span>) involves one reactant (B) in large excess (e.g., a solvent), its concentration <span class="math notranslate nohighlight">\(C_B\)</span> remains essentially constant throughout the reaction. We can combine the true rate constant <span class="math notranslate nohighlight">\(k'\)</span> and the constant concentration <span class="math notranslate nohighlight">\(C_B\)</span> into a new, “pseudo-first-order” rate constant, <span class="math notranslate nohighlight">\(k\)</span>.
 Molar density of water: <span class="math notranslate nohighlight">\(C_B \approx \frac{1000 \, \text{g/L}}{18.015 \, \text{g/mol}} \approx 55.5\)</span> mol/L.
 Since <span class="math notranslate nohighlight">\(C_B \gg C_{A0}\)</span> (<span class="math notranslate nohighlight">\(55.5 \gg 0.25\)</span>), the assumption is valid.</p>
 <div class="math notranslate nohighlight">
-\[
-r_A = -k' C_A C_B \approx -(k' C_B) C_A = -k C_A
-\]</div>
+\[r_A = -k' C_A C_B \approx -(k' C_B) C_A = -k C_A\]</div>
 <div class="math notranslate nohighlight">
-\[
-k = k' C_B = (8.3 \times 10^{-4} \, \frac{\text{L}}{\text{mol}\cdot\text{min}}) \cdot (55.5 \, \frac{\text{mol}}{\text{L}}) = 0.046065 \, \text{min}^{-1}
-\]</div>
-<p><strong>Step 2: Apply the First-Order Integrated Rate Law:</strong>
+\[k = k' C_B = (8.3 \times 10^{-4} \, \frac{\text{L}}{\text{mol}\cdot\text{min}}) \cdot (55.5 \, \frac{\text{mol}}{\text{L}}) = 0.046065 \, \text{min}^{-1}\]</div>
+<p class="sd-card-text"><strong>Step 2: Apply the First-Order Integrated Rate Law:</strong>
 For a first-order reaction in a constant-volume batch reactor:</p>
 <div class="math notranslate nohighlight">
-\[
-\ln\left(\frac{C_{A0}}{C_A}\right) = k t
-\]</div>
-<p>Solving for the final concentration, <span class="math notranslate nohighlight">\(C_A\)</span>, after <span class="math notranslate nohighlight">\(t = 45\)</span> min:</p>
+\[\ln\left(\frac{C_{A0}}{C_A}\right) = k t\]</div>
+<p class="sd-card-text">Solving for the final concentration, <span class="math notranslate nohighlight">\(C_A\)</span>, after <span class="math notranslate nohighlight">\(t = 45\)</span> min:</p>
 <div class="math notranslate nohighlight">
-\[
-\ln\left(\frac{0.25 \, \text{mol/L}}{C_A}\right) = (0.046065 \, \text{min}^{-1}) \cdot (45 \, \text{min}) = 2.073
-\]</div>
+\[\ln\left(\frac{0.25 \, \text{mol/L}}{C_A}\right) = (0.046065 \, \text{min}^{-1}) \cdot (45 \, \text{min}) = 2.073\]</div>
 <div class="math notranslate nohighlight">
-\[
-\frac{0.25}{C_A} = e^{2.073} \approx 7.948
-\]</div>
+\[\frac{0.25}{C_A} = e^{2.073} \approx 7.948\]</div>
 <div class="math notranslate nohighlight">
-\[
-C_A = \frac{0.25}{7.948} \approx \textbf{0.0315 mol/L}
-\]</div>
+\[C_A = \frac{0.25}{7.948} \approx \textbf{0.0315 mol/L}\]</div>
 </div>
-<div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Solution (Part b): Effect of Adding More Solvent</strong></p>
-<p><strong>Step 1: Analyze the Proposal using a Mole Basis:</strong>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Solution (Part b): Effect of Adding More Solvent</strong></p>
+<p class="sd-card-text"><strong>Step 1: Analyze the Proposal using a Mole Basis:</strong>
 The proposal involves changing the volume, so analyzing concentrations can be misleading. The fundamental measure of reaction progress is the number of <strong>moles</strong> converted. Let’s write the mole balance for the product, C. This is now a semi-batch reactor, but the core principle holds.</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dN_C}{dt} = r_C V
-\]</div>
-<p><strong>Step 2: Examine the Rate of Molar Production:</strong>
+\[\frac{dN_C}{dt} = r_C V\]</div>
+<p class="sd-card-text"><strong>Step 2: Examine the Rate of Molar Production:</strong>
 The rate of formation of product C per unit volume is <span class="math notranslate nohighlight">\(r_C = k' C_A C_B\)</span>. Substituting this into the mole balance gives:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dN_C}{dt} = (k' C_A C_B) V
-\]</div>
-<p>Now, express the concentration of A in terms of moles and the changing volume, <span class="math notranslate nohighlight">\(C_A = N_A/V\)</span>.</p>
-<p><strong>Molar Rate of Production</strong></p>
+\[\frac{dN_C}{dt} = (k' C_A C_B) V\]</div>
+<p class="sd-card-text">Now, express the concentration of A in terms of moles and the changing volume, <span class="math notranslate nohighlight">\(C_A = N_A/V\)</span>.</p>
+<p class="sd-card-text"><strong>Molar Rate of Production</strong></p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dN_C}{dt} = \left(k' \frac{N_A}{V} C_B\right) V = k' C_B N_A
-\]</div>
-<p>Using the pseudo-first-order constant <span class="math notranslate nohighlight">\(k = k'C_B\)</span>:</p>
+\[\frac{dN_C}{dt} = \left(k' \frac{N_A}{V} C_B\right) V = k' C_B N_A\]</div>
+<p class="sd-card-text">Using the pseudo-first-order constant <span class="math notranslate nohighlight">\(k = k'C_B\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dN_C}{dt} = k N_A
-\]</div>
-<p><strong>Step 3: Conclusion:</strong>
+\[\frac{dN_C}{dt} = k N_A\]</div>
+<p class="sd-card-text"><strong>Step 3: Conclusion:</strong>
 The final equation is the key insight. The rate at which <strong>moles of product C are formed</strong> depends only on the number of moles of reactant A present (<span class="math notranslate nohighlight">\(N_A\)</span>) and the pseudo-rate constant (<span class="math notranslate nohighlight">\(k\)</span>). It is <strong>independent of the total reactor volume <span class="math notranslate nohighlight">\(V\)</span></strong>.</p>
 <ul class="simple">
-<li><p>When adding more water, the concentration of A (<span class="math notranslate nohighlight">\(C_A = N_A/V\)</span>) decreases because the volume <span class="math notranslate nohighlight">\(V\)</span> increases. This <em>lowers</em> the volumetric reaction rate (<span class="math notranslate nohighlight">\(r_C\)</span>).</p></li>
-<li><p>At the same time, the total reactor volume <span class="math notranslate nohighlight">\(V\)</span> is increasing.</p></li>
+<li><p class="sd-card-text">When adding more water, the concentration of A (<span class="math notranslate nohighlight">\(C_A = N_A/V\)</span>) decreases because the volume <span class="math notranslate nohighlight">\(V\)</span> increases. This <em>lowers</em> the volumetric reaction rate (<span class="math notranslate nohighlight">\(r_C\)</span>).</p></li>
+<li><p class="sd-card-text">At the same time, the total reactor volume <span class="math notranslate nohighlight">\(V\)</span> is increasing.</p></li>
 </ul>
-<p>As the mole balance explicitly shows, these two effects exactly cancel each other out. The rate of conversion of moles of A is unchanged. Therefore, the consultant’s proposal will have <strong>no effect</strong> on the time required to reach a specific conversion (i.e., to convert a specific number of moles of A).</p>
+<p class="sd-card-text">As the mole balance explicitly shows, these two effects exactly cancel each other out. The rate of conversion of moles of A is unchanged. Therefore, the consultant’s proposal will have <strong>no effect</strong> on the time required to reach a specific conversion (i.e., to convert a specific number of moles of A).</p>
 </div>
-</section>
+</details></section>
 </section>
 <section id="isothermal-semibatch-reactors">
 <h2>Isothermal Semibatch Reactors<a class="headerlink" href="#isothermal-semibatch-reactors" title="Link to this heading">#</a></h2>
@@ -1290,8 +1142,8 @@ The final equation is the key insight. The rate at which <strong>moles of produc
 <section id="fundamental-equations">
 <h3>Fundamental Equations<a class="headerlink" href="#fundamental-equations" title="Link to this heading">#</a></h3>
 <p>The dynamic behavior of a semibatch reactor is described by a set of simultaneous ordinary differential equations derived from mole and volume balances.</p>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(N_i\)</span>: Moles of component <span class="math notranslate nohighlight">\(i\)</span> in the reactor at time <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(F_{i0}, F_i\)</span>: Molar flow rates of <span class="math notranslate nohighlight">\(i\)</span> entering and leaving the reactor (mol/s).</p></li>
@@ -1301,26 +1153,22 @@ The final equation is the key insight. The rate at which <strong>moles of produc
 <li><p><span class="math notranslate nohighlight">\(C_i\)</span>: Molar concentration of component <span class="math notranslate nohighlight">\(i\)</span> in the reactor, <span class="math notranslate nohighlight">\(C_i = N_i/V\)</span> (mol/L).</p></li>
 </ul>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>General Mole and Volume Balances</strong>
 For an irreversible reaction <span class="math notranslate nohighlight">\(A + B \rightarrow 2C\)</span> with a rate law of <span class="math notranslate nohighlight">\(r = k C_A^n C_B^m\)</span>:</p>
 <ul>
 <li><p><strong>Mole Balances (moles):</strong></p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-  \begin{align*}
+\[\begin{split}  \begin{align*}
       \frac{dN_A}{dt} &amp;= F_{A0} - F_A - kC_A^n C_B^m V \\
       \frac{dN_B}{dt} &amp;= F_{B0} - F_B - kC_A^n C_B^m V \\
       \frac{dN_C}{dt} &amp;= F_{C0} - F_C + 2kC_A^n C_B^m V
-  \end{align*}
-  \end{split}\]</div>
+  \end{align*}\end{split}\]</div>
 </li>
 <li><p><strong>Volume Balance (liquid phase):</strong></p>
 <div class="math notranslate nohighlight">
-\[
-  \frac{dV}{dt} = v_0 - v
-  \]</div>
+\[  \frac{dV}{dt} = v_0 - v\]</div>
 </li>
 </ul>
 <p>To solve this system, initial conditions (<span class="math notranslate nohighlight">\(N_{A0}, N_{B0}, N_{C0}, V_0\)</span>) at <span class="math notranslate nohighlight">\(t=0\)</span> are required.</p>
@@ -1329,8 +1177,8 @@ For an irreversible reaction <span class="math notranslate nohighlight">\(A + B 
 <section id="conceptual-overview-and-applications">
 <h3>Conceptual Overview and Applications<a class="headerlink" href="#conceptual-overview-and-applications" title="Link to this heading">#</a></h3>
 <p>Semibatch reactors are typically stirred tanks operating in a non-steady-state, open-system mode, primarily used for liquid-phase reactions.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Key Applications of Semibatch Reactors</strong>
 This reactor type is chosen to exert specific control over the reaction environment.</p>
 <ol class="arabic simple">
@@ -1351,76 +1199,56 @@ This reactor type is chosen to exert specific control over the reaction environm
 (a) Determine the time required to reach 80% conversion of A.
 (b) Derive an expression for the molar flow rate of hydrogen into the reactor as a function of time.</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Solution (Part a): Time to Reach 80% Conversion</strong></p>
-<p><strong>Step 1: Mole Balance on A:</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Solution (Part a): Time to Reach 80% Conversion</strong></p>
+<p class="sd-card-text"><strong>Step 1: Mole Balance on A:</strong>
 Reactant A is only present in the liquid phase and is not fed or removed. Therefore, its mole balance is identical to that of a batch reactor. Let <span class="math notranslate nohighlight">\(V_L\)</span> be the constant liquid volume.</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dN_A}{dt} = r_A V_L = (-k C_A P_{H_2}) V_L
-\]</div>
-<p>Since <span class="math notranslate nohighlight">\(V_L\)</span> is constant, we can use <span class="math notranslate nohighlight">\(N_A = C_A V_L\)</span> and simplify to a concentration basis:</p>
+\[\frac{dN_A}{dt} = r_A V_L = (-k C_A P_{H_2}) V_L\]</div>
+<p class="sd-card-text">Since <span class="math notranslate nohighlight">\(V_L\)</span> is constant, we can use <span class="math notranslate nohighlight">\(N_A = C_A V_L\)</span> and simplify to a concentration basis:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dC_A}{dt} = -k C_A P_{H_2}
-\]</div>
-<p><strong>Step 2: Integrate the Rate Law:</strong>
+\[\frac{dC_A}{dt} = -k C_A P_{H_2}\]</div>
+<p class="sd-card-text"><strong>Step 2: Integrate the Rate Law:</strong>
 The key simplification is that hydrogen is supplied to maintain a constant pressure, so <span class="math notranslate nohighlight">\(P_{H_2} = 3\)</span> bar is constant throughout the reaction. The rate law simplifies to a pseudo-first-order form, <span class="math notranslate nohighlight">\(r_A = -k'C_A\)</span>, where the new constant is <span class="math notranslate nohighlight">\(k' = k \cdot P_{H_2}\)</span>. We can now separate variables and integrate the simplified rate law:</p>
 <div class="math notranslate nohighlight">
-\[
-\int_{C_{A0}}^{C_A} \frac{dC_A}{C_A} = \int_0^t -k P_{H_2} dt \implies \ln\left(\frac{C_A}{C_{A0}}\right) = -k P_{H_2} t
-\]</div>
-<p><strong>Step 3: Solve for Time:</strong>
+\[\int_{C_{A0}}^{C_A} \frac{dC_A}{C_A} = \int_0^t -k P_{H_2} dt \implies \ln\left(\frac{C_A}{C_{A0}}\right) = -k P_{H_2} t\]</div>
+<p class="sd-card-text"><strong>Step 3: Solve for Time:</strong>
 The target is 80% conversion (<span class="math notranslate nohighlight">\(X_A=0.8\)</span>). At this point, the final concentration is <span class="math notranslate nohighlight">\(C_A = C_{A0}(1-X_A) = 0.2 C_{A0}\)</span>. The concentration ratio is <span class="math notranslate nohighlight">\(C_A/C_{A0} = 0.2\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-\ln(0.2) = -(0.0074 \, \text{bar}^{-1}\text{min}^{-1}) \cdot (3 \, \text{bar}) \cdot t
-\]</div>
+\[\ln(0.2) = -(0.0074 \, \text{bar}^{-1}\text{min}^{-1}) \cdot (3 \, \text{bar}) \cdot t\]</div>
 <div class="math notranslate nohighlight">
-\[
--1.6094 = -0.0222 \cdot t
-\]</div>
+\[-1.6094 = -0.0222 \cdot t\]</div>
 <div class="math notranslate nohighlight">
-\[
-t = \frac{1.6094}{0.0222} = \textbf{72.5 min}
-\]</div>
+\[t = \frac{1.6094}{0.0222} = \textbf{72.5 min}\]</div>
 </div>
-<div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Solution (Part b): Hydrogen Flow Rate vs. Time</strong></p>
-<p><strong>Step 1: Mole Balance on Gaseous H<span class="math notranslate nohighlight">\(_2\)</span>:</strong>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Solution (Part b): Hydrogen Flow Rate vs. Time</strong></p>
+<p class="sd-card-text"><strong>Step 1: Mole Balance on Gaseous H<span class="math notranslate nohighlight">\(_2\)</span>:</strong>
 Hydrogen is fed into the reactor (<span class="math notranslate nohighlight">\(F_{H_2,in}\)</span>) and consumed by the reaction. From the 1:1 stoichiometry, its rate of formation is <span class="math notranslate nohighlight">\(r_{H_2} = r_A = -k C_A P_{H_2}\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dN_{H_2}}{dt} = F_{H_2,in} + r_{H_2} V_L = F_{H_2,in} - k C_A P_{H_2} V_L
-\]</div>
-<p><strong>Step 2: Apply Simplification for Constant Gas Moles:</strong>
+\[\frac{dN_{H_2}}{dt} = F_{H_2,in} + r_{H_2} V_L = F_{H_2,in} - k C_A P_{H_2} V_L\]</div>
+<p class="sd-card-text"><strong>Step 2: Apply Simplification for Constant Gas Moles:</strong>
 The problem states that the reactor pressure, temperature, and volume are constant. According to the ideal gas law (<span class="math notranslate nohighlight">\(PV=nRT\)</span>), if P, V, and T are constant for the gas phase, then the number of moles of hydrogen gas in the reactor headspace, <span class="math notranslate nohighlight">\(N_{H_2}\)</span>, must also be constant. Therefore, the accumulation term is zero:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dN_{H_2}}{dt} = 0
-\]</div>
-<p><strong>Step 3: Derive the Flow Rate Expression:</strong>
+\[\frac{dN_{H_2}}{dt} = 0\]</div>
+<p class="sd-card-text"><strong>Step 3: Derive the Flow Rate Expression:</strong>
 The mole balance simplifies to an algebraic equation for the inlet flow rate:</p>
 <div class="math notranslate nohighlight">
-\[
-0 = F_{H_2,in} - k C_A P_{H_2} V_L \implies F_{H_2,in} = k P_{H_2} V_L C_A
-\]</div>
-<p>To get the flow rate as a function of time, we need the expression for <span class="math notranslate nohighlight">\(C_A(t)\)</span> from Part (a):</p>
+\[0 = F_{H_2,in} - k C_A P_{H_2} V_L \implies F_{H_2,in} = k P_{H_2} V_L C_A\]</div>
+<p class="sd-card-text">To get the flow rate as a function of time, we need the expression for <span class="math notranslate nohighlight">\(C_A(t)\)</span> from Part (a):</p>
 <div class="math notranslate nohighlight">
-\[
-C_A(t) = C_{A0} e^{-k P_{H_2} t}
-\]</div>
-<p>Substituting this in and recognizing that <span class="math notranslate nohighlight">\(C_{A0} V_L = N_{A0}\)</span> (the initial moles of A):</p>
-<p><strong>Hydrogen Feed Rate as a Function of Time</strong></p>
+\[C_A(t) = C_{A0} e^{-k P_{H_2} t}\]</div>
+<p class="sd-card-text">Substituting this in and recognizing that <span class="math notranslate nohighlight">\(C_{A0} V_L = N_{A0}\)</span> (the initial moles of A):</p>
+<p class="sd-card-text"><strong>Hydrogen Feed Rate as a Function of Time</strong></p>
 <div class="math notranslate nohighlight">
-\[
-F_{H_2,in}(t) = k P_{H_2} N_{A0} e^{-k P_{H_2} t}
-\]</div>
-<p>This result shows that the hydrogen flow rate required is highest at <span class="math notranslate nohighlight">\(t=0\)</span> when the concentration of A is highest, and it decays exponentially as reactant A is consumed.</p>
+\[F_{H_2,in}(t) = k P_{H_2} N_{A0} e^{-k P_{H_2} t}\]</div>
+<p class="sd-card-text">This result shows that the hydrogen flow rate required is highest at <span class="math notranslate nohighlight">\(t=0\)</span> when the concentration of A is highest, and it decays exponentially as reactant A is consumed.</p>
 </div>
-</section>
+</details></section>
 <section id="example-catalytic-semibatch-reaction">
 <h3>Example: Catalytic Semibatch Reaction<a class="headerlink" href="#example-catalytic-semibatch-reaction" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-9">
@@ -1428,47 +1256,44 @@ F_{H_2,in}(t) = k P_{H_2} N_{A0} e^{-k P_{H_2} t}
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> A catalytic reaction, <span class="math notranslate nohighlight">\(A \rightarrow C\)</span>, takes place in the liquid phase of an isothermal semibatch reactor. The rate law is <span class="math notranslate nohighlight">\(r_A = -k C_A C_B\)</span>, with <span class="math notranslate nohighlight">\(k = 0.25\)</span> L/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>min), where B is the catalyst. Initially, the reactor contains 2700 L of a solution with <span class="math notranslate nohighlight">\(C_{A0} = 20.0\)</span> mol/L. The initial concentration of catalyst B is zero. Starting at <span class="math notranslate nohighlight">\(t=0\)</span>, a solution containing 0.05 mol/L of B is fed to the reactor at a flow rate of 12.5 L/min. How many moles of product C are in the reactor after 200 min?</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Strategy and Initial Conditions:</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Strategy and Initial Conditions:</strong>
 This system involves changing volume and coupled concentrations, requiring a numerical solution. We first define all initial conditions and constant feed rates.
 Initial Conditions (<span class="math notranslate nohighlight">\(t=0\)</span>): <span class="math notranslate nohighlight">\(V(0) = 2700\)</span> L, <span class="math notranslate nohighlight">\(N_A(0) = C_{A0} V(0) = (20.0 \, \text{mol/L}) \cdot (2700 \, \text{L}) = 54,000\)</span> mol, <span class="math notranslate nohighlight">\(N_B(0) = 0\)</span> mol (Catalyst is not present initially), <span class="math notranslate nohighlight">\(N_C(0) = 0\)</span> mol (Product is not present initially).
 Feed Stream (<span class="math notranslate nohighlight">\(t &gt; 0\)</span>): Volumetric flow rate in: <span class="math notranslate nohighlight">\(v_0 = 12.5\)</span> L/min.
 Molar feed rate of B: <span class="math notranslate nohighlight">\(F_{B0} = v_0 C_{B,in} = (12.5 \, \text{L/min}) (0.05 \, \text{mol/L}) = 0.625\)</span> mol/min.
 Molar feed rates of A and C are zero: <span class="math notranslate nohighlight">\(F_{A0} = 0, F_{C0} = 0\)</span>.</p>
-<p><strong>Step 2: Formulate the System of Differential Equations:</strong>
+<p class="sd-card-text"><strong>Step 2: Formulate the System of Differential Equations:</strong>
 We need mole balances for A, B, and C, and a volume balance. The concentrations <span class="math notranslate nohighlight">\(C_A=N_A/V\)</span> and <span class="math notranslate nohighlight">\(C_B=N_B/V\)</span> must be calculated at each time step.</p>
-<p>Volume Balance: Flow in only.
+<p class="sd-card-text">Volume Balance: Flow in only.
 <span class="math notranslate nohighlight">\(\frac{dV}{dt} = v_0 = 12.5\)</span></p>
-<p>Mole Balance on A (Reactant): No flow, only consumption.
+<p class="sd-card-text">Mole Balance on A (Reactant): No flow, only consumption.
 <span class="math notranslate nohighlight">\(\frac{dN_A}{dt} = r_A V = -k C_A C_B V\)</span></p>
-<p>Mole Balance on B (Catalyst): Flow in, no consumption.
+<p class="sd-card-text">Mole Balance on B (Catalyst): Flow in, no consumption.
 <span class="math notranslate nohighlight">\(\frac{dN_B}{dt} = F_{B0} = 0.625\)</span></p>
-<p>Mole Balance on C (Product): No flow, only formation.
+<p class="sd-card-text">Mole Balance on C (Product): No flow, only formation.
 <span class="math notranslate nohighlight">\(\frac{dN_C}{dt} = r_C V = -r_A V = k C_A C_B V\)</span></p>
-<p><strong>Step 3: Summarize for Numerical Solution:</strong>
+<p class="sd-card-text"><strong>Step 3: Summarize for Numerical Solution:</strong>
 The complete system of ODEs and initial conditions is prepared for a numerical solver.</p>
-<p><strong>System for Numerical Solver</strong>
+<p class="sd-card-text"><strong>System for Numerical Solver</strong>
 Differential Equations:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
+\[\begin{split}\begin{align*}
     \frac{dV}{dt} &amp;= 12.5 \\
     \frac{dN_A}{dt} &amp;= -0.25 \left(\frac{N_A}{V}\right) \left(\frac{N_B}{V}\right) V = -0.25 \frac{N_A N_B}{V} \\
     \frac{dN_B}{dt} &amp;= 0.625 \\
     \frac{dN_C}{dt} &amp;= 0.25 \left(\frac{N_A}{V}\right) \left(\frac{N_B}{V}\right) V = 0.25 \frac{N_A N_B}{V}
-\end{align*}
-\end{split}\]</div>
-<p>Initial Conditions (at <span class="math notranslate nohighlight">\(t=0\)</span>): <span class="math notranslate nohighlight">\(V=2700\)</span>, <span class="math notranslate nohighlight">\(N_A=54000\)</span>, <span class="math notranslate nohighlight">\(N_B=0\)</span>, <span class="math notranslate nohighlight">\(N_C=0\)</span>.
+\end{align*}\end{split}\]</div>
+<p class="sd-card-text">Initial Conditions (at <span class="math notranslate nohighlight">\(t=0\)</span>): <span class="math notranslate nohighlight">\(V=2700\)</span>, <span class="math notranslate nohighlight">\(N_A=54000\)</span>, <span class="math notranslate nohighlight">\(N_B=0\)</span>, <span class="math notranslate nohighlight">\(N_C=0\)</span>.
 Integration Interval: from <span class="math notranslate nohighlight">\(t=0\)</span> to <span class="math notranslate nohighlight">\(t=200\)</span> min.</p>
-<p><strong>Step 4: Final Result:</strong>
+<p class="sd-card-text"><strong>Step 4: Final Result:</strong>
 Solving this system with a numerical package (such as POLYMATH, MATLAB, or Python) yields the number of moles of each component at <span class="math notranslate nohighlight">\(t=200\)</span> min. The result for product C is:</p>
 <div class="math notranslate nohighlight">
-\[
-N_C(200 \text{ min}) \approx \textbf{28,000 moles}
-\]</div>
+\[N_C(200 \text{ min}) \approx \textbf{28,000 moles}\]</div>
 </div>
-</section>
+</details></section>
 </section>
 <section id="isothermal-continuous-stirred-tank-reactors-cstrs">
 <h2>Isothermal Continuous Stirred Tank Reactors (CSTRs)<a class="headerlink" href="#isothermal-continuous-stirred-tank-reactors-cstrs" title="Link to this heading">#</a></h2>
@@ -1476,8 +1301,8 @@ N_C(200 \text{ min}) \approx \textbf{28,000 moles}
 <section id="id1">
 <h3>Fundamental Equations<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>The design of a CSTR is based on a steady-state mole balance, which results in an algebraic equation rather than a differential equation.</p>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(F_{i0}, F_i\)</span>: Molar flow rates of component <span class="math notranslate nohighlight">\(i\)</span> entering and leaving the reactor (mol/s).</p></li>
 <li><p><span class="math notranslate nohighlight">\(V\)</span>: Volume of the reactor contents (L).</p></li>
@@ -1487,43 +1312,33 @@ N_C(200 \text{ min}) \approx \textbf{28,000 moles}
 <li><p><span class="math notranslate nohighlight">\(X_A\)</span>: Fractional conversion of reactant A.</p></li>
 </ul>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>CSTR Steady-State Mole Balance</strong>
 The general form is: <span class="math notranslate nohighlight">\(\text{Inflow} - \text{Outflow} + \text{Generation by Reaction} = 0\)</span>.
 For a reaction <span class="math notranslate nohighlight">\(A \rightarrow \text{Products}\)</span> with rate law <span class="math notranslate nohighlight">\(-r_A = k C_A^n\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-F_{A0} - F_A + r_A V = 0
-\]</div>
+\[F_{A0} - F_A + r_A V = 0\]</div>
 <p>Substituting <span class="math notranslate nohighlight">\(r_A = -kC_A^n\)</span> and <span class="math notranslate nohighlight">\(F_A = vC_A\)</span> (for constant liquid density):</p>
 <div class="math notranslate nohighlight">
-\[
-v C_{A0} - v C_A - kC_A^n V = 0
-\]</div>
+\[v C_{A0} - v C_A - kC_A^n V = 0\]</div>
 <p>This algebraic equation must be solved for the unknown outlet concentration, <span class="math notranslate nohighlight">\(C_A\)</span>.</p>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>Key CSTR Relationships (Constant Density)</strong></p>
 <ul>
 <li><p><strong>Space Time (<span class="math notranslate nohighlight">\(\tau\)</span>):</strong> The average time a fluid element spends in the reactor.</p>
 <div class="math notranslate nohighlight">
-\[
-  \tau = \frac{V}{v}
-  \]</div>
+\[  \tau = \frac{V}{v}\]</div>
 </li>
 <li><p><strong>Conversion (<span class="math notranslate nohighlight">\(X_A\)</span>):</strong> The fraction of reactant A that has been converted.</p>
 <div class="math notranslate nohighlight">
-\[
-  X_A = \frac{F_{A0} - F_A}{F_{A0}} = \frac{v C_{A0} - v C_A}{v C_{A0}} = \frac{C_{A0} - C_A}{C_{A0}}
-  \]</div>
+\[  X_A = \frac{F_{A0} - F_A}{F_{A0}} = \frac{v C_{A0} - v C_A}{v C_{A0}} = \frac{C_{A0} - C_A}{C_{A0}}\]</div>
 </li>
 <li><p><strong>Concentration from Conversion:</strong></p>
 <div class="math notranslate nohighlight">
-\[
-  C_A = C_{A0}(1-X_A)
-  \]</div>
+\[  C_A = C_{A0}(1-X_A)\]</div>
 </li>
 </ul>
 </div>
@@ -1535,56 +1350,47 @@ v C_{A0} - v C_A - kC_A^n V = 0
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> The hydrolysis of acetic anhydride (A) to form acetic acid is carried out in a 1250-L CSTR. The feed contains 2.5 mol/L acetic anhydride and 50.0 mol/L of water (W). The reaction, <span class="math notranslate nohighlight">\((CH_3CO)_2O + H_2O \rightarrow 2CH_3COOH\)</span>, is first order in acetic anhydride and first order in water. At the reactor temperature, the rate constant is <span class="math notranslate nohighlight">\(k = 0.075\)</span> L/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>s). The feed flow rate is 15 L/s. What is the conversion of acetic anhydride?</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Formulate the Steady-State Mole Balances:</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Formulate the Steady-State Mole Balances:</strong>
 We must solve the steady-state mole balances for both reactants, acetic anhydride (A) and water (W).
 Rate Law: <span class="math notranslate nohighlight">\(-r_A = k C_A C_W\)</span>. Stoichiometry: A and W react in a 1:1 ratio, so their rates of formation are equal: <span class="math notranslate nohighlight">\(r_A = r_W\)</span>.
 The general mole balance for species <span class="math notranslate nohighlight">\(i\)</span> is <span class="math notranslate nohighlight">\(F_{i0} - F_i + r_i V = 0\)</span>.
 Assuming constant volumetric flow rate <span class="math notranslate nohighlight">\(v\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
+\[\begin{split}\begin{align*}
     v C_{A0} - v C_A + r_A V = 0 &amp;\implies v(C_{A0} - C_A) - k C_A C_W V = 0 \\
     v C_{W0} - v C_W + r_W V = 0 &amp;\implies v(C_{W0} - C_W) - k C_A C_W V = 0
-\end{align*}
-\end{split}\]</div>
-<p><strong>Step 2: Substitute Known Values to Form a System of Equations:</strong>
+\end{align*}\end{split}\]</div>
+<p class="sd-card-text"><strong>Step 2: Substitute Known Values to Form a System of Equations:</strong>
 We have a system of two algebraic equations with two unknowns: the outlet concentrations <span class="math notranslate nohighlight">\(C_A\)</span> and <span class="math notranslate nohighlight">\(C_W\)</span>.
 Given: <span class="math notranslate nohighlight">\(v = 15\)</span> L/s, <span class="math notranslate nohighlight">\(V = 1250\)</span> L, <span class="math notranslate nohighlight">\(C_{A0} = 2.5\)</span> mol/L, <span class="math notranslate nohighlight">\(C_{W0} = 50.0\)</span> mol/L, <span class="math notranslate nohighlight">\(k = 0.075\)</span> L/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>s).</p>
-<p><strong>System of Algebraic Equations</strong>
+<p class="sd-card-text"><strong>System of Algebraic Equations</strong>
 Substituting the values:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
+\[\begin{split}\begin{align*}
     15(2.5 - C_A) - (0.075) C_A C_W (1250) &amp;= 0 \\
     15(50.0 - C_W) - (0.075) C_A C_W (1250) &amp;= 0
-\end{align*}
-\end{split}\]</div>
-<p>Simplifying:</p>
+\end{align*}\end{split}\]</div>
+<p class="sd-card-text">Simplifying:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
+\[\begin{split}\begin{align*}
     37.5 - 15 C_A - 93.75 C_A C_W &amp;= 0 \\
     750 - 15 C_W - 93.75 C_A C_W &amp;= 0
-\end{align*}
-\end{split}\]</div>
-<p><strong>Step 3: Solve the System of Equations:</strong>
+\end{align*}\end{split}\]</div>
+<p class="sd-card-text"><strong>Step 3: Solve the System of Equations:</strong>
 This system of non-linear equations must be solved simultaneously. While analytical substitution is possible, a numerical solver is a more robust approach for complex systems.
 Based on the provided solution from such a solver:</p>
 <div class="math notranslate nohighlight">
-\[
-C_A = 0.081 \, \text{mol/L} \quad \text{and} \quad C_W = 47.58 \, \text{mol/L}
-\]</div>
-<p><strong>Step 4: Calculate the Final Conversion:</strong>
+\[C_A = 0.081 \, \text{mol/L} \quad \text{and} \quad C_W = 47.58 \, \text{mol/L}\]</div>
+<p class="sd-card-text"><strong>Step 4: Calculate the Final Conversion:</strong>
 The conversion of acetic anhydride (A) is calculated from the inlet and outlet concentrations.</p>
 <div class="math notranslate nohighlight">
-\[
-X_A = \frac{C_{A0} - C_A}{C_{A0}} = \frac{2.5 - 0.081}{2.5} = \frac{2.419}{2.5} = 0.9676
-\]</div>
-<p>The conversion is <strong>97%</strong>.</p>
+\[X_A = \frac{C_{A0} - C_A}{C_{A0}} = \frac{2.5 - 0.081}{2.5} = \frac{2.419}{2.5} = 0.9676\]</div>
+<p class="sd-card-text">The conversion is <strong>97%</strong>.</p>
 </div>
-</section>
+</details></section>
 <section id="example-reversible-reaction-in-a-cstr">
 <h3>Example: Reversible Reaction in a CSTR<a class="headerlink" href="#example-reversible-reaction-in-a-cstr" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-11">
@@ -1592,126 +1398,93 @@ X_A = \frac{C_{A0} - C_A}{C_{A0}} = \frac{2.5 - 0.081}{2.5} = \frac{2.419}{2.5} 
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> The liquid-phase, reversible reaction <span class="math notranslate nohighlight">\(A + B \rightleftharpoons 2C\)</span> occurs in an isothermal CSTR. The feed contains equimolar amounts of A and B. The conversion of A is measured to be 60.0%. The equilibrium conversion under the same feed conditions is 80.0%. If the volumetric flow rate is increased by 50.0%, what is the new conversion of A? The forward reaction is first order in A and B; the reverse reaction is second order in C.</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Solution (Part 1 of 3): Use Equilibrium Data</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Solution (Part 1 of 3): Use Equilibrium Data</strong>
 This problem is solved by finding a key dimensionless group that characterizes the reactor system and then using it to predict performance under new conditions.</p>
-<p><strong>Step 1: Relate Rate Constants using Equilibrium Conversion (<span class="math notranslate nohighlight">\(X_e\)</span>):</strong>
+<p class="sd-card-text"><strong>Step 1: Relate Rate Constants using Equilibrium Conversion (<span class="math notranslate nohighlight">\(X_e\)</span>):</strong>
 The net rate of reaction for A is <span class="math notranslate nohighlight">\(-r_A = k_1 C_A C_B - k_2 C_C^2\)</span>.
 At equilibrium, the net rate is zero (<span class="math notranslate nohighlight">\(-r_A = 0\)</span>) and the conversion is <span class="math notranslate nohighlight">\(X_e = 0.80\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-k_1 C_{A,e} C_{B,e} = k_2 C_{C,e}^2
-\]</div>
-<p>We express the equilibrium concentrations in terms of the initial concentration <span class="math notranslate nohighlight">\(C_{A0}\)</span> and <span class="math notranslate nohighlight">\(X_e\)</span>. Since the feed is equimolar, <span class="math notranslate nohighlight">\(C_{B0} = C_{A0}\)</span>.</p>
+\[k_1 C_{A,e} C_{B,e} = k_2 C_{C,e}^2\]</div>
+<p class="sd-card-text">We express the equilibrium concentrations in terms of the initial concentration <span class="math notranslate nohighlight">\(C_{A0}\)</span> and <span class="math notranslate nohighlight">\(X_e\)</span>. Since the feed is equimolar, <span class="math notranslate nohighlight">\(C_{B0} = C_{A0}\)</span>.</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(C_{A,e} = C_{A0}(1-X_e) = C_{A0}(1-0.80) = 0.2 C_{A0}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(C_{B,e} = C_{A0}(1-X_e) = 0.2 C_{A0}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(C_{C,e} = 2 C_{A0} X_e = 2 C_{A0}(0.80) = 1.6 C_{A0}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(C_{A,e} = C_{A0}(1-X_e) = C_{A0}(1-0.80) = 0.2 C_{A0}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(C_{B,e} = C_{A0}(1-X_e) = 0.2 C_{A0}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(C_{C,e} = 2 C_{A0} X_e = 2 C_{A0}(0.80) = 1.6 C_{A0}\)</span></p></li>
 </ul>
-<p>Substituting these into the equilibrium expression allows us to find the ratio of rate constants:</p>
+<p class="sd-card-text">Substituting these into the equilibrium expression allows us to find the ratio of rate constants:</p>
 <div class="math notranslate nohighlight">
-\[
-k_1 (0.2 C_{A0})(0.2 C_{A0}) = k_2 (1.6 C_{A0})^2
-\]</div>
+\[k_1 (0.2 C_{A0})(0.2 C_{A0}) = k_2 (1.6 C_{A0})^2\]</div>
 <div class="math notranslate nohighlight">
-\[
-k_1 (0.04 C_{A0}^2) = k_2 (2.56 C_{A0}^2)
-\]</div>
-<p><strong>Relationship Between Rate Constants</strong></p>
+\[k_1 (0.04 C_{A0}^2) = k_2 (2.56 C_{A0}^2)\]</div>
+<p class="sd-card-text"><strong>Relationship Between Rate Constants</strong></p>
 <div class="math notranslate nohighlight">
-\[
-k_1 = \frac{2.56}{0.04} k_2 \implies k_1 = 64 k_2
-\]</div>
+\[k_1 = \frac{2.56}{0.04} k_2 \implies k_1 = 64 k_2\]</div>
 </div>
-<div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Solution (Part 2 of 3): Characterize the Initial Reactor State</strong></p>
-<p><strong>Step 1: Use Initial Operating Data to Find a Reactor Constant Group:</strong>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Solution (Part 2 of 3): Characterize the Initial Reactor State</strong></p>
+<p class="sd-card-text"><strong>Step 1: Use Initial Operating Data to Find a Reactor Constant Group:</strong>
 For the initial case (Case 1), the conversion is <span class="math notranslate nohighlight">\(X_1 = 0.60\)</span> at a flow rate <span class="math notranslate nohighlight">\(v_1\)</span>. We use the CSTR mole balance:</p>
 <div class="math notranslate nohighlight">
-\[
-v_1(C_{A0} - C_{A1}) + r_{A1} V = 0 \implies v_1 C_{A0} X_1 = -r_{A1} V
-\]</div>
-<p>First, find the concentrations at <span class="math notranslate nohighlight">\(X_1 = 0.60\)</span>:</p>
+\[v_1(C_{A0} - C_{A1}) + r_{A1} V = 0 \implies v_1 C_{A0} X_1 = -r_{A1} V\]</div>
+<p class="sd-card-text">First, find the concentrations at <span class="math notranslate nohighlight">\(X_1 = 0.60\)</span>:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(C_{A1} = C_{A0}(1-X_1) = 0.4 C_{A0}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(C_{B1} = C_{A0}(1-X_1) = 0.4 C_{A0}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(C_{C1} = 2 C_{A0} X_1 = 1.2 C_{A0}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(C_{A1} = C_{A0}(1-X_1) = 0.4 C_{A0}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(C_{B1} = C_{A0}(1-X_1) = 0.4 C_{A0}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(C_{C1} = 2 C_{A0} X_1 = 1.2 C_{A0}\)</span></p></li>
 </ul>
-<p>Now, substitute these into the rate law, using <span class="math notranslate nohighlight">\(k_1=64k_2\)</span>:</p>
+<p class="sd-card-text">Now, substitute these into the rate law, using <span class="math notranslate nohighlight">\(k_1=64k_2\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
--r_{A1} = k_1 C_{A1} C_{B1} - k_2 C_{C1}^2 = 64k_2(0.4C_{A0})^2 - k_2(1.2C_{A0})^2
-\]</div>
+\[-r_{A1} = k_1 C_{A1} C_{B1} - k_2 C_{C1}^2 = 64k_2(0.4C_{A0})^2 - k_2(1.2C_{A0})^2\]</div>
 <div class="math notranslate nohighlight">
-\[
--r_{A1} = k_2 C_{A0}^2 [64(0.16) - 1.44] = k_2 C_{A0}^2 [10.24 - 1.44] = 8.8 k_2 C_{A0}^2
-\]</div>
-<p>Substitute this rate back into the mole balance:</p>
+\[-r_{A1} = k_2 C_{A0}^2 [64(0.16) - 1.44] = k_2 C_{A0}^2 [10.24 - 1.44] = 8.8 k_2 C_{A0}^2\]</div>
+<p class="sd-card-text">Substitute this rate back into the mole balance:</p>
 <div class="math notranslate nohighlight">
-\[
-v_1 C_{A0} (0.60) = (8.8 k_2 C_{A0}^2) V
-\]</div>
-<p>Rearranging gives us a key dimensionless group that combines all the unknown system parameters:</p>
-<p><strong>Dimensionless Reactor Group</strong></p>
+\[v_1 C_{A0} (0.60) = (8.8 k_2 C_{A0}^2) V\]</div>
+<p class="sd-card-text">Rearranging gives us a key dimensionless group that combines all the unknown system parameters:</p>
+<p class="sd-card-text"><strong>Dimensionless Reactor Group</strong></p>
 <div class="math notranslate nohighlight">
-\[
-\frac{k_2 C_{A0} V}{v_1} = \frac{0.60}{8.8} \approx 0.06818
-\]</div>
+\[\frac{k_2 C_{A0} V}{v_1} = \frac{0.60}{8.8} \approx 0.06818\]</div>
 </div>
-<div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Solution (Part 3 of 3): Solve for the New Conversion</strong></p>
-<p><strong>Step 1: Set up the Mole Balance for the New Condition:</strong>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Solution (Part 3 of 3): Solve for the New Conversion</strong></p>
+<p class="sd-card-text"><strong>Step 1: Set up the Mole Balance for the New Condition:</strong>
 The flow rate is increased by 50%, so the new flow rate is <span class="math notranslate nohighlight">\(v_2 = 1.5 v_1\)</span>. We seek the new conversion, <span class="math notranslate nohighlight">\(X_2\)</span>. The CSTR design equation for this new case (Case 2) is:</p>
 <div class="math notranslate nohighlight">
-\[
-v_2 C_{A0} X_2 = -r_{A2} V
-\]</div>
-<p>The rate law <span class="math notranslate nohighlight">\(-r_{A2}\)</span> can be expressed in terms of the new conversion <span class="math notranslate nohighlight">\(X_2\)</span>:</p>
+\[v_2 C_{A0} X_2 = -r_{A2} V\]</div>
+<p class="sd-card-text">The rate law <span class="math notranslate nohighlight">\(-r_{A2}\)</span> can be expressed in terms of the new conversion <span class="math notranslate nohighlight">\(X_2\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
--r_{A2} = k_1 C_{A2}C_{B2} - k_2 C_{C2}^2 = k_2 C_{A0}^2 [64(1-X_2)^2 - 4X_2^2]
-\]</div>
-<p>Substitute this into the design equation:</p>
+\[-r_{A2} = k_1 C_{A2}C_{B2} - k_2 C_{C2}^2 = k_2 C_{A0}^2 [64(1-X_2)^2 - 4X_2^2]\]</div>
+<p class="sd-card-text">Substitute this into the design equation:</p>
 <div class="math notranslate nohighlight">
-\[
-(1.5 v_1) C_{A0} X_2 = k_2 C_{A0}^2 [64(1-X_2)^2 - 4X_2^2] V
-\]</div>
-<p>Rearrange the equation to isolate the dimensionless group we found in the previous step:</p>
+\[(1.5 v_1) C_{A0} X_2 = k_2 C_{A0}^2 [64(1-X_2)^2 - 4X_2^2] V\]</div>
+<p class="sd-card-text">Rearrange the equation to isolate the dimensionless group we found in the previous step:</p>
 <div class="math notranslate nohighlight">
-\[
-X_2 = \left(\frac{k_2 C_{A0} V}{v_1}\right) \frac{[64(1-X_2)^2 - 4X_2^2]}{1.5}
-\]</div>
-<p><strong>Step 2: Solve for the New Conversion <span class="math notranslate nohighlight">\(X_2\)</span>:</strong>
+\[X_2 = \left(\frac{k_2 C_{A0} V}{v_1}\right) \frac{[64(1-X_2)^2 - 4X_2^2]}{1.5}\]</div>
+<p class="sd-card-text"><strong>Step 2: Solve for the New Conversion <span class="math notranslate nohighlight">\(X_2\)</span>:</strong>
 Substitute the value of the dimensionless group (0.06818) into the equation:</p>
 <div class="math notranslate nohighlight">
-\[
-X_2 = (0.06818) \frac{64(1-2X_2+X_2^2) - 4X_2^2}{1.5}
-\]</div>
+\[X_2 = (0.06818) \frac{64(1-2X_2+X_2^2) - 4X_2^2}{1.5}\]</div>
 <div class="math notranslate nohighlight">
-\[
-1.5 X_2 = 0.06818 [64 - 128X_2 + 64X_2^2 - 4X_2^2]
-\]</div>
+\[1.5 X_2 = 0.06818 [64 - 128X_2 + 64X_2^2 - 4X_2^2]\]</div>
 <div class="math notranslate nohighlight">
-\[
-1.5 X_2 = 0.06818 [60X_2^2 - 128X_2 + 64]
-\]</div>
-<p>Multiplying and rearranging gives a quadratic equation:</p>
+\[1.5 X_2 = 0.06818 [60X_2^2 - 128X_2 + 64]\]</div>
+<p class="sd-card-text">Multiplying and rearranging gives a quadratic equation:</p>
 <div class="math notranslate nohighlight">
-\[
-22.0 X_2 = 60X_2^2 - 128X_2 + 64
-\]</div>
-<p><strong>Final Quadratic Equation for Conversion</strong></p>
+\[22.0 X_2 = 60X_2^2 - 128X_2 + 64\]</div>
+<p class="sd-card-text"><strong>Final Quadratic Equation for Conversion</strong></p>
 <div class="math notranslate nohighlight">
-\[
-60X_2^2 - 150X_2 + 64 = 0
-\]</div>
-<p>Solving this using the quadratic formula yields two roots: <span class="math notranslate nohighlight">\(X_2 \approx 1.95\)</span> and <span class="math notranslate nohighlight">\(X_2 \approx 0.546\)</span>. Since conversion cannot be greater than 1, the only physically meaningful answer is <span class="math notranslate nohighlight">\(X_2=0.546\)</span>.</p>
-<p>The new conversion is <strong>55%</strong>. This result is logical, as increasing the flow rate decreases the reactor’s space time, leading to a lower conversion.</p>
+\[60X_2^2 - 150X_2 + 64 = 0\]</div>
+<p class="sd-card-text">Solving this using the quadratic formula yields two roots: <span class="math notranslate nohighlight">\(X_2 \approx 1.95\)</span> and <span class="math notranslate nohighlight">\(X_2 \approx 0.546\)</span>. Since conversion cannot be greater than 1, the only physically meaningful answer is <span class="math notranslate nohighlight">\(X_2=0.546\)</span>.</p>
+<p class="sd-card-text">The new conversion is <strong>55%</strong>. This result is logical, as increasing the flow rate decreases the reactor’s space time, leading to a lower conversion.</p>
 </div>
-</section>
+</details></section>
 </section>
 <section id="isothermal-plug-flow-reactors-pfrs">
 <h2>Isothermal Plug Flow Reactors (PFRs)<a class="headerlink" href="#isothermal-plug-flow-reactors-pfrs" title="Link to this heading">#</a></h2>
@@ -1719,8 +1492,8 @@ X_2 = (0.06818) \frac{64(1-2X_2+X_2^2) - 4X_2^2}{1.5}
 <section id="id2">
 <h3>Fundamental Equations<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>The design of a PFR is based on a differential mole balance taken over a differential segment of the reactor volume. For an irreversible reaction <span class="math notranslate nohighlight">\(A \rightarrow 2B\)</span> with a rate law of <span class="math notranslate nohighlight">\(-r_A = k C_A^n\)</span>:</p>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(F_i\)</span>: Molar flow rate of component <span class="math notranslate nohighlight">\(i\)</span> at a specific point in the reactor (mol/s).</p></li>
 <li><p><span class="math notranslate nohighlight">\(V\)</span>: Cumulative reactor volume from the inlet to a specific point (L). <span class="math notranslate nohighlight">\(V_T\)</span> is the total reactor volume.</p></li>
@@ -1734,24 +1507,22 @@ X_2 = (0.06818) \frac{64(1-2X_2+X_2^2) - 4X_2^2}{1.5}
 <li><p><span class="math notranslate nohighlight">\(X_A\)</span>: Fractional conversion of component A.</p></li>
 </ul>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>PFR Differential Mole Balances (Volume Basis)</strong>
 The change in molar flow rate with respect to reactor volume is:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
+\[\begin{split}\begin{align*}
     \frac{dF_A}{dV} &amp;= r_A = -kC_A^n \\
     \frac{dF_B}{dV} &amp;= -2r_A = 2kC_A^n
-\end{align*}
-\end{split}\]</div>
+\end{align*}\end{split}\]</div>
 </div>
 </section>
 <section id="conceptual-model-of-a-pfr">
 <h3>Conceptual Model of a PFR<a class="headerlink" href="#conceptual-model-of-a-pfr" title="Link to this heading">#</a></h3>
 <p>The PFR model simplifies the complex fluid dynamics within a tubular reactor by making several key assumptions.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>The Ideal Plug Flow Model</strong></p>
 <ul class="simple">
 <li><p><strong>Plug Flow:</strong> The fluid is assumed to flow in discrete “plugs,” as if separated by invisible pistons.</p></li>
@@ -1765,52 +1536,42 @@ The change in molar flow rate with respect to reactor volume is:</p>
 <section id="mole-balance-derivation-for-a-pfr">
 <h3>Mole Balance Derivation for a PFR<a class="headerlink" href="#mole-balance-derivation-for-a-pfr" title="Link to this heading">#</a></h3>
 <p>The PFR design equation is derived by performing a mole balance on a differential slice of the reactor volume, <span class="math notranslate nohighlight">\(dV\)</span>, at steady state. For a component A, the general mole balance on the differential volume <span class="math notranslate nohighlight">\(dV\)</span> is:</p>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>General Mole Balance:</strong></p>
 <div class="math notranslate nohighlight">
-\[
-(\text{Rate of Accumulation}) = (\text{Rate In}) - (\text{Rate Out}) + (\text{Rate of Generation})
-\]</div>
+\[(\text{Rate of Accumulation}) = (\text{Rate In}) - (\text{Rate Out}) + (\text{Rate of Generation})\]</div>
 </div>
 <p>At steady state, the accumulation term is zero. The balance becomes:</p>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>Steady-State Mole Balance:</strong></p>
 <div class="math notranslate nohighlight">
-\[
-0 = F_A\big|_V - F_A\big|_{V+dV} + r_A \cdot dV
-\]</div>
+\[0 = F_A\big|_V - F_A\big|_{V+dV} + r_A \cdot dV\]</div>
 </div>
 <p>Here, <span class="math notranslate nohighlight">\(r_A\)</span> is the rate of formation of A per unit volume, and <span class="math notranslate nohighlight">\(F_A\big|_{V+dV}\)</span> can be expressed using a Taylor series as <span class="math notranslate nohighlight">\(F_A\big|_{V+dV} \approx F_A\big|_V + \frac{dF_A}{dV}dV\)</span>. The balance simplifies to:</p>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>Simplified PFR Design Equation:</strong></p>
 <div class="math notranslate nohighlight">
-\[
-0 = F_A\big|_V - \left(F_A\big|_V + \frac{dF_A}{dV}dV\right) + r_A dV \implies -\frac{dF_A}{dV}dV + r_A dV = 0
-\]</div>
+\[0 = F_A\big|_V - \left(F_A\big|_V + \frac{dF_A}{dV}dV\right) + r_A dV \implies -\frac{dF_A}{dV}dV + r_A dV = 0\]</div>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>PFR Design Equations</strong>
 Rearranging gives the fundamental <strong>differential form</strong> of the PFR design equation:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dF_A}{dV} = r_A
-\]</div>
+\[\frac{dF_A}{dV} = r_A\]</div>
 <p>To find the total reactor volume <span class="math notranslate nohighlight">\(V\)</span> required for a certain conversion, this equation is integrated. By relating molar flow to conversion (<span class="math notranslate nohighlight">\(F_A = F_{A0}(1-X_A) \implies dF_A = -F_{A0}dX_A\)</span>), we get the <strong>integral form</strong>:</p>
 <div class="math notranslate nohighlight">
-\[
-V = F_{A0} \int_0^{X_A} \frac{dX_A}{-r_A}
-\]</div>
+\[V = F_{A0} \int_0^{X_A} \frac{dX_A}{-r_A}\]</div>
 </div>
 </section>
 <section id="accounting-for-gas-phase-reactions">
 <h3>Accounting for Gas-Phase Reactions<a class="headerlink" href="#accounting-for-gas-phase-reactions" title="Link to this heading">#</a></h3>
 <p>For liquid-phase reactions, density and volumetric flow rate (<span class="math notranslate nohighlight">\(v\)</span>) are typically assumed to be constant. For <strong>gas-phase reactions</strong>, this assumption is often invalid.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Causes of Volumetric Flow Rate Change in Gas-Phase PFRs</strong>
 The volumetric flow rate, <span class="math notranslate nohighlight">\(v\)</span>, can change along the length of the reactor due to:</p>
 <ol class="arabic simple">
@@ -1820,21 +1581,19 @@ The volumetric flow rate, <span class="math notranslate nohighlight">\(v\)</span
 </ol>
 </div>
 <p>Because <span class="math notranslate nohighlight">\(v\)</span> can change, we cannot simply use <span class="math notranslate nohighlight">\(F_A = vC_A\)</span> with a constant <span class="math notranslate nohighlight">\(v\)</span>. Instead, we must express the concentration, <span class="math notranslate nohighlight">\(C_A\)</span>, in terms of the variables we are integrating (<span class="math notranslate nohighlight">\(F_i, P, T\)</span>).</p>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>Concentration in Gas-Phase Systems (Ideal Gas)</strong>
 Using the ideal gas law, concentration can be written in terms of molar flow rates:</p>
 <div class="math notranslate nohighlight">
-\[
-C_A = \frac{P_A}{RT} = \frac{y_A P}{RT} = \left(\frac{F_A}{F_T}\right) \frac{P}{RT}
-\]</div>
+\[C_A = \frac{P_A}{RT} = \frac{y_A P}{RT} = \left(\frac{F_A}{F_T}\right) \frac{P}{RT}\]</div>
 <p>Where <span class="math notranslate nohighlight">\(F_T = F_A + F_B + \dots + F_{\text{inerts}}\)</span> is the total molar flow rate. This complete expression for <span class="math notranslate nohighlight">\(C_A\)</span> is substituted into the rate law (<span class="math notranslate nohighlight">\(r_A\)</span>). This creates a system of coupled differential equations for the molar flow rates (<span class="math notranslate nohighlight">\(F_i\)</span>), temperature (<span class="math notranslate nohighlight">\(T\)</span>), and pressure (<span class="math notranslate nohighlight">\(P\)</span>) that must be solved simultaneously with numerical methods.</p>
 </div>
 </section>
 <section id="applications-and-design-considerations">
 <h3>Applications and Design Considerations<a class="headerlink" href="#applications-and-design-considerations" title="Link to this heading">#</a></h3>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <p><strong>Typical PFR Applications</strong>
 PFRs are generally preferred for:</p>
 <ul class="simple">
@@ -1844,8 +1603,8 @@ PFRs are generally preferred for:</p>
 <li><p>Situations where <strong>high conversion</strong> is desired, as a PFR is typically more volume-efficient than a CSTR for positive-order reactions.</p></li>
 </ul>
 </div>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Key PFR Design Concerns</strong></p>
 <ul class="simple">
 <li><p><strong>Poor Mixing:</strong> PFRs have no moving parts for agitation. If reactants need to be mixed, static mixers can be installed within the tube.</p></li>
@@ -1860,86 +1619,73 @@ PFRs are generally preferred for:</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Develop the equations required to determine the plug flow reactor volume needed to achieve 50% conversion of reactant A. The gas-phase reaction, <span class="math notranslate nohighlight">\(A + 2B \rightarrow 2D\)</span>, is carried out in an isothermal PFR at 5.0 atm and 55<span class="math notranslate nohighlight">\(^\circ\)</span>C. The feed volumetric flow rate is 50 L/min. The rate law is <span class="math notranslate nohighlight">\(r_A = -2.5 C_A^{0.5} C_B\)</span> mol/(L<span class="math notranslate nohighlight">\(\cdot\)</span>min). The feed consists of mole fractions <span class="math notranslate nohighlight">\(y_A = 0.2\)</span>, <span class="math notranslate nohighlight">\(y_B = 0.5\)</span>, and <span class="math notranslate nohighlight">\(y_C = 0.3\)</span>, where C is an inert.</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Strategy:</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Strategy:</strong>
 This is a gas-phase reaction where the total number of moles changes (1 mole of A + 2 moles of B <span class="math notranslate nohighlight">\(\rightarrow\)</span> 2 moles of D, a net change of -1 mole of gas per mole of A reacted). Even at constant temperature and pressure, this change in moles will cause the volumetric flow rate, <span class="math notranslate nohighlight">\(v\)</span>, to change along the reactor. Therefore, we cannot solve a simple integral in terms of concentration. We must solve a system of differential equations in terms of molar flow rates (<span class="math notranslate nohighlight">\(F_i\)</span>).</p>
-<p><strong>Step 2: Calculate Initial Conditions (at V=0):</strong>
+<p class="sd-card-text"><strong>Step 2: Calculate Initial Conditions (at V=0):</strong>
 First, we need the initial molar flow rate of each species. This requires finding the total molar feed rate, <span class="math notranslate nohighlight">\(F_{T0}\)</span>, using the ideal gas law.</p>
 <ul class="simple">
-<li><p>Temperature: <span class="math notranslate nohighlight">\(T = 55 + 273.15 = 328.15\)</span> K.</p></li>
-<li><p>Pressure: <span class="math notranslate nohighlight">\(P = 5.0\)</span> atm.</p></li>
-<li><p>Gas Constant: <span class="math notranslate nohighlight">\(R = 0.08206\)</span> L<span class="math notranslate nohighlight">\(\cdot\)</span>atm/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K).</p></li>
+<li><p class="sd-card-text">Temperature: <span class="math notranslate nohighlight">\(T = 55 + 273.15 = 328.15\)</span> K.</p></li>
+<li><p class="sd-card-text">Pressure: <span class="math notranslate nohighlight">\(P = 5.0\)</span> atm.</p></li>
+<li><p class="sd-card-text">Gas Constant: <span class="math notranslate nohighlight">\(R = 0.08206\)</span> L<span class="math notranslate nohighlight">\(\cdot\)</span>atm/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K).</p></li>
 </ul>
-<p><strong>Initial Molar Flow Rates</strong>
+<p class="sd-card-text"><strong>Initial Molar Flow Rates</strong>
 Total Molar Feed Rate:</p>
 <div class="math notranslate nohighlight">
-\[
-F_{T0} = \frac{P v_0}{R T} = \frac{(5.0 \, \text{atm})(50 \, \text{L/min})}{(0.08206 \, \frac{\text{L}\cdot\text{atm}}{\text{mol}\cdot\text{K}})(328.15 \, \text{K})} = 9.29 \, \text{mol/min}
-\]</div>
-<p>Individual Molar Feed Rates:</p>
+\[F_{T0} = \frac{P v_0}{R T} = \frac{(5.0 \, \text{atm})(50 \, \text{L/min})}{(0.08206 \, \frac{\text{L}\cdot\text{atm}}{\text{mol}\cdot\text{K}})(328.15 \, \text{K})} = 9.29 \, \text{mol/min}\]</div>
+<p class="sd-card-text">Individual Molar Feed Rates:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{align*}
+\[\begin{split}\begin{align*}
     F_{A0} &amp;= y_{A0} F_{T0} = 0.2 \cdot (9.29) = \textbf{1.858 mol/min} \\
     F_{B0} &amp;= y_{B0} F_{T0} = 0.5 \cdot (9.29) = \textbf{4.645 mol/min} \\
     F_{C0} &amp;= y_{C0} F_{T0} = 0.3 \cdot (9.29) = \textbf{2.787 mol/min} \\
     F_{D0} &amp;= 0
-\end{align*}
-\end{split}\]</div>
-<p><strong>Step 3: Formulate the System of Differential Equations:</strong>
+\end{align*}\end{split}\]</div>
+<p class="sd-card-text"><strong>Step 3: Formulate the System of Differential Equations:</strong>
 We write the PFR design equation, <span class="math notranslate nohighlight">\(\frac{dF_i}{dV} = r_i\)</span>, for each species.</p>
 <ul>
-<li><p><strong>Reactant A:</strong> <span class="math notranslate nohighlight">\(\frac{dF_A}{dV} = r_A = -2.5 C_A^{0.5} C_B\)</span></p></li>
-<li><p><strong>Reactant B:</strong> The stoichiometry is 2 moles of B per 1 mole of A, so <span class="math notranslate nohighlight">\(r_B = 2r_A\)</span>.</p>
+<li><p class="sd-card-text"><strong>Reactant A:</strong> <span class="math notranslate nohighlight">\(\frac{dF_A}{dV} = r_A = -2.5 C_A^{0.5} C_B\)</span></p></li>
+<li><p class="sd-card-text"><strong>Reactant B:</strong> The stoichiometry is 2 moles of B per 1 mole of A, so <span class="math notranslate nohighlight">\(r_B = 2r_A\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-  \frac{dF_B}{dV} = 2r_A = -5.0 C_A^{0.5} C_B
-  \]</div>
+\[  \frac{dF_B}{dV} = 2r_A = -5.0 C_A^{0.5} C_B\]</div>
 </li>
-<li><p><strong>Product D:</strong> The stoichiometry is 2 moles of D formed per 1 mole of A reacted, so <span class="math notranslate nohighlight">\(r_D = -2r_A\)</span>.</p>
+<li><p class="sd-card-text"><strong>Product D:</strong> The stoichiometry is 2 moles of D formed per 1 mole of A reacted, so <span class="math notranslate nohighlight">\(r_D = -2r_A\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-  \frac{dF_D}{dV} = -2r_A = 5.0 C_A^{0.5} C_B
-  \]</div>
+\[  \frac{dF_D}{dV} = -2r_A = 5.0 C_A^{0.5} C_B\]</div>
 </li>
-<li><p><strong>Inert C:</strong> The inert does not react, so <span class="math notranslate nohighlight">\(\frac{dF_C}{dV} = 0\)</span>. This means <span class="math notranslate nohighlight">\(F_C = F_{C0}\)</span> throughout the reactor.</p></li>
+<li><p class="sd-card-text"><strong>Inert C:</strong> The inert does not react, so <span class="math notranslate nohighlight">\(\frac{dF_C}{dV} = 0\)</span>. This means <span class="math notranslate nohighlight">\(F_C = F_{C0}\)</span> throughout the reactor.</p></li>
 </ul>
-<p><strong>Step 4: Define Algebraic Relationships and Stopping Condition:</strong>
+<p class="sd-card-text"><strong>Step 4: Define Algebraic Relationships and Stopping Condition:</strong>
 The rate laws depend on concentrations, which must be related to the molar flow rates.</p>
 <ul>
-<li><p><strong>Algebraic Equations:</strong></p>
+<li><p class="sd-card-text"><strong>Algebraic Equations:</strong></p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-  \begin{align*}
+\[\begin{split}  \begin{align*}
       F_T &amp;= F_A + F_B + F_C + F_D \quad (\text{Total molar flow rate}) \\
       v &amp;= v_0 \left(\frac{F_T}{F_{T0}}\right) \quad (\text{Volumetric flow rate, since P and T are constant}) \\
       C_A &amp;= \frac{F_A}{v} \quad (\text{Concentration of A}) \\
       C_B &amp;= \frac{F_B}{v} \quad (\text{Concentration of B})
-  \end{align*}
-  \end{split}\]</div>
+  \end{align*}\end{split}\]</div>
 </li>
-<li><p><strong>Differential Equations:</strong></p>
+<li><p class="sd-card-text"><strong>Differential Equations:</strong></p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-  \begin{align*}
+\[\begin{split}  \begin{align*}
        \frac{dF_A}{dV} &amp;= -2.5 C_A^{0.5} C_B \\
        \frac{dF_B}{dV} &amp;= -5.0 C_A^{0.5} C_B \\
        \frac{dF_D}{dV} &amp;= 5.0 C_A^{0.5} C_B
-  \end{align*}
-  \end{split}\]</div>
+  \end{align*}\end{split}\]</div>
 </li>
-<li><p><strong>Initial Conditions:</strong> Use the <span class="math notranslate nohighlight">\(F_{i0}\)</span> values from Step 2 at <span class="math notranslate nohighlight">\(V=0\)</span>.</p></li>
-<li><p><strong>Stopping Condition:</strong> Integrate with respect to <span class="math notranslate nohighlight">\(V\)</span> until conversion <span class="math notranslate nohighlight">\(X_A = \frac{F_{A0} - F_A}{F_{A0}}\)</span> reaches 0.50.</p></li>
+<li><p class="sd-card-text"><strong>Initial Conditions:</strong> Use the <span class="math notranslate nohighlight">\(F_{i0}\)</span> values from Step 2 at <span class="math notranslate nohighlight">\(V=0\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Stopping Condition:</strong> Integrate with respect to <span class="math notranslate nohighlight">\(V\)</span> until conversion <span class="math notranslate nohighlight">\(X_A = \frac{F_{A0} - F_A}{F_{A0}}\)</span> reaches 0.50.</p></li>
 </ul>
-<p><strong>Step 5: Final Result:</strong>
+<p class="sd-card-text"><strong>Step 5: Final Result:</strong>
 Solving this system with a numerical package provides the reactor volume <span class="math notranslate nohighlight">\(V\)</span> at which the stopping condition is met. The result is:</p>
 <div class="math notranslate nohighlight">
-\[
-V \approx \textbf{28.8 L}
-\]</div>
+\[V \approx \textbf{28.8 L}\]</div>
 </div>
-</section>
+</details></section>
 <section id="example-gas-to-solid-reaction">
 <h3>Example: Gas-to-Solid Reaction<a class="headerlink" href="#example-gas-to-solid-reaction" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-13">
@@ -1947,61 +1693,48 @@ V \approx \textbf{28.8 L}
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> An isothermal plug flow reactor is used for the reaction <span class="math notranslate nohighlight">\(10A(g) \rightarrow B(s)\)</span>. The rate law is first order in A, with a rate expression <span class="math notranslate nohighlight">\(r_A = -10kC_A\)</span>, where the intrinsic rate constant is <span class="math notranslate nohighlight">\(k=0.30\)</span> L/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>min). Small solid particles of product B are entrained in the gas flow. The solid is assumed to occupy a negligible volume compared to the gas. The feed of pure A is at a pressure of 10 bar, a temperature of 450 K, and a molar flow rate of 120 mol/min. The reactor volume is 100 L. Determine the exit conversion.</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Strategy and Key Insight:</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Strategy and Key Insight:</strong>
 <strong>Constant Concentration due to Phase Change:</strong> The crucial point in this problem is that 10 moles of gaseous reactant A are consumed and removed from the gas phase, and replaced by a negligible volume of solid B. The feed is pure A, and since only A is removed from the gas phase, the remaining gas is also pure A. Because the temperature and pressure are constant, the concentration of the pure gas A must also be constant throughout the reactor.</p>
-<p><strong>Step 2: Calculate the Constant Gas-Phase Concentration (<span class="math notranslate nohighlight">\(C_{A0}\)</span>):</strong>
+<p class="sd-card-text"><strong>Step 2: Calculate the Constant Gas-Phase Concentration (<span class="math notranslate nohighlight">\(C_{A0}\)</span>):</strong>
 Using the ideal gas law for the inlet conditions (which apply everywhere in the reactor):</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(P = 10\)</span> bar</p></li>
-<li><p><span class="math notranslate nohighlight">\(T = 450\)</span> K</p></li>
-<li><p><span class="math notranslate nohighlight">\(R = 0.08314\)</span> L<span class="math notranslate nohighlight">\(\cdot\)</span>bar/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K)</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(P = 10\)</span> bar</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(T = 450\)</span> K</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(R = 0.08314\)</span> L<span class="math notranslate nohighlight">\(\cdot\)</span>bar/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K)</p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[
-C_A = C_{A0} = \frac{P}{RT} = \frac{10 \, \text{bar}}{(0.08314 \, \frac{\text{L}\cdot\text{bar}}{\text{mol}\cdot\text{K}})(450 \, \text{K})} = \textbf{0.267 mol/L}
-\]</div>
-<p><strong>Step 3: Set up and Integrate the Mole Balance:</strong>
+\[C_A = C_{A0} = \frac{P}{RT} = \frac{10 \, \text{bar}}{(0.08314 \, \frac{\text{L}\cdot\text{bar}}{\text{mol}\cdot\text{K}})(450 \, \text{K})} = \textbf{0.267 mol/L}\]</div>
+<p class="sd-card-text"><strong>Step 3: Set up and Integrate the Mole Balance:</strong>
 The PFR design equation is <span class="math notranslate nohighlight">\(\frac{dF_A}{dV} = r_A\)</span>. The rate of reaction of A is given as <span class="math notranslate nohighlight">\(r_A = -10 k C_A\)</span>. Since we’ve established that <span class="math notranslate nohighlight">\(C_A\)</span> is constant and equal to <span class="math notranslate nohighlight">\(C_{A0}\)</span>, the rate of reaction is also constant throughout the reactor.</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dF_A}{dV} = -10 \cdot k \cdot C_{A0} = \text{constant}
-\]</div>
-<p>We can integrate this simple differential equation directly from the inlet (<span class="math notranslate nohighlight">\(V=0, F_A=F_{A0}\)</span>) to the outlet (<span class="math notranslate nohighlight">\(V=V_T, F_A=F_{A,exit}\)</span>):</p>
+\[\frac{dF_A}{dV} = -10 \cdot k \cdot C_{A0} = \text{constant}\]</div>
+<p class="sd-card-text">We can integrate this simple differential equation directly from the inlet (<span class="math notranslate nohighlight">\(V=0, F_A=F_{A0}\)</span>) to the outlet (<span class="math notranslate nohighlight">\(V=V_T, F_A=F_{A,exit}\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[
-\int_{F_{A0}}^{F_{A,exit}} dF_A = \int_0^{V_T} (-10 k C_{A0}) dV
-\]</div>
+\[\int_{F_{A0}}^{F_{A,exit}} dF_A = \int_0^{V_T} (-10 k C_{A0}) dV\]</div>
 <div class="math notranslate nohighlight">
-\[
-F_{A,exit} - F_{A0} = -10 \cdot k \cdot C_{A0} \cdot V_T
-\]</div>
-<p><strong>Step 4: Calculate Conversion:</strong>
+\[F_{A,exit} - F_{A0} = -10 \cdot k \cdot C_{A0} \cdot V_T\]</div>
+<p class="sd-card-text"><strong>Step 4: Calculate Conversion:</strong>
 The conversion <span class="math notranslate nohighlight">\(X_A\)</span> is defined as <span class="math notranslate nohighlight">\(X_A = \frac{F_{A0} - F_{A,exit}}{F_{A0}}\)</span>. The term <span class="math notranslate nohighlight">\(F_{A0} - F_{A,exit}\)</span> represents the total moles of A reacted per minute. From our integrated equation:</p>
-<p><strong>Moles of A Reacted</strong></p>
+<p class="sd-card-text"><strong>Moles of A Reacted</strong></p>
 <div class="math notranslate nohighlight">
-\[
-\text{Moles Reacted} = F_{A0} - F_{A,exit} = 10 \cdot k \cdot C_{A0} \cdot V_T
-\]</div>
-<p>Now, substitute the known values:</p>
+\[\text{Moles Reacted} = F_{A0} - F_{A,exit} = 10 \cdot k \cdot C_{A0} \cdot V_T\]</div>
+<p class="sd-card-text">Now, substitute the known values:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(k = 0.30\)</span> L/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>min)</p></li>
-<li><p><span class="math notranslate nohighlight">\(C_{A0} = 0.267\)</span> mol/L</p></li>
-<li><p><span class="math notranslate nohighlight">\(V_T = 100\)</span> L</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(k = 0.30\)</span> L/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>min)</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(C_{A0} = 0.267\)</span> mol/L</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(V_T = 100\)</span> L</p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[
-\text{Moles Reacted} = 10 \cdot (0.30) \cdot (0.267) \cdot (100) = 80.1 \, \text{mol/min}
-\]</div>
-<p>The conversion is the ratio of moles reacted to moles fed (<span class="math notranslate nohighlight">\(F_{A0} = 120\)</span> mol/min):</p>
+\[\text{Moles Reacted} = 10 \cdot (0.30) \cdot (0.267) \cdot (100) = 80.1 \, \text{mol/min}\]</div>
+<p class="sd-card-text">The conversion is the ratio of moles reacted to moles fed (<span class="math notranslate nohighlight">\(F_{A0} = 120\)</span> mol/min):</p>
 <div class="math notranslate nohighlight">
-\[
-X_A = \frac{80.1 \, \text{mol/min}}{120 \, \text{mol/min}} = 0.6675
-\]</div>
-<p>The exit conversion is <strong>67%</strong>.</p>
+\[X_A = \frac{80.1 \, \text{mol/min}}{120 \, \text{mol/min}} = 0.6675\]</div>
+<p class="sd-card-text">The exit conversion is <strong>67%</strong>.</p>
 </div>
-</section>
+</details></section>
 </section>
 <section id="comparing-reactors-in-series">
 <h2>Comparing Reactors in Series<a class="headerlink" href="#comparing-reactors-in-series" title="Link to this heading">#</a></h2>
@@ -2009,8 +1742,8 @@ X_A = \frac{80.1 \, \text{mol/min}}{120 \, \text{mol/min}} = 0.6675
 <section id="the-levenspiel-plot-a-graphical-tool-for-reactor-design">
 <h3>The Levenspiel Plot: A Graphical Tool for Reactor Design<a class="headerlink" href="#the-levenspiel-plot-a-graphical-tool-for-reactor-design" title="Link to this heading">#</a></h3>
 <p>For an isothermal reaction, the Levenspiel plot provides a powerful visual representation of reactor performance by plotting a function of the inverse reaction rate against conversion.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Understanding the Levenspiel Plot</strong>
 A Levenspiel plot graphs the term <span class="math notranslate nohighlight">\(\frac{F_{A0}}{-r_A}\)</span> on the y-axis versus the conversion, <span class="math notranslate nohighlight">\(X_A\)</span>, on the x-axis.</p>
 <ul class="simple">
@@ -2023,28 +1756,24 @@ A Levenspiel plot graphs the term <span class="math notranslate nohighlight">\(\
 <section id="visualizing-single-reactor-volume">
 <h3>Visualizing Single Reactor Volume<a class="headerlink" href="#visualizing-single-reactor-volume" title="Link to this heading">#</a></h3>
 <p>For a given conversion, the required volume for a CSTR and a PFR can be represented as distinct areas on the Levenspiel plot.</p>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>CSTR Design Equation and Graphical Area</strong>
 The design equation for a CSTR is an algebraic equation:</p>
 <div class="math notranslate nohighlight">
-\[
-V_{CSTR} = \frac{F_{A0} X_A}{(-r_A)_{\text{exit}}} \quad \text{or} \quad V_{CSTR} = \left(\frac{F_{A0}}{-r_A}\right)_{\text{at }X_A} \times X_A
-\]</div>
+\[V_{CSTR} = \frac{F_{A0} X_A}{(-r_A)_{\text{exit}}} \quad \text{or} \quad V_{CSTR} = \left(\frac{F_{A0}}{-r_A}\right)_{\text{at }X_A} \times X_A\]</div>
 <p>Graphically, this represents the area of a <strong>rectangle</strong>. The height of the rectangle is the value of <span class="math notranslate nohighlight">\(\frac{F_{A0}}{-r_A}\)</span> at the final exit conversion (the slowest rate in the process), and the width is the total conversion <span class="math notranslate nohighlight">\(X_A\)</span>.</p>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>PFR Design Equation and Graphical Area</strong>
 The design equation for a PFR is an integral equation:</p>
 <div class="math notranslate nohighlight">
-\[
-V_{PFR} = F_{A0} \int_0^{X_A} \frac{dX_A}{-r_A} \quad \text{or} \quad V_{PFR} = \int_0^{X_A} \left(\frac{F_{A0}}{-r_A}\right) dX_A
-\]</div>
+\[V_{PFR} = F_{A0} \int_0^{X_A} \frac{dX_A}{-r_A} \quad \text{or} \quad V_{PFR} = \int_0^{X_A} \left(\frac{F_{A0}}{-r_A}\right) dX_A\]</div>
 <p>Graphically, this represents the <strong>area under the curve</strong> of the Levenspiel plot, integrated from zero conversion to the final conversion <span class="math notranslate nohighlight">\(X_A\)</span>.</p>
 </div>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <p><strong>Single Reactor Comparison</strong>
 For any reaction where the rate decreases as conversion increases (a typical nth-order reaction), the Levenspiel plot curve will be upward-sloping. In this common case, the rectangle representing the CSTR volume will always be larger than the area under the curve representing the PFR volume for the same final conversion.</p>
 <p><strong>Conclusion:</strong> To achieve the same conversion for a typical reaction, a <strong>PFR requires a smaller volume than a CSTR</strong>. This is because the entire CSTR must operate at the lowest reaction rate (corresponding to the final exit conditions), whereas the PFR takes advantage of the higher reaction rates that exist at lower conversions near the reactor inlet.</p>
@@ -2053,18 +1782,16 @@ For any reaction where the rate decreases as conversion increases (a typical nth
 <section id="id3">
 <h3>Comparing Reactors in Series<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>The graphical method also provides clear insight into configuring multiple reactors in series to optimize total volume.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>PFRs in Series</strong>
 The total volume required to achieve a final conversion <span class="math notranslate nohighlight">\(X_f\)</span> using two PFRs in series is the sum of their individual volumes.</p>
 <div class="math notranslate nohighlight">
-\[
-V_{total} = V_1 + V_2 = \int_0^{X_1} \left(\frac{F_{A0}}{-r_A}\right) dX_A + \int_{X_1}^{X_f} \left(\frac{F_{A0}}{-r_A}\right) dX_A = \int_0^{X_f} \left(\frac{F_{A0}}{-r_A}\right) dX_A
-\]</div>
+\[V_{total} = V_1 + V_2 = \int_0^{X_1} \left(\frac{F_{A0}}{-r_A}\right) dX_A + \int_{X_1}^{X_f} \left(\frac{F_{A0}}{-r_A}\right) dX_A = \int_0^{X_f} \left(\frac{F_{A0}}{-r_A}\right) dX_A\]</div>
 <p>The total volume is exactly the same as the volume of a single PFR used to achieve the same final conversion <span class="math notranslate nohighlight">\(X_f\)</span>. Therefore, for an isothermal reaction, there is <strong>no volumetric advantage or disadvantage</strong> to using multiple PFRs in series instead of one larger PFR.</p>
 </div>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>CSTRs in Series</strong>
 Using two or more CSTRs in series offers a significant advantage in reducing the total required volume compared to a single CSTR for the same final conversion.</p>
 <ul class="simple">
@@ -2073,8 +1800,8 @@ Using two or more CSTRs in series offers a significant advantage in reducing the
 </ul>
 <p>The sum of the areas of the two smaller rectangles is significantly less than the area of the single large rectangle required for one CSTR.</p>
 </div>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <p><strong>Series Reactor Comparison Conclusion</strong></p>
 <ul class="simple">
 <li><p>For a given final conversion, the total volume required for <strong>multiple CSTRs in series is less</strong> than the volume of a single CSTR.</p></li>
@@ -2099,106 +1826,73 @@ Using two or more CSTRs in series offers a significant advantage in reducing the
 where T is in Kelvin. Calculate the adiabatic temperature for 30% conversion of NO.</p></li>
 </ul>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Strategy: Enthalpy as a State Function:</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Strategy: Enthalpy as a State Function:</strong>
 Since enthalpy is a state function, the overall enthalpy change of a process is independent of the path taken. For an adiabatic process, the total enthalpy change is zero (<span class="math notranslate nohighlight">\(\Delta H_{total} = 0\)</span>). We can construct a convenient hypothetical three-step path from the initial state (reactants at 373 K) to the final state (product mixture at <span class="math notranslate nohighlight">\(T_f\)</span>) and set the sum of the enthalpy changes to zero.
 (a) <strong><span class="math notranslate nohighlight">\(\Delta H_1\)</span>:</strong> Cool the reactants from the feed temperature (373 K) to a reference temperature (298 K).
 (b) <strong><span class="math notranslate nohighlight">\(\Delta H_2\)</span>:</strong> Carry out the reaction at 298 K to the specified conversion (30%).
 © <strong><span class="math notranslate nohighlight">\(\Delta H_3\)</span>:</strong> Heat the final product mixture from 298 K to the unknown final adiabatic temperature, <span class="math notranslate nohighlight">\(T_f\)</span>.
 The energy balance is: <span class="math notranslate nohighlight">\(\Delta H_1 + \Delta H_2 + \Delta H_3 = \Delta H_{total} = 0\)</span>.</p>
-<p><strong>Step 2: Calculate <span class="math notranslate nohighlight">\(\Delta H_1\)</span> (Cooling Reactants):</strong>
+<p class="sd-card-text"><strong>Step 2: Calculate <span class="math notranslate nohighlight">\(\Delta H_1\)</span> (Cooling Reactants):</strong>
 This is the enthalpy change from cooling the initial 1 mole of NO and 0.5 moles of O<span class="math notranslate nohighlight">\(_2\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-\Delta H_1 = \int_{373K}^{298K} \sum n_i C_{p,i} \, dT = \int_{373}^{298} R \left[ (1)(3.5 + 0.001T) + (0.5)(3.2 + 0.0018T) \right] dT
-\]</div>
+\[\Delta H_1 = \int_{373K}^{298K} \sum n_i C_{p,i} \, dT = \int_{373}^{298} R \left[ (1)(3.5 + 0.001T) + (0.5)(3.2 + 0.0018T) \right] dT\]</div>
 <div class="math notranslate nohighlight">
-\[
-\Delta H_1 = R \int_{373}^{298} (5.1 + 0.0019T) dT = R \left[ 5.1T + \frac{0.0019}{2}T^2 \right]_{373}^{298}
-\]</div>
-<p>Plugging in the limits and <span class="math notranslate nohighlight">\(R = 8.314\)</span> J/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K):</p>
+\[\Delta H_1 = R \int_{373}^{298} (5.1 + 0.0019T) dT = R \left[ 5.1T + \frac{0.0019}{2}T^2 \right]_{373}^{298}\]</div>
+<p class="sd-card-text">Plugging in the limits and <span class="math notranslate nohighlight">\(R = 8.314\)</span> J/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>K):</p>
 <div class="math notranslate nohighlight">
-\[
-\Delta H_1 = 8.314 \left[ (5.1(298-373)) + (0.00095(298^2-373^2)) \right]
-\]</div>
+\[\Delta H_1 = 8.314 \left[ (5.1(298-373)) + (0.00095(298^2-373^2)) \right]\]</div>
 <div class="math notranslate nohighlight">
-\[
-\Delta H_1 = 8.314 [-382.5 - 47.8] = -3578 \, \text{J} = \textbf{-3.58 kJ}
-\]</div>
-<p>The sign is negative because heat is removed during cooling.</p>
-<p><strong>Step 3: Calculate <span class="math notranslate nohighlight">\(\Delta H_2\)</span> (Heat of Reaction at 298 K):</strong>
+\[\Delta H_1 = 8.314 [-382.5 - 47.8] = -3578 \, \text{J} = \textbf{-3.58 kJ}\]</div>
+<p class="sd-card-text">The sign is negative because heat is removed during cooling.</p>
+<p class="sd-card-text"><strong>Step 3: Calculate <span class="math notranslate nohighlight">\(\Delta H_2\)</span> (Heat of Reaction at 298 K):</strong>
 The reaction proceeds to 30% conversion, so 0.3 moles of the basis reactant (NO) react.</p>
 <div class="math notranslate nohighlight">
-\[
-\Delta H_2 = (\text{moles NO reacted}) \times (\Delta H_{rxn, 298K}) = (0.3 \, \text{mol}) \times (-57.0 \, \text{kJ/mol})
-\]</div>
+\[\Delta H_2 = (\text{moles NO reacted}) \times (\Delta H_{rxn, 298K}) = (0.3 \, \text{mol}) \times (-57.0 \, \text{kJ/mol})\]</div>
 <div class="math notranslate nohighlight">
-\[
-\Delta H_2 = \textbf{-17.1 kJ}
-\]</div>
-<p><strong>Step 4: Set up <span class="math notranslate nohighlight">\(\Delta H_3\)</span> (Heating the Final Mixture):</strong>
+\[\Delta H_2 = \textbf{-17.1 kJ}\]</div>
+<p class="sd-card-text"><strong>Step 4: Set up <span class="math notranslate nohighlight">\(\Delta H_3\)</span> (Heating the Final Mixture):</strong>
 First, determine the composition of the final mixture based on 30% conversion of 1 mole of NO.</p>
 <ul class="simple">
-<li><p>Moles NO remaining: <span class="math notranslate nohighlight">\(1.0 - 0.3 = 0.7\)</span> mol</p></li>
-<li><p>Moles O<span class="math notranslate nohighlight">\(_2\)</span> remaining: <span class="math notranslate nohighlight">\(0.5 - (0.5 \times 0.3) = 0.35\)</span> mol</p></li>
-<li><p>Moles NO<span class="math notranslate nohighlight">\(_2\)</span> formed: <span class="math notranslate nohighlight">\(1 \times 0.3 = 0.3\)</span> mol
+<li><p class="sd-card-text">Moles NO remaining: <span class="math notranslate nohighlight">\(1.0 - 0.3 = 0.7\)</span> mol</p></li>
+<li><p class="sd-card-text">Moles O<span class="math notranslate nohighlight">\(_2\)</span> remaining: <span class="math notranslate nohighlight">\(0.5 - (0.5 \times 0.3) = 0.35\)</span> mol</p></li>
+<li><p class="sd-card-text">Moles NO<span class="math notranslate nohighlight">\(_2\)</span> formed: <span class="math notranslate nohighlight">\(1 \times 0.3 = 0.3\)</span> mol
 Now, set up the integral for heating this final mixture from 298 K to <span class="math notranslate nohighlight">\(T_f\)</span>.</p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[
-\Delta H_3 = \int_{298K}^{T_f} \sum n_i C_{p,i} \, dT
-\]</div>
+\[\Delta H_3 = \int_{298K}^{T_f} \sum n_i C_{p,i} \, dT\]</div>
 <div class="math notranslate nohighlight">
-\[
-\Delta H_3 = R \int_{298}^{T_f} \left[ (0.7)(3.5+0.001T) + (0.35)(3.2+0.0018T) + (0.3)(4.2+0.0025T) \right] dT
-\]</div>
+\[\Delta H_3 = R \int_{298}^{T_f} \left[ (0.7)(3.5+0.001T) + (0.35)(3.2+0.0018T) + (0.3)(4.2+0.0025T) \right] dT\]</div>
 <div class="math notranslate nohighlight">
-\[
-\Delta H_3 = R \int_{298}^{T_f} (2.45+0.0007T + 1.12+0.00063T + 1.26+0.00075T) dT
-\]</div>
+\[\Delta H_3 = R \int_{298}^{T_f} (2.45+0.0007T + 1.12+0.00063T + 1.26+0.00075T) dT\]</div>
 <div class="math notranslate nohighlight">
-\[
-\Delta H_3 = R \int_{298}^{T_f} (4.83 + 0.00208T) dT
-\]</div>
-<p>Integrating this expression gives:</p>
-<p><strong>Expression for <span class="math notranslate nohighlight">\(\Delta H_3\)</span></strong></p>
+\[\Delta H_3 = R \int_{298}^{T_f} (4.83 + 0.00208T) dT\]</div>
+<p class="sd-card-text">Integrating this expression gives:</p>
+<p class="sd-card-text"><strong>Expression for <span class="math notranslate nohighlight">\(\Delta H_3\)</span></strong></p>
 <div class="math notranslate nohighlight">
-\[
-\Delta H_3 = R \left[ 4.83T + \frac{0.00208}{2}T^2 \right]_{298}^{T_f}
-\]</div>
+\[\Delta H_3 = R \left[ 4.83T + \frac{0.00208}{2}T^2 \right]_{298}^{T_f}\]</div>
 <div class="math notranslate nohighlight">
-\[
-\Delta H_3 (\text{in kJ}) = \frac{8.314}{1000} \left[ 4.83(T_f-298) + 0.00104(T_f^2 - 298^2) \right]
-\]</div>
-<p><strong>Step 5: Solve the Energy Balance for the Final Temperature (<span class="math notranslate nohighlight">\(T_f\)</span>):</strong>
+\[\Delta H_3 (\text{in kJ}) = \frac{8.314}{1000} \left[ 4.83(T_f-298) + 0.00104(T_f^2 - 298^2) \right]\]</div>
+<p class="sd-card-text"><strong>Step 5: Solve the Energy Balance for the Final Temperature (<span class="math notranslate nohighlight">\(T_f\)</span>):</strong>
 Set the sum of the enthalpies to zero: <span class="math notranslate nohighlight">\(\Delta H_1 + \Delta H_2 + \Delta H_3 = 0\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
--3.58 \, \text{kJ} - 17.1 \, \text{kJ} + 0.008314 \left[ 4.83(T_f-298) + 0.00104(T_f^2 - 298^2) \right] = 0
-\]</div>
+\[-3.58 \, \text{kJ} - 17.1 \, \text{kJ} + 0.008314 \left[ 4.83(T_f-298) + 0.00104(T_f^2 - 298^2) \right] = 0\]</div>
 <div class="math notranslate nohighlight">
-\[
--20.68 + 0.008314 [4.83 T_f - 1439.34 + 0.00104 T_f^2 - 92.1] = 0
-\]</div>
+\[-20.68 + 0.008314 [4.83 T_f - 1439.34 + 0.00104 T_f^2 - 92.1] = 0\]</div>
 <div class="math notranslate nohighlight">
-\[
--20.68 + 0.04017 T_f - 11.97 + 8.647 \times 10^{-6} T_f^2 - 0.766 = 0
-\]</div>
-<p>This simplifies to a quadratic equation for <span class="math notranslate nohighlight">\(T_f\)</span>:</p>
-<p><strong>Final Quadratic Equation for Temperature</strong></p>
+\[-20.68 + 0.04017 T_f - 11.97 + 8.647 \times 10^{-6} T_f^2 - 0.766 = 0\]</div>
+<p class="sd-card-text">This simplifies to a quadratic equation for <span class="math notranslate nohighlight">\(T_f\)</span>:</p>
+<p class="sd-card-text"><strong>Final Quadratic Equation for Temperature</strong></p>
 <div class="math notranslate nohighlight">
-\[
-8.647 \times 10^{-6} T_f^2 + 0.04017 T_f - 33.416 = 0
-\]</div>
-<p>Solving this using the quadratic formula, <span class="math notranslate nohighlight">\(T_f = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</span>, yields two roots. Only the positive root is physically meaningful.</p>
+\[8.647 \times 10^{-6} T_f^2 + 0.04017 T_f - 33.416 = 0\]</div>
+<p class="sd-card-text">Solving this using the quadratic formula, <span class="math notranslate nohighlight">\(T_f = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</span>, yields two roots. Only the positive root is physically meaningful.</p>
 <div class="math notranslate nohighlight">
-\[
-T_f = \frac{-0.04017 + \sqrt{0.04017^2 - 4(8.647 \times 10^{-6})(-33.416)}}{2(8.647 \times 10^{-6})} \approx \textbf{720 K}
-\]</div>
-<p>The final adiabatic temperature is approximately 720 K (or 447<span class="math notranslate nohighlight">\(^\circ\)</span>C).</p>
+\[T_f = \frac{-0.04017 + \sqrt{0.04017^2 - 4(8.647 \times 10^{-6})(-33.416)}}{2(8.647 \times 10^{-6})} \approx \textbf{720 K}\]</div>
+<p class="sd-card-text">The final adiabatic temperature is approximately 720 K (or 447<span class="math notranslate nohighlight">\(^\circ\)</span>C).</p>
 </div>
-</section>
+</details></section>
 <section id="example-endothermic-reaction-in-an-adiabatic-pbr">
 <h3>Example: Endothermic Reaction in an Adiabatic PBR<a class="headerlink" href="#example-endothermic-reaction-in-an-adiabatic-pbr" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-15">
@@ -2208,36 +1902,31 @@ T_f = \frac{-0.04017 + \sqrt{0.04017^2 - 4(8.647 \times 10^{-6})(-33.416)}}{2(8.
 (a) Is the reaction endothermic or exothermic?
 (b) If the space time is doubled, causing the outlet temperature to drop to 482 K, what is the new conversion?</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Part (a): Endothermic or Exothermic?</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Part (a): Endothermic or Exothermic?</strong>
 In an adiabatic system, no heat is exchanged with the surroundings. Any temperature change is caused solely by the heat of reaction. If the temperature drops, the reaction must be consuming energy from the fluid (endothermic). If the temperature rises, the reaction must be releasing energy (exothermic). The reactor is adiabatic, and the temperature drops from 500 K to 487 K. Therefore, the reaction is <strong>endothermic</strong>.</p>
-<p><strong>Step 2: Part (b): Calculating New Conversion via Proportionality:</strong>
+<p class="sd-card-text"><strong>Step 2: Part (b): Calculating New Conversion via Proportionality:</strong>
 For an adiabatic reactor with constant heat capacities, the energy balance shows a direct linear relationship between conversion (<span class="math notranslate nohighlight">\(X\)</span>) and the change in temperature (<span class="math notranslate nohighlight">\(\Delta T = T_{out} - T_{in}\)</span>).</p>
 <div class="math notranslate nohighlight">
-\[
-X_A = \frac{\sum \Theta_i C_{p,i}}{-\Delta H_{rxn}}(T - T_{in}) = (\text{Constant}) \cdot (T_{out} - T_{in})
-\]</div>
-<p>We can solve for this constant using the initial set of conditions.</p>
+\[X_A = \frac{\sum \Theta_i C_{p,i}}{-\Delta H_{rxn}}(T - T_{in}) = (\text{Constant}) \cdot (T_{out} - T_{in})\]</div>
+<p class="sd-card-text">We can solve for this constant using the initial set of conditions.</p>
 <ul class="simple">
-<li><p>Initial conversion: <span class="math notranslate nohighlight">\(X_1 = 0.40\)</span></p></li>
-<li><p>Initial temperature change: <span class="math notranslate nohighlight">\(\Delta T_1 = 487 \, \text{K} - 500 \, \text{K} = -13 \, \text{K}\)</span></p></li>
+<li><p class="sd-card-text">Initial conversion: <span class="math notranslate nohighlight">\(X_1 = 0.40\)</span></p></li>
+<li><p class="sd-card-text">Initial temperature change: <span class="math notranslate nohighlight">\(\Delta T_1 = 487 \, \text{K} - 500 \, \text{K} = -13 \, \text{K}\)</span></p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[
-0.40 = \text{Constant} \cdot (-13 \, \text{K}) \implies \text{Constant} = \frac{0.40}{-13} \approx -0.03077 \, \text{K}^{-1}
-\]</div>
-<p>Now we use this constant to find the new conversion (<span class="math notranslate nohighlight">\(X_2\)</span>) for the new temperature change. Doubling the space time allows the reaction to proceed further, consuming more heat and dropping the temperature more.</p>
+\[0.40 = \text{Constant} \cdot (-13 \, \text{K}) \implies \text{Constant} = \frac{0.40}{-13} \approx -0.03077 \, \text{K}^{-1}\]</div>
+<p class="sd-card-text">Now we use this constant to find the new conversion (<span class="math notranslate nohighlight">\(X_2\)</span>) for the new temperature change. Doubling the space time allows the reaction to proceed further, consuming more heat and dropping the temperature more.</p>
 <ul class="simple">
-<li><p>New temperature change: <span class="math notranslate nohighlight">\(\Delta T_2 = 482 \, \text{K} - 500 \, \text{K} = -18 \, \text{K}\)</span></p></li>
+<li><p class="sd-card-text">New temperature change: <span class="math notranslate nohighlight">\(\Delta T_2 = 482 \, \text{K} - 500 \, \text{K} = -18 \, \text{K}\)</span></p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[
-X_2 = (\text{Constant}) \cdot (\Delta T_2) = (-0.03077 \, \text{K}^{-1}) \cdot (-18 \, \text{K}) = 0.554
-\]</div>
-<p>The new conversion is <strong>55%</strong>.</p>
+\[X_2 = (\text{Constant}) \cdot (\Delta T_2) = (-0.03077 \, \text{K}^{-1}) \cdot (-18 \, \text{K}) = 0.554\]</div>
+<p class="sd-card-text">The new conversion is <strong>55%</strong>.</p>
 </div>
-</section>
+</details></section>
 <section id="example-initial-temperature-profile-in-a-heated-pfr">
 <h3>Example: Initial Temperature Profile in a Heated PFR<a class="headerlink" href="#example-initial-temperature-profile-in-a-heated-pfr" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-16">
@@ -2245,50 +1934,39 @@ X_2 = (\text{Constant}) \cdot (\Delta T_2) = (-0.03077 \, \text{K}^{-1}) \cdot (
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> An endothermic, second-order reaction (<span class="math notranslate nohighlight">\(A \rightarrow \text{Products, } -r_A = k C_A^2\)</span>) takes place in a PFR with a diameter of 8 cm. The reactor is heated by a steam jacket that maintains a constant wall temperature of 300<span class="math notranslate nohighlight">\(^\circ\)</span>C. The feed enters at 250<span class="math notranslate nohighlight">\(^\circ\)</span>C. Other data includes: <span class="math notranslate nohighlight">\(\Delta H_{rxn} = 80\)</span> kJ/mol, <span class="math notranslate nohighlight">\(k = 0.5\)</span> L/(mol<span class="math notranslate nohighlight">\(\cdot\)</span>min) at 250<span class="math notranslate nohighlight">\(^\circ\)</span>C, and <span class="math notranslate nohighlight">\(U = 5000\)</span> kJ/(m<span class="math notranslate nohighlight">\(^2\cdot\)</span>h<span class="math notranslate nohighlight">\(\cdot\)</span>K). Immediately downstream from the reactor inlet, will the fluid temperature increase, decrease, or stay the same?</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Strategy: Analyze the Differential Energy Balance:</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Strategy: Analyze the Differential Energy Balance:</strong>
 <strong>Comparing Heat Effects:</strong> To determine the initial temperature trend, we must evaluate the sign of the temperature derivative with respect to reactor volume, <span class="math notranslate nohighlight">\(\frac{dT}{dV}\)</span>, at the inlet (<span class="math notranslate nohighlight">\(V=0\)</span>). This requires comparing the rate of heat consumption by the endothermic reaction with the rate of heat addition from the steam jacket at the reactor entrance.</p>
-<p>The differential energy balance for a PFR with heat exchange is:</p>
+<p class="sd-card-text">The differential energy balance for a PFR with heat exchange is:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dT}{dV} = \frac{Ua(T_a - T) + r_A(-\Delta H_{rxn})}{\sum F_i C_{p,i}}
-\]</div>
-<p>The sign of <span class="math notranslate nohighlight">\(\frac{dT}{dV}\)</span> is determined by the sign of the numerator: <span class="math notranslate nohighlight">\(Ua(T_a - T) + r_A(-\Delta H_{rxn})\)</span>.</p>
-<p><strong>Step 2: Evaluate Heat Transfer Term at the Inlet:</strong>
+\[\frac{dT}{dV} = \frac{Ua(T_a - T) + r_A(-\Delta H_{rxn})}{\sum F_i C_{p,i}}\]</div>
+<p class="sd-card-text">The sign of <span class="math notranslate nohighlight">\(\frac{dT}{dV}\)</span> is determined by the sign of the numerator: <span class="math notranslate nohighlight">\(Ua(T_a - T) + r_A(-\Delta H_{rxn})\)</span>.</p>
+<p class="sd-card-text"><strong>Step 2: Evaluate Heat Transfer Term at the Inlet:</strong>
 This term represents heat addition from the steam jacket. The heat transfer area per unit volume is <span class="math notranslate nohighlight">\(a = 4/D\)</span>.</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(U = 5000 \, \frac{\text{kJ}}{\text{m}^2 \cdot \text{h} \cdot \text{K}} \times \frac{1 \text{ h}}{60 \text{ min}} = 83.33 \, \frac{\text{kJ}}{\text{m}^2 \cdot \text{min} \cdot \text{K}}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(D = 8 \, \text{cm} = 0.08 \, \text{m}\)</span></p></li>
-<li><p>Temperature difference at inlet: <span class="math notranslate nohighlight">\(T_a - T = 300^\circ\text{C} - 250^\circ\text{C} = 50 \, \text{K}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(U = 5000 \, \frac{\text{kJ}}{\text{m}^2 \cdot \text{h} \cdot \text{K}} \times \frac{1 \text{ h}}{60 \text{ min}} = 83.33 \, \frac{\text{kJ}}{\text{m}^2 \cdot \text{min} \cdot \text{K}}\)</span></p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\(D = 8 \, \text{cm} = 0.08 \, \text{m}\)</span></p></li>
+<li><p class="sd-card-text">Temperature difference at inlet: <span class="math notranslate nohighlight">\(T_a - T = 300^\circ\text{C} - 250^\circ\text{C} = 50 \, \text{K}\)</span></p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[
-\text{Heat Added} = U \left(\frac{4}{D}\right)(T_a - T) = (83.33) \left(\frac{4}{0.08}\right)(50) = 208,333 \, \frac{\text{kJ}}{\text{m}^3 \cdot \text{min}}
-\]</div>
+\[\text{Heat Added} = U \left(\frac{4}{D}\right)(T_a - T) = (83.33) \left(\frac{4}{0.08}\right)(50) = 208,333 \, \frac{\text{kJ}}{\text{m}^3 \cdot \text{min}}\]</div>
 <div class="math notranslate nohighlight">
-\[
-\text{Heat Added} = 208,333 \frac{\text{kJ}}{\text{m}^3\cdot\text{min}} \times \frac{1 \, \text{m}^3}{1000 \, \text{L}} = \textbf{208.3} \, \frac{\text{kJ}}{\text{L} \cdot \text{min}}
-\]</div>
-<p><strong>Step 3: Evaluate Heat Consumption Term at the Inlet:</strong>
+\[\text{Heat Added} = 208,333 \frac{\text{kJ}}{\text{m}^3\cdot\text{min}} \times \frac{1 \, \text{m}^3}{1000 \, \text{L}} = \textbf{208.3} \, \frac{\text{kJ}}{\text{L} \cdot \text{min}}\]</div>
+<p class="sd-card-text"><strong>Step 3: Evaluate Heat Consumption Term at the Inlet:</strong>
 This term represents heat consumed by the endothermic reaction (<span class="math notranslate nohighlight">\(\Delta H_{rxn} &gt; 0\)</span>).</p>
 <div class="math notranslate nohighlight">
-\[
-\text{Heat Consumed} = -r_A(\Delta H_{rxn}) = (k C_{A0}^2)(\Delta H_{rxn})
-\]</div>
+\[\text{Heat Consumed} = -r_A(\Delta H_{rxn}) = (k C_{A0}^2)(\Delta H_{rxn})\]</div>
 <div class="math notranslate nohighlight">
-\[
-\text{Heat Consumed} = (0.5 \frac{\text{L}}{\text{mol}\cdot\text{min}} \cdot C_{A0}^2)(80 \frac{\text{kJ}}{\text{mol}}) = \textbf{40} \cdot C_{A0}^2 \, \frac{\text{kJ}}{\text{L} \cdot \text{min}}
-\]</div>
-<p><strong>Step 4: Compare Heat Effects and Conclude:</strong>
+\[\text{Heat Consumed} = (0.5 \frac{\text{L}}{\text{mol}\cdot\text{min}} \cdot C_{A0}^2)(80 \frac{\text{kJ}}{\text{mol}}) = \textbf{40} \cdot C_{A0}^2 \, \frac{\text{kJ}}{\text{L} \cdot \text{min}}\]</div>
+<p class="sd-card-text"><strong>Step 4: Compare Heat Effects and Conclude:</strong>
 The initial temperature trend depends on the sign of <span class="math notranslate nohighlight">\((208.3 - 40 C_{A0}^2)\)</span>. The problem implies a realistic operating condition where the initial concentration is not excessively high. For any reasonable initial concentration (e.g., even if <span class="math notranslate nohighlight">\(C_{A0}\)</span> were as high as 2 mol/L, the heat consumption term would be <span class="math notranslate nohighlight">\(40 \cdot 2^2 = 160\)</span> kJ/(L<span class="math notranslate nohighlight">\(\cdot\)</span>min)), the heat addition term dominates.</p>
 <div class="math notranslate nohighlight">
-\[
-\text{Heat Added (208.3)} &gt; \text{Heat Consumed (e.g., 160)}
-\]</div>
-<p>Since the rate of heat addition from the steam jacket is greater than the rate of heat consumption by the reaction at the inlet, the numerator in the energy balance is positive. Therefore, <span class="math notranslate nohighlight">\(\frac{dT}{dV}\)</span> is positive, and the temperature will <strong>increase</strong> immediately downstream from the inlet.</p>
+\[\text{Heat Added (208.3)} &gt; \text{Heat Consumed (e.g., 160)}\]</div>
+<p class="sd-card-text">Since the rate of heat addition from the steam jacket is greater than the rate of heat consumption by the reaction at the inlet, the numerator in the energy balance is positive. Therefore, <span class="math notranslate nohighlight">\(\frac{dT}{dV}\)</span> is positive, and the temperature will <strong>increase</strong> immediately downstream from the inlet.</p>
 </div>
-</section>
+</details></section>
 </section>
 </section>
 
