@@ -554,65 +554,39 @@ For a 200 mL cup (<span class="math notranslate nohighlight">\(2 \times 10^{-4} 
 </details></section>
 <section id="example-vertical-water-jet">
 <h3>Example: Vertical Water Jet<a class="headerlink" href="#example-vertical-water-jet" title="Link to this heading">#</a></h3>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>**Question:**<span class="w"> </span>Water<span class="w"> </span>flows<span class="w"> </span>through<span class="w"> </span>a<span class="w"> </span><span class="m">2</span>.5-cm<span class="w"> </span>ID<span class="w"> </span>pipe<span class="w"> </span>at<span class="w"> </span><span class="m">115</span><span class="w"> </span>L/min<span class="w"> </span>and<span class="w"> </span><span class="m">0</span>.15-bar<span class="w"> </span>gauge<span class="w"> </span>pressure.<span class="w"> </span>It<span class="w"> </span>vents<span class="w"> </span>vertically<span class="w"> </span><span class="m">1</span>.0<span class="w"> </span>m<span class="w"> </span>above<span class="w"> </span>the<span class="w"> </span>pipe.<span class="w"> </span>How<span class="w"> </span>high<span class="w"> </span>will<span class="w"> </span>the<span class="w"> </span>water<span class="w"> </span>shoot<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>vent?<span class="w"> </span>Assume<span class="w"> </span>no<span class="w"> </span>frictional<span class="w"> </span>losses.
-</pre></div>
-</div>
-<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span>**Step 1: Strategy and Coordinate System:**
-We will apply the Bernoulli equation between a point inside the pipe just before the vent (point 1) and the highest point of the water jet (point 2). We assume no friction and steady state. Let the centerline of the pipe be the reference height, so <span class="s">$</span><span class="nb">z_</span><span class="m">1</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="s">$</span>. Point 2 is the peak of the jet&#39;s trajectory at height <span class="s">$</span><span class="nb">z_</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">1</span><span class="nb">.</span><span class="m">0</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m} </span><span class="o">+</span><span class="nb"> H</span><span class="s">$</span>, where <span class="s">$</span><span class="nb">H</span><span class="s">$</span> is the height above the vent.
-
-**Step 2: Analyze the Bernoulli Equation Terms:**
-The Bernoulli equation states that the total mechanical energy is conserved between points 1 and 2.
-
-<span class="sb">$$</span>
-
-<span class="nv">\frac</span><span class="nb">{P_</span><span class="m">1</span><span class="nb">}{</span><span class="nv">\rho</span><span class="nb">} </span><span class="o">+</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{u_</span><span class="m">1</span><span class="nb">^</span><span class="m">2</span><span class="nb">}{</span><span class="m">2</span><span class="nb">} </span><span class="o">+</span><span class="nb"> gz_</span><span class="m">1</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{P_</span><span class="m">2</span><span class="nb">}{</span><span class="nv">\rho</span><span class="nb">} </span><span class="o">+</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{u_</span><span class="m">2</span><span class="nb">^</span><span class="m">2</span><span class="nb">}{</span><span class="m">2</span><span class="nb">} </span><span class="o">+</span><span class="nb"> gz_</span><span class="m">2</span>
-
-<span class="s">$$</span>
-
-Given: <span class="s">$</span><span class="nb">P_</span><span class="m">1</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">15</span><span class="s">$</span> bar (gauge), <span class="s">$</span><span class="nb">P_</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="s">$</span> bar (gauge) at atmospheric pressure, <span class="s">$</span><span class="nb">u_</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="s">$</span> m/s at maximum height, <span class="s">$</span><span class="nb">z_</span><span class="m">1</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="s">$</span> m and <span class="s">$</span><span class="nb">z_</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">1</span><span class="nb">.</span><span class="m">0</span><span class="nb"> </span><span class="o">+</span><span class="nb"> H</span><span class="s">$</span>.
-
-**Step 3: Calculate Inlet Velocity (<span class="s">$</span><span class="nb">u_</span><span class="m">1</span><span class="s">$</span>):**
-Convert the volumetric flow rate to SI units:
-
-<span class="sb">$$</span>
-
-<span class="nb">v </span><span class="o">=</span><span class="nb"> </span><span class="m">115</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\text</span><span class="nb">{L}}{</span><span class="nv">\text</span><span class="nb">{min}} </span><span class="nv">\times</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m}^</span><span class="m">3</span><span class="nb">}{</span><span class="m">1000</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{L}} </span><span class="nv">\times</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{min}}{</span><span class="m">60</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{s}} </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">001917</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m}^</span><span class="m">3</span><span class="o">/</span><span class="nv">\text</span><span class="nb">{s}</span>
-
-<span class="s">$$</span>
-
-The pipe area is <span class="s">$</span><span class="nb">A_</span><span class="m">1</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\pi</span><span class="nb"> d^</span><span class="m">2</span><span class="nb">}{</span><span class="m">4</span><span class="nb">} </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\pi</span><span class="nb"> </span><span class="o">(</span><span class="m">0</span><span class="nb">.</span><span class="m">025</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m}</span><span class="o">)</span><span class="nb">^</span><span class="m">2</span><span class="nb">}{</span><span class="m">4</span><span class="nb">} </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">0004909</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m}^</span><span class="m">2</span><span class="s">$</span>.
-
-<span class="sb">$$</span>
-
-<span class="nb">u_</span><span class="m">1</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{v}{A_</span><span class="m">1</span><span class="nb">} </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="m">0</span><span class="nb">.</span><span class="m">001917</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m}^</span><span class="m">3</span><span class="o">/</span><span class="nv">\text</span><span class="nb">{s}}{</span><span class="m">0</span><span class="nb">.</span><span class="m">0004909</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m}^</span><span class="m">2</span><span class="nb">} </span><span class="o">=</span><span class="nb"> </span><span class="m">3</span><span class="nb">.</span><span class="m">905</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m</span><span class="o">/</span><span class="nb">s}</span>
-
-<span class="s">$$</span>
-
-**Step 4: Solve for Height (<span class="s">$</span><span class="nb">H</span><span class="s">$</span>):**
-Substitute the known values into the Bernoulli equation using SI units. Convert <span class="s">$</span><span class="nb">P_</span><span class="m">1</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">15</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{bar} </span><span class="o">=</span><span class="nb"> </span><span class="m">15</span><span class="nb">,</span><span class="m">000</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{Pa}</span><span class="s">$</span> and use <span class="s">$</span><span class="nv">\rho</span><span class="nb">_{water} </span><span class="o">=</span><span class="nb"> </span><span class="m">1000</span><span class="s">$</span> kg/m<span class="s">$</span><span class="nb">^</span><span class="m">3</span><span class="s">$</span> and <span class="s">$</span><span class="nb">g </span><span class="o">=</span><span class="nb"> </span><span class="m">9</span><span class="nb">.</span><span class="m">81</span><span class="s">$</span> m/s<span class="s">$</span><span class="nb">^</span><span class="m">2</span><span class="s">$</span>.
-
-<span class="sb">$$</span>
-
-<span class="nv">\frac</span><span class="nb">{</span><span class="m">15000</span><span class="nb">}{</span><span class="m">1000</span><span class="nb">} </span><span class="o">+</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="o">(</span><span class="m">3</span><span class="nb">.</span><span class="m">905</span><span class="o">)</span><span class="nb">^</span><span class="m">2</span><span class="nb">}{</span><span class="m">2</span><span class="nb">} </span><span class="o">+</span><span class="nb"> </span><span class="m">0</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb"> </span><span class="o">+</span><span class="nb"> </span><span class="m">0</span><span class="nb"> </span><span class="o">+</span><span class="nb"> </span><span class="m">9</span><span class="nb">.</span><span class="m">81</span><span class="nb"> </span><span class="nv">\cdot</span><span class="nb"> </span><span class="o">(</span><span class="m">1</span><span class="nb">.</span><span class="m">0</span><span class="nb"> </span><span class="o">+</span><span class="nb"> H</span><span class="o">)</span>
-
-<span class="s">$$</span>
-
-<span class="sb">$$</span>
-
-<span class="m">15</span><span class="nb">.</span><span class="m">0</span><span class="nb"> </span><span class="o">+</span><span class="nb"> </span><span class="m">7</span><span class="nb">.</span><span class="m">625</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">9</span><span class="nb">.</span><span class="m">81</span><span class="nb"> </span><span class="nv">\cdot</span><span class="nb"> </span><span class="o">(</span><span class="m">1</span><span class="nb">.</span><span class="m">0</span><span class="nb"> </span><span class="o">+</span><span class="nb"> H</span><span class="o">)</span>
-
-<span class="s">$$</span>
-
-<span class="sb">$$</span>
-
-<span class="nb">H </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="m">22</span><span class="nb">.</span><span class="m">625</span><span class="nb">}{</span><span class="m">9</span><span class="nb">.</span><span class="m">81</span><span class="nb">} </span><span class="o">-</span><span class="nb"> </span><span class="m">1</span><span class="nb">.</span><span class="m">0</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">2</span><span class="nb">.</span><span class="m">306</span><span class="nb"> </span><span class="o">-</span><span class="nb"> </span><span class="m">1</span><span class="nb">.</span><span class="m">0</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">1</span><span class="nb">.</span><span class="m">306</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m}</span>
-
-<span class="s">$$</span>
-
-The water will shoot approximately **1.3 meters** above the vent.
-</pre></div>
-</div>
+<div class="proof example admonition" id="example-1">
+<p class="admonition-title"><span class="caption-number">Example 46 </span> (Vertical Water Jet)</p>
+<section class="example-content" id="proof-content">
+<p><strong>Question:</strong> Water flows through a 2.5-cm ID pipe at 115 L/min and 0.15-bar gauge pressure. It vents vertically 1.0 m above the pipe. How high will the water shoot from the vent? Assume no frictional losses.</p>
 </section>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Strategy and Coordinate System:</strong>
+We will apply the Bernoulli equation between a point inside the pipe just before the vent (point 1) and the highest point of the water jet (point 2). We assume no friction and steady state. Let the centerline of the pipe be the reference height, so <span class="math notranslate nohighlight">\(z_1 = 0\)</span>. Point 2 is the peak of the jet’s trajectory at height <span class="math notranslate nohighlight">\(z_2 = 1.0 \, \text{m} + H\)</span>, where <span class="math notranslate nohighlight">\(H\)</span> is the height above the vent.</p>
+<p class="sd-card-text"><strong>Step 2: Analyze the Bernoulli Equation Terms:</strong>
+The Bernoulli equation states that the total mechanical energy is conserved between points 1 and 2.</p>
+<div class="math notranslate nohighlight">
+\[\frac{P_1}{\rho} + \frac{u_1^2}{2} + gz_1 = \frac{P_2}{\rho} + \frac{u_2^2}{2} + gz_2\]</div>
+<p class="sd-card-text">Given: <span class="math notranslate nohighlight">\(P_1 = 0.15\)</span> bar (gauge), <span class="math notranslate nohighlight">\(P_2 = 0\)</span> bar (gauge) at atmospheric pressure, <span class="math notranslate nohighlight">\(u_2 = 0\)</span> m/s at maximum height, <span class="math notranslate nohighlight">\(z_1 = 0\)</span> m and <span class="math notranslate nohighlight">\(z_2 = 1.0 + H\)</span>.</p>
+<p class="sd-card-text"><strong>Step 3: Calculate Inlet Velocity (<span class="math notranslate nohighlight">\(u_1\)</span>):</strong>
+Convert the volumetric flow rate to SI units:</p>
+<div class="math notranslate nohighlight">
+\[v = 115 \frac{\text{L}}{\text{min}} \times \frac{1 \, \text{m}^3}{1000 \, \text{L}} \times \frac{1 \, \text{min}}{60 \, \text{s}} = 0.001917 \, \text{m}^3/\text{s}\]</div>
+<p class="sd-card-text">The pipe area is <span class="math notranslate nohighlight">\(A_1 = \frac{\pi d^2}{4} = \frac{\pi (0.025 \, \text{m})^2}{4} = 0.0004909 \, \text{m}^2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[u_1 = \frac{v}{A_1} = \frac{0.001917 \, \text{m}^3/\text{s}}{0.0004909 \, \text{m}^2} = 3.905 \, \text{m/s}\]</div>
+<p class="sd-card-text"><strong>Step 4: Solve for Height (<span class="math notranslate nohighlight">\(H\)</span>):</strong>
+Substitute the known values into the Bernoulli equation using SI units. Convert <span class="math notranslate nohighlight">\(P_1 = 0.15 \, \text{bar} = 15,000 \, \text{Pa}\)</span> and use <span class="math notranslate nohighlight">\(\rho_{water} = 1000\)</span> kg/m<span class="math notranslate nohighlight">\(^3\)</span> and <span class="math notranslate nohighlight">\(g = 9.81\)</span> m/s<span class="math notranslate nohighlight">\(^2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\frac{15000}{1000} + \frac{(3.905)^2}{2} + 0 = 0 + 0 + 9.81 \cdot (1.0 + H)\]</div>
+<div class="math notranslate nohighlight">
+\[15.0 + 7.625 = 9.81 \cdot (1.0 + H)\]</div>
+<div class="math notranslate nohighlight">
+\[H = \frac{22.625}{9.81} - 1.0 = 2.306 - 1.0 = 1.306 \, \text{m}\]</div>
+<p class="sd-card-text">The water will shoot approximately <strong>1.3 meters</strong> above the vent.</p>
+</div>
+</details></section>
 </section>
 <section id="the-bernoulli-equation-a-force-balance-approach">
 <h2>The Bernoulli Equation: A Force Balance Approach<a class="headerlink" href="#the-bernoulli-equation-a-force-balance-approach" title="Link to this heading">#</a></h2>
@@ -693,8 +667,8 @@ Now we plug the forces and the acceleration term back into Newton’s law:</p>
 </details></section>
 <section id="applications-of-the-bernoulli-equation">
 <h3>Applications of the Bernoulli Equation<a class="headerlink" href="#applications-of-the-bernoulli-equation" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-1">
-<p class="admonition-title"><span class="caption-number">Example 46 </span> (Air Flow Through Pipe and Nozzle)</p>
+<div class="proof example admonition" id="example-2">
+<p class="admonition-title"><span class="caption-number">Example 47 </span> (Air Flow Through Pipe and Nozzle)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Air flows steadily through a horizontal pipe of 10 cm diameter. It exits into the atmosphere through an 8 cm diameter nozzle. The gauge pressure in the pipe is 800 Pa. Assuming air is incompressible with a density of 1.23 kg/m<span class="math notranslate nohighlight">\(^3\)</span>, what is the velocity of the air at the exit?</p>
 </section>
@@ -741,8 +715,8 @@ Now we substitute the expression for <span class="math notranslate nohighlight">
 <p class="sd-card-text"><strong>Step 5: Check the Incompressible Assumption:</strong>
 Is it valid to treat air as incompressible? The rule of thumb is that this assumption is reasonable if the fluid’s velocity is less than 30% of the speed of sound (Mach number <span class="math notranslate nohighlight">\(&lt; 0.3\)</span>). The speed of sound in air is about 343 m/s. Here, <span class="math notranslate nohighlight">\(M \approx 47/343 \approx 0.14\)</span>, which is well below 0.3. The assumption is justified.</p>
 </div>
-</details><div class="proof example admonition" id="example-2">
-<p class="admonition-title"><span class="caption-number">Example 47 </span> (Flow from Coffee Urn (Torricelli’s Law))</p>
+</details><div class="proof example admonition" id="example-3">
+<p class="admonition-title"><span class="caption-number">Example 48 </span> (Flow from Coffee Urn (Torricelli’s Law))</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> A 60-cm tall coffee urn is filled to the top. It dispenses coffee through a 0.7-cm diameter nozzle that is 12 cm above the table surface. How long does it take to pour a 200-mL cup of coffee?</p>
 </section>
@@ -771,8 +745,8 @@ Find the volumetric flow rate through the nozzle. Converting the exit velocity t
 \[\text{Time} = \frac{200 \, \text{cm}^3}{118.1 \, \text{cm}^3/\text{s}} = 1.69 \, \text{s}\]</div>
 <p class="sd-card-text">The time required is approximately <strong>1.7 seconds</strong>.</p>
 </div>
-</details><div class="proof example admonition" id="example-3">
-<p class="admonition-title"><span class="caption-number">Example 48 </span> (Pitot Tube on Plane)</p>
+</details><div class="proof example admonition" id="example-4">
+<p class="admonition-title"><span class="caption-number">Example 49 </span> (Pitot Tube on Plane)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> A pitot-static tube is placed on the nose of a plane traveling 100 m/s at an elevation of 4000 m. What is the pressure difference measured by the device? Assume the density of air is 0.8194 kg/m<span class="math notranslate nohighlight">\(^3\)</span> at this elevation.</p>
 </section>
@@ -844,8 +818,8 @@ The Reynolds number represents the ratio of <strong>inertial forces</strong> to 
 </section>
 <section id="example-calculating-the-reynolds-number">
 <h3>Example: Calculating the Reynolds Number<a class="headerlink" href="#example-calculating-the-reynolds-number" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-4">
-<p class="admonition-title"><span class="caption-number">Example 49 </span> (Calculating Reynolds Number for Water Flow)</p>
+<div class="proof example admonition" id="example-5">
+<p class="admonition-title"><span class="caption-number">Example 50 </span> (Calculating Reynolds Number for Water Flow)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Water flows through a large pipe with a diameter of 1.0 meter at a velocity of 100 cm/s. The density of water is 1.0 g/cm<span class="math notranslate nohighlight">\(^3\)</span> and its viscosity is 1.0 centipoise (cP). Calculate the Reynolds number and determine the flow regime.</p>
 </section>
@@ -992,8 +966,8 @@ To solve for pressure directly, we exponentiate both sides:</p>
 </section>
 <section id="example-pressure-calculation-at-high-altitude">
 <h3>Example: Pressure Calculation at High Altitude<a class="headerlink" href="#example-pressure-calculation-at-high-altitude" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-5">
-<p class="admonition-title"><span class="caption-number">Example 50 </span> (Air Pressure at 40,000 Feet)</p>
+<div class="proof example admonition" id="example-6">
+<p class="admonition-title"><span class="caption-number">Example 51 </span> (Air Pressure at 40,000 Feet)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Calculate the air pressure at an altitude of 40,000 feet above sea level using three different physical models: (1) incompressible, (2) compressible isothermal, and (3) compressible non-isothermal. Compare the results to the standard atmospheric value of 18.7 kPa.</p>
 </section>
@@ -1075,8 +1049,8 @@ This result is extremely close to the standard tabulated value of 18.7 kPa. This
 <p>A common and practical problem in fluid mechanics is determining the power required to pump a fluid through a piping system. This analysis requires a comprehensive application of the energy balance, accounting for changes in pressure, velocity, and elevation.</p>
 <section id="example-pumping-water-for-a-ski-resort">
 <h3>Example: Pumping Water for a Ski Resort<a class="headerlink" href="#example-pumping-water-for-a-ski-resort" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-6">
-<p class="admonition-title"><span class="caption-number">Example 51 </span> (Pumping Water for Snow Making)</p>
+<div class="proof example admonition" id="example-7">
+<p class="admonition-title"><span class="caption-number">Example 52 </span> (Pumping Water for Snow Making)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> A ski resort needs to pump water at 10<span class="math notranslate nohighlight">\(^\circ\)</span>C from a reservoir at an elevation of 6500 ft to a snow-making machine at 7300 ft. The water flows through 1000 ft of 2-inch diameter commercial steel pipe at a rate of 0.25 ft<span class="math notranslate nohighlight">\(^3\)</span>/s. The pressure required at the inlet of the snow machine is 20 psi (gauge). The piping system includes a sharp-edged entrance, a fully open gate valve, and two standard 90<span class="math notranslate nohighlight">\(^\circ\)</span> elbows. Determine the horsepower that must be delivered to the water by the pump.</p>
 </section>
@@ -1198,8 +1172,8 @@ A classic application of the Bernoulli equation is analyzing flow through a cons
 </div>
 <section id="example-velocity-in-a-constriction-venturi-effect">
 <h3>Example: Velocity in a Constriction (Venturi Effect)<a class="headerlink" href="#example-velocity-in-a-constriction-venturi-effect" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-7">
-<p class="admonition-title"><span class="caption-number">Example 52 </span> (Velocity in a Constriction (Venturi Effect))</p>
+<div class="proof example admonition" id="example-8">
+<p class="admonition-title"><span class="caption-number">Example 53 </span> (Velocity in a Constriction (Venturi Effect))</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Air with a density of 1.0 kg/m<span class="math notranslate nohighlight">\(^3\)</span> flows steadily and incompressibly through a horizontal constriction. The pressure at the wide entrance (point 1) is 10 kPa greater than the pressure at the narrow throat (point 2). The cross-sectional area at the entrance is five times the area at the throat (<span class="math notranslate nohighlight">\(A_1 = 5A_2\)</span>). What is the air speed at the throat (<span class="math notranslate nohighlight">\(\nu_2\)</span>)?</p>
 </section>
@@ -1357,8 +1331,8 @@ $<span class="math notranslate nohighlight">\(P_A - P_B = \gamma_2 h_2 + \gamma_
 </section>
 <section id="example-hydrostatic-balance-in-an-inclined-manometer">
 <h3>Example: Hydrostatic Balance in an Inclined Manometer<a class="headerlink" href="#example-hydrostatic-balance-in-an-inclined-manometer" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-8">
-<p class="admonition-title"><span class="caption-number">Example 53 </span> (Hydrostatic Balance in an Inclined Manometer)</p>
+<div class="proof example admonition" id="example-9">
+<p class="admonition-title"><span class="caption-number">Example 54 </span> (Hydrostatic Balance in an Inclined Manometer)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> An inclined manometer contains water, oil (SG=0.85), and mercury (SG=13.6). The left vertical tube has an inner diameter (ID) of 2 cm, and the inclined right tube has an ID of 1 cm. Initially, the system is at equilibrium. Then, the pressure <span class="math notranslate nohighlight">\(P_1\)</span> is increased by 50 mm of mercury. What is the change in the reading along the inclined scale (<span class="math notranslate nohighlight">\(y\)</span>)? The angle of inclination is 30<span class="math notranslate nohighlight">\(^\circ\)</span>.</p>
 </section>
@@ -1463,8 +1437,8 @@ Many important fluids do not follow this simple linear relationship. Their “ap
 </section>
 <section id="example-film-flow-down-an-inclined-surface">
 <h3>Example: Film Flow Down an Inclined Surface<a class="headerlink" href="#example-film-flow-down-an-inclined-surface" title="Link to this heading">#</a></h3>
-<div class="proof example admonition" id="example-9">
-<p class="admonition-title"><span class="caption-number">Example 54 </span> (Film Flow Down an Inclined Surface)</p>
+<div class="proof example admonition" id="example-10">
+<p class="admonition-title"><span class="caption-number">Example 55 </span> (Film Flow Down an Inclined Surface)</p>
 <section class="example-content" id="proof-content">
 <p><strong>Question:</strong> Crude oil with a specific gravity of 0.85 flows steadily in a thin film down a wide surface inclined 30<span class="math notranslate nohighlight">\(^\circ\)</span> below the horizontal. The film has a thickness of 0.125 inches. The velocity profile is given by the equation:</p>
 <div class="math notranslate nohighlight">
@@ -1516,78 +1490,57 @@ $<span class="math notranslate nohighlight">\(\rho = 0.85 \cdot (1.94 \, \text{s
 </details></section>
 <section id="example-determining-viscosity-experimentally">
 <h3>Example: Determining Viscosity Experimentally<a class="headerlink" href="#example-determining-viscosity-experimentally" title="Link to this heading">#</a></h3>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="err">**Ques</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="p">:</span><span class="err">**</span><span class="w"> </span><span class="err">A</span><span class="w"> </span><span class="kc">t</span><span class="err">oo</span><span class="kc">t</span><span class="err">hpick</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">placed</span><span class="w"> </span><span class="err">co</span><span class="kc">n</span><span class="err">ce</span><span class="kc">ntr</span><span class="err">ically</span><span class="w"> </span><span class="err">i</span><span class="kc">ns</span><span class="err">ide</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="err">mm</span><span class="w"> </span><span class="err">diame</span><span class="kc">ter</span><span class="w"> </span><span class="err">s</span><span class="kc">tra</span><span class="err">w</span><span class="w"> </span><span class="kc">full</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">mys</span><span class="kc">ter</span><span class="err">ious</span><span class="w"> </span><span class="kc">flu</span><span class="err">id.</span><span class="w"> </span><span class="err">There</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="err">mm</span><span class="w"> </span><span class="err">gap</span><span class="w"> </span><span class="err">be</span><span class="kc">t</span><span class="err">wee</span><span class="kc">n</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="kc">t</span><span class="err">oo</span><span class="kc">t</span><span class="err">hpick</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">s</span><span class="kc">tra</span><span class="err">w</span><span class="w"> </span><span class="err">o</span><span class="kc">n</span><span class="w"> </span><span class="err">all</span><span class="w"> </span><span class="err">sides.</span><span class="w"> </span><span class="err">A</span><span class="w"> </span><span class="err">le</span><span class="kc">n</span><span class="err">g</span><span class="kc">t</span><span class="err">h</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="err">mm</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="kc">t</span><span class="err">oo</span><span class="kc">t</span><span class="err">hpick</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">submerged</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="kc">flu</span><span class="err">id.</span><span class="w"> </span><span class="err">Whe</span><span class="kc">n</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">co</span><span class="kc">nstant</span><span class="w"> </span><span class="kc">f</span><span class="err">orce</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="err">N</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">used</span><span class="w"> </span><span class="kc">t</span><span class="err">o</span><span class="w"> </span><span class="err">pull</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="kc">t</span><span class="err">oo</span><span class="kc">t</span><span class="err">hpick</span><span class="w"> </span><span class="err">ou</span><span class="kc">t</span><span class="p">,</span><span class="w"> </span><span class="err">i</span><span class="kc">t</span><span class="w"> </span><span class="err">moves</span><span class="w"> </span><span class="err">a</span><span class="kc">t</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">co</span><span class="kc">nstant</span><span class="w"> </span><span class="err">veloci</span><span class="kc">t</span><span class="err">y</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="err">m/s.</span><span class="w"> </span><span class="err">Wha</span><span class="kc">t</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">viscosi</span><span class="kc">t</span><span class="err">y</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="kc">flu</span><span class="err">id?</span><span class="w"> </span><span class="err">Assume</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="kc">flu</span><span class="err">id</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">New</span><span class="kc">t</span><span class="err">o</span><span class="kc">n</span><span class="err">ia</span><span class="kc">n</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">veloci</span><span class="kc">t</span><span class="err">y</span><span class="w"> </span><span class="err">pro</span><span class="kc">f</span><span class="err">ile</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="kc">narr</span><span class="err">ow</span><span class="w"> </span><span class="err">gap</span><span class="w"> </span><span class="err">is</span><span class="w"> </span><span class="err">li</span><span class="kc">near</span><span class="err">.</span>
-</pre></div>
-</div>
-<div class="highlight-tex notranslate"><div class="highlight"><pre><span></span>**Step 1: Strategy: Rearrange Newton&#39;s Law of Viscosity**
-Our governing equation is <span class="s">$</span><span class="nv">\tau</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\mu</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{du}{dy}</span><span class="s">$</span>. We want to find the viscosity, <span class="s">$</span><span class="nv">\mu</span><span class="s">$</span>. We can rearrange the equation to solve for it:
-
-<span class="sb">$$</span><span class="nv">\mu</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\tau</span><span class="nb">}{du</span><span class="o">/</span><span class="nb">dy}</span><span class="s">$$</span>
-
-Our plan is to calculate the shear stress (<span class="s">$</span><span class="nv">\tau</span><span class="s">$</span>) and the velocity gradient (<span class="s">$</span><span class="nv">\frac</span><span class="nb">{du}{dy}</span><span class="s">$</span>) from the information given in the problem.
-
-**Step 2: Calculate the Shear Stress (<span class="s">$</span><span class="nv">\tau</span><span class="s">$</span>):**
-
-Shear stress is the tangential force applied divided by the surface area over which it acts.
-
-<span class="sb">$$</span><span class="nv">\tau</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{F}{A}</span><span class="s">$$</span>
-
-- **Force (<span class="s">$</span><span class="nb">F</span><span class="s">$</span>):** The problem states a constant pulling force of <span class="s">$</span><span class="nb">F </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="s">$</span> N.
-
-- **Area (<span class="s">$</span><span class="nb">A</span><span class="s">$</span>):** This is the cylindrical surface area of the toothpick that is in contact with the fluid.
-
-- The straw has a 5 mm diameter. The annular gap is 1 mm on each side.
-
-- Toothpick diameter <span class="s">$</span><span class="nb">d_{</span><span class="nv">\text</span><span class="nb">{toothpick}} </span><span class="o">=</span><span class="nb"> d_{</span><span class="nv">\text</span><span class="nb">{straw}} </span><span class="o">-</span><span class="nb"> </span><span class="m">2</span><span class="nb"> </span><span class="nv">\cdot</span><span class="nb"> </span><span class="o">(</span><span class="nv">\text</span><span class="nb">{gap}</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">5</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{mm} </span><span class="o">-</span><span class="nb"> </span><span class="m">2</span><span class="o">(</span><span class="m">1</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{mm}</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">3</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{mm} </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">003</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m}</span><span class="s">$</span>.
-
-- Length in fluid <span class="s">$</span><span class="nb">L </span><span class="o">=</span><span class="nb"> </span><span class="m">50</span><span class="s">$</span> mm = 0.050 m.
-
-<span class="sb">$$</span><span class="nb">A </span><span class="o">=</span><span class="nb"> </span><span class="o">(</span><span class="nv">\text</span><span class="nb">{circumference}</span><span class="o">)</span><span class="nb"> </span><span class="nv">\times</span><span class="nb"> </span><span class="o">(</span><span class="nv">\text</span><span class="nb">{length}</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\pi</span><span class="nb"> d_{</span><span class="nv">\text</span><span class="nb">{toothpick}} L</span><span class="s">$$</span>
-
-<span class="sb">$$</span><span class="o">=</span><span class="nb"> </span><span class="nv">\pi</span><span class="nb"> </span><span class="nv">\cdot</span><span class="nb"> </span><span class="o">(</span><span class="m">0</span><span class="nb">.</span><span class="m">003</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m}</span><span class="o">)</span><span class="nb"> </span><span class="nv">\cdot</span><span class="nb"> </span><span class="o">(</span><span class="m">0</span><span class="nb">.</span><span class="m">050</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m}</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">0004712</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m}^</span><span class="m">2</span><span class="s">$$</span>
-
-Now we can calculate the shear stress:
-
-<span class="sb">$$</span><span class="nv">\tau</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{N}}{</span><span class="m">0</span><span class="nb">.</span><span class="m">0004712</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m}^</span><span class="m">2</span><span class="nb">} </span><span class="o">=</span><span class="nb"> </span><span class="m">212</span><span class="nb">.</span><span class="m">2</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{N</span><span class="o">/</span><span class="nb">m}^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\textbf</span><span class="nb">{</span><span class="m">212</span><span class="nb">.</span><span class="m">2</span><span class="nb"> Pa}</span><span class="s">$$</span>
-
-**Step 3: Calculate the Velocity Gradient (<span class="s">$</span><span class="nv">\frac</span><span class="nb">{du}{dy}</span><span class="s">$</span>):**
-
-**The Linear Velocity Profile Assumption:** For fluid flow in a very narrow gap (an annulus), it is often a very good approximation to assume the velocity changes linearly across the gap. This means we can approximate the differential term <span class="s">$</span><span class="nv">\frac</span><span class="nb">{du}{dy}</span><span class="s">$</span> with the difference term <span class="s">$</span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\Delta</span><span class="nb"> u}{</span><span class="nv">\Delta</span><span class="nb"> y}</span><span class="s">$</span>.
-
-- The change in velocity, <span class="s">$</span><span class="nv">\Delta</span><span class="nb"> u</span><span class="s">$</span>, is the difference between the toothpick&#39;s velocity (0.1 m/s) and the stationary straw&#39;s velocity (0 m/s). So, <span class="s">$</span><span class="nv">\Delta</span><span class="nb"> u </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m</span><span class="o">/</span><span class="nb">s}</span><span class="s">$</span>.
-
-- The distance over which this change occurs, <span class="s">$</span><span class="nv">\Delta</span><span class="nb"> y</span><span class="s">$</span>, is the size of the gap: <span class="s">$</span><span class="m">1</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{mm} </span><span class="o">=</span><span class="nb"> </span><span class="m">0</span><span class="nb">.</span><span class="m">001</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m}</span><span class="s">$</span>.
-
-<span class="sb">$$</span>
-
-<span class="nv">\frac</span><span class="nb">{du}{dy} </span><span class="nv">\approx</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\Delta</span><span class="nb"> u}{</span><span class="nv">\Delta</span><span class="nb"> y} </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="m">0</span><span class="nb">.</span><span class="m">1</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m</span><span class="o">/</span><span class="nb">s}}{</span><span class="m">0</span><span class="nb">.</span><span class="m">001</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{m}} </span><span class="o">=</span><span class="nb"> </span><span class="nv">\textbf</span><span class="nb">{</span><span class="m">100</span><span class="nb"> s </span><span class="nv">\textsuperscript</span><span class="nb">{</span><span class="o">-</span><span class="m">1</span><span class="nb">}}</span>
-
-<span class="s">$$</span>
-
-**Step 4: Solve for Viscosity (<span class="s">$</span><span class="nv">\mu</span><span class="s">$</span>):**
-Now we can substitute our calculated values for <span class="s">$</span><span class="nv">\tau</span><span class="s">$</span> and <span class="s">$</span><span class="nv">\frac</span><span class="nb">{du}{dy}</span><span class="s">$</span> into our rearranged equation from Step 1.
-
-**Calculating Viscosity**
-
-<span class="sb">$$</span>
-
-<span class="nv">\mu</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\tau</span><span class="nb">}{du</span><span class="o">/</span><span class="nb">dy} </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="m">212</span><span class="nb">.</span><span class="m">2</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{Pa}}{</span><span class="m">100</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{s}^{</span><span class="o">-</span><span class="m">1</span><span class="nb">}} </span><span class="o">=</span><span class="nb"> </span><span class="m">2</span><span class="nb">.</span><span class="m">122</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{Pa}</span><span class="nv">\cdot\text</span><span class="nb">{s}</span>
-
-<span class="s">$$</span>
-
-**Step 5: Interpret the Result:**
-The standard SI unit for viscosity is the Pascal-second (Pa<span class="s">$</span><span class="nv">\cdot</span><span class="s">$</span>s). A more common unit in practice is the centipoise (cP), where 1 Pa<span class="s">$</span><span class="nv">\cdot</span><span class="s">$</span>s = 1000 cP.
-
-<span class="sb">$$</span>
-
-<span class="nv">\mu</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="m">2</span><span class="nb">.</span><span class="m">122</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{Pa}</span><span class="nv">\cdot\text</span><span class="nb">{s} </span><span class="nv">\times</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="m">1000</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{cP}}{</span><span class="m">1</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{Pa}</span><span class="nv">\cdot\text</span><span class="nb">{s}} </span><span class="o">=</span><span class="nb"> </span><span class="m">2122</span><span class="nb"> </span><span class="nv">\,</span><span class="nb"> </span><span class="nv">\text</span><span class="nb">{cP}</span>
-
-<span class="s">$$</span>
-
-For context, the viscosity of water at room temperature is about 1 cP, olive oil is about 80 cP, and honey is around 2,000-10,000 cP. The mysterious fluid has a viscosity similar to that of honey or a thick syrup.
-</pre></div>
-</div>
+<div class="proof example admonition" id="example-11">
+<p class="admonition-title"><span class="caption-number">Example 56 </span> (Determining Viscosity Experimentally)</p>
+<section class="example-content" id="proof-content">
+<p><strong>Question:</strong> A toothpick is placed concentrically inside a 5 mm diameter straw full of a mysterious fluid. There is a 1 mm gap between the toothpick and the straw on all sides. A length of 50 mm of the toothpick is submerged in the fluid. When a constant force of 0.1 N is used to pull the toothpick out, it moves at a constant velocity of 0.1 m/s. What is the viscosity of the fluid? Assume the fluid is Newtonian and the velocity profile in the narrow gap is linear.</p>
 </section>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Strategy: Rearrange Newton’s Law of Viscosity</strong>
+Our governing equation is <span class="math notranslate nohighlight">\(\tau = \mu \frac{du}{dy}\)</span>. We want to find the viscosity, <span class="math notranslate nohighlight">\(\mu\)</span>. We can rearrange the equation to solve for it:</p>
+<div class="math notranslate nohighlight">
+\[\mu = \frac{\tau}{du/dy}\]</div>
+<p class="sd-card-text">Our plan is to calculate the shear stress (<span class="math notranslate nohighlight">\(\tau\)</span>) and the velocity gradient (<span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span>) from the information given in the problem.</p>
+<p class="sd-card-text"><strong>Step 2: Calculate the Shear Stress (<span class="math notranslate nohighlight">\(\tau\)</span>):</strong></p>
+<p class="sd-card-text">Shear stress is the tangential force applied divided by the surface area over which it acts.</p>
+<div class="math notranslate nohighlight">
+\[\tau = \frac{F}{A}\]</div>
+<ul class="simple">
+<li><p class="sd-card-text"><strong>Force (<span class="math notranslate nohighlight">\(F\)</span>):</strong> The problem states a constant pulling force of <span class="math notranslate nohighlight">\(F = 0.1\)</span> N.</p></li>
+<li><p class="sd-card-text"><strong>Area (<span class="math notranslate nohighlight">\(A\)</span>):</strong> This is the cylindrical surface area of the toothpick that is in contact with the fluid.</p></li>
+<li><p class="sd-card-text">The straw has a 5 mm diameter. The annular gap is 1 mm on each side.</p></li>
+<li><p class="sd-card-text">Toothpick diameter <span class="math notranslate nohighlight">\(d_{\text{toothpick}} = d_{\text{straw}} - 2 \cdot (\text{gap}) = 5 \, \text{mm} - 2(1 \, \text{mm}) = 3 \, \text{mm} = 0.003 \, \text{m}\)</span>.</p></li>
+<li><p class="sd-card-text">Length in fluid <span class="math notranslate nohighlight">\(L = 50\)</span> mm = 0.050 m.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[A = (\text{circumference}) \times (\text{length}) = \pi d_{\text{toothpick}} L\]</div>
+<div class="math notranslate nohighlight">
+\[= \pi \cdot (0.003 \, \text{m}) \cdot (0.050 \, \text{m}) = 0.0004712 \, \text{m}^2\]</div>
+<p class="sd-card-text">Now we can calculate the shear stress:</p>
+<div class="math notranslate nohighlight">
+\[\tau = \frac{0.1 \, \text{N}}{0.0004712 \, \text{m}^2} = 212.2 \, \text{N/m}^2 = \textbf{212.2 Pa}\]</div>
+<p class="sd-card-text"><strong>Step 3: Calculate the Velocity Gradient (<span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span>):</strong></p>
+<p class="sd-card-text"><strong>The Linear Velocity Profile Assumption:</strong> For fluid flow in a very narrow gap (an annulus), it is often a very good approximation to assume the velocity changes linearly across the gap. This means we can approximate the differential term <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> with the difference term <span class="math notranslate nohighlight">\(\frac{\Delta u}{\Delta y}\)</span>.</p>
+<ul class="simple">
+<li><p class="sd-card-text">The change in velocity, <span class="math notranslate nohighlight">\(\Delta u\)</span>, is the difference between the toothpick’s velocity (0.1 m/s) and the stationary straw’s velocity (0 m/s). So, <span class="math notranslate nohighlight">\(\Delta u = 0.1 \, \text{m/s}\)</span>.</p></li>
+<li><p class="sd-card-text">The distance over which this change occurs, <span class="math notranslate nohighlight">\(\Delta y\)</span>, is the size of the gap: <span class="math notranslate nohighlight">\(1 \, \text{mm} = 0.001 \, \text{m}\)</span>.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{du}{dy} \approx \frac{\Delta u}{\Delta y} = \frac{0.1 \, \text{m/s}}{0.001 \, \text{m}} = \textbf{100 s \textsuperscript{-1}}\]</div>
+<p class="sd-card-text"><strong>Step 4: Solve for Viscosity (<span class="math notranslate nohighlight">\(\mu\)</span>):</strong>
+Now we can substitute our calculated values for <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(\frac{du}{dy}\)</span> into our rearranged equation from Step 1.</p>
+<p class="sd-card-text"><strong>Calculating Viscosity</strong></p>
+<div class="math notranslate nohighlight">
+\[\mu = \frac{\tau}{du/dy} = \frac{212.2 \, \text{Pa}}{100 \, \text{s}^{-1}} = 2.122 \, \text{Pa}\cdot\text{s}\]</div>
+<p class="sd-card-text"><strong>Step 5: Interpret the Result:</strong>
+The standard SI unit for viscosity is the Pascal-second (Pa<span class="math notranslate nohighlight">\(\cdot\)</span>s). A more common unit in practice is the centipoise (cP), where 1 Pa<span class="math notranslate nohighlight">\(\cdot\)</span>s = 1000 cP.</p>
+<div class="math notranslate nohighlight">
+\[\mu = 2.122 \, \text{Pa}\cdot\text{s} \times \frac{1000 \, \text{cP}}{1 \, \text{Pa}\cdot\text{s}} = 2122 \, \text{cP}\]</div>
+<p class="sd-card-text">For context, the viscosity of water at room temperature is about 1 cP, olive oil is about 80 cP, and honey is around 2,000-10,000 cP. The mysterious fluid has a viscosity similar to that of honey or a thick syrup.</p>
+</div>
+</details></section>
 </section>
 </section>
 

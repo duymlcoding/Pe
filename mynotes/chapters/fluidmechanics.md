@@ -138,12 +138,13 @@ The time required is approximately **1.7 seconds**.
 
 ### Example: Vertical Water Jet
 
-```sh { prf:example= }
-**Question:** Water flows through a 2.5-cm ID pipe at 115 L/min and 0.15-bar gauge pressure. It vents vertically 1.0 m above the pipe. How high will the water shoot from the vent? Assume no frictional losses.
+```{prf:example} Vertical Water Jet
 
+**Question:** Water flows through a 2.5-cm ID pipe at 115 L/min and 0.15-bar gauge pressure. It vents vertically 1.0 m above the pipe. How high will the water shoot from the vent? Assume no frictional losses.
 ```
 
-```tex { dropdown= }
+```{dropdown} Solution Steps
+
 **Step 1: Strategy and Coordinate System:**
 We will apply the Bernoulli equation between a point inside the pipe just before the vent (point 1) and the highest point of the water jet (point 2). We assume no friction and steady state. Let the centerline of the pipe be the reference height, so $z_1 = 0$. Point 2 is the peak of the jet's trajectory at height $z_2 = 1.0 \, \text{m} + H$, where $H$ is the height above the vent.
 
@@ -1539,12 +1540,12 @@ $$
 
 ### Example: Determining Viscosity Experimentally
 
-```json { prf:example= }
-**Question:** A toothpick is placed concentrically inside a 5 mm diameter straw full of a mysterious fluid. There is a 1 mm gap between the toothpick and the straw on all sides. A length of 50 mm of the toothpick is submerged in the fluid. When a constant force of 0.1 N is used to pull the toothpick out, it moves at a constant velocity of 0.1 m/s. What is the viscosity of the fluid? Assume the fluid is Newtonian and the velocity profile in the narrow gap is linear.
+```{prf:example} Determining Viscosity Experimentally
 
+**Question:** A toothpick is placed concentrically inside a 5 mm diameter straw full of a mysterious fluid. There is a 1 mm gap between the toothpick and the straw on all sides. A length of 50 mm of the toothpick is submerged in the fluid. When a constant force of 0.1 N is used to pull the toothpick out, it moves at a constant velocity of 0.1 m/s. What is the viscosity of the fluid? Assume the fluid is Newtonian and the velocity profile in the narrow gap is linear.
 ```
 
-```tex { dropdown= }
+```{dropdown} Solution Steps
 **Step 1: Strategy: Rearrange Newton's Law of Viscosity**
 Our governing equation is $\tau = \mu \frac{du}{dy}$. We want to find the viscosity, $\mu$. We can rearrange the equation to solve for it:
 
