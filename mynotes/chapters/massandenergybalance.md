@@ -1,10 +1,10 @@
 ---
-title: "Chemical Engineering PE Exam - Mass and Energy Balances"
+title: "Mass and Energy Balances"
 author: "PE Study Guide"
 date: "Process Fundamentals"
 ---
 
-# Chemical Engineering PE Exam
+# Mass and Energy Balance
 
 # Process Fundamentals Study Guide
 

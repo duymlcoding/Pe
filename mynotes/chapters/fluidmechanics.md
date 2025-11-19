@@ -496,13 +496,14 @@ The pressure difference measured by the device is approximately **4.1 kPa**.
 
 In the study of fluid mechanics, heat transfer, and mass transfer, we often encounter complex phenomena that are difficult to describe with simple equations. Dimensionless groups are powerful tools that help engineers simplify these complex problems, allowing us to scale experiments and generalize results across a wide range of conditions.
 
-```md { note= }
+```{note}
 **The Power of Dimensionless Groups**
+
 A **dimensionless group** (or dimensionless number) is a quantity that has no physical units. It is formed by creating a ratio of two competing physical quantities, such as different types of forces, rates of energy transport, or time scales. Because the units in the numerator and denominator are designed to cancel out, the result is a pure number.
+
 - **Simplifying Complexity:** They reduce the number of variables in a problem. Instead of studying how a fluid's behavior changes with density, velocity, diameter, and viscosity separately, we can combine them into a single variable: the Reynolds number. This makes analysis much more manageable.
 - **Dynamic Similitude and Scaling:** They are the key to making small-scale experiments relevant to large-scale reality. If you can match the key dimensionless numbers for a model airplane in a wind tunnel to those of a real airplane in flight, the flow patterns will be similar. This principle of "dynamic similitude" allows for cost-effective design and testing.
 - **Generalizing Results:** Dimensionless groups allow for the creation of universal correlations and charts. For example, the Moody chart, which describes friction in pipes, plots the friction factor against the Reynolds number. This single chart works for water, oil, air, or any other common fluid, regardless of the pipe size.
-
 ```
 
 ### The Reynolds Number (Re)
