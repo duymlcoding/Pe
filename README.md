@@ -25,6 +25,22 @@ Pe/
 │   │   └── chemicalreactionengineering.md     # 1,877 lines
 │   └── chemical-and-phase-equilibria/          # ✅ Completed
 │       └── chemicalandphaseequilibria.md      # 2,674 lines
+├── mynotes/                                    # Jupyter Book website source
+│   ├── _config.yml                             # Main configuration
+│   ├── _toc.yml                                # Table of contents
+│   ├── index.md                                # Homepage
+│   ├── requirements.txt                        # Python dependencies
+│   ├── references.bib                          # Bibliography
+│   ├── chapters/                               # All chapter content
+│   │   ├── massandenergybalance.md
+│   │   ├── thermodynamics.md
+│   │   ├── fluidmechanics.md
+│   │   ├── heattransfer.md
+│   │   ├── masstransfer.md
+│   │   ├── chemicalreactionengineering.md
+│   │   └── chemicalandphaseequilibria.md
+│   ├── images/                                 # Images (if any)
+│   └── _static/                                # Custom CSS/assets
 ├── source/                                     # Original source files
 │   └── latex/                                  # 21 LaTeX files (7 topics × 3 parts each)
 │       ├── massandenergybalance_part1.tex
@@ -193,6 +209,18 @@ Pe/
 
 **Overall Progress**: 7/7 topics completed (100%) ✅
 
+## 🌐 Live Website
+
+**Jupyter Book Website:** https://duymlcoding.github.io/Pe/
+
+A beautifully rendered, searchable, and mobile-responsive website built with Jupyter Book featuring:
+- Interactive navigation with sidebar
+- Full-text search functionality
+- Properly rendered LaTeX mathematics
+- Collapsible solution boxes
+- Copy buttons for code blocks
+- Mobile-friendly responsive design
+
 ## Features
 
 ### Content Quality
@@ -216,42 +244,97 @@ Pe/
 - Print individual sections as needed
 - Offline access when built locally
 
-## Building the Documentation
+## Building the Jupyter Book Website
 
 ### Prerequisites
-```bash
-# Install Jupyter Book
-pip install jupyter-book
 
-# Optional: Install additional dependencies
-pip install sphinx-book-theme myst-parser
+```bash
+# Install Jupyter Book and dependencies
+pip install jupyter-book>=1.0.0
+pip install sphinx-proof sphinx-togglebutton sphinx-copybutton
+pip install ghp-import
 ```
 
-### Build Instructions
+Or install from requirements.txt:
+
 ```bash
-# Navigate to repository root
-cd Pe/
-
-# Build the book
-jupyter-book build .
-
-# The built HTML will be in _build/html/
-# Open _build/html/index.html in your browser
-
-# Optional: Clean previous builds
-jupyter-book clean .
+pip install -r mynotes/requirements.txt
 ```
 
-### Publishing Options
+### Local Development
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/duymlcoding/Pe.git
+   cd Pe
+   ```
+
+2. **Build the book:**
+   ```bash
+   cd mynotes
+   jupyter-book build . --all
+   ```
+
+3. **Preview locally:**
+   ```bash
+   cd _build/html
+   python3 -m http.server 8000
+   ```
+
+   Then open your browser to: `http://localhost:8000`
+
+4. **Clean previous build:**
+   ```bash
+   cd mynotes
+   jupyter-book clean .
+   ```
+
+### Deploying to GitHub Pages
+
+**Option 1: Automatic Deployment Script**
+
+Use the provided update script (recommended):
+
 ```bash
-# Option 1: GitHub Pages
-ghp-import -n -p -f _build/html
+./update_website.sh
+```
 
-# Option 2: Local server
-cd _build/html && python -m http.server 8000
+This will:
+1. Clean previous builds
+2. Rebuild the book
+3. Provide deployment instructions
 
-# Option 3: Deploy to custom hosting
-# Upload contents of _build/html/ to web server
+**Option 2: Manual Deployment**
+
+1. Build the book:
+   ```bash
+   cd mynotes
+   jupyter-book build . --all
+   cd ..
+   ```
+
+2. Deploy to GitHub Pages:
+   ```bash
+   ghp-import -n -p -f mynotes/_build/html
+   ```
+
+3. Enable GitHub Pages:
+   - Go to repository Settings → Pages
+   - Source: Deploy from branch `gh-pages`
+   - Folder: `/ (root)`
+   - Save
+
+4. Website will be live at: `https://duymlcoding.github.io/Pe/`
+
+### Updating Content
+
+After making changes to markdown files:
+
+```bash
+# 1. Edit files in mynotes/chapters/
+# 2. Update mynotes/_toc.yml if adding new chapters
+# 3. Rebuild and deploy:
+./update_website.sh
 ```
 
 ## Content Quality Standards
