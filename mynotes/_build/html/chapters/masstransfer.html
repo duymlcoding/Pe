@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Mass Transfer &#8212; Chemical Engineering PE Exam Study Guide</title>
+    <title>Mass Transfer &#8212; Introduction to Process Fundamentals</title>
   
   
   
@@ -152,7 +152,7 @@
   
   
   
-    <p class="title logo__title">Chemical Engineering PE</p>
+    <p class="title logo__title">Process Fundamentals</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -457,20 +457,18 @@ document.write(`
 <p>Diffusion is the net movement of a substance from a region of higher concentration to a region of lower concentration, driven by the random motion of particles. When this process occurs over time, it is known as <strong>unsteady-state diffusion</strong>, and it is crucial for many materials science and chemical engineering processes, such as hardening steel or doping semiconductors.</p>
 <section id="the-governing-equation-ficks-second-law">
 <h3>The Governing Equation: Fick’s Second Law<a class="headerlink" href="#the-governing-equation-ficks-second-law" title="Link to this heading">#</a></h3>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Unsteady-state diffusion is described by <strong>Fick’s Second Law</strong>, a partial differential equation that relates the change in concentration over time to the second derivative of concentration with respect to spatial position. It describes how the concentration profile evolves over time.</p>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p>For one-dimensional diffusion with a constant diffusion coefficient, the law is:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{\partial C_A}{\partial t} = D_{AB} \frac{\partial^2 C_A}{\partial x^2} \quad \text{(Equation 1)}
-\]</div>
+\[\frac{\partial C_A}{\partial t} = D_{AB} \frac{\partial^2 C_A}{\partial x^2} \quad \text{(Equation 1)}\]</div>
 </div>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(C_A\)</span>: Concentration of the diffusing substance A [mol/m<span class="math notranslate nohighlight">\(^3\)</span> or wt%].</p></li>
 <li><p><span class="math notranslate nohighlight">\(t\)</span>: Time [s].</p></li>
@@ -481,20 +479,18 @@ document.write(`
 </section>
 <section id="the-error-function-solution-for-a-semi-infinite-solid">
 <h3>The Error Function Solution for a Semi-Infinite Solid<a class="headerlink" href="#the-error-function-solution-for-a-semi-infinite-solid" title="Link to this heading">#</a></h3>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>A common scenario involves diffusion into a solid that is thick enough to be considered <strong>semi-infinite</strong>. The initial concentration is uniform, and at time <span class="math notranslate nohighlight">\(t=0\)</span>, the surface concentration is suddenly changed to a new, constant value. The analytical solution for this specific case uses the mathematical <strong>error function (erf)</strong>.</p>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p>The concentration profile is given by:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{C_A(x,t) - C_{A0}}{C_{As} - C_{A0}} = 1 - \text{erf}\left(\frac{x}{2\sqrt{D_{AB}t}}\right) \quad \text{(Equation 2)}
-\]</div>
+\[\frac{C_A(x,t) - C_{A0}}{C_{As} - C_{A0}} = 1 - \text{erf}\left(\frac{x}{2\sqrt{D_{AB}t}}\right) \quad \text{(Equation 2)}\]</div>
 </div>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(C_A(x,t)\)</span>: The concentration at position <span class="math notranslate nohighlight">\(x\)</span> and time <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(C_{A0}\)</span>: The initial, uniform concentration in the solid at <span class="math notranslate nohighlight">\(t=0\)</span>.</p></li>
@@ -510,98 +506,77 @@ document.write(`
 <section class="example-content" id="proof-content">
 <p>A steel alloy initially has a uniform carbon concentration of 0.10 wt%. To harden the surface, it is placed in a high-temperature furnace at 1000<span class="math notranslate nohighlight">\(^\circ\)</span>C where the carbon concentration at the surface is maintained at 1.5 wt%. The diffusion coefficient of carbon in steel at this temperature is <span class="math notranslate nohighlight">\(D_{AB} = 2.0 \times 10^{-11}\)</span> m<span class="math notranslate nohighlight">\(^2\)</span>/s. How long (in hours) will it take for the carbon concentration to reach 1.0 wt% at a depth of 1.0 mm below the surface?</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Identify Knowns and Strategy</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Identify Knowns and Strategy</strong>
 The problem describes diffusion into a semi-infinite solid with constant surface concentration, matching the conditions for the error function solution. We will solve Equation 2 for time, <span class="math notranslate nohighlight">\(t\)</span>.</p>
 <ul class="simple">
-<li><p>Target Concentration: <span class="math notranslate nohighlight">\(C_A(x,t) = 1.0\)</span> wt%</p></li>
-<li><p>Initial Concentration: <span class="math notranslate nohighlight">\(C_{A0} = 0.10\)</span> wt%</p></li>
-<li><p>Surface Concentration: <span class="math notranslate nohighlight">\(C_{As} = 1.5\)</span> wt%</p></li>
-<li><p>Depth: <span class="math notranslate nohighlight">\(x = 1.0 \, \text{mm} = 1.0 \times 10^{-3}\)</span> m</p></li>
-<li><p>Diffusivity: <span class="math notranslate nohighlight">\(D_{AB} = 2.0 \times 10^{-11}\)</span> m<span class="math notranslate nohighlight">\(^2\)</span>/s</p></li>
+<li><p class="sd-card-text">Target Concentration: <span class="math notranslate nohighlight">\(C_A(x,t) = 1.0\)</span> wt%</p></li>
+<li><p class="sd-card-text">Initial Concentration: <span class="math notranslate nohighlight">\(C_{A0} = 0.10\)</span> wt%</p></li>
+<li><p class="sd-card-text">Surface Concentration: <span class="math notranslate nohighlight">\(C_{As} = 1.5\)</span> wt%</p></li>
+<li><p class="sd-card-text">Depth: <span class="math notranslate nohighlight">\(x = 1.0 \, \text{mm} = 1.0 \times 10^{-3}\)</span> m</p></li>
+<li><p class="sd-card-text">Diffusivity: <span class="math notranslate nohighlight">\(D_{AB} = 2.0 \times 10^{-11}\)</span> m<span class="math notranslate nohighlight">\(^2\)</span>/s</p></li>
 </ul>
-<p><strong>Step 2: Calculate the Concentration Ratio</strong>
+<p class="sd-card-text"><strong>Step 2: Calculate the Concentration Ratio</strong>
 Substitute the known concentrations into the left-hand side of Equation 2.</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{C_A(x,t) - C_{A0}}{C_{As} - C_{A0}} = \frac{1.0 - 0.10}{1.5 - 0.10} = \frac{0.9}{1.4} \approx 0.6429
-\]</div>
-<p><strong>Step 3: Solve for the Error Function Term</strong>
+\[\frac{C_A(x,t) - C_{A0}}{C_{As} - C_{A0}} = \frac{1.0 - 0.10}{1.5 - 0.10} = \frac{0.9}{1.4} \approx 0.6429\]</div>
+<p class="sd-card-text"><strong>Step 3: Solve for the Error Function Term</strong>
 Set the result equal to the right-hand side of Equation 2 and solve for erf(z).</p>
 <div class="math notranslate nohighlight">
-\[
-0.6429 = 1 - \text{erf}\left(\frac{x}{2\sqrt{D_{AB}t}}\right)
-\]</div>
+\[0.6429 = 1 - \text{erf}\left(\frac{x}{2\sqrt{D_{AB}t}}\right)\]</div>
 <div class="math notranslate nohighlight">
-\[
-\text{erf}\left(\frac{x}{2\sqrt{D_{AB}t}}\right) = 1 - 0.6429 = 0.3571
-\]</div>
-<p><strong>Step 4: Find the Argument of the Error Function</strong>
+\[\text{erf}\left(\frac{x}{2\sqrt{D_{AB}t}}\right) = 1 - 0.6429 = 0.3571\]</div>
+<p class="sd-card-text"><strong>Step 4: Find the Argument of the Error Function</strong>
 Using an error function table or calculator, find the value of <span class="math notranslate nohighlight">\(z\)</span> for which <span class="math notranslate nohighlight">\(\text{erf}(z) = 0.3571\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-z = \frac{x}{2\sqrt{D_{AB}t}} \approx 0.328
-\]</div>
-<p><strong>Step 5: Solve for Time (<span class="math notranslate nohighlight">\(t\)</span>)</strong>
+\[z = \frac{x}{2\sqrt{D_{AB}t}} \approx 0.328\]</div>
+<p class="sd-card-text"><strong>Step 5: Solve for Time (<span class="math notranslate nohighlight">\(t\)</span>)</strong>
 Rearrange the equation for <span class="math notranslate nohighlight">\(z\)</span> to solve for the unknown time, <span class="math notranslate nohighlight">\(t\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-\sqrt{t} = \frac{x}{2 \cdot (0.328) \cdot \sqrt{D_{AB}}}
-\]</div>
+\[\sqrt{t} = \frac{x}{2 \cdot (0.328) \cdot \sqrt{D_{AB}}}\]</div>
 <div class="math notranslate nohighlight">
-\[
-t = \left( \frac{x}{2 \cdot (0.328) \cdot \sqrt{D_{AB}}} \right)^2 = \frac{x^2}{4 \cdot (0.328)^2 \cdot D_{AB}}
-\]</div>
+\[t = \left( \frac{x}{2 \cdot (0.328) \cdot \sqrt{D_{AB}}} \right)^2 = \frac{x^2}{4 \cdot (0.328)^2 \cdot D_{AB}}\]</div>
 <div class="math notranslate nohighlight">
-\[
-t = \frac{(1.0 \times 10^{-3} \, \text{m})^2}{4 \cdot (0.328)^2 \cdot (2.0 \times 10^{-11} \, \text{m}^2/\text{s})} = \frac{1.0 \times 10^{-6}}{8.60 \times 10^{-12}} \, \text{s} \approx 116,279 \, \text{s}
-\]</div>
-<p><strong>Step 6: Convert to Hours and Final Answer</strong>
+\[t = \frac{(1.0 \times 10^{-3} \, \text{m})^2}{4 \cdot (0.328)^2 \cdot (2.0 \times 10^{-11} \, \text{m}^2/\text{s})} = \frac{1.0 \times 10^{-6}}{8.60 \times 10^{-12}} \, \text{s} \approx 116,279 \, \text{s}\]</div>
+<p class="sd-card-text"><strong>Step 6: Convert to Hours and Final Answer</strong>
 Convert the time from seconds to hours.</p>
 <div class="math notranslate nohighlight">
-\[
-t = 116,279 \, \text{s} \times \frac{1 \, \text{h}}{3600 \, \text{s}} \approx 32.3 \, \text{h}
-\]</div>
-<p>The process will take approximately <strong>32.3 hours</strong>.</p>
+\[t = 116,279 \, \text{s} \times \frac{1 \, \text{h}}{3600 \, \text{s}} \approx 32.3 \, \text{h}\]</div>
+<p class="sd-card-text">The process will take approximately <strong>32.3 hours</strong>.</p>
 </div>
-</section>
+</details></section>
 </section>
 <section id="mccabe-thiele-diagrams">
 <h2>McCabe-Thiele Diagrams<a class="headerlink" href="#mccabe-thiele-diagrams" title="Link to this heading">#</a></h2>
 <p>The McCabe-Thiele method is a graphical technique used to determine the number of theoretical equilibrium stages required to separate a binary (two-component) mixture via distillation. It is a powerful visual tool that combines thermodynamic equilibrium data with material balances to model the distillation process. The entire method is built upon a key simplifying assumption.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Key Assumption: Constant Molar Overflow (CMO)</strong>
 The McCabe-Thiele method assumes <strong>Constant Molar Overflow (CMO)</strong>. This means that for every mole of vapor that condenses on a tray, one mole of liquid vaporizes. As a result, the molar flow rates of liquid (<span class="math notranslate nohighlight">\(L\)</span>) and vapor (<span class="math notranslate nohighlight">\(V\)</span>) are considered constant throughout each section of the column (i.e., above the feed and below the feed). This simplification is reasonably accurate for ideal mixtures where the molar heats of vaporization of the two components are nearly equal.</p>
 </div>
 <section id="important-equations">
 <h3>Important Equations<a class="headerlink" href="#important-equations" title="Link to this heading">#</a></h3>
 <p>The McCabe-Thiele diagram is constructed using several key lines, each derived from material balances around different sections of the distillation column.</p>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>Key Operating and Feed Lines</strong></p>
 <p><strong>Rectifying Section Operating Line (TOL):</strong>
 This line describes the material balance in the section above the feed. In terms of the reflux ratio, <span class="math notranslate nohighlight">\(R\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-y = \left(\frac{R}{R+1}\right)x + \left(\frac{1}{R+1}\right)x_D
-\]</div>
+\[y = \left(\frac{R}{R+1}\right)x + \left(\frac{1}{R+1}\right)x_D\]</div>
 <p><strong>Stripping Section Operating Line (BOL):</strong>
 This line describes the material balance in the section below the feed.</p>
 <div class="math notranslate nohighlight">
-\[
-y = \left(\frac{\bar{L}}{\bar{V}}\right)x - \left(\frac{B}{\bar{V}}\right)x_B
-\]</div>
+\[y = \left(\frac{\bar{L}}{\bar{V}}\right)x - \left(\frac{B}{\bar{V}}\right)x_B\]</div>
 <p><strong>The q-Line (Feed Line):</strong>
 This line is determined by the thermal condition of the feed and represents the locus of intersection points for the TOL and BOL.</p>
 <div class="math notranslate nohighlight">
-\[
-y = \left(\frac{q}{q-1}\right)x - \left(\frac{z_F}{q-1}\right)
-\]</div>
+\[y = \left(\frac{q}{q-1}\right)x - \left(\frac{z_F}{q-1}\right)\]</div>
 </div>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(x, y\)</span>: Mole fraction of the more volatile component in the liquid and vapor phase, respectively.</p></li>
 <li><p><span class="math notranslate nohighlight">\(x_D, x_B, z_F\)</span>: Mole fractions in the distillate, bottoms, and feed streams.</p></li>
@@ -615,8 +590,8 @@ y = \left(\frac{q}{q-1}\right)x - \left(\frac{z_F}{q-1}\right)
 </section>
 <section id="the-conceptual-basis-why-stepping-off-stages-works">
 <h3>The Conceptual Basis: Why “Stepping Off Stages” Works<a class="headerlink" href="#the-conceptual-basis-why-stepping-off-stages-works" title="Link to this heading">#</a></h3>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Combining Balances and Equilibrium</strong>
 A distillation column achieves separation because of two distinct physical phenomena that are represented by the two main lines on the diagram:</p>
 <ol class="arabic simple">
@@ -625,8 +600,8 @@ A distillation column achieves separation because of two distinct physical pheno
 </ol>
 <p>The McCabe-Thiele “staircase” is a graphical method of alternating between these two relationships to count the number of stages needed to get from the reboiler composition to the distillate composition.</p>
 </div>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Visualizing the Stepping Process</strong>
 The graphical procedure for stepping off stages simulates the movement of components through the column:</p>
 <ol class="arabic simple">
@@ -640,17 +615,15 @@ The graphical procedure for stepping off stages simulates the movement of compon
 <section id="the-role-of-the-feed-the-q-line">
 <h3>The Role of the Feed: The q-Line<a class="headerlink" href="#the-role-of-the-feed-the-q-line" title="Link to this heading">#</a></h3>
 <p>The condition of the feed stream when it enters the column has a significant impact on the internal liquid and vapor flow rates. The <strong>q-line</strong> is a graphical tool that accounts for the thermal condition and composition of the feed, and it correctly links the operating lines for the top and bottom sections of the column.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Definition of Feed Quality (q)</strong>
 The value of <strong>q</strong>, the feed quality, is defined as the fraction of the feed that becomes liquid in the stripping (bottom) section of the column. It can be thought of as the heat required to vaporize one mole of feed divided by the molar latent heat of vaporization of the feed.</p>
 <div class="math notranslate nohighlight">
-\[
-q = \frac{\text{Increase in liquid flow rate below the feed tray}}{\text{Total molar feed rate}} = \frac{\bar{L} - L}{F}
-\]</div>
+\[q = \frac{\text{Increase in liquid flow rate below the feed tray}}{\text{Total molar feed rate}} = \frac{\bar{L} - L}{F}\]</div>
 </div>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <p><strong>Feed Quality (q) Classification</strong>
 The value of <span class="math notranslate nohighlight">\(q\)</span> precisely defines the thermal state of the feed, which in turn determines the slope of the q-line.</p>
 <ul class="simple">
@@ -661,14 +634,12 @@ The value of <span class="math notranslate nohighlight">\(q\)</span> precisely d
 <li><p><strong>Superheated Vapor (<span class="math notranslate nohighlight">\(q &lt; 0\)</span>):</strong> The feed is a hot vapor. It vaporizes some of the liquid flowing down from above, resulting in less liquid in the stripping section. The q-line has a positive slope less than 1.</p></li>
 </ul>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>q-Line Properties</strong>
 The q-line is derived by finding the mathematical intersection of the TOL and BOL. Its equation is:</p>
 <div class="math notranslate nohighlight">
-\[
-y = \left(\frac{q}{q-1}\right)x - \left(\frac{z_F}{q-1}\right)
-\]</div>
+\[y = \left(\frac{q}{q-1}\right)x - \left(\frac{z_F}{q-1}\right)\]</div>
 <p>This line has two critical properties that are used to draw it on the diagram:</p>
 <ul class="simple">
 <li><p>Its <strong>slope</strong> is determined by the feed quality: <span class="math notranslate nohighlight">\(m_q = \frac{q}{q-1}\)</span>.</p></li>
@@ -691,139 +662,120 @@ y = \left(\frac{q}{q-1}\right)x - \left(\frac{z_F}{q-1}\right)
 <li><p>Determine the molar flow rates of the distillate (D) and bottoms (B) products, as well as the internal flow rates in the rectifying (L, V) and stripping (<span class="math notranslate nohighlight">\(\bar{L}, \bar{V}\)</span>) sections.</p></li>
 </ol>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Analyze the Problem and List Knowns</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Analyze the Problem and List Knowns</strong>
 Before beginning, it’s crucial to identify all the given information and the goals.</p>
 <ul class="simple">
-<li><p><strong>Feed (F):</strong> Rate = 100 kmol/hr, Composition <span class="math notranslate nohighlight">\(z_F = 0.5\)</span>.</p></li>
-<li><p><strong>Distillate (D):</strong> Vapor product, Composition <span class="math notranslate nohighlight">\(y_D = 0.95\)</span>.</p></li>
-<li><p><strong>Bottoms (B):</strong> Liquid product, Composition <span class="math notranslate nohighlight">\(x_B = 0.05\)</span>.</p></li>
-<li><p><strong>Column Type:</strong> Partial condenser and partial reboiler.</p></li>
-<li><p><strong>Operating Condition:</strong> <span class="math notranslate nohighlight">\((L/V) = 1.4 \times (L/V)_{\text{min}}\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Feed (F):</strong> Rate = 100 kmol/hr, Composition <span class="math notranslate nohighlight">\(z_F = 0.5\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Distillate (D):</strong> Vapor product, Composition <span class="math notranslate nohighlight">\(y_D = 0.95\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Bottoms (B):</strong> Liquid product, Composition <span class="math notranslate nohighlight">\(x_B = 0.05\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Column Type:</strong> Partial condenser and partial reboiler.</p></li>
+<li><p class="sd-card-text"><strong>Operating Condition:</strong> <span class="math notranslate nohighlight">\((L/V) = 1.4 \times (L/V)_{\text{min}}\)</span>.</p></li>
 </ul>
-<p>Our task is to fully define the column’s design and operation using the McCabe-Thiele method. We will start by defining the three key lines on the diagram: the q-line, the Top Operating Line (TOL), and the Bottom Operating Line (BOL).</p>
-<p><strong>Solution Part 1: Constructing the McCabe-Thiele Diagram</strong></p>
-<p><strong>Step 2: Determine the Feed Line (q-Line)</strong>
+<p class="sd-card-text">Our task is to fully define the column’s design and operation using the McCabe-Thiele method. We will start by defining the three key lines on the diagram: the q-line, the Top Operating Line (TOL), and the Bottom Operating Line (BOL).</p>
+<p class="sd-card-text"><strong>Solution Part 1: Constructing the McCabe-Thiele Diagram</strong></p>
+<p class="sd-card-text"><strong>Step 2: Determine the Feed Line (q-Line)</strong>
 The q-line’s properties are determined by the thermal condition of the feed. The feed is a sub-cooled liquid, which means <span class="math notranslate nohighlight">\(q &gt; 1\)</span>.</p>
 <ul>
-<li><p>The increase in liquid flow across the feed stage is the sum of the feed itself plus any vapor it condenses: <span class="math notranslate nohighlight">\(\bar{L} - L = F + \frac{1}{6}F = \frac{7}{6}F\)</span>.</p></li>
-<li><p>We can now calculate <span class="math notranslate nohighlight">\(q\)</span>:</p>
+<li><p class="sd-card-text">The increase in liquid flow across the feed stage is the sum of the feed itself plus any vapor it condenses: <span class="math notranslate nohighlight">\(\bar{L} - L = F + \frac{1}{6}F = \frac{7}{6}F\)</span>.</p></li>
+<li><p class="sd-card-text">We can now calculate <span class="math notranslate nohighlight">\(q\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-  q = \frac{\bar{L} - L}{F} = \frac{(7/6)F}{F} = \frac{7}{6} \approx 1.167
-  \]</div>
+\[  q = \frac{\bar{L} - L}{F} = \frac{(7/6)F}{F} = \frac{7}{6} \approx 1.167\]</div>
 </li>
 </ul>
-<p>The q-line is plotted by starting at the point <span class="math notranslate nohighlight">\((z_F, z_F) = (0.5, 0.5)\)</span> on the <span class="math notranslate nohighlight">\(y=x\)</span> line and drawing a line with a slope of <span class="math notranslate nohighlight">\(m_q = q/(q-1) = (7/6)/(1/6) = 7\)</span>.</p>
-<p><strong>Step 3: Clarify Distillate Composition and the Partial Condenser</strong>
+<p class="sd-card-text">The q-line is plotted by starting at the point <span class="math notranslate nohighlight">\((z_F, z_F) = (0.5, 0.5)\)</span> on the <span class="math notranslate nohighlight">\(y=x\)</span> line and drawing a line with a slope of <span class="math notranslate nohighlight">\(m_q = q/(q-1) = (7/6)/(1/6) = 7\)</span>.</p>
+<p class="sd-card-text"><strong>Step 3: Clarify Distillate Composition and the Partial Condenser</strong>
 A partial condenser acts as one equilibrium stage. It takes vapor from the top tray and splits it into two streams that are in equilibrium: the final vapor product (<span class="math notranslate nohighlight">\(D\)</span>, with composition <span class="math notranslate nohighlight">\(y_D\)</span>) and the saturated liquid reflux (<span class="math notranslate nohighlight">\(L\)</span>, with composition <span class="math notranslate nohighlight">\(x_D\)</span>). To find <span class="math notranslate nohighlight">\(x_D\)</span>, we must use the VLE data to find the liquid composition in equilibrium with the vapor <span class="math notranslate nohighlight">\(y_D=0.95\)</span>. The Top Operating Line (TOL) must originate from the point <span class="math notranslate nohighlight">\((x_D, x_D)\)</span> on the <span class="math notranslate nohighlight">\(y=x\)</span> line.
 From VLE data for Acetone-Ethanol, a vapor of <span class="math notranslate nohighlight">\(y=0.95\)</span> is in equilibrium with a liquid of approximately <span class="math notranslate nohighlight">\(x=0.91\)</span>. We will use <span class="math notranslate nohighlight">\(\mathbf{x_D = 0.91}\)</span> for plotting our operating line.</p>
-<p><strong>Step 4: Determine the Rectifying Operating Line (TOL)</strong>
+<p class="sd-card-text"><strong>Step 4: Determine the Rectifying Operating Line (TOL)</strong>
 The operating liquid-to-vapor ratio is <span class="math notranslate nohighlight">\((L/V) = 1.4 \times (L/V)_{\text{min}}\)</span>. First, we find the minimum ratio.</p>
 <ul class="simple">
-<li><p>The minimum TOL is the line drawn from <span class="math notranslate nohighlight">\((x_D, x_D) = (0.91, 0.91)\)</span> to the intersection of the <strong>q-line</strong> and the <strong>VLE curve</strong>.</p></li>
-<li><p>By drawing this line on the graph, its slope is measured to be approximately 0.62. So, <span class="math notranslate nohighlight">\((L/V)_{\text{min}} \approx 0.62\)</span>.</p></li>
-<li><p>The actual operating ratio is: <span class="math notranslate nohighlight">\((L/V)_{\text{actual}} = 1.4 \times 0.62 = 0.868 \approx 0.87\)</span>.
+<li><p class="sd-card-text">The minimum TOL is the line drawn from <span class="math notranslate nohighlight">\((x_D, x_D) = (0.91, 0.91)\)</span> to the intersection of the <strong>q-line</strong> and the <strong>VLE curve</strong>.</p></li>
+<li><p class="sd-card-text">By drawing this line on the graph, its slope is measured to be approximately 0.62. So, <span class="math notranslate nohighlight">\((L/V)_{\text{min}} \approx 0.62\)</span>.</p></li>
+<li><p class="sd-card-text">The actual operating ratio is: <span class="math notranslate nohighlight">\((L/V)_{\text{actual}} = 1.4 \times 0.62 = 0.868 \approx 0.87\)</span>.
 The TOL is plotted starting from <span class="math notranslate nohighlight">\((x_D, x_D) = (0.91, 0.91)\)</span> with a slope of 0.87.</p></li>
 </ul>
-<p><strong>Step 5: Determine the Stripping Operating Line (BOL)</strong>
+<p class="sd-card-text"><strong>Step 5: Determine the Stripping Operating Line (BOL)</strong>
 The BOL is the straight line that connects two points: <span class="math notranslate nohighlight">\((x_B, x_B) = (0.05, 0.05)\)</span> and the intersection point of the TOL and the q-line. Drawing this line completes the diagram.</p>
-<p><strong>Solution Part 2: Determining Stages and Feed Location</strong></p>
-<p><strong>Step 6: Step Off Stages and Determine Feed Location</strong>
+<p class="sd-card-text"><strong>Solution Part 2: Determining Stages and Feed Location</strong></p>
+<p class="sd-card-text"><strong>Step 6: Step Off Stages and Determine Feed Location</strong>
 Now we use the completed diagram to count the required equilibrium stages, starting from the top.</p>
 <ul class="simple">
-<li><p><strong>Stage 1 (Partial Condenser):</strong> This is our first equilibrium stage, establishing the equilibrium between <span class="math notranslate nohighlight">\(y_D=0.95\)</span> and <span class="math notranslate nohighlight">\(x_D=0.91\)</span>.</p></li>
-<li><p><strong>Stepping Procedure:</strong> We begin counting trays at <span class="math notranslate nohighlight">\((x_D, x_D)=(0.91, 0.91)\)</span>. We draw “stair steps” between the <strong>TOL</strong> and the VLE curve.</p></li>
-<li><p><strong>Feed Stage and Switch to BOL:</strong> When a step crosses the q-line, we switch to using the <strong>BOL</strong>. The tray on which this crossover occurs is the optimal feed tray.</p></li>
-<li><p><strong>Final Stage (Partial Reboiler):</strong> We continue stepping down on the BOL until we reach or pass <span class="math notranslate nohighlight">\(x_B=0.05\)</span>. The partial reboiler is the final equilibrium stage.</p></li>
+<li><p class="sd-card-text"><strong>Stage 1 (Partial Condenser):</strong> This is our first equilibrium stage, establishing the equilibrium between <span class="math notranslate nohighlight">\(y_D=0.95\)</span> and <span class="math notranslate nohighlight">\(x_D=0.91\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Stepping Procedure:</strong> We begin counting trays at <span class="math notranslate nohighlight">\((x_D, x_D)=(0.91, 0.91)\)</span>. We draw “stair steps” between the <strong>TOL</strong> and the VLE curve.</p></li>
+<li><p class="sd-card-text"><strong>Feed Stage and Switch to BOL:</strong> When a step crosses the q-line, we switch to using the <strong>BOL</strong>. The tray on which this crossover occurs is the optimal feed tray.</p></li>
+<li><p class="sd-card-text"><strong>Final Stage (Partial Reboiler):</strong> We continue stepping down on the BOL until we reach or pass <span class="math notranslate nohighlight">\(x_B=0.05\)</span>. The partial reboiler is the final equilibrium stage.</p></li>
 </ul>
-<p>Following this procedure on the McCabe-Thiele graph yields the following results:</p>
+<p class="sd-card-text">Following this procedure on the McCabe-Thiele graph yields the following results:</p>
 <ul class="simple">
-<li><p>Total equilibrium stages required <span class="math notranslate nohighlight">\(\approx \textbf{10.75}\)</span>.</p></li>
-<li><p>Number of trays = Total Stages - Condenser - Reboiler = <span class="math notranslate nohighlight">\(10.75 - 1 - 1 = 8.75\)</span> trays. We round up to <strong>9 trays</strong>.</p></li>
-<li><p>The optimal feed tray is where the switch from TOL to BOL occurs, which is <strong>Tray 7</strong> (counting from the top).</p></li>
+<li><p class="sd-card-text">Total equilibrium stages required <span class="math notranslate nohighlight">\(\approx \textbf{10.75}\)</span>.</p></li>
+<li><p class="sd-card-text">Number of trays = Total Stages - Condenser - Reboiler = <span class="math notranslate nohighlight">\(10.75 - 1 - 1 = 8.75\)</span> trays. We round up to <strong>9 trays</strong>.</p></li>
+<li><p class="sd-card-text">The optimal feed tray is where the switch from TOL to BOL occurs, which is <strong>Tray 7</strong> (counting from the top).</p></li>
 </ul>
-<p><strong>Solution Part 3: Calculating Molar Flow Rates</strong></p>
-<p><strong>Step 7: Calculate Overall Product Flow Rates (D and B)</strong>
+<p class="sd-card-text"><strong>Solution Part 3: Calculating Molar Flow Rates</strong></p>
+<p class="sd-card-text"><strong>Step 7: Calculate Overall Product Flow Rates (D and B)</strong>
 We solve the overall material balances for the column.</p>
 <ul>
-<li><p><strong>Overall Total Balance:</strong> <span class="math notranslate nohighlight">\(F = D + B \implies 100 = D + B\)</span></p></li>
-<li><p><strong>Overall Component Balance (Acetone):</strong> <span class="math notranslate nohighlight">\(F z_F = D y_D + B x_B\)</span></p>
+<li><p class="sd-card-text"><strong>Overall Total Balance:</strong> <span class="math notranslate nohighlight">\(F = D + B \implies 100 = D + B\)</span></p></li>
+<li><p class="sd-card-text"><strong>Overall Component Balance (Acetone):</strong> <span class="math notranslate nohighlight">\(F z_F = D y_D + B x_B\)</span></p>
 <div class="math notranslate nohighlight">
-\[
-  (100)(0.5) = D(0.95) + B(0.05)
-  \]</div>
+\[  (100)(0.5) = D(0.95) + B(0.05)\]</div>
 </li>
 </ul>
-<p>Solving the system of two equations (by substituting <span class="math notranslate nohighlight">\(B = 100 - D\)</span>):</p>
+<p class="sd-card-text">Solving the system of two equations (by substituting <span class="math notranslate nohighlight">\(B = 100 - D\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[
-50 = 0.95D + (100 - D)(0.05) \implies 45 = 0.90D \implies D = 50 \, \text{kmol/hr}
-\]</div>
+\[50 = 0.95D + (100 - D)(0.05) \implies 45 = 0.90D \implies D = 50 \, \text{kmol/hr}\]</div>
 <div class="math notranslate nohighlight">
-\[
-B = 100 - D = 50 \, \text{kmol/hr}
-\]</div>
-<p><strong>Step 8: Calculate Internal Column Flow Rates</strong></p>
+\[B = 100 - D = 50 \, \text{kmol/hr}\]</div>
+<p class="sd-card-text"><strong>Step 8: Calculate Internal Column Flow Rates</strong></p>
 <ul>
-<li><p><strong>Rectifying Section (L, V):</strong> From a balance around the partial condenser, <span class="math notranslate nohighlight">\(V = L + D\)</span>. We also know <span class="math notranslate nohighlight">\(L = 0.87V\)</span>.</p>
+<li><p class="sd-card-text"><strong>Rectifying Section (L, V):</strong> From a balance around the partial condenser, <span class="math notranslate nohighlight">\(V = L + D\)</span>. We also know <span class="math notranslate nohighlight">\(L = 0.87V\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-  V = 0.87V + 50 \implies 0.13V = 50 \implies V \approx 385 \, \text{kmol/hr}
-  \]</div>
+\[  V = 0.87V + 50 \implies 0.13V = 50 \implies V \approx 385 \, \text{kmol/hr}\]</div>
 <div class="math notranslate nohighlight">
-\[
-  L = 0.87 \times V = 0.87 \times 385 \approx 335 \, \text{kmol/hr}
-  \]</div>
+\[  L = 0.87 \times V = 0.87 \times 385 \approx 335 \, \text{kmol/hr}\]</div>
 </li>
-<li><p><strong>Stripping Section (<span class="math notranslate nohighlight">\(\bar{L}, \bar{V}\)</span>):</strong> We use the q-value to find <span class="math notranslate nohighlight">\(\bar{L}\)</span>.</p>
+<li><p class="sd-card-text"><strong>Stripping Section (<span class="math notranslate nohighlight">\(\bar{L}, \bar{V}\)</span>):</strong> We use the q-value to find <span class="math notranslate nohighlight">\(\bar{L}\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-  \bar{L} = L + qF = 335 + (7/6)(100) \approx 452 \, \text{kmol/hr}
-  \]</div>
-<p>From a balance around the reboiler, <span class="math notranslate nohighlight">\(\bar{L} = \bar{V} + B\)</span>.</p>
+\[  \bar{L} = L + qF = 335 + (7/6)(100) \approx 452 \, \text{kmol/hr}\]</div>
+<p class="sd-card-text">From a balance around the reboiler, <span class="math notranslate nohighlight">\(\bar{L} = \bar{V} + B\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-  \bar{V} = \bar{L} - B = 452 - 50 = 402 \, \text{kmol/hr}
-  \]</div>
+\[  \bar{V} = \bar{L} - B = 452 - 50 = 402 \, \text{kmol/hr}\]</div>
 </li>
 </ul>
-<p><strong>Final Answer Summary</strong></p>
+<p class="sd-card-text"><strong>Final Answer Summary</strong></p>
 <ul class="simple">
-<li><p><strong>Total Equilibrium Stages:</strong> 10.75 (Requires 1 partial condenser, 1 partial reboiler, and 9 trays).</p></li>
-<li><p><strong>Optimal Feed Location:</strong> Tray 7 (from the top).</p></li>
-<li><p><strong>Product Flow Rates:</strong> <span class="math notranslate nohighlight">\(D = 50\)</span> kmol/hr, <span class="math notranslate nohighlight">\(B = 50\)</span> kmol/hr.</p></li>
-<li><p><strong>Internal Flow Rates (Rectifying):</strong> <span class="math notranslate nohighlight">\(L = 335\)</span> kmol/hr, <span class="math notranslate nohighlight">\(V = 385\)</span> kmol/hr.</p></li>
-<li><p><strong>Internal Flow Rates (Stripping):</strong> <span class="math notranslate nohighlight">\(\bar{L} = 452\)</span> kmol/hr, <span class="math notranslate nohighlight">\(\bar{V} = 402\)</span> kmol/hr.</p></li>
+<li><p class="sd-card-text"><strong>Total Equilibrium Stages:</strong> 10.75 (Requires 1 partial condenser, 1 partial reboiler, and 9 trays).</p></li>
+<li><p class="sd-card-text"><strong>Optimal Feed Location:</strong> Tray 7 (from the top).</p></li>
+<li><p class="sd-card-text"><strong>Product Flow Rates:</strong> <span class="math notranslate nohighlight">\(D = 50\)</span> kmol/hr, <span class="math notranslate nohighlight">\(B = 50\)</span> kmol/hr.</p></li>
+<li><p class="sd-card-text"><strong>Internal Flow Rates (Rectifying):</strong> <span class="math notranslate nohighlight">\(L = 335\)</span> kmol/hr, <span class="math notranslate nohighlight">\(V = 385\)</span> kmol/hr.</p></li>
+<li><p class="sd-card-text"><strong>Internal Flow Rates (Stripping):</strong> <span class="math notranslate nohighlight">\(\bar{L} = 452\)</span> kmol/hr, <span class="math notranslate nohighlight">\(\bar{V} = 402\)</span> kmol/hr.</p></li>
 </ul>
 </div>
-</section>
+</details></section>
 </section>
 <section id="batch-column-variable-reflux">
 <h2>Batch Column: Variable Reflux<a class="headerlink" href="#batch-column-variable-reflux" title="Link to this heading">#</a></h2>
 <p>An alternative operating mode for batch distillation is to maintain a <strong>constant distillate composition</strong>, <span class="math notranslate nohighlight">\(x_D\)</span>. To achieve this, the <strong>reflux ratio, R</strong>, must be continuously increased throughout the run. As the liquid in the reboiler becomes leaner in the more volatile component, more reflux (a higher <span class="math notranslate nohighlight">\(R\)</span>) is needed to achieve the required separation and keep the distillate product on-spec.</p>
 <section id="material-balances-for-constant-distillate-composition">
 <h3>Material Balances for Constant Distillate Composition<a class="headerlink" href="#material-balances-for-constant-distillate-composition" title="Link to this heading">#</a></h3>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>When the distillate composition (<span class="math notranslate nohighlight">\(x_D\)</span>) is held constant, the complex Rayleigh integral is not needed. The process can be analyzed with simple overall and component mole balances, treating the entire process as a single system with initial and final states.</p>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p>The governing equations are the overall material balances:</p>
 <div class="math notranslate nohighlight">
-\[
-\text{Total Balance: } W_i = D + W_f \quad \text{(Equation 4)}
-\]</div>
+\[\text{Total Balance: } W_i = D + W_f \quad \text{(Equation 4)}\]</div>
 <div class="math notranslate nohighlight">
-\[
-\text{Component Balance: } W_i x_{W,i} = D x_D + W_f x_{W,f} \quad \text{(Equation 5)}
-\]</div>
+\[\text{Component Balance: } W_i x_{W,i} = D x_D + W_f x_{W,f} \quad \text{(Equation 5)}\]</div>
 <p>These two equations can be solved simultaneously for two unknowns (e.g., <span class="math notranslate nohighlight">\(D\)</span> and <span class="math notranslate nohighlight">\(W_f\)</span>).</p>
 </div>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(W_i\)</span>, <span class="math notranslate nohighlight">\(W_f\)</span>: Initial and final moles of liquid in the reboiler.</p></li>
 <li><p><span class="math notranslate nohighlight">\(D\)</span>: Total moles of distillate collected.</p></li>
@@ -839,83 +791,61 @@ B = 100 - D = 50 \, \text{kmol/hr}
 <section class="example-content" id="proof-content">
 <p>A batch still is charged with 1000 moles of an ethanol-water mixture containing 30 mole % ethanol (<span class="math notranslate nohighlight">\(x_{W,i}=0.3\)</span>). The column has 2 equilibrium stages (including the partial reboiler). The distillation is run with a constant distillate composition of <span class="math notranslate nohighlight">\(x_D=0.6\)</span> until the reboiler composition drops to <span class="math notranslate nohighlight">\(x_{W,f}=0.09\)</span>. How much distillate is produced, and what is the range of reflux ratios used?</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Part 1: Calculate Amount of Distillate</strong></p>
-<p><strong>Step 1: Set up Balances:</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Part 1: Calculate Amount of Distillate</strong></p>
+<p class="sd-card-text"><strong>Step 1: Set up Balances:</strong>
 Use the known values in Equations 4 and 5.
 Given: <span class="math notranslate nohighlight">\(W_i = 1000\)</span> mol, <span class="math notranslate nohighlight">\(x_{W,i} = 0.30\)</span>, <span class="math notranslate nohighlight">\(x_D = 0.60\)</span> (constant), <span class="math notranslate nohighlight">\(x_{W,f} = 0.09\)</span>.
 Total material balance:</p>
 <div class="math notranslate nohighlight">
-\[
-1000 = D + W_f \implies W_f = 1000 - D
-\]</div>
-<p>Component balance:</p>
+\[1000 = D + W_f \implies W_f = 1000 - D\]</div>
+<p class="sd-card-text">Component balance:</p>
 <div class="math notranslate nohighlight">
-\[
-(1000)(0.30) = D(0.60) + W_f(0.09)
-\]</div>
-<p><strong>Step 2: Solve for Distillate (D):</strong> Substitute the expression for <span class="math notranslate nohighlight">\(W_f\)</span> into the component balance.</p>
+\[(1000)(0.30) = D(0.60) + W_f(0.09)\]</div>
+<p class="sd-card-text"><strong>Step 2: Solve for Distillate (D):</strong> Substitute the expression for <span class="math notranslate nohighlight">\(W_f\)</span> into the component balance.</p>
 <div class="math notranslate nohighlight">
-\[
-300 = 0.60 D + (1000 - D)(0.09)
-\]</div>
+\[300 = 0.60 D + (1000 - D)(0.09)\]</div>
 <div class="math notranslate nohighlight">
-\[
-300 = 0.60 D + 90 - 0.09 D
-\]</div>
+\[300 = 0.60 D + 90 - 0.09 D\]</div>
 <div class="math notranslate nohighlight">
-\[
-210 = 0.51 D
-\]</div>
+\[210 = 0.51 D\]</div>
 <div class="math notranslate nohighlight">
-\[
-D = \frac{210}{0.51} \approx 411.8 \, \text{moles}
-\]</div>
-<p><strong>Final Answer (Part 1):</strong>
+\[D = \frac{210}{0.51} \approx 411.8 \, \text{moles}\]</div>
+<p class="sd-card-text"><strong>Final Answer (Part 1):</strong>
 The total amount of distillate produced is approximately <strong>412 moles</strong>.</p>
 </div>
-<div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Part 2: Determine the Range of Reflux Ratios</strong></p>
-<p><strong>Step 1: Strategy:</strong> The reflux ratio must be adjusted continuously. We find the required range by determining the reflux ratio needed at the start (<span class="math notranslate nohighlight">\(R_i\)</span>) and at the end (<span class="math notranslate nohighlight">\(R_f\)</span>) of the process using the McCabe-Thiele method. The slope of the operating line is <span class="math notranslate nohighlight">\(m = R/(R+1)\)</span>.</p>
-<p><strong>Step 2: Calculate Initial Reflux Ratio (<span class="math notranslate nohighlight">\(R_i\)</span>):</strong> At the start, <span class="math notranslate nohighlight">\(x_D = 0.6\)</span> and <span class="math notranslate nohighlight">\(x_{W,i} = 0.3\)</span>. We find the operating line that connects the point (<span class="math notranslate nohighlight">\(0.6, 0.6\)</span>) on the <span class="math notranslate nohighlight">\(y=x\)</span> line and allows for a bottoms composition of <span class="math notranslate nohighlight">\(0.3\)</span> in exactly 2 stages. This requires a graphical trial-and-error process, which shows this corresponds to an operating line with a slope of 0.125.</p>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Part 2: Determine the Range of Reflux Ratios</strong></p>
+<p class="sd-card-text"><strong>Step 1: Strategy:</strong> The reflux ratio must be adjusted continuously. We find the required range by determining the reflux ratio needed at the start (<span class="math notranslate nohighlight">\(R_i\)</span>) and at the end (<span class="math notranslate nohighlight">\(R_f\)</span>) of the process using the McCabe-Thiele method. The slope of the operating line is <span class="math notranslate nohighlight">\(m = R/(R+1)\)</span>.</p>
+<p class="sd-card-text"><strong>Step 2: Calculate Initial Reflux Ratio (<span class="math notranslate nohighlight">\(R_i\)</span>):</strong> At the start, <span class="math notranslate nohighlight">\(x_D = 0.6\)</span> and <span class="math notranslate nohighlight">\(x_{W,i} = 0.3\)</span>. We find the operating line that connects the point (<span class="math notranslate nohighlight">\(0.6, 0.6\)</span>) on the <span class="math notranslate nohighlight">\(y=x\)</span> line and allows for a bottoms composition of <span class="math notranslate nohighlight">\(0.3\)</span> in exactly 2 stages. This requires a graphical trial-and-error process, which shows this corresponds to an operating line with a slope of 0.125.</p>
 <div class="math notranslate nohighlight">
-\[
-\text{slope} = \frac{R_i}{R_i+1} = 0.125
-\]</div>
+\[\text{slope} = \frac{R_i}{R_i+1} = 0.125\]</div>
 <div class="math notranslate nohighlight">
-\[
-R_i = 0.125(R_i+1) \implies R_i = 0.125 R_i + 0.125
-\]</div>
+\[R_i = 0.125(R_i+1) \implies R_i = 0.125 R_i + 0.125\]</div>
 <div class="math notranslate nohighlight">
-\[
-0.875 R_i = 0.125 \implies R_i = \frac{0.125}{0.875} \approx 0.143
-\]</div>
-<p><strong>Step 3: Calculate Final Reflux Ratio (<span class="math notranslate nohighlight">\(R_f\)</span>):</strong> At the end, <span class="math notranslate nohighlight">\(x_D=0.6\)</span> and <span class="math notranslate nohighlight">\(x_{W,f}=0.09\)</span>. We repeat the trial-and-error process. The operating line that connects (<span class="math notranslate nohighlight">\(0.6, 0.6\)</span>) to a bottoms composition of <span class="math notranslate nohighlight">\(0.09\)</span> in 2 stages corresponds to a slope of 0.75.</p>
+\[0.875 R_i = 0.125 \implies R_i = \frac{0.125}{0.875} \approx 0.143\]</div>
+<p class="sd-card-text"><strong>Step 3: Calculate Final Reflux Ratio (<span class="math notranslate nohighlight">\(R_f\)</span>):</strong> At the end, <span class="math notranslate nohighlight">\(x_D=0.6\)</span> and <span class="math notranslate nohighlight">\(x_{W,f}=0.09\)</span>. We repeat the trial-and-error process. The operating line that connects (<span class="math notranslate nohighlight">\(0.6, 0.6\)</span>) to a bottoms composition of <span class="math notranslate nohighlight">\(0.09\)</span> in 2 stages corresponds to a slope of 0.75.</p>
 <div class="math notranslate nohighlight">
-\[
-\text{slope} = \frac{R_f}{R_f+1} = 0.75
-\]</div>
+\[\text{slope} = \frac{R_f}{R_f+1} = 0.75\]</div>
 <div class="math notranslate nohighlight">
-\[
-R_f = 0.75(R_f+1) \implies R_f = 0.75 R_f + 0.75
-\]</div>
+\[R_f = 0.75(R_f+1) \implies R_f = 0.75 R_f + 0.75\]</div>
 <div class="math notranslate nohighlight">
-\[
-0.25 R_f = 0.75 \implies R_f = \frac{0.75}{0.25} = 3.0
-\]</div>
-<p><strong>Final Answer (Part 2):</strong> The required reflux ratio increases from an initial value of <strong>R = 0.14</strong> to a final value of <strong>R = 3.0</strong>.</p>
+\[0.25 R_f = 0.75 \implies R_f = \frac{0.75}{0.25} = 3.0\]</div>
+<p class="sd-card-text"><strong>Final Answer (Part 2):</strong> The required reflux ratio increases from an initial value of <strong>R = 0.14</strong> to a final value of <strong>R = 3.0</strong>.</p>
 </div>
-</section>
+</details></section>
 </section>
 <section id="distillation-side-stream-feed">
 <h2>Distillation – Side Stream Feed<a class="headerlink" href="#distillation-side-stream-feed" title="Link to this heading">#</a></h2>
 <p>Standard distillation columns have a single feed, creating a rectifying section (above the feed) and a stripping section (below). When a column has multiple feeds, such as a main feed and a secondary steam feed, additional operating sections are created. A column with two feeds will have three sections: top, middle, and bottom, each with a unique operating line on a McCabe-Thiele diagram.</p>
 <section id="constructing-the-middle-operating-line">
 <h3>Constructing the Middle Operating Line<a class="headerlink" href="#constructing-the-middle-operating-line" title="Link to this heading">#</a></h3>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>For a column with two feeds, a <strong>Middle Operating Line (MOL)</strong> must be constructed. This line represents the material balance in the section between the two feed points. The MOL is the straight line that connects two specific intersection points on the McCabe-Thiele diagram:</p>
 <ol class="arabic simple">
 <li><p>The intersection of the <strong>Top Operating Line (TOL)</strong> with the <strong>feed line for the upper feed</strong>.</p></li>
@@ -930,44 +860,45 @@ R_f = 0.75(R_f+1) \implies R_f = 0.75 R_f + 0.75
 <section class="example-content" id="proof-content">
 <p>An ethanol-water distillation column has a total condenser and a partial reboiler. It is fed with a main subcooled liquid feed and a secondary feed of pure saturated steam, which enters on the first stage above the reboiler. The Top Operating Line (TOL), Bottom Operating Line (BOL), and main feed line are plotted. Determine the optimal feed plate location for the main feed and the total number of equilibrium stages required.</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Strategy:</strong> The solution requires correctly constructing the Middle Operating Line (MOL). Once all three operating lines (TOL, MOL, BOL) are drawn, we can step off the stages from the bottom (<span class="math notranslate nohighlight">\(x_B\)</span>) to the top (<span class="math notranslate nohighlight">\(x_D\)</span>), switching operating lines as we cross the feed locations.</p>
-<p><strong>Step 2: Construct the Steam Feed Line:</strong> A feed line’s properties are set by its composition (<span class="math notranslate nohighlight">\(z\)</span>) and thermal quality (<span class="math notranslate nohighlight">\(q\)</span>).</p>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Strategy:</strong> The solution requires correctly constructing the Middle Operating Line (MOL). Once all three operating lines (TOL, MOL, BOL) are drawn, we can step off the stages from the bottom (<span class="math notranslate nohighlight">\(x_B\)</span>) to the top (<span class="math notranslate nohighlight">\(x_D\)</span>), switching operating lines as we cross the feed locations.</p>
+<p class="sd-card-text"><strong>Step 2: Construct the Steam Feed Line:</strong> A feed line’s properties are set by its composition (<span class="math notranslate nohighlight">\(z\)</span>) and thermal quality (<span class="math notranslate nohighlight">\(q\)</span>).</p>
 <ul class="simple">
-<li><p><strong>Composition (<span class="math notranslate nohighlight">\(z_s\)</span>):</strong> The feed is pure steam (pure water), so its mole fraction of ethanol is zero. The feed line originates at (<span class="math notranslate nohighlight">\(z_s, z_s\)</span>) = (0, 0).</p></li>
-<li><p><strong>Quality (<span class="math notranslate nohighlight">\(q\)</span>):</strong> The feed is a saturated vapor, for which <span class="math notranslate nohighlight">\(q=0\)</span>. The slope of the feed line is <span class="math notranslate nohighlight">\(\frac{q}{q-1} = \frac{0}{0-1} = 0\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Composition (<span class="math notranslate nohighlight">\(z_s\)</span>):</strong> The feed is pure steam (pure water), so its mole fraction of ethanol is zero. The feed line originates at (<span class="math notranslate nohighlight">\(z_s, z_s\)</span>) = (0, 0).</p></li>
+<li><p class="sd-card-text"><strong>Quality (<span class="math notranslate nohighlight">\(q\)</span>):</strong> The feed is a saturated vapor, for which <span class="math notranslate nohighlight">\(q=0\)</span>. The slope of the feed line is <span class="math notranslate nohighlight">\(\frac{q}{q-1} = \frac{0}{0-1} = 0\)</span>.</p></li>
 </ul>
-<p>Therefore, the steam feed line is a <strong>horizontal line at y=0</strong> (the x-axis).</p>
-<p><strong>Step 3: Construct the Middle Operating Line (MOL):</strong> Following the rule from the Key Concept, we draw a straight line connecting the two intersection points:</p>
+<p class="sd-card-text">Therefore, the steam feed line is a <strong>horizontal line at y=0</strong> (the x-axis).</p>
+<p class="sd-card-text"><strong>Step 3: Construct the Middle Operating Line (MOL):</strong> Following the rule from the Key Concept, we draw a straight line connecting the two intersection points:</p>
 <ul class="simple">
-<li><p><strong>Point 1:</strong> Intersection of the given TOL and the main (upper) feed line.</p></li>
-<li><p><strong>Point 2:</strong> Intersection of the given BOL and the steam (lower) feed line. This point lies on the x-axis.</p></li>
+<li><p class="sd-card-text"><strong>Point 1:</strong> Intersection of the given TOL and the main (upper) feed line.</p></li>
+<li><p class="sd-card-text"><strong>Point 2:</strong> Intersection of the given BOL and the steam (lower) feed line. This point lies on the x-axis.</p></li>
 </ul>
-<p><strong>Step 4: Step Off the Stages:</strong> We count stages from the bottom up.</p>
+<p class="sd-card-text"><strong>Step 4: Step Off the Stages:</strong> We count stages from the bottom up.</p>
 <ul class="simple">
-<li><p><strong>Partial Reboiler:</strong> The reboiler counts as Stage 0. Start at (<span class="math notranslate nohighlight">\(x_B, x_B\)</span>) on the y=x line. The first step goes from the equilibrium curve down to the <strong>BOL</strong>.</p></li>
-<li><p><strong>Stage 1 (Steam Feed):</strong> The steam enters on Stage 1. This is the stage immediately above the reboiler. After stepping up from the reboiler, we have crossed the lower feed location. Therefore, all subsequent steps must use the next operating line up, which is the <strong>MOL</strong>.</p></li>
-<li><p><strong>Switch to TOL:</strong> Continue stepping off stages using the MOL. When a stage step crosses the main feed line, switch to the <strong>TOL</strong> for all remaining stages until <span class="math notranslate nohighlight">\(x_D\)</span> is reached.</p></li>
+<li><p class="sd-card-text"><strong>Partial Reboiler:</strong> The reboiler counts as Stage 0. Start at (<span class="math notranslate nohighlight">\(x_B, x_B\)</span>) on the y=x line. The first step goes from the equilibrium curve down to the <strong>BOL</strong>.</p></li>
+<li><p class="sd-card-text"><strong>Stage 1 (Steam Feed):</strong> The steam enters on Stage 1. This is the stage immediately above the reboiler. After stepping up from the reboiler, we have crossed the lower feed location. Therefore, all subsequent steps must use the next operating line up, which is the <strong>MOL</strong>.</p></li>
+<li><p class="sd-card-text"><strong>Switch to TOL:</strong> Continue stepping off stages using the MOL. When a stage step crosses the main feed line, switch to the <strong>TOL</strong> for all remaining stages until <span class="math notranslate nohighlight">\(x_D\)</span> is reached.</p></li>
 </ul>
-<p><strong>Step 5: Determine Optimal Feed Location:</strong> The optimal stage for a feed is where the stage composition is closest to the feed composition. Graphically, this is the stage where we switch operating lines. In this case, the switch from the MOL to the TOL occurs at <strong>Stage 2</strong>. Therefore, the main feed should be introduced on Stage 2.</p>
-<p><strong>Final Answer:</strong> Following the procedure yields a <strong>partial reboiler and 5 ideal stages</strong>, for a total of 6 equilibrium contacts. The optimal location for the main feed is <strong>Stage 2</strong>.</p>
+<p class="sd-card-text"><strong>Step 5: Determine Optimal Feed Location:</strong> The optimal stage for a feed is where the stage composition is closest to the feed composition. Graphically, this is the stage where we switch operating lines. In this case, the switch from the MOL to the TOL occurs at <strong>Stage 2</strong>. Therefore, the main feed should be introduced on Stage 2.</p>
+<p class="sd-card-text"><strong>Final Answer:</strong> Following the procedure yields a <strong>partial reboiler and 5 ideal stages</strong>, for a total of 6 equilibrium contacts. The optimal location for the main feed is <strong>Stage 2</strong>.</p>
 </div>
-</section>
+</details></section>
 </section>
 <section id="single-stage-batch-distillation">
 <h2>Single-stage Batch Distillation<a class="headerlink" href="#single-stage-batch-distillation" title="Link to this heading">#</a></h2>
 <p>Single-stage batch distillation, also known as simple or differential distillation, is the most basic method of separating a finite batch of a liquid mixture. In this process, a liquid charge is placed in a heated vessel (the “still”), and the vapor generated is immediately removed and condensed.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>The Principle of Simple Distillation</strong>
 Simple distillation works because the vapor generated from a boiling liquid mixture is typically richer in the more volatile component (MVC) than the liquid from which it came. As this enriched vapor is continuously removed, the liquid remaining in the still becomes progressively leaner in the MVC. This means the composition of the liquid in the still, the composition of the vapor being produced, and the boiling temperature all change continuously throughout the process.</p>
 </div>
 <section id="id1">
 <h3>Important Equations<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>The process is inherently unsteady-state, so its analysis relies on differential mass balances that are integrated over the course of the distillation.</p>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>Key Equations for Simple Distillation</strong></p>
 <p><strong>Differential Mass Balances (on the still):</strong></p>
 <ul class="simple">
@@ -977,9 +908,7 @@ Simple distillation works because the vapor generated from a boiling liquid mixt
 <p><strong>The Rayleigh Equation (Primary Design Equation):</strong>
 This equation relates the change in liquid composition to the change in the total amount of liquid in the still. Note that the relationship between <span class="math notranslate nohighlight">\(y_D\)</span> and <span class="math notranslate nohighlight">\(x_W\)</span> comes from vapor-liquid equilibrium (VLE) data.</p>
 <div class="math notranslate nohighlight">
-\[
-\int_{x_{W0}}^{x_W} \frac{dx_W}{y_D - x_W} = \ln\left(\frac{W}{W_0}\right)
-\]</div>
+\[\int_{x_{W0}}^{x_W} \frac{dx_W}{y_D - x_W} = \ln\left(\frac{W}{W_0}\right)\]</div>
 <p><strong>Overall Material Balances (for the entire process):</strong>
 These are used to relate the initial state to the final state and the total distillate collected.</p>
 <ul class="simple">
@@ -991,54 +920,39 @@ These are used to relate the initial state to the final state and the total dist
 <section id="derivation-of-the-rayleigh-equation">
 <h3>Derivation of the Rayleigh Equation<a class="headerlink" href="#derivation-of-the-rayleigh-equation" title="Link to this heading">#</a></h3>
 <p>The Rayleigh equation is derived by combining the differential balances to eliminate time, providing a direct relationship between the amount of liquid remaining and its composition.</p>
-<div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Derivation of the Rayleigh Equation</strong></p>
-<p><strong>Step 1: Start with Differential Balances:</strong> We begin with the fundamental unsteady-state balances on the contents of the still.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Derivation of the Rayleigh Equation</strong></p>
+<p class="sd-card-text"><strong>Step 1: Start with Differential Balances:</strong> We begin with the fundamental unsteady-state balances on the contents of the still.</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dW}{dt} = -\dot{D} \quad \text{(Overall)}
-\]</div>
+\[\frac{dW}{dt} = -\dot{D} \quad \text{(Overall)}\]</div>
 <div class="math notranslate nohighlight">
-\[
-\frac{d(W x_W)}{dt} = -\dot{D} y_D \quad \text{(Component)}
-\]</div>
-<p><strong>Step 2: Expand the Component Balance:</strong> Apply the product rule for differentiation to the left side of the component balance.</p>
+\[\frac{d(W x_W)}{dt} = -\dot{D} y_D \quad \text{(Component)}\]</div>
+<p class="sd-card-text"><strong>Step 2: Expand the Component Balance:</strong> Apply the product rule for differentiation to the left side of the component balance.</p>
 <div class="math notranslate nohighlight">
-\[
-W\frac{dx_W}{dt} + x_W\frac{dW}{dt} = -\dot{D} y_D
-\]</div>
-<p><strong>Step 3: Combine the Balances:</strong> To eliminate the distillate rate <span class="math notranslate nohighlight">\(\dot{D}\)</span>, substitute the overall balance (<span class="math notranslate nohighlight">\(\frac{dW}{dt} = -\dot{D}\)</span>) into the expanded component balance.</p>
+\[W\frac{dx_W}{dt} + x_W\frac{dW}{dt} = -\dot{D} y_D\]</div>
+<p class="sd-card-text"><strong>Step 3: Combine the Balances:</strong> To eliminate the distillate rate <span class="math notranslate nohighlight">\(\dot{D}\)</span>, substitute the overall balance (<span class="math notranslate nohighlight">\(\frac{dW}{dt} = -\dot{D}\)</span>) into the expanded component balance.</p>
 <div class="math notranslate nohighlight">
-\[
-W\frac{dx_W}{dt} + x_W\frac{dW}{dt} = \left(\frac{dW}{dt}\right) y_D
-\]</div>
-<p><strong>Step 4: Separate the Variables:</strong> Rearrange the equation to group all terms involving composition (<span class="math notranslate nohighlight">\(x_W, y_D\)</span>) on one side and all terms involving the total amount (<span class="math notranslate nohighlight">\(W\)</span>) on the other.</p>
+\[W\frac{dx_W}{dt} + x_W\frac{dW}{dt} = \left(\frac{dW}{dt}\right) y_D\]</div>
+<p class="sd-card-text"><strong>Step 4: Separate the Variables:</strong> Rearrange the equation to group all terms involving composition (<span class="math notranslate nohighlight">\(x_W, y_D\)</span>) on one side and all terms involving the total amount (<span class="math notranslate nohighlight">\(W\)</span>) on the other.</p>
 <div class="math notranslate nohighlight">
-\[
-W\frac{dx_W}{dt} = y_D\frac{dW}{dt} - x_W\frac{dW}{dt} = (y_D - x_W)\frac{dW}{dt}
-\]</div>
-<p>Dividing both sides by <span class="math notranslate nohighlight">\(W\)</span> and <span class="math notranslate nohighlight">\((y_D - x_W)\)</span>, and cancelling the <span class="math notranslate nohighlight">\(dt\)</span> term, yields:</p>
+\[W\frac{dx_W}{dt} = y_D\frac{dW}{dt} - x_W\frac{dW}{dt} = (y_D - x_W)\frac{dW}{dt}\]</div>
+<p class="sd-card-text">Dividing both sides by <span class="math notranslate nohighlight">\(W\)</span> and <span class="math notranslate nohighlight">\((y_D - x_W)\)</span>, and cancelling the <span class="math notranslate nohighlight">\(dt\)</span> term, yields:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dx_W}{y_D - x_W} = \frac{dW}{W}
-\]</div>
-<p><strong>Step 5: Integrate the Result:</strong> Integrate both sides from the initial state (<span class="math notranslate nohighlight">\(W_0, x_{W0}\)</span>) to a final state (<span class="math notranslate nohighlight">\(W, x_W\)</span>).</p>
+\[\frac{dx_W}{y_D - x_W} = \frac{dW}{W}\]</div>
+<p class="sd-card-text"><strong>Step 5: Integrate the Result:</strong> Integrate both sides from the initial state (<span class="math notranslate nohighlight">\(W_0, x_{W0}\)</span>) to a final state (<span class="math notranslate nohighlight">\(W, x_W\)</span>).</p>
 <div class="math notranslate nohighlight">
-\[
-\int_{x_{W0}}^{x_W} \frac{dx_W}{y_D - x_W} = \int_{W_0}^{W} \frac{dW}{W}
-\]</div>
-<p>Solving the right-side integral gives the final form of the Rayleigh Equation:</p>
+\[\int_{x_{W0}}^{x_W} \frac{dx_W}{y_D - x_W} = \int_{W_0}^{W} \frac{dW}{W}\]</div>
+<p class="sd-card-text">Solving the right-side integral gives the final form of the Rayleigh Equation:</p>
 <div class="math notranslate nohighlight">
-\[
-\int_{x_{W0}}^{x_W} \frac{dx_W}{y_D - x_W} = \ln\left(\frac{W}{W_0}\right)
-\]</div>
+\[\int_{x_{W0}}^{x_W} \frac{dx_W}{y_D - x_W} = \ln\left(\frac{W}{W_0}\right)\]</div>
 </div>
-</section>
+</details></section>
 <section id="conceptual-example-distillation-of-a-system-with-an-azeotrope">
 <h3>Conceptual Example: Distillation of a System with an Azeotrope<a class="headerlink" href="#conceptual-example-distillation-of-a-system-with-an-azeotrope" title="Link to this heading">#</a></h3>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Azeotropes in Distillation</strong>
 An <strong>azeotrope</strong> is a liquid mixture which, at its boiling point, produces a vapor of the exact same composition as the liquid (<span class="math notranslate nohighlight">\(y=x\)</span>). Such mixtures represent a limit to separation by conventional distillation. A <strong>minimum-boiling azeotrope</strong> occurs when the boiling point of the azeotropic mixture is lower than that of either pure component. This azeotrope acts as an “attractor” for the vapor composition during distillation of mixtures on one side of it, and a “repeller” on the other.</p>
 </div>
@@ -1047,23 +961,24 @@ An <strong>azeotrope</strong> is a liquid mixture which, at its boiling point, p
 <section class="example-content" id="proof-content">
 <p>A batch still is charged with a liquid mixture with a mole fraction of 0.2 of component 1. The T-x-y diagram shows that this system has a minimum-boiling azeotrope at a mole fraction of 0.5. With constant heating, describe how the temperature of the still and the composition of the vapor product change over time.</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Analysis using the T-x-y Diagram</strong></p>
-<p><strong>Step 1: Initial Vaporization:</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Analysis using the T-x-y Diagram</strong></p>
+<p class="sd-card-text"><strong>Step 1: Initial Vaporization:</strong>
 The initial liquid at <span class="math notranslate nohighlight">\(x_W = 0.2\)</span> is heated to its boiling point. At this temperature, the vapor in equilibrium with it (found by moving horizontally across the tie-line to the dew-point line) has a composition of approximately <span class="math notranslate nohighlight">\(y_D = 0.05\)</span>.</p>
-<p><strong>Step 2: The Distillation Path:</strong>
+<p class="sd-card-text"><strong>Step 2: The Distillation Path:</strong>
 Since the vapor being removed (<span class="math notranslate nohighlight">\(y_D \approx 0.05\)</span>) is <em>leaner</em> in component 1 than the liquid it came from (<span class="math notranslate nohighlight">\(x_W = 0.2\)</span>), component 2 is being removed preferentially. This causes the liquid remaining in the still to become progressively <strong>enriched in component 1</strong>. As the liquid composition <span class="math notranslate nohighlight">\(x_W\)</span> increases from 0.2 towards 0.5, we move up along the bubble-point (liquid) curve. This has two effects:</p>
 <ul class="simple">
-<li><p>The <strong>boiling temperature of the liquid in the still increases</strong>.</p></li>
-<li><p>The composition of the vapor being produced, <span class="math notranslate nohighlight">\(y_D\)</span>, also becomes richer in component 1.</p></li>
+<li><p class="sd-card-text">The <strong>boiling temperature of the liquid in the still increases</strong>.</p></li>
+<li><p class="sd-card-text">The composition of the vapor being produced, <span class="math notranslate nohighlight">\(y_D\)</span>, also becomes richer in component 1.</p></li>
 </ul>
-<p><strong>Step 3: Approaching the Azeotrope:</strong>
+<p class="sd-card-text"><strong>Step 3: Approaching the Azeotrope:</strong>
 This enrichment process continues, with the liquid in the still becoming more and more concentrated in component 1. As <span class="math notranslate nohighlight">\(x_W\)</span> approaches the azeotropic composition of 0.5, the boiling temperature of the mixture continues to rise, approaching the minimum boiling point of the azeotrope. The vapor composition <span class="math notranslate nohighlight">\(y_D\)</span> also approaches 0.5.</p>
-<p><strong>Step 4: Azeotropic Boiling:</strong>
+<p class="sd-card-text"><strong>Step 4: Azeotropic Boiling:</strong>
 Eventually, the liquid in the still will reach the azeotropic composition, <span class="math notranslate nohighlight">\(x_W = 0.5\)</span>. At this point, the liquid and vapor compositions are identical (<span class="math notranslate nohighlight">\(x_W = y_D = 0.5\)</span>). Any further vaporization produces vapor of that same azeotropic composition. Since the vapor being removed has the same composition as the liquid, the composition of the liquid in the still <strong>no longer changes</strong>. Consequently, the boiling temperature also becomes <strong>constant</strong> and remains at the azeotropic boiling point until all the remaining liquid is boiled away. This is the limit of separation for this starting mixture.</p>
 </div>
-</section>
+</details></section>
 <section id="example-problem-distillation-using-t-x-y-data">
 <h3>Example Problem: Distillation using T-x-y Data<a class="headerlink" href="#example-problem-distillation-using-t-x-y-data" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-5">
@@ -1076,72 +991,57 @@ Eventually, the liquid in the still will reach the azeotropic composition, <span
 <li><p>The average composition of the total collected distillate.</p></li>
 </ol>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Strategy: The Rayleigh Equation with Numerical Integration</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Strategy: The Rayleigh Equation with Numerical Integration</strong>
 The governing equation for this process is the Rayleigh equation. Since this is a single-stage still, the vapor leaving (<span class="math notranslate nohighlight">\(y_D\)</span>) is in direct equilibrium with the liquid in the still (<span class="math notranslate nohighlight">\(x_W\)</span>).</p>
 <div class="math notranslate nohighlight">
-\[
-\int_{x_{W0}}^{x_{Wf}} \frac{dx_W}{y - x_W} = \ln\left(\frac{W_f}{W_0}\right)
-\]</div>
-<p>Our plan is to:
+\[\int_{x_{W0}}^{x_{Wf}} \frac{dx_W}{y - x_W} = \ln\left(\frac{W_f}{W_0}\right)\]</div>
+<p class="sd-card-text">Our plan is to:
 (a) Use the given temperatures and the T-x-y diagram to find the initial (<span class="math notranslate nohighlight">\(x_{W0}\)</span>) and final (<span class="math notranslate nohighlight">\(x_{Wf}\)</span>) liquid compositions.
 (b) Use the x-y data from the diagram to numerically evaluate the integral on the left-hand side.
 © Solve for the final moles in the still, <span class="math notranslate nohighlight">\(W_f\)</span>.
 (d) Use overall material balances to find the amount and average composition of the distillate.</p>
-<p><strong>Step 2: Determine Compositions from T-x-y Data</strong>
+<p class="sd-card-text"><strong>Step 2: Determine Compositions from T-x-y Data</strong>
 The head temperature is the boiling point of the liquid currently in the still. We use this to find the liquid composition from the bubble-point line on the diagram.</p>
 <ul class="simple">
-<li><p>Initial State (<span class="math notranslate nohighlight">\(T=84^\circ\)</span>C): Following the 84°C line to the liquid curve gives the initial still composition: <span class="math notranslate nohighlight">\(\mathbf{x_{W0} \approx 0.17}\)</span>.</p></li>
-<li><p>Final State (<span class="math notranslate nohighlight">\(T=89^\circ\)</span>C): Following the 89°C line to the liquid curve gives the final still composition: <span class="math notranslate nohighlight">\(\mathbf{x_{Wf} \approx 0.07}\)</span>.
+<li><p class="sd-card-text">Initial State (<span class="math notranslate nohighlight">\(T=84^\circ\)</span>C): Following the 84°C line to the liquid curve gives the initial still composition: <span class="math notranslate nohighlight">\(\mathbf{x_{W0} \approx 0.17}\)</span>.</p></li>
+<li><p class="sd-card-text">Final State (<span class="math notranslate nohighlight">\(T=89^\circ\)</span>C): Following the 89°C line to the liquid curve gives the final still composition: <span class="math notranslate nohighlight">\(\mathbf{x_{Wf} \approx 0.07}\)</span>.
 The distillation proceeds from a liquid concentration of 17% ethanol down to 7% ethanol.</p></li>
 </ul>
-<p><strong>Step 3: Perform Numerical Integration</strong>
+<p class="sd-card-text"><strong>Step 3: Perform Numerical Integration</strong>
 We must evaluate the integral <span class="math notranslate nohighlight">\(\int_{0.17}^{0.07} \frac{dx_W}{y - x_W}\)</span>. This is done by taking several points from the VLE diagram between <span class="math notranslate nohighlight">\(x_W = 0.07\)</span> and <span class="math notranslate nohighlight">\(x_W = 0.17\)</span>, calculating the value of <span class="math notranslate nohighlight">\(1/(y-x_W)\)</span> at each point, and finding the area under the curve. Using a numerical method like the trapezoidal rule, the value is found to be:</p>
 <div class="math notranslate nohighlight">
-\[
-\int_{0.17}^{0.07} \frac{dx_W}{y - x_W} \approx -0.27
-\]</div>
-<p>The value is negative because we are integrating from a higher concentration to a lower one (<span class="math notranslate nohighlight">\(x_{Wf} &lt; x_{W0}\)</span>).</p>
-<p><strong>Step 4: Solve for Final Moles in Still (<span class="math notranslate nohighlight">\(W_f\)</span>)</strong>
+\[\int_{0.17}^{0.07} \frac{dx_W}{y - x_W} \approx -0.27\]</div>
+<p class="sd-card-text">The value is negative because we are integrating from a higher concentration to a lower one (<span class="math notranslate nohighlight">\(x_{Wf} &lt; x_{W0}\)</span>).</p>
+<p class="sd-card-text"><strong>Step 4: Solve for Final Moles in Still (<span class="math notranslate nohighlight">\(W_f\)</span>)</strong>
 Substitute the result of the integral into the Rayleigh equation. We are given <span class="math notranslate nohighlight">\(W_0 = 50\)</span> moles.</p>
 <div class="math notranslate nohighlight">
-\[
-\ln\left(\frac{W_f}{W_0}\right) = -0.27
-\]</div>
+\[\ln\left(\frac{W_f}{W_0}\right) = -0.27\]</div>
 <div class="math notranslate nohighlight">
-\[
-\frac{W_f}{50} = e^{-0.27} \approx 0.763 \implies W_f = 50 \times 0.763 = 38.15 \, \text{moles}
-\]</div>
-<p><strong>Step 5: Calculate Final Answers</strong>
+\[\frac{W_f}{50} = e^{-0.27} \approx 0.763 \implies W_f = 50 \times 0.763 = 38.15 \, \text{moles}\]</div>
+<p class="sd-card-text"><strong>Step 5: Calculate Final Answers</strong>
 With <span class="math notranslate nohighlight">\(W_f\)</span> known, we can find the remaining quantities using simple material balances.
 Total Distillate Collected (D): <span class="math notranslate nohighlight">\(D = W_0 - W_f = 50 - 38.15 = 11.85\)</span> moles.
 Average Distillate Composition (<span class="math notranslate nohighlight">\(x_{D,avg}\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[
-W_0 x_{W0} = W_f x_{Wf} + D x_{D,avg}
-\]</div>
+\[W_0 x_{W0} = W_f x_{Wf} + D x_{D,avg}\]</div>
 <div class="math notranslate nohighlight">
-\[
-(50)(0.17) = (38.15)(0.07) + (11.85) x_{D,avg}
-\]</div>
+\[(50)(0.17) = (38.15)(0.07) + (11.85) x_{D,avg}\]</div>
 <div class="math notranslate nohighlight">
-\[
-8.5 = 2.67 + 11.85 x_{D,avg} \implies 11.85 x_{D,avg} = 5.83
-\]</div>
+\[8.5 = 2.67 + 11.85 x_{D,avg} \implies 11.85 x_{D,avg} = 5.83\]</div>
 <div class="math notranslate nohighlight">
-\[
-x_{D,avg} = \frac{5.83}{11.85} \approx 0.492
-\]</div>
-<p><strong>Final Answer Summary for Example 1</strong></p>
+\[x_{D,avg} = \frac{5.83}{11.85} \approx 0.492\]</div>
+<p class="sd-card-text"><strong>Final Answer Summary for Example 1</strong></p>
 <ul class="simple">
-<li><p>Total Distillate Collected (D): <span class="math notranslate nohighlight">\(\approx 12\)</span> moles.</p></li>
-<li><p>Final Still Composition (<span class="math notranslate nohighlight">\(x_{Wf}\)</span>): 7% ethanol.</p></li>
-<li><p>Average Distillate Composition (<span class="math notranslate nohighlight">\(x_{D,avg}\)</span>): <span class="math notranslate nohighlight">\(\approx 49\%\)</span> ethanol.
+<li><p class="sd-card-text">Total Distillate Collected (D): <span class="math notranslate nohighlight">\(\approx 12\)</span> moles.</p></li>
+<li><p class="sd-card-text">Final Still Composition (<span class="math notranslate nohighlight">\(x_{Wf}\)</span>): 7% ethanol.</p></li>
+<li><p class="sd-card-text">Average Distillate Composition (<span class="math notranslate nohighlight">\(x_{D,avg}\)</span>): <span class="math notranslate nohighlight">\(\approx 49\%\)</span> ethanol.
 A sanity check confirms this is reasonable: the instantaneous vapor was richer than 49% at the start and leaner at the end.</p></li>
 </ul>
 </div>
-</section>
+</details></section>
 <section id="example-problem-distillation-using-raoults-law">
 <h3>Example Problem: Distillation using Raoult’s Law<a class="headerlink" href="#example-problem-distillation-using-raoults-law" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-6">
@@ -1158,82 +1058,73 @@ A sanity check confirms this is reasonable: the instantaneous vapor was richer t
 <li><p>Water: <span class="math notranslate nohighlight">\(\log_{10}(P_2^{\text{sat}}) = 8.071 - \frac{1731}{T + 233.4}\)</span></p></li>
 </ul>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Strategy: Iterative Numerical Solution</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Strategy: Iterative Numerical Solution</strong>
 This problem is more complex for two reasons: 1) The VLE data is not given directly and must be calculated using Raoult’s Law. 2) The stopping condition is based on the <em>average</em> distillate composition, which depends on the entire path of the distillation. This means we cannot solve directly and must use an iterative, “marching” solution.</p>
-<p><strong>Step 2: Set up the VLE Calculation Block</strong>
+<p class="sd-card-text"><strong>Step 2: Set up the VLE Calculation Block</strong>
 At any given temperature <span class="math notranslate nohighlight">\(T\)</span>, we can find the equilibrium liquid (<span class="math notranslate nohighlight">\(x_W\)</span>) and vapor (<span class="math notranslate nohighlight">\(y_D\)</span>) compositions at <span class="math notranslate nohighlight">\(P_{total} = 760\)</span> mmHg.</p>
-<p><strong>VLE Calculation using Raoult’s Law</strong>
+<p class="sd-card-text"><strong>VLE Calculation using Raoult’s Law</strong>
 For any temperature T:
 (a) Calculate the vapor pressures of methanol (<span class="math notranslate nohighlight">\(P_1^{\text{sat}}\)</span>) and water (<span class="math notranslate nohighlight">\(P_2^{\text{sat}}\)</span>) using their Antoine equations.
 (b) Find the liquid mole fraction (<span class="math notranslate nohighlight">\(x_W\)</span>) that boils at this temperature and total pressure:</p>
 <div class="math notranslate nohighlight">
-\[
-x_W = \frac{P_{total} - P_2^{\text{sat}}}{P_1^{\text{sat}} - P_2^{\text{sat}}}
-\]</div>
-<p>© Find the corresponding equilibrium vapor composition (<span class="math notranslate nohighlight">\(y_D\)</span>):</p>
+\[x_W = \frac{P_{total} - P_2^{\text{sat}}}{P_1^{\text{sat}} - P_2^{\text{sat}}}\]</div>
+<p class="sd-card-text">© Find the corresponding equilibrium vapor composition (<span class="math notranslate nohighlight">\(y_D\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[
-y_D = \frac{x_W P_1^{\text{sat}}}{P_{total}}
-\]</div>
-<p>This block of calculations forms the core of our iterative solution.</p>
-<p><strong>Step 3: Describe the Iterative “Marching” Procedure</strong>
+\[y_D = \frac{x_W P_1^{\text{sat}}}{P_{total}}\]</div>
+<p class="sd-card-text">This block of calculations forms the core of our iterative solution.</p>
+<p class="sd-card-text"><strong>Step 3: Describe the Iterative “Marching” Procedure</strong>
 The spreadsheet calculation proceeds by taking small steps (e.g., small increments of T or <span class="math notranslate nohighlight">\(x_W\)</span>) and updating all system properties until the target condition (<span class="math notranslate nohighlight">\(x_{D,avg}=0.90\)</span>) is met.
 (a) <strong>Initialize:</strong> Start with the initial conditions: <span class="math notranslate nohighlight">\(W_0=75\)</span> mol, <span class="math notranslate nohighlight">\(x_{W0}=0.82\)</span>.
 (b) <strong>Take a Step:</strong> Choose a new, slightly lower liquid composition, <span class="math notranslate nohighlight">\(x_{W, new}\)</span>.
 © <strong>Calculate VLE:</strong> At both the old and new <span class="math notranslate nohighlight">\(x_W\)</span>, calculate the corresponding temperatures and vapor compositions (<span class="math notranslate nohighlight">\(y_D\)</span>) using the VLE block from Step 2.
 (d) <strong>Update the Rayleigh Integral:</strong> Approximate the integral over this small step using the trapezoidal rule:</p>
 <div class="math notranslate nohighlight">
-\[
-\Delta(\text{Integral}) = \frac{1}{2} \left( \left[\frac{1}{y_D-x_W}\right]_{\text{old}} + \left[\frac{1}{y_D-x_W}\right]_{\text{new}} \right) \cdot (x_{W,\text{new}} - x_{W,\text{old}})
-\]</div>
-<p>The total value of the integral is the running sum of these small step changes.
+\[\Delta(\text{Integral}) = \frac{1}{2} \left( \left[\frac{1}{y_D-x_W}\right]_{\text{old}} + \left[\frac{1}{y_D-x_W}\right]_{\text{new}} \right) \cdot (x_{W,\text{new}} - x_{W,\text{old}})\]</div>
+<p class="sd-card-text">The total value of the integral is the running sum of these small step changes.
 (e) <strong>Update Moles in Still (W):</strong> Use the new total value of the integral in the Rayleigh equation: <span class="math notranslate nohighlight">\(W = W_0 \exp(\text{Integral})\)</span>.
 (f) <strong>Update Total Distillate (D):</strong> Use the overall balance: <span class="math notranslate nohighlight">\(D = W_0 - W\)</span>.
 (g) <strong>Update Average Composition (<span class="math notranslate nohighlight">\(x_{D,avg}\)</span>):</strong> Use the overall component balance, solved for <span class="math notranslate nohighlight">\(x_{D,avg}\)</span>: <span class="math notranslate nohighlight">\(x_{D,avg} = (W_0 x_{W0} - W x_W) / D\)</span>.
 (h) <strong>Check and Repeat:</strong> Compare the calculated <span class="math notranslate nohighlight">\(x_{D,avg}\)</span> to the target of 0.90. If they don’t match, repeat from step (b) with another small step in <span class="math notranslate nohighlight">\(x_W\)</span>. The process is complete when <span class="math notranslate nohighlight">\(x_{D,avg} = 0.90\)</span>.</p>
-<p><strong>Final Answer Summary for Example 2</strong>
+<p class="sd-card-text"><strong>Final Answer Summary for Example 2</strong>
 The iterative calculation is continued until the target is met. The results obtained from this procedure are:</p>
 <ul class="simple">
-<li><p><strong>Total Distillate Collected (D):</strong> <span class="math notranslate nohighlight">\(\approx 62.5\)</span> moles.</p></li>
-<li><p><strong>Moles Remaining in Still (W):</strong> <span class="math notranslate nohighlight">\(\approx 12.5\)</span> moles.</p></li>
-<li><p><strong>Final Still Composition (<span class="math notranslate nohighlight">\(x_{Wf}\)</span>):</strong> <span class="math notranslate nohighlight">\(\approx 42\%\)</span> methanol.</p></li>
+<li><p class="sd-card-text"><strong>Total Distillate Collected (D):</strong> <span class="math notranslate nohighlight">\(\approx 62.5\)</span> moles.</p></li>
+<li><p class="sd-card-text"><strong>Moles Remaining in Still (W):</strong> <span class="math notranslate nohighlight">\(\approx 12.5\)</span> moles.</p></li>
+<li><p class="sd-card-text"><strong>Final Still Composition (<span class="math notranslate nohighlight">\(x_{Wf}\)</span>):</strong> <span class="math notranslate nohighlight">\(\approx 42\%\)</span> methanol.</p></li>
 </ul>
 </div>
-</section>
+</details></section>
 </section>
 <section id="gas-absorption-columns">
 <h2>Gas Absorption Columns<a class="headerlink" href="#gas-absorption-columns" title="Link to this heading">#</a></h2>
 <p><strong>Gas Absorption</strong> is a mass transfer operation used to selectively remove one or more components (called <strong>solutes</strong>) from a gas stream by contacting it with a liquid <strong>solvent</strong>. The process works because the solute is more soluble in the liquid solvent than the other gases in the stream. A common industrial application is “sour gas sweetening,” where acidic gases like H<span class="math notranslate nohighlight">\(_2\)</span>S are removed from natural gas using an amine solvent.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>The Principle of Gas Absorption</strong>
 The operation is typically carried out in a tower containing trays or packing where the gas stream flows upwards and the liquid solvent flows downwards. This <strong>counter-current</strong> flow maximizes the concentration difference (the driving force) between the gas and liquid at every point in the column, leading to the most efficient mass transfer of the solute from the gas phase to the liquid phase.</p>
 </div>
 <section id="fundamental-principles-and-equations">
 <h3>Fundamental Principles and Equations<a class="headerlink" href="#fundamental-principles-and-equations" title="Link to this heading">#</a></h3>
 <p>The design of an absorption column involves combining thermodynamic equilibrium relationships with overall material balances.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Equilibrium Relationship:</strong> On each theoretical stage of the column, the exiting gas and liquid streams are assumed to reach thermodynamic equilibrium. For dilute solutions, this relationship is described by <strong>Henry’s Law</strong>, which states that the partial pressure of a solute in the gas phase is proportional to its concentration in the liquid phase.</p>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>Henry’s Law and Equilibrium Constant</strong>
 The equilibrium relationship can be expressed in terms of mole fractions:</p>
 <div class="math notranslate nohighlight">
-\[
-y_n = \left(\frac{H}{P}\right) x_n \quad \text{or simply} \quad y_n = m \cdot x_n
-\]</div>
+\[y_n = \left(\frac{H}{P}\right) x_n \quad \text{or simply} \quad y_n = m \cdot x_n\]</div>
 <p>The temperature dependence of Henry’s constant is often described by:</p>
 <div class="math notranslate nohighlight">
-\[
-H(T) = H^0 \exp\left[-\frac{E}{R}\left(\frac{1}{T} - \frac{1}{T_0}\right)\right]
-\]</div>
+\[H(T) = H^0 \exp\left[-\frac{E}{R}\left(\frac{1}{T} - \frac{1}{T_0}\right)\right]\]</div>
 </div>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(y_n, x_n\)</span>: Mole fractions of the solute in the gas and liquid phases leaving stage <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(H\)</span>: Henry’s Law constant [Pressure units, e.g., atm].</p></li>
@@ -1242,53 +1133,50 @@ H(T) = H^0 \exp\left[-\frac{E}{R}\left(\frac{1}{T} - \frac{1}{T_0}\right)\right]
 <li><p><span class="math notranslate nohighlight">\(L, V\)</span>: Molar flow rates of the liquid and gas (often on a solute-free basis) [mol/time].</p></li>
 </ul>
 </div>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>The Operating Line:</strong> The relationship between a gas stream rising and a liquid stream descending <em>between</em> stages is not governed by equilibrium, but by a <strong>material balance</strong>. The operating line equation relates the composition of the gas entering a stage from below to the liquid entering it from above.</p>
 </div>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>The Operating Line Equation</strong>
 A material balance for the solute from the top of the column down to an arbitrary stage <span class="math notranslate nohighlight">\(n\)</span> gives:</p>
 <div class="math notranslate nohighlight">
-\[
-L x_0 + V y_{n+1} = L x_n + V y_1
-\]</div>
+\[L x_0 + V y_{n+1} = L x_n + V y_1\]</div>
 <p>Rearranging this into the form of a line (<span class="math notranslate nohighlight">\(y=mx+b\)</span>) gives the operating line equation:</p>
 <div class="math notranslate nohighlight">
-\[
-y_{n+1} = \left(\frac{L}{V}\right)x_n + \left(y_1 - \frac{L}{V}x_0\right)
-\]</div>
+\[y_{n+1} = \left(\frac{L}{V}\right)x_n + \left(y_1 - \frac{L}{V}x_0\right)\]</div>
 </div>
 </section>
 <section id="graphical-method-for-stage-calculation">
 <h3>Graphical Method for Stage Calculation<a class="headerlink" href="#graphical-method-for-stage-calculation" title="Link to this heading">#</a></h3>
 <p>Similar to the McCabe-Thiele method, we can use a graphical method on an x-y diagram to determine the number of theoretical stages required.</p>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <p><strong>Key Lines on the Absorption Diagram</strong></p>
 <ul class="simple">
 <li><p><strong>Equilibrium Line:</strong> This is a plot of the thermodynamic equilibrium relationship. For dilute systems following Henry’s Law, this is a straight line through the origin with a slope of <span class="math notranslate nohighlight">\(m\)</span>, i.e., <span class="math notranslate nohighlight">\(y=mx\)</span>.</p></li>
 <li><p><strong>Operating Line:</strong> This is a plot of the material balance equation. It is a straight line with a slope of <span class="math notranslate nohighlight">\(L/V\)</span> that connects the compositions at the top of the column (point <span class="math notranslate nohighlight">\((x_0, y_1)\)</span>) with the compositions at the bottom (point <span class="math notranslate nohighlight">\((x_N, y_{N+1})\)</span>).</p></li>
 </ul>
 </div>
-<div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Graphical Procedure for Stage Calculation</strong>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Graphical Procedure for Stage Calculation</strong>
 The number of stages is found by constructing a staircase between the operating line and the equilibrium line, typically starting from the bottom of the column.</p>
 <ol class="arabic simple">
-<li><p><strong>Start at the Bottom:</strong> Begin at the point <span class="math notranslate nohighlight">\((x_N, y_{N+1})\)</span> on the operating line. This represents the rich entering gas (<span class="math notranslate nohighlight">\(y_{N+1}\)</span>) and the rich exiting liquid (<span class="math notranslate nohighlight">\(x_N\)</span>).</p></li>
-<li><p><strong>Move to Equilibrium:</strong> The vapor that leaves stage N (<span class="math notranslate nohighlight">\(y_N\)</span>) is in equilibrium with the liquid on stage N (<span class="math notranslate nohighlight">\(x_N\)</span>). To find its composition, move <strong>vertically down</strong> from the operating line to the <strong>equilibrium line</strong>.</p></li>
-<li><p><strong>Move to Operating Line:</strong> The vapor leaving stage N (<span class="math notranslate nohighlight">\(y_N\)</span>) passes the liquid entering from the stage above (<span class="math notranslate nohighlight">\(x_{N-1}\)</span>). To find this liquid’s composition, move <strong>horizontally to the left</strong> from the equilibrium line to the <strong>operating line</strong>.</p></li>
-<li><p><strong>Repeat:</strong> This completes one “step” (one theoretical stage). Repeat this process—vertically to equilibrium, horizontally to the operating line—counting each step until the gas composition (<span class="math notranslate nohighlight">\(y\)</span>) is less than or equal to the desired exit gas composition, <span class="math notranslate nohighlight">\(y_1\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Start at the Bottom:</strong> Begin at the point <span class="math notranslate nohighlight">\((x_N, y_{N+1})\)</span> on the operating line. This represents the rich entering gas (<span class="math notranslate nohighlight">\(y_{N+1}\)</span>) and the rich exiting liquid (<span class="math notranslate nohighlight">\(x_N\)</span>).</p></li>
+<li><p class="sd-card-text"><strong>Move to Equilibrium:</strong> The vapor that leaves stage N (<span class="math notranslate nohighlight">\(y_N\)</span>) is in equilibrium with the liquid on stage N (<span class="math notranslate nohighlight">\(x_N\)</span>). To find its composition, move <strong>vertically down</strong> from the operating line to the <strong>equilibrium line</strong>.</p></li>
+<li><p class="sd-card-text"><strong>Move to Operating Line:</strong> The vapor leaving stage N (<span class="math notranslate nohighlight">\(y_N\)</span>) passes the liquid entering from the stage above (<span class="math notranslate nohighlight">\(x_{N-1}\)</span>). To find this liquid’s composition, move <strong>horizontally to the left</strong> from the equilibrium line to the <strong>operating line</strong>.</p></li>
+<li><p class="sd-card-text"><strong>Repeat:</strong> This completes one “step” (one theoretical stage). Repeat this process—vertically to equilibrium, horizontally to the operating line—counting each step until the gas composition (<span class="math notranslate nohighlight">\(y\)</span>) is less than or equal to the desired exit gas composition, <span class="math notranslate nohighlight">\(y_1\)</span>.</p></li>
 </ol>
 </div>
-</section>
+</details></section>
 <section id="effect-of-operating-parameters">
 <h3>Effect of Operating Parameters<a class="headerlink" href="#effect-of-operating-parameters" title="Link to this heading">#</a></h3>
 <p>The graphical method provides an excellent way to visualize how changing operating conditions will impact the required number of stages for a given separation.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Effect of Temperature (T)</strong></p>
 <ul class="simple">
 <li><p><strong>What it Affects:</strong> The <strong>Equilibrium Line</strong>.</p></li>
@@ -1297,8 +1185,8 @@ The number of stages is found by constructing a staircase between the operating 
 <li><p><strong>Conclusion:</strong> Gas absorption is favored at <strong>lower temperatures</strong>.</p></li>
 </ul>
 </div>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Effect of Pressure (P)</strong></p>
 <ul class="simple">
 <li><p><strong>What it Affects:</strong> The <strong>Equilibrium Line</strong>.</p></li>
@@ -1307,8 +1195,8 @@ The number of stages is found by constructing a staircase between the operating 
 <li><p><strong>Conclusion:</strong> Gas absorption is favored at <strong>higher pressures</strong>.</p></li>
 </ul>
 </div>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Effect of Solvent Flow Rate (L/V Ratio)</strong></p>
 <ul class="simple">
 <li><p><strong>What it Affects:</strong> The <strong>Operating Line</strong>.</p></li>
@@ -1317,8 +1205,8 @@ The number of stages is found by constructing a staircase between the operating 
 <li><p><strong>Conclusion and Trade-off:</strong> A higher solvent flow rate requires a smaller, cheaper column (lower capital cost) but costs more to operate (pumping and regenerating more solvent, higher operating cost). Engineers must choose an optimal <span class="math notranslate nohighlight">\(L/V\)</span> ratio that balances these costs. The theoretical <strong>minimum L/V ratio</strong> would require an infinite number of stages.</p></li>
 </ul>
 </div>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Effect of Inlet and Outlet Compositions</strong></p>
 <ul class="simple">
 <li><p><strong>What they Affect:</strong> The <strong>anchor points</strong> of the Operating Line.</p></li>
@@ -1334,74 +1222,59 @@ The number of stages is found by constructing a staircase between the operating 
 <section class="example-content" id="proof-content">
 <p>A laboratory process releases an air stream of 1000 kmol/hr containing 200 ppm of chloroform. To meet environmental standards, this concentration must be reduced to 10 ppm before release. An absorption column using pure water as the solvent is proposed. The system operates at 25<span class="math notranslate nohighlight">\(^\circ\)</span>C and 1.5 atm. How many theoretical equilibrium stages are required for this separation?</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Strategy and Assumptions</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Strategy and Assumptions</strong>
 The first step is to recognize that with solute concentrations in the parts-per-million (ppm) range, this is a <strong>dilute system</strong>.</p>
-<p><strong>Simplifications for Dilute Systems:</strong> For dilute systems (typically when solute concentrations are below 1-2% in both phases), we can make several key simplifications that make the analysis much easier:</p>
+<p class="sd-card-text"><strong>Simplifications for Dilute Systems:</strong> For dilute systems (typically when solute concentrations are below 1-2% in both phases), we can make several key simplifications that make the analysis much easier:</p>
 <ul class="simple">
-<li><p>The total liquid (<span class="math notranslate nohighlight">\(L\)</span>) and gas (<span class="math notranslate nohighlight">\(V\)</span>) molar flow rates can be assumed to be constant throughout the column because the amount of solute transferred is negligible compared to the total flow.</p></li>
-<li><p>We can work with mole fractions (<span class="math notranslate nohighlight">\(x, y\)</span>) directly. The operating and equilibrium lines are straight, allowing for an analytical solution.</p></li>
+<li><p class="sd-card-text">The total liquid (<span class="math notranslate nohighlight">\(L\)</span>) and gas (<span class="math notranslate nohighlight">\(V\)</span>) molar flow rates can be assumed to be constant throughout the column because the amount of solute transferred is negligible compared to the total flow.</p></li>
+<li><p class="sd-card-text">We can work with mole fractions (<span class="math notranslate nohighlight">\(x, y\)</span>) directly. The operating and equilibrium lines are straight, allowing for an analytical solution.</p></li>
 </ul>
-<p>Our plan is to determine the minimum liquid flow rate (<span class="math notranslate nohighlight">\(L_{min}\)</span>), select a practical operating flow rate, and then solve for the number of stages using both the graphical method and the analytical Kremser equation.</p>
-<p><strong>Step 2: Define Knowns and Find Equilibrium Data</strong></p>
+<p class="sd-card-text">Our plan is to determine the minimum liquid flow rate (<span class="math notranslate nohighlight">\(L_{min}\)</span>), select a practical operating flow rate, and then solve for the number of stages using both the graphical method and the analytical Kremser equation.</p>
+<p class="sd-card-text"><strong>Step 2: Define Knowns and Find Equilibrium Data</strong></p>
 <ul class="simple">
-<li><p><strong>Gas Flow Rate (<span class="math notranslate nohighlight">\(V\)</span>):</strong> <span class="math notranslate nohighlight">\(1000\)</span> kmol/hr.</p></li>
-<li><p><strong>Inlet Gas (<span class="math notranslate nohighlight">\(y_{N+1}\)</span>):</strong> <span class="math notranslate nohighlight">\(200 \, \text{ppm} = 200 \times 10^{-6}\)</span>.</p></li>
-<li><p><strong>Outlet Gas (<span class="math notranslate nohighlight">\(y_1\)</span>):</strong> <span class="math notranslate nohighlight">\(10 \, \text{ppm} = 10 \times 10^{-6}\)</span>.</p></li>
-<li><p><strong>Inlet Liquid (<span class="math notranslate nohighlight">\(x_0\)</span>):</strong> <span class="math notranslate nohighlight">\(0\)</span> (pure water solvent).</p></li>
-<li><p><strong>Henry’s Constant (<span class="math notranslate nohighlight">\(H\)</span>):</strong> <span class="math notranslate nohighlight">\(H = 211\)</span> atm/mole fraction.</p></li>
-<li><p><strong>Equilibrium Line Slope (<span class="math notranslate nohighlight">\(m\)</span>):</strong> <span class="math notranslate nohighlight">\(m = H/P = 211 \, \text{atm} / 1.5 \, \text{atm} = 140.7\)</span>.
+<li><p class="sd-card-text"><strong>Gas Flow Rate (<span class="math notranslate nohighlight">\(V\)</span>):</strong> <span class="math notranslate nohighlight">\(1000\)</span> kmol/hr.</p></li>
+<li><p class="sd-card-text"><strong>Inlet Gas (<span class="math notranslate nohighlight">\(y_{N+1}\)</span>):</strong> <span class="math notranslate nohighlight">\(200 \, \text{ppm} = 200 \times 10^{-6}\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Outlet Gas (<span class="math notranslate nohighlight">\(y_1\)</span>):</strong> <span class="math notranslate nohighlight">\(10 \, \text{ppm} = 10 \times 10^{-6}\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Inlet Liquid (<span class="math notranslate nohighlight">\(x_0\)</span>):</strong> <span class="math notranslate nohighlight">\(0\)</span> (pure water solvent).</p></li>
+<li><p class="sd-card-text"><strong>Henry’s Constant (<span class="math notranslate nohighlight">\(H\)</span>):</strong> <span class="math notranslate nohighlight">\(H = 211\)</span> atm/mole fraction.</p></li>
+<li><p class="sd-card-text"><strong>Equilibrium Line Slope (<span class="math notranslate nohighlight">\(m\)</span>):</strong> <span class="math notranslate nohighlight">\(m = H/P = 211 \, \text{atm} / 1.5 \, \text{atm} = 140.7\)</span>.
 The equilibrium line is therefore <span class="math notranslate nohighlight">\(\mathbf{y = 140.7 x}\)</span>.</p></li>
 </ul>
-<p><strong>Step 3: Determine the Minimum Liquid Flow Rate (<span class="math notranslate nohighlight">\(L_{min}\)</span>)</strong>
+<p class="sd-card-text"><strong>Step 3: Determine the Minimum Liquid Flow Rate (<span class="math notranslate nohighlight">\(L_{min}\)</span>)</strong>
 The minimum liquid flow rate corresponds to an infinite number of stages, which occurs when the operating line touches the equilibrium line at the bottom (high-concentration) end of the column. At this “pinch point,” the exiting liquid (<span class="math notranslate nohighlight">\(x_{N,max}\)</span>) is in equilibrium with the entering gas (<span class="math notranslate nohighlight">\(y_{N+1}\)</span>).</p>
 <div class="math notranslate nohighlight">
-\[
-x_{N,max} = \frac{y_{N+1}}{m} = \frac{200 \times 10^{-6}}{140.7} = 1.42 \times 10^{-6}
-\]</div>
-<p>The slope of this minimum operating line is <span class="math notranslate nohighlight">\((L/V)_{min}\)</span>, found from a balance over the whole column:</p>
+\[x_{N,max} = \frac{y_{N+1}}{m} = \frac{200 \times 10^{-6}}{140.7} = 1.42 \times 10^{-6}\]</div>
+<p class="sd-card-text">The slope of this minimum operating line is <span class="math notranslate nohighlight">\((L/V)_{min}\)</span>, found from a balance over the whole column:</p>
 <div class="math notranslate nohighlight">
-\[
-\left(\frac{L}{V}\right)_{min} = \frac{y_{N+1} - y_1}{x_{N,max} - x_0} = \frac{(200 - 10) \times 10^{-6}}{(1.42 - 0) \times 10^{-6}} = 133.8
-\]</div>
+\[\left(\frac{L}{V}\right)_{min} = \frac{y_{N+1} - y_1}{x_{N,max} - x_0} = \frac{(200 - 10) \times 10^{-6}}{(1.42 - 0) \times 10^{-6}} = 133.8\]</div>
 <div class="math notranslate nohighlight">
-\[
-L_{min} = V \cdot (L/V)_{min} = 1000 \frac{\text{kmol}}{\text{hr}} \cdot 133.8 = 133,800 \frac{\text{kmol}}{\text{hr}}
-\]</div>
-<p><strong>Step 4: Determine the Actual Operating Line</strong>
+\[L_{min} = V \cdot (L/V)_{min} = 1000 \frac{\text{kmol}}{\text{hr}} \cdot 133.8 = 133,800 \frac{\text{kmol}}{\text{hr}}\]</div>
+<p class="sd-card-text"><strong>Step 4: Determine the Actual Operating Line</strong>
 A common heuristic is to use an actual liquid flow rate <span class="math notranslate nohighlight">\(1.1\)</span> to <span class="math notranslate nohighlight">\(2.0\)</span> times the minimum. We will use <span class="math notranslate nohighlight">\(L_{actual} = 1.4 \cdot L_{min}\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-(L/V)_{actual} = 1.4 \cdot (L/V)_{min} = 1.4 \cdot 133.8 = 187.3
-\]</div>
-<p><strong>Step 5: Method A: Graphical Solution</strong>
+\[(L/V)_{actual} = 1.4 \cdot (L/V)_{min} = 1.4 \cdot 133.8 = 187.3\]</div>
+<p class="sd-card-text"><strong>Step 5: Method A: Graphical Solution</strong>
 We plot the equilibrium line (<span class="math notranslate nohighlight">\(y=140.7x\)</span>) and the operating line. The operating line has a slope of 187.3 and connects the top point <span class="math notranslate nohighlight">\((x_0, y_1) = (0, 10\text{ppm})\)</span> and the bottom point <span class="math notranslate nohighlight">\((x_N, y_{N+1}) = (x_N, 200\text{ppm})\)</span>. By stepping off the stages graphically, we find that approximately <strong>7.25 theoretical stages</strong> are required. We would design for <strong>8 stages</strong>.</p>
-<p><strong>Step 6: Method B: Analytical Solution (Kremser Equation)</strong>
+<p class="sd-card-text"><strong>Step 6: Method B: Analytical Solution (Kremser Equation)</strong>
 For dilute systems with linear equilibrium and operating lines, the Kremser equation provides a direct analytical solution.</p>
 <div class="math notranslate nohighlight">
-\[
-N = \frac{\ln\left[ \frac{y_{N+1} - mx_0}{y_1 - mx_0} \left(1 - \frac{1}{A}\right) + \frac{1}{A} \right]}{\ln(A)}
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(A\)</span> is the dimensionless <strong>absorption factor</strong>, <span class="math notranslate nohighlight">\(A = \frac{L}{mV}\)</span>.</p>
-<p>First, calculate the absorption factor:</p>
+\[N = \frac{\ln\left[ \frac{y_{N+1} - mx_0}{y_1 - mx_0} \left(1 - \frac{1}{A}\right) + \frac{1}{A} \right]}{\ln(A)}\]</div>
+<p class="sd-card-text">where <span class="math notranslate nohighlight">\(A\)</span> is the dimensionless <strong>absorption factor</strong>, <span class="math notranslate nohighlight">\(A = \frac{L}{mV}\)</span>.</p>
+<p class="sd-card-text">First, calculate the absorption factor:</p>
 <div class="math notranslate nohighlight">
-\[
-A = \frac{L/V}{m} = \frac{187.3}{140.7} = 1.33
-\]</div>
-<p>Since we are using pure solvent (<span class="math notranslate nohighlight">\(x_0 = 0\)</span>), the equation simplifies:</p>
+\[A = \frac{L/V}{m} = \frac{187.3}{140.7} = 1.33\]</div>
+<p class="sd-card-text">Since we are using pure solvent (<span class="math notranslate nohighlight">\(x_0 = 0\)</span>), the equation simplifies:</p>
 <div class="math notranslate nohighlight">
-\[
-N = \frac{\ln\left[ \frac{y_{N+1}}{y_1} \left(1 - \frac{1}{A}\right) + \frac{1}{A} \right]}{\ln(A)} = \frac{\ln\left[ \frac{200}{10} \left(1 - \frac{1}{1.33}\right) + \frac{1}{1.33} \right]}{\ln(1.33)}
-\]</div>
+\[N = \frac{\ln\left[ \frac{y_{N+1}}{y_1} \left(1 - \frac{1}{A}\right) + \frac{1}{A} \right]}{\ln(A)} = \frac{\ln\left[ \frac{200}{10} \left(1 - \frac{1}{1.33}\right) + \frac{1}{1.33} \right]}{\ln(1.33)}\]</div>
 <div class="math notranslate nohighlight">
-\[
-N = \frac{\ln[20(0.248) + 0.752]}{\ln(1.33)} = \frac{\ln(5.712)}{0.285} \approx 6.1
-\]</div>
-<p><strong>Final Answer Summary for Example 1</strong>
+\[N = \frac{\ln[20(0.248) + 0.752]}{\ln(1.33)} = \frac{\ln(5.712)}{0.285} \approx 6.1\]</div>
+<p class="sd-card-text"><strong>Final Answer Summary for Example 1</strong>
 The Kremser equation predicts that <strong>6.1 theoretical stages</strong> are required. We would round up and design the column for <strong>7 stages</strong>. The small difference between the graphical and analytical methods is expected and acceptable.</p>
 </div>
-</section>
+</details></section>
 <section id="example-problem-concentrated-system-co-2-removal">
 <h3>Example Problem: Concentrated System - CO<span class="math notranslate nohighlight">\(_2\)</span> Removal<a class="headerlink" href="#example-problem-concentrated-system-co-2-removal" title="Link to this heading">#</a></h3>
 <div class="proof example admonition" id="example-8">
@@ -1409,77 +1282,74 @@ The Kremser equation predicts that <strong>6.1 theoretical stages</strong> are r
 <section class="example-content" id="proof-content">
 <p>We wish to remove 65% of the CO<span class="math notranslate nohighlight">\(_2\)</span> from a 100 mol/hr gas stream that is initially 8 mol% CO<span class="math notranslate nohighlight">\(_2\)</span> in nitrogen. The scrubbing is done with pure water at room temperature and atmospheric pressure, where the VLE relationship is approximately <span class="math notranslate nohighlight">\(y=1640x\)</span>. How many equilibrium stages are required if the solvent flow rate is 1.5 times the minimum?</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Strategy: Analysis for a Concentrated System</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Strategy: Analysis for a Concentrated System</strong>
 First, we must determine if the system is dilute. A significant change in the total molar flow rate means we cannot use the simplifying assumptions of the dilute case.</p>
 <ul class="simple">
-<li><p>Moles CO<span class="math notranslate nohighlight">\(_2\)</span> entering: <span class="math notranslate nohighlight">\(100 \, \text{mol/hr} \times 0.08 = 8.0\)</span> mol/hr.</p></li>
-<li><p>Moles CO<span class="math notranslate nohighlight">\(_2\)</span> removed: <span class="math notranslate nohighlight">\(8.0 \, \text{mol/hr} \times 0.65 = 5.2\)</span> mol/hr.</p></li>
-<li><p>Percent change in total gas flow rate: <span class="math notranslate nohighlight">\(\frac{5.2 \, \text{mol/hr removed}}{100 \, \text{mol/hr total in}} = 5.2\%\)</span>.</p></li>
+<li><p class="sd-card-text">Moles CO<span class="math notranslate nohighlight">\(_2\)</span> entering: <span class="math notranslate nohighlight">\(100 \, \text{mol/hr} \times 0.08 = 8.0\)</span> mol/hr.</p></li>
+<li><p class="sd-card-text">Moles CO<span class="math notranslate nohighlight">\(_2\)</span> removed: <span class="math notranslate nohighlight">\(8.0 \, \text{mol/hr} \times 0.65 = 5.2\)</span> mol/hr.</p></li>
+<li><p class="sd-card-text">Percent change in total gas flow rate: <span class="math notranslate nohighlight">\(\frac{5.2 \, \text{mol/hr removed}}{100 \, \text{mol/hr total in}} = 5.2\%\)</span>.</p></li>
 </ul>
-<p><strong>Rule of Thumb: Concentrated Systems:</strong> When the amount of solute transferred causes the total molar flow rate of either the gas or liquid phase to change by more than 5-10%, the system should be treated as <strong>concentrated</strong>. This requires using constant <strong>solute-free flow rates</strong> (G for carrier gas, S for solvent) and compositions expressed as <strong>mole ratios</strong> (Y, X).</p>
-<p><strong>Step 2: Define Solute-Free Flow Rates and Mole Ratios</strong></p>
+<p class="sd-card-text"><strong>Rule of Thumb: Concentrated Systems:</strong> When the amount of solute transferred causes the total molar flow rate of either the gas or liquid phase to change by more than 5-10%, the system should be treated as <strong>concentrated</strong>. This requires using constant <strong>solute-free flow rates</strong> (G for carrier gas, S for solvent) and compositions expressed as <strong>mole ratios</strong> (Y, X).</p>
+<p class="sd-card-text"><strong>Step 2: Define Solute-Free Flow Rates and Mole Ratios</strong></p>
 <ul class="simple">
-<li><p><strong>Carrier Gas Flow (<span class="math notranslate nohighlight">\(G\)</span>):</strong> The inert N<span class="math notranslate nohighlight">\(_2\)</span> flow is constant: <span class="math notranslate nohighlight">\(G = 100 \cdot (1-0.08) = 92\)</span> mol/hr.</p></li>
-<li><p><strong>Solvent Flow (<span class="math notranslate nohighlight">\(S\)</span>):</strong> The flow of pure water, to be determined.</p></li>
-<li><p><strong>Mole Ratios:</strong> <span class="math notranslate nohighlight">\(Y = \frac{\text{moles CO}_2}{\text{moles N}_2}\)</span>, <span class="math notranslate nohighlight">\(X = \frac{\text{moles CO}_2}{\text{moles H}_2\text{O}}\)</span>.</p></li>
-<li><p><strong>Known Compositions in Mole Ratios:</strong></p>
+<li><p class="sd-card-text"><strong>Carrier Gas Flow (<span class="math notranslate nohighlight">\(G\)</span>):</strong> The inert N<span class="math notranslate nohighlight">\(_2\)</span> flow is constant: <span class="math notranslate nohighlight">\(G = 100 \cdot (1-0.08) = 92\)</span> mol/hr.</p></li>
+<li><p class="sd-card-text"><strong>Solvent Flow (<span class="math notranslate nohighlight">\(S\)</span>):</strong> The flow of pure water, to be determined.</p></li>
+<li><p class="sd-card-text"><strong>Mole Ratios:</strong> <span class="math notranslate nohighlight">\(Y = \frac{\text{moles CO}_2}{\text{moles N}_2}\)</span>, <span class="math notranslate nohighlight">\(X = \frac{\text{moles CO}_2}{\text{moles H}_2\text{O}}\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Known Compositions in Mole Ratios:</strong></p>
 <ul>
-<li><p>Inlet gas (<span class="math notranslate nohighlight">\(Y_{N+1}\)</span>): <span class="math notranslate nohighlight">\(Y_{N+1} = \frac{y_{in}}{1-y_{in}} = \frac{0.08}{1-0.08} = 0.0870\)</span>.</p></li>
-<li><p>Outlet gas (<span class="math notranslate nohighlight">\(Y_1\)</span>): Moles CO<span class="math notranslate nohighlight">\(_2\)</span> out = <span class="math notranslate nohighlight">\(8.0 - 5.2 = 2.8\)</span> mol/hr. <span class="math notranslate nohighlight">\(Y_1 = \frac{2.8}{92} = 0.0304\)</span>.</p></li>
-<li><p>Inlet liquid (<span class="math notranslate nohighlight">\(X_0\)</span>): Pure water, so <span class="math notranslate nohighlight">\(X_0 = 0\)</span>.</p></li>
+<li><p class="sd-card-text">Inlet gas (<span class="math notranslate nohighlight">\(Y_{N+1}\)</span>): <span class="math notranslate nohighlight">\(Y_{N+1} = \frac{y_{in}}{1-y_{in}} = \frac{0.08}{1-0.08} = 0.0870\)</span>.</p></li>
+<li><p class="sd-card-text">Outlet gas (<span class="math notranslate nohighlight">\(Y_1\)</span>): Moles CO<span class="math notranslate nohighlight">\(_2\)</span> out = <span class="math notranslate nohighlight">\(8.0 - 5.2 = 2.8\)</span> mol/hr. <span class="math notranslate nohighlight">\(Y_1 = \frac{2.8}{92} = 0.0304\)</span>.</p></li>
+<li><p class="sd-card-text">Inlet liquid (<span class="math notranslate nohighlight">\(X_0\)</span>): Pure water, so <span class="math notranslate nohighlight">\(X_0 = 0\)</span>.</p></li>
 </ul>
 </li>
 </ul>
-<p><strong>Step 3: Convert Equilibrium Data to Mole Ratios</strong>
+<p class="sd-card-text"><strong>Step 3: Convert Equilibrium Data to Mole Ratios</strong>
 The VLE data (<span class="math notranslate nohighlight">\(y = 1640x\)</span>) must be converted to mole ratios using the relations <span class="math notranslate nohighlight">\(Y = y/(1-y)\)</span> and <span class="math notranslate nohighlight">\(X = x/(1-x)\)</span>. This results in a <em>curved</em> equilibrium line on a Y-X plot.</p>
-<p><strong>Step 4: Determine the Operating Line</strong>
+<p class="sd-card-text"><strong>Step 4: Determine the Operating Line</strong>
 The operating line on a Y-X plot is a straight line with slope <span class="math notranslate nohighlight">\(S/G\)</span>. We first find the minimum slope by finding the pinch point at the bottom of the column.</p>
 <ul class="simple">
-<li><p>At the pinch, the exiting liquid <span class="math notranslate nohighlight">\(X_{N,max}\)</span> is in equilibrium with the entering gas <span class="math notranslate nohighlight">\(Y_{N+1}=0.0870\)</span>.</p></li>
-<li><p>Convert to mole fractions to use VLE data: <span class="math notranslate nohighlight">\(y = Y/(1+Y) = 0.0870/(1.0870) = 0.0800\)</span>.</p></li>
-<li><p>Find equilibrium liquid mole fraction: <span class="math notranslate nohighlight">\(x = y/1640 = 0.0800/1640 = 4.88 \times 10^{-5}\)</span>.</p></li>
-<li><p>Convert back to mole ratio: <span class="math notranslate nohighlight">\(X_{N,max} = x/(1-x) \approx 4.88 \times 10^{-5}\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\((S/G)_{min} = \frac{Y_{N+1} - Y_1}{X_{N,max} - X_0} = \frac{0.0870 - 0.0304}{4.88 \times 10^{-5} - 0} = 1160\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\((S/G)_{actual} = 1.5 \cdot (S/G)_{min} = 1.5 \cdot 1160 = 1740\)</span>.</p></li>
+<li><p class="sd-card-text">At the pinch, the exiting liquid <span class="math notranslate nohighlight">\(X_{N,max}\)</span> is in equilibrium with the entering gas <span class="math notranslate nohighlight">\(Y_{N+1}=0.0870\)</span>.</p></li>
+<li><p class="sd-card-text">Convert to mole fractions to use VLE data: <span class="math notranslate nohighlight">\(y = Y/(1+Y) = 0.0870/(1.0870) = 0.0800\)</span>.</p></li>
+<li><p class="sd-card-text">Find equilibrium liquid mole fraction: <span class="math notranslate nohighlight">\(x = y/1640 = 0.0800/1640 = 4.88 \times 10^{-5}\)</span>.</p></li>
+<li><p class="sd-card-text">Convert back to mole ratio: <span class="math notranslate nohighlight">\(X_{N,max} = x/(1-x) \approx 4.88 \times 10^{-5}\)</span>.</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\((S/G)_{min} = \frac{Y_{N+1} - Y_1}{X_{N,max} - X_0} = \frac{0.0870 - 0.0304}{4.88 \times 10^{-5} - 0} = 1160\)</span>.</p></li>
+<li><p class="sd-card-text"><span class="math notranslate nohighlight">\((S/G)_{actual} = 1.5 \cdot (S/G)_{min} = 1.5 \cdot 1160 = 1740\)</span>.</p></li>
 </ul>
-<p><strong>Step 5: Graphical Solution</strong>
+<p class="sd-card-text"><strong>Step 5: Graphical Solution</strong>
 We plot the curved equilibrium line and the straight operating line (slope=1740, passing through <span class="math notranslate nohighlight">\((X_0, Y_1) = (0, 0.0304)\)</span>). We then step off the stages starting from the bottom point <span class="math notranslate nohighlight">\((X_N, Y_{N+1})\)</span>. By constructing the staircase on the Y-X diagram, we find that we cross the target outlet gas composition of <span class="math notranslate nohighlight">\(Y_1 = 0.0304\)</span> after approximately <strong>1.9 equilibrium stages</strong>.</p>
-<p><strong>Final Answer Summary for Example 2</strong>
+<p class="sd-card-text"><strong>Final Answer Summary for Example 2</strong>
 The graphical analysis shows that 1.9 equilibrium stages are needed. Therefore, we would design the column with <strong>2 theoretical stages</strong>.</p>
 </div>
-</section>
+</details></section>
 </section>
 <section id="stripping-columns">
 <h2>Stripping Columns<a class="headerlink" href="#stripping-columns" title="Link to this heading">#</a></h2>
 <p><strong>Stripping</strong>, also known as desorption, is a mass transfer operation that is the reverse of absorption. Its purpose is to selectively remove a dissolved solute from a liquid stream by contacting it with a gas, known as the <strong>stripping agent</strong>.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>The Principle of Stripping</strong>
 Like absorption, stripping is typically carried out in a counter-current column. The solute-rich liquid enters at the top, and the clean stripping gas enters at the bottom. The counter-current flow maximizes the concentration difference at every point, providing the driving force for the solute to transfer <strong>from the liquid phase to the gas phase</strong>.</p>
 </div>
 <section id="id2">
 <h3>Fundamental Principles and Equations<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>The design equations for stripping are identical in form to those for absorption; however, the relative positions of the operating and equilibrium lines are different, and the direction of mass transfer is from liquid to gas.</p>
-<div class="admonition-important-formula admonition">
-<p class="admonition-title">Important Formula</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
 <p><strong>Key Stripping Equations</strong></p>
 <p><strong>Equilibrium Relationship (Henry’s Law):</strong>
 For dilute solutions, the equilibrium between the liquid and gas on a given stage is described by Henry’s Law.</p>
 <div class="math notranslate nohighlight">
-\[
-y_n = m \cdot x_n \quad \text{where } m = H/P
-\]</div>
+\[y_n = m \cdot x_n \quad \text{where } m = H/P\]</div>
 <p><strong>The Operating Line (Material Balance):</strong>
 A material balance on the solute relates the compositions of the passing streams between stages.</p>
 <div class="math notranslate nohighlight">
-\[
-y_{n+1} = \left(\frac{L}{V}\right)x_n + \left(y_1 - \frac{L}{V}x_0\right)
-\]</div>
+\[y_{n+1} = \left(\frac{L}{V}\right)x_n + \left(y_1 - \frac{L}{V}x_0\right)\]</div>
 </div>
-<div class="admonition-key-variables-definitions admonition">
-<p class="admonition-title">Key Variables &amp; Definitions</p>
+<div class="tip admonition">
+<p class="admonition-title">Term Definitions</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(x_0\)</span>: Mole fraction of solute in the <strong>entering liquid feed</strong> (at the top, stage 1).</p></li>
 <li><p><span class="math notranslate nohighlight">\(x_N\)</span>: Mole fraction of solute in the <strong>exiting stripped liquid</strong> (at the bottom, stage N).</p></li>
@@ -1491,28 +1361,29 @@ y_{n+1} = \left(\frac{L}{V}\right)x_n + \left(y_1 - \frac{L}{V}x_0\right)
 </section>
 <section id="graphical-method-for-stripping-columns">
 <h3>Graphical Method for Stripping Columns<a class="headerlink" href="#graphical-method-for-stripping-columns" title="Link to this heading">#</a></h3>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Key Feature of the Stripping Diagram</strong>
 The number of theoretical stages for a stripping column can be found graphically on an x-y diagram. The key difference from absorption is that the <strong>operating line must lie below the equilibrium line</strong>. This ensures that at every point in the column, the actual vapor-phase concentration (<span class="math notranslate nohighlight">\(y\)</span>) is lower than the equilibrium concentration, providing a driving force for the solute to move from the liquid to the gas phase.</p>
 </div>
-<div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Graphical Procedure for Stage Calculation</strong>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Graphical Procedure for Stage Calculation</strong>
 The number of stages is found by constructing a staircase between the equilibrium line and the operating line. It is often intuitive to start from the top of the column (stage 1).</p>
 <ol class="arabic simple">
-<li><p><strong>Plot the Lines:</strong> Draw the equilibrium line (<span class="math notranslate nohighlight">\(y=mx\)</span>) and the operating line, which is the straight line connecting the known top-of-column point <span class="math notranslate nohighlight">\((x_0, y_1)\)</span> and bottom-of-column point <span class="math notranslate nohighlight">\((x_N, y_{N+1})\)</span>.</p></li>
-<li><p><strong>Begin at Stage 1:</strong> The liquid entering the column is <span class="math notranslate nohighlight">\(x_0\)</span>. This liquid enters Stage 1. Find the point <span class="math notranslate nohighlight">\((x_0, y_1)\)</span> on the diagram. This point is on the operating line. The liquid leaving stage 1 (<span class="math notranslate nohighlight">\(x_1\)</span>) is in equilibrium with the vapor leaving stage 1 (<span class="math notranslate nohighlight">\(y_1\)</span>). To find <span class="math notranslate nohighlight">\(x_1\)</span>, start at <span class="math notranslate nohighlight">\(y_1\)</span> and move <strong>horizontally to the right</strong> to the <strong>equilibrium line</strong>. The x-coordinate of this point is <span class="math notranslate nohighlight">\(x_1\)</span>.</p></li>
-<li><p><strong>Move to Stage 2:</strong> The liquid <span class="math notranslate nohighlight">\(x_1\)</span> flows from stage 1 to stage 2. The vapor that it passes, which is rising from stage 2, is <span class="math notranslate nohighlight">\(y_2\)</span>. Their compositions are related by the operating line. To find <span class="math notranslate nohighlight">\(y_2\)</span>, start at <span class="math notranslate nohighlight">\(x_1\)</span> and move <strong>vertically up</strong> to the <strong>operating line</strong>. The y-coordinate is <span class="math notranslate nohighlight">\(y_2\)</span>.</p></li>
-<li><p><strong>Repeat:</strong> Now find the liquid on stage 2 (<span class="math notranslate nohighlight">\(x_2\)</span>) that is in equilibrium with <span class="math notranslate nohighlight">\(y_2\)</span> by moving <strong>horizontally to the right</strong> to the <strong>equilibrium line</strong>. This completes the step for Stage 2. Continue this process—vertically to the operating line, horizontally to the equilibrium line—counting each “triangle” as one stage, until the liquid composition <span class="math notranslate nohighlight">\(x\)</span> is less than or equal to the desired exit liquid composition, <span class="math notranslate nohighlight">\(x_N\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Plot the Lines:</strong> Draw the equilibrium line (<span class="math notranslate nohighlight">\(y=mx\)</span>) and the operating line, which is the straight line connecting the known top-of-column point <span class="math notranslate nohighlight">\((x_0, y_1)\)</span> and bottom-of-column point <span class="math notranslate nohighlight">\((x_N, y_{N+1})\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Begin at Stage 1:</strong> The liquid entering the column is <span class="math notranslate nohighlight">\(x_0\)</span>. This liquid enters Stage 1. Find the point <span class="math notranslate nohighlight">\((x_0, y_1)\)</span> on the diagram. This point is on the operating line. The liquid leaving stage 1 (<span class="math notranslate nohighlight">\(x_1\)</span>) is in equilibrium with the vapor leaving stage 1 (<span class="math notranslate nohighlight">\(y_1\)</span>). To find <span class="math notranslate nohighlight">\(x_1\)</span>, start at <span class="math notranslate nohighlight">\(y_1\)</span> and move <strong>horizontally to the right</strong> to the <strong>equilibrium line</strong>. The x-coordinate of this point is <span class="math notranslate nohighlight">\(x_1\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Move to Stage 2:</strong> The liquid <span class="math notranslate nohighlight">\(x_1\)</span> flows from stage 1 to stage 2. The vapor that it passes, which is rising from stage 2, is <span class="math notranslate nohighlight">\(y_2\)</span>. Their compositions are related by the operating line. To find <span class="math notranslate nohighlight">\(y_2\)</span>, start at <span class="math notranslate nohighlight">\(x_1\)</span> and move <strong>vertically up</strong> to the <strong>operating line</strong>. The y-coordinate is <span class="math notranslate nohighlight">\(y_2\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Repeat:</strong> Now find the liquid on stage 2 (<span class="math notranslate nohighlight">\(x_2\)</span>) that is in equilibrium with <span class="math notranslate nohighlight">\(y_2\)</span> by moving <strong>horizontally to the right</strong> to the <strong>equilibrium line</strong>. This completes the step for Stage 2. Continue this process—vertically to the operating line, horizontally to the equilibrium line—counting each “triangle” as one stage, until the liquid composition <span class="math notranslate nohighlight">\(x\)</span> is less than or equal to the desired exit liquid composition, <span class="math notranslate nohighlight">\(x_N\)</span>.</p></li>
 </ol>
 </div>
-</section>
+</details></section>
 <section id="id3">
 <h3>Effect of Operating Parameters<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
 <p>The performance of a stripping column is highly sensitive to the operating conditions. Understanding these effects is key to efficient design.</p>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Effect of Temperature (T)</strong></p>
 <ul class="simple">
 <li><p><strong>What it Affects:</strong> The <strong>Equilibrium Line</strong>.</p></li>
@@ -1521,8 +1392,8 @@ The number of stages is found by constructing a staircase between the equilibriu
 <li><p><strong>Conclusion:</strong> Stripping is favored at <strong>higher temperatures</strong>.</p></li>
 </ul>
 </div>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Effect of Pressure (P)</strong></p>
 <ul class="simple">
 <li><p><strong>What it Affects:</strong> The <strong>Equilibrium Line</strong>.</p></li>
@@ -1531,8 +1402,8 @@ The number of stages is found by constructing a staircase between the equilibriu
 <li><p><strong>Conclusion:</strong> Stripping is favored at <strong>lower pressures</strong>.</p></li>
 </ul>
 </div>
-<div class="admonition-key-concept admonition">
-<p class="admonition-title">Key Concept</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>Effect of Stripping Gas Flow Rate (V)</strong></p>
 <ul class="simple">
 <li><p><strong>What it Affects:</strong> The <strong>Operating Line</strong>.</p></li>
@@ -1549,100 +1420,79 @@ The number of stages is found by constructing a staircase between the equilibriu
 <section class="example-content" id="proof-content">
 <p>A single-stage stripping process is used to remove a dissolved organic compound from a water stream. The contaminated water enters the stage at 20<span class="math notranslate nohighlight">\(^\circ\)</span>C with an organic concentration of 0.05 mol%. A stream of pure, dry air at 5 bar is contacted with the water to act as the stripping agent. The Henry’s Law constant for the organic in water at this temperature is 2.5 bar. What flow rate of air (in moles of air per mole of water) is needed to reduce the amount of organic in the water by 95%?</p>
 </section>
-</div><div class="admonition-solution-steps admonition">
-<p class="admonition-title">Solution Steps</p>
-<p><strong>Step 1: Strategy and Process Basis</strong>
+</div><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Solution Steps</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Step 1: Strategy and Process Basis</strong>
 The core of this problem is a material balance on the organic solute around the single equilibrium stage. We will relate the compositions of the exiting liquid and vapor streams using Henry’s Law. Since the air flow rate is the unknown, we will solve the material balance for this quantity. Let’s first establish a basis for our calculation.</p>
-<p><strong>Calculation Basis and Streams:</strong></p>
+<p class="sd-card-text"><strong>Calculation Basis and Streams:</strong></p>
 <ul class="simple">
-<li><p><strong>Basis:</strong> 1 mole of contaminated water entering the process (<span class="math notranslate nohighlight">\(L_{in} = 1\)</span> mol).</p></li>
-<li><p><strong>Liquid In (<span class="math notranslate nohighlight">\(L_{in}\)</span>):</strong> Contains water and the organic solute.</p></li>
-<li><p><strong>Gas In (<span class="math notranslate nohighlight">\(V_{in}\)</span>):</strong> Contains <span class="math notranslate nohighlight">\(n_{air}\)</span> moles of pure, dry air.</p></li>
-<li><p><strong>Liquid Out (<span class="math notranslate nohighlight">\(L_{out}\)</span>):</strong> Contains the remaining water and organic. Assumed to be in equilibrium with <span class="math notranslate nohighlight">\(V_{out}\)</span>.</p></li>
-<li><p><strong>Gas Out (<span class="math notranslate nohighlight">\(V_{out}\)</span>):</strong> Contains the inlet air plus the stripped organic. Assumed to be in equilibrium with <span class="math notranslate nohighlight">\(L_{out}\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Basis:</strong> 1 mole of contaminated water entering the process (<span class="math notranslate nohighlight">\(L_{in} = 1\)</span> mol).</p></li>
+<li><p class="sd-card-text"><strong>Liquid In (<span class="math notranslate nohighlight">\(L_{in}\)</span>):</strong> Contains water and the organic solute.</p></li>
+<li><p class="sd-card-text"><strong>Gas In (<span class="math notranslate nohighlight">\(V_{in}\)</span>):</strong> Contains <span class="math notranslate nohighlight">\(n_{air}\)</span> moles of pure, dry air.</p></li>
+<li><p class="sd-card-text"><strong>Liquid Out (<span class="math notranslate nohighlight">\(L_{out}\)</span>):</strong> Contains the remaining water and organic. Assumed to be in equilibrium with <span class="math notranslate nohighlight">\(V_{out}\)</span>.</p></li>
+<li><p class="sd-card-text"><strong>Gas Out (<span class="math notranslate nohighlight">\(V_{out}\)</span>):</strong> Contains the inlet air plus the stripped organic. Assumed to be in equilibrium with <span class="math notranslate nohighlight">\(L_{out}\)</span>.</p></li>
 </ul>
-<p>Our goal is to find the ratio <span class="math notranslate nohighlight">\(n_{air} / L_{in}\)</span>. Since our basis is <span class="math notranslate nohighlight">\(L_{in}=1\)</span> mol, we just need to find the value of <span class="math notranslate nohighlight">\(n_{air}\)</span>.</p>
-<p><strong>Step 2: Material Balance on the Organic Solute</strong>
+<p class="sd-card-text">Our goal is to find the ratio <span class="math notranslate nohighlight">\(n_{air} / L_{in}\)</span>. Since our basis is <span class="math notranslate nohighlight">\(L_{in}=1\)</span> mol, we just need to find the value of <span class="math notranslate nohighlight">\(n_{air}\)</span>.</p>
+<p class="sd-card-text"><strong>Step 2: Material Balance on the Organic Solute</strong>
 First, let’s quantify the moles of the organic contaminant © entering and leaving based on our 1-mole basis.</p>
 <ul>
-<li><p><strong>Moles of C IN:</strong> The inlet water has a concentration of 0.05 mol%, which is a mole fraction of <span class="math notranslate nohighlight">\(x_{C,in} = 0.0005\)</span>.</p>
+<li><p class="sd-card-text"><strong>Moles of C IN:</strong> The inlet water has a concentration of 0.05 mol%, which is a mole fraction of <span class="math notranslate nohighlight">\(x_{C,in} = 0.0005\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-  n_{C,in} = x_{C,in} \cdot L_{in} = (0.0005) \cdot (1 \, \text{mol}) = 5 \times 10^{-4} \, \text{mol}
-  \]</div>
+\[  n_{C,in} = x_{C,in} \cdot L_{in} = (0.0005) \cdot (1 \, \text{mol}) = 5 \times 10^{-4} \, \text{mol}\]</div>
 </li>
-<li><p><strong>Moles of C OUT (in Liquid):</strong> The process removes 95% of the organic, meaning 5% remains in the liquid.</p>
+<li><p class="sd-card-text"><strong>Moles of C OUT (in Liquid):</strong> The process removes 95% of the organic, meaning 5% remains in the liquid.</p>
 <div class="math notranslate nohighlight">
-\[
-  n_{C,L,out} = 0.05 \cdot n_{C,in} = 0.05 \cdot (5 \times 10^{-4}) = 2.5 \times 10^{-5} \, \text{mol}
-  \]</div>
+\[  n_{C,L,out} = 0.05 \cdot n_{C,in} = 0.05 \cdot (5 \times 10^{-4}) = 2.5 \times 10^{-5} \, \text{mol}\]</div>
 </li>
-<li><p><strong>Moles of C OUT (in Gas):</strong> By difference, 95% of the inlet organic must have been transferred to the air stream.</p>
+<li><p class="sd-card-text"><strong>Moles of C OUT (in Gas):</strong> By difference, 95% of the inlet organic must have been transferred to the air stream.</p>
 <div class="math notranslate nohighlight">
-\[
-  n_{C,V,out} = 0.95 \cdot n_{C,in} = 0.95 \cdot (5 \times 10^{-4}) = 4.75 \times 10^{-4} \, \text{mol}
-  \]</div>
+\[  n_{C,V,out} = 0.95 \cdot n_{C,in} = 0.95 \cdot (5 \times 10^{-4}) = 4.75 \times 10^{-4} \, \text{mol}\]</div>
 </li>
 </ul>
-<p><strong>Step 3: State Simplifying Assumptions</strong>
+<p class="sd-card-text"><strong>Step 3: State Simplifying Assumptions</strong>
 <strong>Key Simplifying Assumptions:</strong>
 To simplify the calculation, we will make two initial assumptions, which are common for processes with very low solute concentrations. We will check their validity later.</p>
 <ol class="arabic simple">
-<li><p>The total molar flow rate of the liquid stream is approximately constant (<span class="math notranslate nohighlight">\(L_{out} \approx L_{in} = 1\)</span> mol).</p></li>
-<li><p>The total molar flow rate of the gas stream is approximately constant (<span class="math notranslate nohighlight">\(V_{out} \approx V_{in} = n_{air}\)</span>). This implies that both the amount of solute transferred and the amount of water evaporated are negligible compared to the air flow.</p></li>
+<li><p class="sd-card-text">The total molar flow rate of the liquid stream is approximately constant (<span class="math notranslate nohighlight">\(L_{out} \approx L_{in} = 1\)</span> mol).</p></li>
+<li><p class="sd-card-text">The total molar flow rate of the gas stream is approximately constant (<span class="math notranslate nohighlight">\(V_{out} \approx V_{in} = n_{air}\)</span>). This implies that both the amount of solute transferred and the amount of water evaporated are negligible compared to the air flow.</p></li>
 </ol>
-<p><strong>Step 4: Use Equilibrium Relationship (Henry’s Law)</strong>
+<p class="sd-card-text"><strong>Step 4: Use Equilibrium Relationship (Henry’s Law)</strong>
 Because this is an equilibrium stage, the exiting liquid and gas streams are in thermodynamic equilibrium. We can relate their compositions using Henry’s Law.</p>
 <div class="math notranslate nohighlight">
-\[
-y_C \cdot P_{total} = x_C \cdot H_C
-\]</div>
-<p>First, let’s find the mole fraction in the exiting liquid, <span class="math notranslate nohighlight">\(x_{C,out}\)</span>, using our simplifying assumptions:</p>
+\[y_C \cdot P_{total} = x_C \cdot H_C\]</div>
+<p class="sd-card-text">First, let’s find the mole fraction in the exiting liquid, <span class="math notranslate nohighlight">\(x_{C,out}\)</span>, using our simplifying assumptions:</p>
 <div class="math notranslate nohighlight">
-\[
-x_{C,out} = \frac{\text{moles of C in liquid out}}{\text{total moles of liquid out}} \approx \frac{n_{C,L,out}}{L_{in}} = \frac{2.5 \times 10^{-5} \, \text{mol}}{1 \, \text{mol}} = 2.5 \times 10^{-5}
-\]</div>
-<p>Now, use Henry’s Law to find the corresponding equilibrium mole fraction in the exiting gas, <span class="math notranslate nohighlight">\(y_{C,out}\)</span>:</p>
+\[x_{C,out} = \frac{\text{moles of C in liquid out}}{\text{total moles of liquid out}} \approx \frac{n_{C,L,out}}{L_{in}} = \frac{2.5 \times 10^{-5} \, \text{mol}}{1 \, \text{mol}} = 2.5 \times 10^{-5}\]</div>
+<p class="sd-card-text">Now, use Henry’s Law to find the corresponding equilibrium mole fraction in the exiting gas, <span class="math notranslate nohighlight">\(y_{C,out}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-y_{C,out} = \frac{x_{C,out} \cdot H_C}{P_{total}} = \frac{(2.5 \times 10^{-5}) \cdot (2.5 \, \text{bar})}{5 \, \text{bar}} = 1.25 \times 10^{-5}
-\]</div>
-<p><strong>Step 5: Calculate the Required Air Flow Rate</strong>
+\[y_{C,out} = \frac{x_{C,out} \cdot H_C}{P_{total}} = \frac{(2.5 \times 10^{-5}) \cdot (2.5 \, \text{bar})}{5 \, \text{bar}} = 1.25 \times 10^{-5}\]</div>
+<p class="sd-card-text"><strong>Step 5: Calculate the Required Air Flow Rate</strong>
 We know the total moles of contaminant leaving in the gas stream (<span class="math notranslate nohighlight">\(n_{C,V,out}\)</span>) and its mole fraction in that stream (<span class="math notranslate nohighlight">\(y_{C,out}\)</span>). We can use these to find the total moles of the exiting gas stream, <span class="math notranslate nohighlight">\(V_{out}\)</span>.</p>
 <div class="math notranslate nohighlight">
-\[
-n_{C,V,out} = y_{C,out} \cdot V_{out}
-\]</div>
+\[n_{C,V,out} = y_{C,out} \cdot V_{out}\]</div>
 <div class="math notranslate nohighlight">
-\[
-4.75 \times 10^{-4} \, \text{mol} = (1.25 \times 10^{-5}) \cdot V_{out}
-\]</div>
+\[4.75 \times 10^{-4} \, \text{mol} = (1.25 \times 10^{-5}) \cdot V_{out}\]</div>
 <div class="math notranslate nohighlight">
-\[
-V_{out} = \frac{4.75 \times 10^{-4}}{1.25 \times 10^{-5}} = 38 \, \text{moles}
-\]</div>
-<p>Based on our simplifying assumption that <span class="math notranslate nohighlight">\(V_{out} \approx V_{in} = n_{air}\)</span>, the required air flow rate is 38 moles.</p>
-<p><strong>Step 6: Evaluate the Assumptions</strong>
+\[V_{out} = \frac{4.75 \times 10^{-4}}{1.25 \times 10^{-5}} = 38 \, \text{moles}\]</div>
+<p class="sd-card-text">Based on our simplifying assumption that <span class="math notranslate nohighlight">\(V_{out} \approx V_{in} = n_{air}\)</span>, the required air flow rate is 38 moles.</p>
+<p class="sd-card-text"><strong>Step 6: Evaluate the Assumptions</strong>
 Is it valid to assume the total flow rates are constant? Let’s check the two effects we ignored.</p>
 <ul>
-<li><p><strong>Solute Transfer:</strong> The amount of organic transferred (<span class="math notranslate nohighlight">\(4.75 \times 10^{-4}\)</span> mol) is tiny compared to the water (1 mol) and air (38 mol) flows. This part of the assumption is excellent.</p></li>
-<li><p><strong>Water Evaporation:</strong> Dry air enters and will become saturated with water vapor. The exiting liquid is almost pure water, so <span class="math notranslate nohighlight">\(x_W \approx 1\)</span>. The saturation pressure of water at 20<span class="math notranslate nohighlight">\(^\circ\)</span>C is <span class="math notranslate nohighlight">\(P_{W,sat} \approx 0.0234\)</span> bar. The mole fraction of water in the exit gas will be:</p>
+<li><p class="sd-card-text"><strong>Solute Transfer:</strong> The amount of organic transferred (<span class="math notranslate nohighlight">\(4.75 \times 10^{-4}\)</span> mol) is tiny compared to the water (1 mol) and air (38 mol) flows. This part of the assumption is excellent.</p></li>
+<li><p class="sd-card-text"><strong>Water Evaporation:</strong> Dry air enters and will become saturated with water vapor. The exiting liquid is almost pure water, so <span class="math notranslate nohighlight">\(x_W \approx 1\)</span>. The saturation pressure of water at 20<span class="math notranslate nohighlight">\(^\circ\)</span>C is <span class="math notranslate nohighlight">\(P_{W,sat} \approx 0.0234\)</span> bar. The mole fraction of water in the exit gas will be:</p>
 <div class="math notranslate nohighlight">
-\[
-  y_W = \frac{x_W P_{W,sat}}{P_{total}} \approx \frac{1 \cdot (0.0234 \, \text{bar})}{5 \, \text{bar}} = 0.00468
-  \]</div>
-<p>The moles of water that evaporate into the exiting gas stream is:</p>
+\[  y_W = \frac{x_W P_{W,sat}}{P_{total}} \approx \frac{1 \cdot (0.0234 \, \text{bar})}{5 \, \text{bar}} = 0.00468\]</div>
+<p class="sd-card-text">The moles of water that evaporate into the exiting gas stream is:</p>
 <div class="math notranslate nohighlight">
-\[
-  n_{W,evap} = \frac{y_W}{1-y_W-y_C} \cdot (n_{air}+n_{C,V,out}) \approx y_W \cdot V_{out} \approx (0.00468) \cdot (38) = 0.178 \, \text{mol}
-  \]</div>
-<p>The total exiting gas flow is actually <span class="math notranslate nohighlight">\(V_{out} = n_{air} + n_{C,V,out} + n_{W,evap} \approx 38 + 0.000475 + 0.178 \approx 38.18\)</span> moles. This is very close to our assumed 38 moles, so the assumption that <span class="math notranslate nohighlight">\(V_{out} \approx V_{in}\)</span> is reasonable for this calculation. However, the water loss (<span class="math notranslate nohighlight">\(0.178\)</span> mol) is nearly 18% of the inlet liquid, which might be significant depending on the process objectives.</p>
+\[  n_{W,evap} = \frac{y_W}{1-y_W-y_C} \cdot (n_{air}+n_{C,V,out}) \approx y_W \cdot V_{out} \approx (0.00468) \cdot (38) = 0.178 \, \text{mol}\]</div>
+<p class="sd-card-text">The total exiting gas flow is actually <span class="math notranslate nohighlight">\(V_{out} = n_{air} + n_{C,V,out} + n_{W,evap} \approx 38 + 0.000475 + 0.178 \approx 38.18\)</span> moles. This is very close to our assumed 38 moles, so the assumption that <span class="math notranslate nohighlight">\(V_{out} \approx V_{in}\)</span> is reasonable for this calculation. However, the water loss (<span class="math notranslate nohighlight">\(0.178\)</span> mol) is nearly 18% of the inlet liquid, which might be significant depending on the process objectives.</p>
 </li>
 </ul>
-<p><strong>Final Answer Summary</strong>
+<p class="sd-card-text"><strong>Final Answer Summary</strong>
 To achieve 95% removal of the organic compound, approximately <strong>38 moles of air are needed per mole of water</strong>. The high ratio of air to water is required because the organic is not highly volatile out of water.</p>
 </div>
-</section>
+</details></section>
 </section>
 </section>
 

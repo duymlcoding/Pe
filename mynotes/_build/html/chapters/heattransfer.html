@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Complete Heat Transfer Fundamentals &#8212; Chemical Engineering PE Exam Study Guide</title>
+    <title>Complete Heat Transfer Fundamentals &#8212; Introduction to Process Fundamentals</title>
   
   
   
@@ -152,7 +152,7 @@
   
   
   
-    <p class="title logo__title">Chemical Engineering PE</p>
+    <p class="title logo__title">Process Fundamentals</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -597,9 +597,7 @@ document.write(`
 </section>
 </div><p>The mathematical expression of Fourier’s Law in one dimension is:</p>
 <div class="math notranslate nohighlight">
-\[
-q = -k A \frac{dT}{dx}
-\]</div>
+\[q = -k A \frac{dT}{dx}\]</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Key Variables for Conduction:</strong></p>
@@ -644,9 +642,7 @@ q = -k A \frac{dT}{dx}
 <h4>General Form in Cartesian Coordinates<a class="headerlink" href="#general-form-in-cartesian-coordinates" title="Link to this heading">#</a></h4>
 <p>The complete heat diffusion equation in three dimensions is:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{\partial}{\partial x}\left(k \frac{\partial T}{\partial x}\right) + \frac{\partial}{\partial y}\left(k \frac{\partial T}{\partial y}\right) + \frac{\partial}{\partial z}\left(k \frac{\partial T}{\partial z}\right) + \dot{q} = \rho c_p \frac{\partial T}{\partial t}
-\]</div>
+\[\frac{\partial}{\partial x}\left(k \frac{\partial T}{\partial x}\right) + \frac{\partial}{\partial y}\left(k \frac{\partial T}{\partial y}\right) + \frac{\partial}{\partial z}\left(k \frac{\partial T}{\partial z}\right) + \dot{q} = \rho c_p \frac{\partial T}{\partial t}\]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\dot{q}\)</span> = volumetric heat generation rate [W/m³]</p></li>
@@ -677,29 +673,21 @@ q = -k A \frac{dT}{dx}
 <h4>Step 1: Simplify the Heat Diffusion Equation<a class="headerlink" href="#step-1-simplify-the-heat-diffusion-equation" title="Link to this heading">#</a></h4>
 <p>Applying the standard assumptions, the general equation reduces to:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{d}{dx}\left(k \frac{dT}{dx}\right) = 0
-\]</div>
+\[\frac{d}{dx}\left(k \frac{dT}{dx}\right) = 0\]</div>
 <p>For constant thermal conductivity:</p>
 <div class="math notranslate nohighlight">
-\[
-k \frac{d^2T}{dx^2} = 0 \quad \implies \quad \frac{d^2T}{dx^2} = 0
-\]</div>
+\[k \frac{d^2T}{dx^2} = 0 \quad \implies \quad \frac{d^2T}{dx^2} = 0\]</div>
 <p>This ordinary differential equation states that the second derivative of temperature with respect to position is zero, meaning the temperature gradient is constant.</p>
 </section>
 <section id="step-2-integrate-to-find-temperature-distribution">
 <h4>Step 2: Integrate to Find Temperature Distribution<a class="headerlink" href="#step-2-integrate-to-find-temperature-distribution" title="Link to this heading">#</a></h4>
 <p>Integrating once with respect to <span class="math notranslate nohighlight">\(x\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{dT}{dx} = C_1
-\]</div>
+\[\frac{dT}{dx} = C_1\]</div>
 <p>This shows the temperature gradient is constant (as expected for steady, one-dimensional conduction with no heat generation).</p>
 <p>Integrating a second time:</p>
 <div class="math notranslate nohighlight">
-\[
-T(x) = C_1 x + C_2
-\]</div>
+\[T(x) = C_1 x + C_2\]</div>
 <p>This is the general solution showing that temperature varies <strong>linearly</strong> with position. The constants <span class="math notranslate nohighlight">\(C_1\)</span> and <span class="math notranslate nohighlight">\(C_2\)</span> are determined from boundary conditions.</p>
 </section>
 <section id="step-3-apply-boundary-conditions">
@@ -708,15 +696,11 @@ T(x) = C_1 x + C_2
 <ul>
 <li><p><strong>Boundary Condition 1</strong>: At <span class="math notranslate nohighlight">\(x = 0\)</span>, <span class="math notranslate nohighlight">\(T(0) = T_{s1}\)</span></p>
 <div class="math notranslate nohighlight">
-\[
-  C_1(0) + C_2 = T_{s1} \implies C_2 = T_{s1}
-  \]</div>
+\[  C_1(0) + C_2 = T_{s1} \implies C_2 = T_{s1}\]</div>
 </li>
 <li><p><strong>Boundary Condition 2</strong>: At <span class="math notranslate nohighlight">\(x = L\)</span>, <span class="math notranslate nohighlight">\(T(L) = T_{s2}\)</span></p>
 <div class="math notranslate nohighlight">
-\[
-  C_1 L + T_{s1} = T_{s2} \implies C_1 = \frac{T_{s2} - T_{s1}}{L}
-  \]</div>
+\[  C_1 L + T_{s1} = T_{s2} \implies C_1 = \frac{T_{s2} - T_{s1}}{L}\]</div>
 </li>
 </ul>
 </section>
@@ -727,25 +711,17 @@ T(x) = C_1 x + C_2
 <p class="admonition-title">Important</p>
 <p><strong>Temperature Profile for a Plane Wall:</strong></p>
 <div class="math notranslate nohighlight">
-\[
-T(x) = \frac{T_{s2} - T_{s1}}{L}x + T_{s1}
-\]</div>
+\[T(x) = \frac{T_{s2} - T_{s1}}{L}x + T_{s1}\]</div>
 <p>This can also be written in dimensionless form:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{T(x) - T_{s1}}{T_{s2} - T_{s1}} = \frac{x}{L}
-\]</div>
+\[\frac{T(x) - T_{s1}}{T_{s2} - T_{s1}} = \frac{x}{L}\]</div>
 <p><strong>Heat Transfer Rate:</strong></p>
 <p>From Fourier’s Law with <span class="math notranslate nohighlight">\(\frac{dT}{dx} = C_1 = \frac{T_{s2} - T_{s1}}{L}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-q = -k A \frac{T_{s2} - T_{s1}}{L} = k A \frac{T_{s1} - T_{s2}}{L}
-\]</div>
+\[q = -k A \frac{T_{s2} - T_{s1}}{L} = k A \frac{T_{s1} - T_{s2}}{L}\]</div>
 <p><strong>Heat Flux:</strong></p>
 <div class="math notranslate nohighlight">
-\[
-q'' = \frac{q}{A} = k \frac{T_{s1} - T_{s2}}{L}
-\]</div>
+\[q'' = \frac{q}{A} = k \frac{T_{s1} - T_{s2}}{L}\]</div>
 </div>
 <p>Notice the heat transfer rate is positive when <span class="math notranslate nohighlight">\(T_{s1} &gt; T_{s2}\)</span>, confirming that heat flows from the hot surface to the cold surface.</p>
 </section>
@@ -754,24 +730,16 @@ q'' = \frac{q}{A} = k \frac{T_{s1} - T_{s2}}{L}
 <h3>Thermal Resistance Concept<a class="headerlink" href="#thermal-resistance-concept" title="Link to this heading">#</a></h3>
 <p>By analogy with Ohm’s Law for electrical circuits (<span class="math notranslate nohighlight">\(V = IR\)</span>), we can express heat transfer through a plane wall as:</p>
 <div class="math notranslate nohighlight">
-\[
-q = \frac{\Delta T}{R_{thermal}}
-\]</div>
+\[q = \frac{\Delta T}{R_{thermal}}\]</div>
 <p>where the <strong>thermal resistance</strong> is:</p>
 <div class="math notranslate nohighlight">
-\[
-R_{thermal} = \frac{L}{kA}
-\]</div>
+\[R_{thermal} = \frac{L}{kA}\]</div>
 <p>For a thermal resistance per unit area (often more convenient):</p>
 <div class="math notranslate nohighlight">
-\[
-R'' = \frac{L}{k} \quad [m^2 \cdot K/W]
-\]</div>
+\[R'' = \frac{L}{k} \quad [m^2 \cdot K/W]\]</div>
 <p>Then:</p>
 <div class="math notranslate nohighlight">
-\[
-q = \frac{\Delta T}{R''} \cdot A
-\]</div>
+\[q = \frac{\Delta T}{R''} \cdot A\]</div>
 <div class="note admonition">
 <p class="admonition-title">Electrical-Thermal Analogy</p>
 <p>The analogy between thermal and electrical systems is powerful:</p>
@@ -801,14 +769,10 @@ q = \frac{\Delta T}{R''} \cdot A
 <h3>Composite Walls<a class="headerlink" href="#composite-walls" title="Link to this heading">#</a></h3>
 <p>For walls composed of multiple layers of different materials in series, the total thermal resistance is the sum of individual resistances:</p>
 <div class="math notranslate nohighlight">
-\[
-R_{total} = R_1 + R_2 + R_3 + \cdots = \frac{L_1}{k_1 A} + \frac{L_2}{k_2 A} + \frac{L_3}{k_3 A} + \cdots
-\]</div>
+\[R_{total} = R_1 + R_2 + R_3 + \cdots = \frac{L_1}{k_1 A} + \frac{L_2}{k_2 A} + \frac{L_3}{k_3 A} + \cdots\]</div>
 <p>The heat transfer rate through the composite wall is:</p>
 <div class="math notranslate nohighlight">
-\[
-q = \frac{T_{s1} - T_{sn}}{R_{total}} = \frac{T_{s1} - T_{sn}}{\sum_{i} \frac{L_i}{k_i A}}
-\]</div>
+\[q = \frac{T_{s1} - T_{sn}}{R_{total}} = \frac{T_{s1} - T_{sn}}{\sum_{i} \frac{L_i}{k_i A}}\]</div>
 <div class="proof example admonition" id="ex-composite-wall">
 <p class="admonition-title"><span class="caption-number">Example 57 </span> (Three-Layer Composite Wall)</p>
 <section class="example-content" id="proof-content">
@@ -822,27 +786,17 @@ q = \frac{T_{s1} - T_{sn}}{R_{total}} = \frac{T_{s1} - T_{sn}}{\sum_{i} \frac{L_
 <p><strong>Solution:</strong></p>
 <p>Calculate individual thermal resistances:</p>
 <div class="math notranslate nohighlight">
-\[
-R_1 = \frac{0.10}{1.0 \times 10} = 0.01 \text{ K/W}
-\]</div>
+\[R_1 = \frac{0.10}{1.0 \times 10} = 0.01 \text{ K/W}\]</div>
 <div class="math notranslate nohighlight">
-\[
-R_2 = \frac{0.15}{0.2 \times 10} = 0.075 \text{ K/W}
-\]</div>
+\[R_2 = \frac{0.15}{0.2 \times 10} = 0.075 \text{ K/W}\]</div>
 <div class="math notranslate nohighlight">
-\[
-R_3 = \frac{0.05}{0.7 \times 10} = 0.00714 \text{ K/W}
-\]</div>
+\[R_3 = \frac{0.05}{0.7 \times 10} = 0.00714 \text{ K/W}\]</div>
 <p>Total resistance:</p>
 <div class="math notranslate nohighlight">
-\[
-R_{total} = 0.01 + 0.075 + 0.00714 = 0.09214 \text{ K/W}
-\]</div>
+\[R_{total} = 0.01 + 0.075 + 0.00714 = 0.09214 \text{ K/W}\]</div>
 <p>Heat transfer rate:</p>
 <div class="math notranslate nohighlight">
-\[
-q = \frac{600 - 50}{0.09214} = \frac{550}{0.09214} = 5970 \text{ W} \approx 6.0 \text{ kW}
-\]</div>
+\[q = \frac{600 - 50}{0.09214} = \frac{550}{0.09214} = 5970 \text{ W} \approx 6.0 \text{ kW}\]</div>
 <p>The heat loss through the furnace wall is approximately 6.0 kW.</p>
 </section>
 </div></section>
@@ -851,9 +805,7 @@ q = \frac{600 - 50}{0.09214} = \frac{550}{0.09214} = 5970 \text{ W} \approx 6.0 
 <p>When internal heat generation occurs (e.g., electrical resistance heating, nuclear decay, exothermic chemical reactions), the heat diffusion equation includes the source term <span class="math notranslate nohighlight">\(\dot{q}\)</span>.</p>
 <p>For steady-state, one-dimensional conduction with uniform heat generation in a plane wall:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{d^2T}{dx^2} + \frac{\dot{q}}{k} = 0
-\]</div>
+\[\frac{d^2T}{dx^2} + \frac{\dot{q}}{k} = 0\]</div>
 <p>The solution (with symmetric boundary conditions) yields a parabolic temperature profile rather than linear.</p>
 <div class="proof example admonition" id="ex-pipe-heat-generation">
 <p class="admonition-title"><span class="caption-number">Example 58 </span> (Volumetric Heat Generation in a Pipe Wall)</p>
@@ -874,37 +826,23 @@ q = \frac{600 - 50}{0.09214} = \frac{550}{0.09214} = 5970 \text{ W} \approx 6.0 
 <p><strong>Step 1: Calculate Total Heat Transfer Rate to Water</strong></p>
 <p>The heat transferred to the water equals its enthalpy change:</p>
 <div class="math notranslate nohighlight">
-\[
-q = \dot{m} c_p (T_{out} - T_{in})
-\]</div>
+\[q = \dot{m} c_p (T_{out} - T_{in})\]</div>
 <div class="math notranslate nohighlight">
-\[
-q = (0.3 \text{ kg/s}) \times (4178 \text{ J/kg·K}) \times (45°C - 25°C)
-\]</div>
+\[q = (0.3 \text{ kg/s}) \times (4178 \text{ J/kg·K}) \times (45°C - 25°C)\]</div>
 <div class="math notranslate nohighlight">
-\[
-q = 0.3 \times 4178 \times 20 = 25068 \text{ W}
-\]</div>
+\[q = 0.3 \times 4178 \times 20 = 25068 \text{ W}\]</div>
 <p><strong>Step 2: Calculate Pipe Wall Volume</strong></p>
 <p>The volume of the hollow cylindrical pipe wall:</p>
 <div class="math notranslate nohighlight">
-\[
-V_{wall} = \frac{\pi}{4}(D_o^2 - D_i^2) \times L
-\]</div>
+\[V_{wall} = \frac{\pi}{4}(D_o^2 - D_i^2) \times L\]</div>
 <div class="math notranslate nohighlight">
-\[
-V_{wall} = \frac{\pi}{4}((0.030)^2 - (0.015)^2) \times 10
-\]</div>
+\[V_{wall} = \frac{\pi}{4}((0.030)^2 - (0.015)^2) \times 10\]</div>
 <div class="math notranslate nohighlight">
-\[
-V_{wall} = \frac{\pi}{4}(0.0009 - 0.000225) \times 10 = \frac{\pi}{4}(0.000675) \times 10 \approx 0.0053 \text{ m}^3
-\]</div>
+\[V_{wall} = \frac{\pi}{4}(0.0009 - 0.000225) \times 10 = \frac{\pi}{4}(0.000675) \times 10 \approx 0.0053 \text{ m}^3\]</div>
 <p><strong>Step 3: Calculate Required Heat Generation Rate</strong></p>
 <p>Since the outer surface is insulated, all generated heat goes to the water:</p>
 <div class="math notranslate nohighlight">
-\[
-\dot{q} = \frac{q}{V_{wall}} = \frac{25068}{0.0053} \approx 4.73 \times 10^6 \text{ W/m}^3
-\]</div>
+\[\dot{q} = \frac{q}{V_{wall}} = \frac{25068}{0.0053} \approx 4.73 \times 10^6 \text{ W/m}^3\]</div>
 <p><strong>Final Answer:</strong> The required uniform volumetric heat generation rate is approximately <strong>4.73 MW/m³</strong>.</p>
 </section>
 </div></section>
@@ -921,9 +859,7 @@ V_{wall} = \frac{\pi}{4}(0.0009 - 0.000225) \times 10 = \frac{\pi}{4}(0.000675) 
 <h3>Newton’s Law of Cooling<a class="headerlink" href="#newtons-law-of-cooling" title="Link to this heading">#</a></h3>
 <p>The rate of convective heat transfer is given by Newton’s Law of Cooling:</p>
 <div class="math notranslate nohighlight">
-\[
-q_{conv} = h A_s (T_s - T_{\infty})
-\]</div>
+\[q_{conv} = h A_s (T_s - T_{\infty})\]</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Key Variables for Convection:</strong></p>
@@ -953,9 +889,7 @@ q_{conv} = h A_s (T_s - T_{\infty})
 <p>The <strong>momentum boundary layer</strong> (<span class="math notranslate nohighlight">\(\delta\)</span>) is the region near the surface where the fluid velocity is affected by viscous forces. The fluid velocity is zero at the surface (no-slip condition) and increases to the free-stream velocity <span class="math notranslate nohighlight">\(u_{\infty}\)</span>.</p>
 <p>Formally, <span class="math notranslate nohighlight">\(\delta\)</span> is defined as the distance from the surface where:</p>
 <div class="math notranslate nohighlight">
-\[
-u(y=\delta) = 0.99 u_{\infty}
-\]</div>
+\[u(y=\delta) = 0.99 u_{\infty}\]</div>
 </section>
 </div><div class="proof definition admonition" id="def-thermal-bl">
 <p class="admonition-title"><span class="caption-number">Definition 3 </span> (Thermal Boundary Layer)</p>
@@ -963,9 +897,7 @@ u(y=\delta) = 0.99 u_{\infty}
 <p>The <strong>thermal boundary layer</strong> (<span class="math notranslate nohighlight">\(\delta_t\)</span>) is the region near the surface where the fluid temperature is affected by heat transfer with the surface. The fluid temperature varies from <span class="math notranslate nohighlight">\(T_s\)</span> at the surface to <span class="math notranslate nohighlight">\(T_{\infty}\)</span> in the free stream.</p>
 <p>Formally, <span class="math notranslate nohighlight">\(\delta_t\)</span> is defined as the distance from the surface where:</p>
 <div class="math notranslate nohighlight">
-\[
-\frac{T(y=\delta_t) - T_s}{T_{\infty} - T_s} = 0.99
-\]</div>
+\[\frac{T(y=\delta_t) - T_s}{T_{\infty} - T_s} = 0.99\]</div>
 </section>
 </div><p>The relative thickness of these boundary layers is governed by the Prandtl number (discussed below). Both boundary layers grow in thickness as fluid moves along the surface.</p>
 </section>
@@ -979,9 +911,7 @@ u(y=\delta) = 0.99 u_{\infty}
 <section class="definition-content" id="proof-content">
 <p>The <strong>Reynolds number</strong> (<span class="math notranslate nohighlight">\(Re\)</span>) is the ratio of inertial forces to viscous forces:</p>
 <div class="math notranslate nohighlight">
-\[
-Re = \frac{\rho u L_c}{\mu} = \frac{u L_c}{\nu}
-\]</div>
+\[Re = \frac{\rho u L_c}{\mu} = \frac{u L_c}{\nu}\]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\rho\)</span> = fluid density [kg/m³]</p></li>
@@ -999,9 +929,7 @@ Re = \frac{\rho u L_c}{\mu} = \frac{u L_c}{\nu}
 </ul>
 <p>For flow over a flat plate, the <strong>local Reynolds number</strong> at position <span class="math notranslate nohighlight">\(x\)</span> is:</p>
 <div class="math notranslate nohighlight">
-\[
-Re_x = \frac{u_{\infty} x}{\nu}
-\]</div>
+\[Re_x = \frac{u_{\infty} x}{\nu}\]</div>
 <p>This increases with distance from the leading edge, causing flow to transition from laminar to turbulent at the critical Reynolds number.</p>
 </section>
 <section id="prandtl-number">
@@ -1011,9 +939,7 @@ Re_x = \frac{u_{\infty} x}{\nu}
 <section class="definition-content" id="proof-content">
 <p>The <strong>Prandtl number</strong> (<span class="math notranslate nohighlight">\(Pr\)</span>) is the ratio of momentum diffusivity to thermal diffusivity:</p>
 <div class="math notranslate nohighlight">
-\[
-Pr = \frac{\nu}{\alpha} = \frac{\mu c_p}{k}
-\]</div>
+\[Pr = \frac{\nu}{\alpha} = \frac{\mu c_p}{k}\]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\alpha = k/(\rho c_p)\)</span> = thermal diffusivity [m²/s]</p></li>
@@ -1035,9 +961,7 @@ Pr = \frac{\nu}{\alpha} = \frac{\mu c_p}{k}
 <section class="definition-content" id="proof-content">
 <p>The <strong>Nusselt number</strong> (<span class="math notranslate nohighlight">\(Nu\)</span>) is the dimensionless heat transfer coefficient:</p>
 <div class="math notranslate nohighlight">
-\[
-Nu = \frac{h L_c}{k_f}
-\]</div>
+\[Nu = \frac{h L_c}{k_f}\]</div>
 <p>where <span class="math notranslate nohighlight">\(k_f\)</span> is the thermal conductivity of the fluid.</p>
 </section>
 </div><p><strong>Physical Meaning:</strong> The Nusselt number represents the ratio of convective to conductive heat transfer:</p>
@@ -1047,9 +971,7 @@ Nu = \frac{h L_c}{k_f}
 </ul>
 <p>The Nusselt number is the primary dependent variable in convection correlations. Most correlations have the form:</p>
 <div class="math notranslate nohighlight">
-\[
-Nu = f(Re, Pr, \text{geometry})
-\]</div>
+\[Nu = f(Re, Pr, \text{geometry})\]</div>
 <p>To find the heat transfer coefficient, we:</p>
 <ol class="arabic simple">
 <li><p>Calculate <span class="math notranslate nohighlight">\(Re\)</span> and <span class="math notranslate nohighlight">\(Pr\)</span> from fluid properties and flow conditions</p></li>
@@ -1079,9 +1001,7 @@ Nu = f(Re, Pr, \text{geometry})
 <p>Required properties: <span class="math notranslate nohighlight">\(k_f\)</span>, <span class="math notranslate nohighlight">\(\mu\)</span> (or <span class="math notranslate nohighlight">\(\nu\)</span>), <span class="math notranslate nohighlight">\(\rho\)</span>, <span class="math notranslate nohighlight">\(c_p\)</span></p>
 <p><strong>Step 3: Calculate Reynolds Number</strong></p>
 <div class="math notranslate nohighlight">
-\[
-Re_{L_c} = \frac{\rho u L_c}{\mu} = \frac{u L_c}{\nu}
-\]</div>
+\[Re_{L_c} = \frac{\rho u L_c}{\mu} = \frac{u L_c}{\nu}\]</div>
 <p>Choose appropriate characteristic length <span class="math notranslate nohighlight">\(L_c\)</span>:</p>
 <ul class="simple">
 <li><p>Flat plate: length from leading edge</p></li>
@@ -1090,26 +1010,18 @@ Re_{L_c} = \frac{\rho u L_c}{\mu} = \frac{u L_c}{\nu}
 </ul>
 <p><strong>Step 4: Calculate Prandtl Number</strong></p>
 <div class="math notranslate nohighlight">
-\[
-Pr = \frac{\mu c_p}{k_f} = \frac{\nu}{\alpha}
-\]</div>
+\[Pr = \frac{\mu c_p}{k_f} = \frac{\nu}{\alpha}\]</div>
 <p><strong>Step 5: Select and Apply Correlation</strong></p>
 <p>Based on geometry and Reynolds number, choose the appropriate Nusselt number correlation:</p>
 <div class="math notranslate nohighlight">
-\[
-Nu = f(Re, Pr, \text{other parameters})
-\]</div>
+\[Nu = f(Re, Pr, \text{other parameters})\]</div>
 <p>Common form: <span class="math notranslate nohighlight">\(Nu = C Re^m Pr^n\)</span></p>
 <p><strong>Step 6: Calculate Heat Transfer Coefficient</strong></p>
 <div class="math notranslate nohighlight">
-\[
-h = \frac{Nu \cdot k_f}{L_c}
-\]</div>
+\[h = \frac{Nu \cdot k_f}{L_c}\]</div>
 <p><strong>Step 7: Calculate Heat Transfer Rate</strong></p>
 <div class="math notranslate nohighlight">
-\[
-q_{conv} = h A_s (T_s - T_{\infty})
-\]</div>
+\[q_{conv} = h A_s (T_s - T_{\infty})\]</div>
 </div>
 </section>
 <section id="common-convection-correlations">
@@ -1120,20 +1032,14 @@ q_{conv} = h A_s (T_s - T_{\infty})
 <p><strong>Laminar flow</strong> (<span class="math notranslate nohighlight">\(Re_x &lt; 5 \times 10^5\)</span>):</p>
 <p>Local Nusselt number:</p>
 <div class="math notranslate nohighlight">
-\[
-Nu_x = 0.332 Re_x^{1/2} Pr^{1/3} \quad (Pr \geq 0.6)
-\]</div>
+\[Nu_x = 0.332 Re_x^{1/2} Pr^{1/3} \quad (Pr \geq 0.6)\]</div>
 <p>Average Nusselt number over length <span class="math notranslate nohighlight">\(L\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-\overline{Nu}_L = 0.664 Re_L^{1/2} Pr^{1/3}
-\]</div>
+\[\overline{Nu}_L = 0.664 Re_L^{1/2} Pr^{1/3}\]</div>
 <p><strong>Turbulent flow</strong> (<span class="math notranslate nohighlight">\(Re_x &gt; 5 \times 10^5\)</span>):</p>
 <p>Average Nusselt number (mixed laminar-turbulent):</p>
 <div class="math notranslate nohighlight">
-\[
-\overline{Nu}_L = (0.037 Re_L^{4/5} - 871) Pr^{1/3}
-\]</div>
+\[\overline{Nu}_L = (0.037 Re_L^{4/5} - 871) Pr^{1/3}\]</div>
 <p>valid for <span class="math notranslate nohighlight">\(0.6 \leq Pr \leq 60\)</span> and <span class="math notranslate nohighlight">\(5 \times 10^5 &lt; Re_L &lt; 10^8\)</span>.</p>
 </section>
 <section id="forced-convection-in-circular-pipes">
@@ -1141,9 +1047,7 @@ Nu_x = 0.332 Re_x^{1/2} Pr^{1/3} \quad (Pr \geq 0.6)
 <p>For <strong>fully developed turbulent flow</strong> in smooth pipes (<span class="math notranslate nohighlight">\(Re_D &gt; 10000\)</span>):</p>
 <p><strong>Dittus-Boelter equation</strong>:</p>
 <div class="math notranslate nohighlight">
-\[
-Nu_D = 0.023 Re_D^{4/5} Pr^n
-\]</div>
+\[Nu_D = 0.023 Re_D^{4/5} Pr^n\]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(n = 0.4\)</span> for heating (fluid heated, <span class="math notranslate nohighlight">\(T_s &gt; T_m\)</span>)</p></li>
@@ -1160,9 +1064,7 @@ Nu_D = 0.023 Re_D^{4/5} Pr^n
 <h4>Natural Convection<a class="headerlink" href="#natural-convection" title="Link to this heading">#</a></h4>
 <p>For natural convection from a vertical plate, the Nusselt number depends on the Rayleigh number:</p>
 <div class="math notranslate nohighlight">
-\[
-Ra_L = Gr_L \cdot Pr = \frac{g \beta (T_s - T_{\infty}) L^3}{\nu^2} \cdot Pr
-\]</div>
+\[Ra_L = Gr_L \cdot Pr = \frac{g \beta (T_s - T_{\infty}) L^3}{\nu^2} \cdot Pr\]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(g\)</span> = gravitational acceleration [m/s²]</p></li>
@@ -1171,14 +1073,10 @@ Ra_L = Gr_L \cdot Pr = \frac{g \beta (T_s - T_{\infty}) L^3}{\nu^2} \cdot Pr
 </ul>
 <p><strong>Vertical plate</strong> (laminar, <span class="math notranslate nohighlight">\(10^4 &lt; Ra_L &lt; 10^9\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[
-\overline{Nu}_L = 0.59 Ra_L^{1/4}
-\]</div>
+\[\overline{Nu}_L = 0.59 Ra_L^{1/4}\]</div>
 <p><strong>Vertical plate</strong> (turbulent, <span class="math notranslate nohighlight">\(10^9 &lt; Ra_L &lt; 10^{13}\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[
-\overline{Nu}_L = 0.10 Ra_L^{1/3}
-\]</div>
+\[\overline{Nu}_L = 0.10 Ra_L^{1/3}\]</div>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p>For comprehensive collections of heat transfer correlations, consult:</p>
@@ -1196,38 +1094,26 @@ Ra_L = Gr_L \cdot Pr = \frac{g \beta (T_s - T_{\infty}) L^3}{\nu^2} \cdot Pr
 <p><strong>Local heat transfer coefficient</strong> (<span class="math notranslate nohighlight">\(h_x\)</span>): The value at a specific location <span class="math notranslate nohighlight">\(x\)</span> on the surface.</p>
 <p><strong>Average heat transfer coefficient</strong> (<span class="math notranslate nohighlight">\(\bar{h}_L\)</span>): The integrated average over the entire surface of length <span class="math notranslate nohighlight">\(L\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-\bar{h}_L = \frac{1}{L} \int_0^L h_x \, dx
-\]</div>
+\[\bar{h}_L = \frac{1}{L} \int_0^L h_x \, dx\]</div>
 <p>The total heat transfer from a surface uses the average coefficient:</p>
 <div class="math notranslate nohighlight">
-\[
-q_{total} = \bar{h}_L A (T_s - T_{\infty})
-\]</div>
+\[q_{total} = \bar{h}_L A (T_s - T_{\infty})\]</div>
 <div class="proof example admonition" id="ex-average-h">
 <p class="admonition-title"><span class="caption-number">Example 59 </span> (Calculating Average Coefficient from Local Coefficient)</p>
 <section class="example-content" id="proof-content">
 <p>The local heat transfer coefficient for flow over a 1-meter long flat plate is given by:</p>
 <div class="math notranslate nohighlight">
-\[
-h_x = 5x^{-1/3} \text{ W/m}^2\cdot\text{K}
-\]</div>
+\[h_x = 5x^{-1/3} \text{ W/m}^2\cdot\text{K}\]</div>
 <p>where <span class="math notranslate nohighlight">\(x\)</span> is the distance from the leading edge in meters. Find the average heat transfer coefficient <span class="math notranslate nohighlight">\(\bar{h}_L\)</span> for the entire plate.</p>
 <p><strong>Solution:</strong></p>
 <p>Apply the definition of average heat transfer coefficient:</p>
 <div class="math notranslate nohighlight">
-\[
-\bar{h}_L = \frac{1}{L} \int_0^L h_x \, dx = \frac{1}{1} \int_0^1 5x^{-1/3} \, dx
-\]</div>
+\[\bar{h}_L = \frac{1}{L} \int_0^L h_x \, dx = \frac{1}{1} \int_0^1 5x^{-1/3} \, dx\]</div>
 <p>Evaluate the integral:</p>
 <div class="math notranslate nohighlight">
-\[
-\int 5x^{-1/3} \, dx = 5 \cdot \frac{x^{2/3}}{2/3} = 7.5 x^{2/3}
-\]</div>
+\[\int 5x^{-1/3} \, dx = 5 \cdot \frac{x^{2/3}}{2/3} = 7.5 x^{2/3}\]</div>
 <div class="math notranslate nohighlight">
-\[
-\bar{h}_L = \left[ 7.5 x^{2/3} \right]_0^1 = 7.5(1)^{2/3} - 7.5(0)^{2/3} = 7.5 \text{ W/m}^2\cdot\text{K}
-\]</div>
+\[\bar{h}_L = \left[ 7.5 x^{2/3} \right]_0^1 = 7.5(1)^{2/3} - 7.5(0)^{2/3} = 7.5 \text{ W/m}^2\cdot\text{K}\]</div>
 <p><strong>Final Answer:</strong> The average heat transfer coefficient is <strong>7.5 W/m²·K</strong>.</p>
 <p><strong>Note:</strong> At the trailing edge (<span class="math notranslate nohighlight">\(x = 1\)</span> m), the local coefficient is <span class="math notranslate nohighlight">\(h_x(1) = 5(1)^{-1/3} = 5\)</span> W/m²·K. The average value is higher because the coefficient is much larger near the leading edge where the boundary layer is thin.</p>
 </section>
@@ -1236,31 +1122,21 @@ h_x = 5x^{-1/3} \text{ W/m}^2\cdot\text{K}
 <h3>Overall Heat Transfer Coefficient<a class="headerlink" href="#overall-heat-transfer-coefficient" title="Link to this heading">#</a></h3>
 <p>When heat is transferred through a composite system involving multiple modes in series (e.g., convection → conduction → convection), it’s convenient to define an <strong>overall heat transfer coefficient</strong> <span class="math notranslate nohighlight">\(U\)</span> that accounts for all resistances:</p>
 <div class="math notranslate nohighlight">
-\[
-q = U A \Delta T_{overall}
-\]</div>
+\[q = U A \Delta T_{overall}\]</div>
 <p>For resistances in series, the overall coefficient is related to the total thermal resistance:</p>
 <div class="math notranslate nohighlight">
-\[
-U = \frac{1}{R''_{total} \cdot A} = \frac{1}{R''_{total}}
-\]</div>
+\[U = \frac{1}{R''_{total} \cdot A} = \frac{1}{R''_{total}}\]</div>
 <p>where <span class="math notranslate nohighlight">\(R''_{total}\)</span> is the total thermal resistance per unit area.</p>
 <section id="composite-plane-wall-with-convection">
 <h4>Composite Plane Wall with Convection<a class="headerlink" href="#composite-plane-wall-with-convection" title="Link to this heading">#</a></h4>
 <p>For a composite wall with convection on both sides:</p>
 <div class="math notranslate nohighlight">
-\[
-R''_{total} = R''_{conv,1} + R''_{cond,1} + R''_{cond,2} + \cdots + R''_{cond,n} + R''_{conv,2}
-\]</div>
+\[R''_{total} = R''_{conv,1} + R''_{cond,1} + R''_{cond,2} + \cdots + R''_{cond,n} + R''_{conv,2}\]</div>
 <div class="math notranslate nohighlight">
-\[
-R''_{total} = \frac{1}{h_1} + \frac{L_1}{k_1} + \frac{L_2}{k_2} + \cdots + \frac{L_n}{k_n} + \frac{1}{h_2}
-\]</div>
+\[R''_{total} = \frac{1}{h_1} + \frac{L_1}{k_1} + \frac{L_2}{k_2} + \cdots + \frac{L_n}{k_n} + \frac{1}{h_2}\]</div>
 <p>The overall heat transfer coefficient is:</p>
 <div class="math notranslate nohighlight">
-\[
-U = \left( \frac{1}{h_1} + \sum_{i=1}^n \frac{L_i}{k_i} + \frac{1}{h_2} \right)^{-1}
-\]</div>
+\[U = \left( \frac{1}{h_1} + \sum_{i=1}^n \frac{L_i}{k_i} + \frac{1}{h_2} \right)^{-1}\]</div>
 <div class="proof example admonition" id="ex-overall-u">
 <p class="admonition-title"><span class="caption-number">Example 60 </span> (Overall U for a Composite Wall)</p>
 <section class="example-content" id="proof-content">
@@ -1276,35 +1152,21 @@ U = \left( \frac{1}{h_1} + \sum_{i=1}^n \frac{L_i}{k_i} + \frac{1}{h_2} \right)^
 <p><strong>Solution:</strong></p>
 <p>Calculate individual resistances per unit area:</p>
 <div class="math notranslate nohighlight">
-\[
-R''_{conv,1} = \frac{1}{20} = 0.050 \text{ m}^2\cdot\text{K/W}
-\]</div>
+\[R''_{conv,1} = \frac{1}{20} = 0.050 \text{ m}^2\cdot\text{K/W}\]</div>
 <div class="math notranslate nohighlight">
-\[
-R''_{cond,1} = \frac{0.1}{1.0} = 0.100 \text{ m}^2\cdot\text{K/W}
-\]</div>
+\[R''_{cond,1} = \frac{0.1}{1.0} = 0.100 \text{ m}^2\cdot\text{K/W}\]</div>
 <div class="math notranslate nohighlight">
-\[
-R''_{cond,2} = \frac{0.05}{0.04} = 1.250 \text{ m}^2\cdot\text{K/W}
-\]</div>
+\[R''_{cond,2} = \frac{0.05}{0.04} = 1.250 \text{ m}^2\cdot\text{K/W}\]</div>
 <div class="math notranslate nohighlight">
-\[
-R''_{cond,3} = \frac{0.15}{0.8} = 0.188 \text{ m}^2\cdot\text{K/W}
-\]</div>
+\[R''_{cond,3} = \frac{0.15}{0.8} = 0.188 \text{ m}^2\cdot\text{K/W}\]</div>
 <div class="math notranslate nohighlight">
-\[
-R''_{conv,2} = \frac{1}{10} = 0.100 \text{ m}^2\cdot\text{K/W}
-\]</div>
+\[R''_{conv,2} = \frac{1}{10} = 0.100 \text{ m}^2\cdot\text{K/W}\]</div>
 <p>Total resistance:</p>
 <div class="math notranslate nohighlight">
-\[
-R''_{total} = 0.050 + 0.100 + 1.250 + 0.188 + 0.100 = 1.688 \text{ m}^2\cdot\text{K/W}
-\]</div>
+\[R''_{total} = 0.050 + 0.100 + 1.250 + 0.188 + 0.100 = 1.688 \text{ m}^2\cdot\text{K/W}\]</div>
 <p>Overall heat transfer coefficient:</p>
 <div class="math notranslate nohighlight">
-\[
-U = \frac{1}{1.688} = 0.593 \text{ W/m}^2\cdot\text{K}
-\]</div>
+\[U = \frac{1}{1.688} = 0.593 \text{ W/m}^2\cdot\text{K}\]</div>
 <p><strong>Final Answer:</strong> <span class="math notranslate nohighlight">\(U = 0.59\)</span> W/m²·K</p>
 <p><strong>Analysis:</strong> The insulation layer (Layer 2) dominates the thermal resistance (<span class="math notranslate nohighlight">\(R''_{cond,2} = 1.250\)</span> out of <span class="math notranslate nohighlight">\(R''_{total} = 1.688\)</span>, or 74% of total resistance). This is typical: in well-designed insulated systems, the insulation provides most of the thermal resistance.</p>
 </section>
@@ -1330,9 +1192,7 @@ U = \frac{1}{1.688} = 0.593 \text{ W/m}^2\cdot\text{K}
 </div>
 <p>The relationship between these quantities is:</p>
 <div class="math notranslate nohighlight">
-\[
-q''_{rad} = J - G
-\]</div>
+\[q''_{rad} = J - G\]</div>
 <p>If <span class="math notranslate nohighlight">\(J &gt; G\)</span>, the surface has a net heat loss by radiation. If <span class="math notranslate nohighlight">\(G &gt; J\)</span>, the surface has a net heat gain.</p>
 </section>
 <section id="blackbody-radiation">
@@ -1349,9 +1209,7 @@ q''_{rad} = J - G
 </section>
 </div><p>The emissive power of a blackbody is given by the Stefan-Boltzmann Law:</p>
 <div class="math notranslate nohighlight">
-\[
-E_b = \sigma T^4
-\]</div>
+\[E_b = \sigma T^4\]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(E_b\)</span> = blackbody emissive power [W/m²]</p></li>
@@ -1362,14 +1220,10 @@ E_b = \sigma T^4
 <p class="admonition-title">Warning</p>
 <p><strong>Critical Reminder:</strong> The Stefan-Boltzmann Law requires temperature in <strong>absolute units</strong> (Kelvin). Always convert Celsius to Kelvin:</p>
 <div class="math notranslate nohighlight">
-\[
-T[K] = T[°C] + 273.15
-\]</div>
+\[T[K] = T[°C] + 273.15\]</div>
 <p>For example, a surface at 25°C has <span class="math notranslate nohighlight">\(T = 298.15\)</span> K, and its blackbody emissive power is:</p>
 <div class="math notranslate nohighlight">
-\[
-E_b = 5.67 \times 10^{-8} \times (298.15)^4 = 448 \text{ W/m}^2
-\]</div>
+\[E_b = 5.67 \times 10^{-8} \times (298.15)^4 = 448 \text{ W/m}^2\]</div>
 </div>
 </section>
 <section id="real-surface-properties">
@@ -1380,16 +1234,12 @@ E_b = 5.67 \times 10^{-8} \times (298.15)^4 = 448 \text{ W/m}^2
 <section class="definition-content" id="proof-content">
 <p><strong>Emissivity</strong> (<span class="math notranslate nohighlight">\(\epsilon\)</span>) is the ratio of the radiation emitted by a real surface to that emitted by a blackbody at the same temperature:</p>
 <div class="math notranslate nohighlight">
-\[
-\epsilon = \frac{E}{E_b}
-\]</div>
+\[\epsilon = \frac{E}{E_b}\]</div>
 <p>where <span class="math notranslate nohighlight">\(0 \leq \epsilon \leq 1\)</span>.</p>
 </section>
 </div><p>For a real surface:</p>
 <div class="math notranslate nohighlight">
-\[
-E = \epsilon E_b = \epsilon \sigma T^4
-\]</div>
+\[E = \epsilon E_b = \epsilon \sigma T^4\]</div>
 <p>Typical emissivity values:</p>
 <ul class="simple">
 <li><p>Polished metals: <span class="math notranslate nohighlight">\(\epsilon \approx 0.02 - 0.10\)</span> (poor emitters/absorbers)</p></li>
@@ -1408,14 +1258,10 @@ E = \epsilon E_b = \epsilon \sigma T^4
 </ul>
 <p>Energy conservation requires:</p>
 <div class="math notranslate nohighlight">
-\[
-\alpha + \rho + \tau = 1
-\]</div>
+\[\alpha + \rho + \tau = 1\]</div>
 <p>For <strong>opaque</strong> surfaces (most solids), <span class="math notranslate nohighlight">\(\tau = 0\)</span>, so:</p>
 <div class="math notranslate nohighlight">
-\[
-\alpha + \rho = 1
-\]</div>
+\[\alpha + \rho = 1\]</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Key Surface Properties:</strong></p>
@@ -1429,9 +1275,7 @@ E = \epsilon E_b = \epsilon \sigma T^4
 <h4>Gray Surface Assumption<a class="headerlink" href="#gray-surface-assumption" title="Link to this heading">#</a></h4>
 <p>A <strong>gray surface</strong> is one whose radiative properties are independent of wavelength. For a gray surface in thermal equilibrium (Kirchhoff’s Law):</p>
 <div class="math notranslate nohighlight">
-\[
-\alpha = \epsilon
-\]</div>
+\[\alpha = \epsilon\]</div>
 <p>This simplification is widely used in engineering calculations and is reasonably accurate for many materials.</p>
 </section>
 </section>
@@ -1439,19 +1283,13 @@ E = \epsilon E_b = \epsilon \sigma T^4
 <h3>Radiosity<a class="headerlink" href="#radiosity" title="Link to this heading">#</a></h3>
 <p>The <strong>radiosity</strong> <span class="math notranslate nohighlight">\(J\)</span> is the total radiation leaving a surface, combining emitted and reflected components:</p>
 <div class="math notranslate nohighlight">
-\[
-J = E + \rho G
-\]</div>
+\[J = E + \rho G\]</div>
 <p>For an opaque, gray surface with <span class="math notranslate nohighlight">\(\rho = 1 - \alpha = 1 - \epsilon\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-J = \epsilon \sigma T^4 + (1 - \epsilon) G
-\]</div>
+\[J = \epsilon \sigma T^4 + (1 - \epsilon) G\]</div>
 <p>The net radiative heat flux from a surface can be written as:</p>
 <div class="math notranslate nohighlight">
-\[
-q''_{rad} = \frac{E_b - J}{(1-\epsilon)/\epsilon}
-\]</div>
+\[q''_{rad} = \frac{E_b - J}{(1-\epsilon)/\epsilon}\]</div>
 <p>This form suggests a resistance analogy, which leads to the radiation network method.</p>
 </section>
 <section id="view-factors">
@@ -1476,9 +1314,7 @@ q''_{rad} = \frac{E_b - J}{(1-\epsilon)/\epsilon}
 <section class="theorem-content" id="proof-content">
 <p>For an enclosure of <span class="math notranslate nohighlight">\(n\)</span> surfaces, all radiation leaving surface <span class="math notranslate nohighlight">\(i\)</span> must be intercepted by surfaces of the enclosure:</p>
 <div class="math notranslate nohighlight">
-\[
-\sum_{j=1}^{n} F_{ij} = F_{i1} + F_{i2} + \cdots + F_{in} = 1
-\]</div>
+\[\sum_{j=1}^{n} F_{ij} = F_{i1} + F_{i2} + \cdots + F_{in} = 1\]</div>
 <p>This includes the view factor from a surface to itself, <span class="math notranslate nohighlight">\(F_{ii}\)</span>:</p>
 <ul class="simple">
 <li><p>For <strong>flat</strong> or <strong>convex</strong> surfaces: <span class="math notranslate nohighlight">\(F_{ii} = 0\)</span></p></li>
@@ -1490,9 +1326,7 @@ q''_{rad} = \frac{E_b - J}{(1-\epsilon)/\epsilon}
 <section class="theorem-content" id="proof-content">
 <p>The reciprocity relationship relates a view factor <span class="math notranslate nohighlight">\(F_{ij}\)</span> to its inverse <span class="math notranslate nohighlight">\(F_{ji}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-A_i F_{ij} = A_j F_{ji}
-\]</div>
+\[A_i F_{ij} = A_j F_{ji}\]</div>
 <p>where <span class="math notranslate nohighlight">\(A_i\)</span> and <span class="math notranslate nohighlight">\(A_j\)</span> are the surface areas.</p>
 </section>
 </div><div class="proof theorem admonition" id="thm-additive-rule">
@@ -1500,9 +1334,7 @@ A_i F_{ij} = A_j F_{ji}
 <section class="theorem-content" id="proof-content">
 <p>If surface <span class="math notranslate nohighlight">\(j\)</span> is subdivided into parts <span class="math notranslate nohighlight">\(j_1, j_2, \ldots, j_n\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-F_{i,j} = F_{i,j_1} + F_{i,j_2} + \cdots + F_{i,j_n}
-\]</div>
+\[F_{i,j} = F_{i,j_1} + F_{i,j_2} + \cdots + F_{i,j_n}\]</div>
 <p>This allows complex geometries to be analyzed by combining simpler ones.</p>
 </section>
 </div><div class="proof example admonition" id="ex-hemisphere-view-factors">
@@ -1513,45 +1345,29 @@ F_{i,j} = F_{i,j_1} + F_{i,j_2} + \cdots + F_{i,j_n}
 <p><strong>Step 1: Calculate Surface Areas</strong></p>
 <p>Surface 1 (flat floor):</p>
 <div class="math notranslate nohighlight">
-\[
-A_1 = (2r) \times L
-\]</div>
+\[A_1 = (2r) \times L\]</div>
 <p>Surface 2 (curved semi-cylinder):</p>
 <div class="math notranslate nohighlight">
-\[
-A_2 = \frac{1}{2}(2\pi r) \times L = \pi r L
-\]</div>
+\[A_2 = \frac{1}{2}(2\pi r) \times L = \pi r L\]</div>
 <p><strong>Step 2: Find <span class="math notranslate nohighlight">\(F_{12}\)</span> using Summation Rule</strong></p>
 <p>For surface 1 (flat):</p>
 <div class="math notranslate nohighlight">
-\[
-F_{11} + F_{12} = 1
-\]</div>
+\[F_{11} + F_{12} = 1\]</div>
 <p>Since surface 1 is flat, <span class="math notranslate nohighlight">\(F_{11} = 0\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-F_{12} = 1
-\]</div>
+\[F_{12} = 1\]</div>
 <p><strong>Physical interpretation:</strong> All radiation leaving the flat floor must strike the curved ceiling (nowhere else to go).</p>
 <p><strong>Step 3: Find <span class="math notranslate nohighlight">\(F_{21}\)</span> using Reciprocity</strong></p>
 <div class="math notranslate nohighlight">
-\[
-A_2 F_{21} = A_1 F_{12}
-\]</div>
+\[A_2 F_{21} = A_1 F_{12}\]</div>
 <div class="math notranslate nohighlight">
-\[
-F_{21} = F_{12} \frac{A_1}{A_2} = 1 \times \frac{2rL}{\pi r L} = \frac{2}{\pi} \approx 0.637
-\]</div>
+\[F_{21} = F_{12} \frac{A_1}{A_2} = 1 \times \frac{2rL}{\pi r L} = \frac{2}{\pi} \approx 0.637\]</div>
 <p><strong>Step 4: Find <span class="math notranslate nohighlight">\(F_{22}\)</span> using Summation Rule</strong></p>
 <p>For surface 2:</p>
 <div class="math notranslate nohighlight">
-\[
-F_{21} + F_{22} = 1
-\]</div>
+\[F_{21} + F_{22} = 1\]</div>
 <div class="math notranslate nohighlight">
-\[
-F_{22} = 1 - F_{21} = 1 - \frac{2}{\pi} \approx 0.363
-\]</div>
+\[F_{22} = 1 - F_{21} = 1 - \frac{2}{\pi} \approx 0.363\]</div>
 <p><strong>Physical interpretation:</strong> About 36.3% of radiation leaving the curved ceiling strikes itself (because it’s concave).</p>
 <p><strong>Final Answers:</strong></p>
 <ul class="simple">
@@ -1569,29 +1385,21 @@ F_{22} = 1 - F_{21} = 1 - \frac{2}{\pi} \approx 0.363
 <h4>Surface Resistance<a class="headerlink" href="#surface-resistance" title="Link to this heading">#</a></h4>
 <p>The <strong>surface resistance</strong> represents the opposition to radiation leaving a surface due to non-ideal emissivity:</p>
 <div class="math notranslate nohighlight">
-\[
-R_{surf,i} = \frac{1 - \epsilon_i}{\epsilon_i A_i}
-\]</div>
+\[R_{surf,i} = \frac{1 - \epsilon_i}{\epsilon_i A_i}\]</div>
 <p>The net heat transfer rate leaving surface <span class="math notranslate nohighlight">\(i\)</span> is:</p>
 <div class="math notranslate nohighlight">
-\[
-q_i = \frac{E_{b,i} - J_i}{R_{surf,i}} = \frac{\sigma T_i^4 - J_i}{(1-\epsilon_i)/(\epsilon_i A_i)}
-\]</div>
+\[q_i = \frac{E_{b,i} - J_i}{R_{surf,i}} = \frac{\sigma T_i^4 - J_i}{(1-\epsilon_i)/(\epsilon_i A_i)}\]</div>
 <p>For a blackbody (<span class="math notranslate nohighlight">\(\epsilon_i = 1\)</span>), the surface resistance is zero, and <span class="math notranslate nohighlight">\(E_{b,i} = J_i\)</span>.</p>
 </section>
 <section id="space-resistance">
 <h4>Space Resistance<a class="headerlink" href="#space-resistance" title="Link to this heading">#</a></h4>
 <p>The <strong>space resistance</strong> (or geometric resistance) represents the geometric opposition to radiation between two surfaces:</p>
 <div class="math notranslate nohighlight">
-\[
-R_{space,ij} = \frac{1}{A_i F_{ij}} = \frac{1}{A_j F_{ji}}
-\]</div>
+\[R_{space,ij} = \frac{1}{A_i F_{ij}} = \frac{1}{A_j F_{ji}}\]</div>
 <p>(The equality follows from reciprocity.)</p>
 <p>The net radiation exchange between surfaces <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> is:</p>
 <div class="math notranslate nohighlight">
-\[
-q_{ij} = \frac{J_i - J_j}{R_{space,ij}}
-\]</div>
+\[q_{ij} = \frac{J_i - J_j}{R_{space,ij}}\]</div>
 </section>
 <section id="constructing-the-radiation-network">
 <h4>Constructing the Radiation Network<a class="headerlink" href="#constructing-the-radiation-network" title="Link to this heading">#</a></h4>
@@ -1606,21 +1414,15 @@ q_{ij} = \frac{J_i - J_j}{R_{space,ij}}
 </div>
 <p>The total net heat leaving surface <span class="math notranslate nohighlight">\(i\)</span> is:</p>
 <div class="math notranslate nohighlight">
-\[
-q_i = \frac{E_{b,i} - J_i}{R_{surf,i}} = \sum_{j=1}^{n} \frac{J_i - J_j}{R_{space,ij}}
-\]</div>
+\[q_i = \frac{E_{b,i} - J_i}{R_{surf,i}} = \sum_{j=1}^{n} \frac{J_i - J_j}{R_{space,ij}}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>For a <strong>two-surface enclosure</strong> (surfaces <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> completely surround each other), the net radiation exchange simplifies to:</p>
 <div class="math notranslate nohighlight">
-\[
-q_{ij} = \frac{\sigma(T_i^4 - T_j^4)}{\frac{1-\epsilon_i}{\epsilon_i A_i} + \frac{1}{A_i F_{ij}} + \frac{1-\epsilon_j}{\epsilon_j A_j}}
-\]</div>
+\[q_{ij} = \frac{\sigma(T_i^4 - T_j^4)}{\frac{1-\epsilon_i}{\epsilon_i A_i} + \frac{1}{A_i F_{ij}} + \frac{1-\epsilon_j}{\epsilon_j A_j}}\]</div>
 <p>If both surfaces are large and parallel (<span class="math notranslate nohighlight">\(F_{ij} = 1\)</span>, <span class="math notranslate nohighlight">\(A_i = A_j = A\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[
-q_{ij} = \frac{\sigma A (T_i^4 - T_j^4)}{\frac{1}{\epsilon_i} + \frac{1}{\epsilon_j} - 1}
-\]</div>
+\[q_{ij} = \frac{\sigma A (T_i^4 - T_j^4)}{\frac{1}{\epsilon_i} + \frac{1}{\epsilon_j} - 1}\]</div>
 </div>
 </section>
 </section>
@@ -1650,9 +1452,7 @@ q_{ij} = \frac{\sigma A (T_i^4 - T_j^4)}{\frac{1}{\epsilon_i} + \frac{1}{\epsilo
 <h3>Fundamental Energy Balance<a class="headerlink" href="#fundamental-energy-balance" title="Link to this heading">#</a></h3>
 <p>For a heat exchanger with no heat loss to surroundings (adiabatic):</p>
 <div class="math notranslate nohighlight">
-\[
-q = \dot{m}_h c_{p,h} (T_{h,in} - T_{h,out}) = \dot{m}_c c_{p,c} (T_{c,out} - T_{c,in})
-\]</div>
+\[q = \dot{m}_h c_{p,h} (T_{h,in} - T_{h,out}) = \dot{m}_c c_{p,c} (T_{c,out} - T_{c,in})\]</div>
 <p>where subscripts <span class="math notranslate nohighlight">\(h\)</span> and <span class="math notranslate nohighlight">\(c\)</span> denote hot and cold fluids.</p>
 <p>This equation states that the heat lost by the hot fluid equals the heat gained by the cold fluid.</p>
 </section>
@@ -1664,9 +1464,7 @@ q = \dot{m}_h c_{p,h} (T_{h,in} - T_{h,out}) = \dot{m}_c c_{p,c} (T_{c,out} - T_
 <p>In a heat exchanger, the temperature difference between hot and cold fluids <strong>varies along the length</strong> of the exchanger. The LMTD is the appropriate average temperature difference to use in the basic heat transfer equation.</p>
 <p>The total heat transfer rate is:</p>
 <div class="math notranslate nohighlight">
-\[
-q = U A \Delta T_{lm}
-\]</div>
+\[q = U A \Delta T_{lm}\]</div>
 <p>where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(U\)</span> = overall heat transfer coefficient [W/m²·K]</p></li>
@@ -1678,26 +1476,18 @@ q = U A \Delta T_{lm}
 <h4>Calculating LMTD<a class="headerlink" href="#calculating-lmtd" title="Link to this heading">#</a></h4>
 <p>The LMTD is the logarithmic average of the temperature differences at the two ends:</p>
 <div class="math notranslate nohighlight">
-\[
-\Delta T_{lm} = \frac{\Delta T_A - \Delta T_B}{\ln(\Delta T_A / \Delta T_B)}
-\]</div>
+\[\Delta T_{lm} = \frac{\Delta T_A - \Delta T_B}{\ln(\Delta T_A / \Delta T_B)}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\Delta T_A\)</span> and <span class="math notranslate nohighlight">\(\Delta T_B\)</span> are the temperature differences between hot and cold streams at the two ends of the exchanger.</p>
 <p><strong>Important:</strong> When <span class="math notranslate nohighlight">\(\Delta T_A \approx \Delta T_B\)</span> (differ by less than ~10%), the LMTD formula can give numerical errors. In this case, use the arithmetic mean:</p>
 <div class="math notranslate nohighlight">
-\[
-\Delta T_{lm} \approx \frac{\Delta T_A + \Delta T_B}{2} \quad \text{(when } \Delta T_A \approx \Delta T_B \text{)}
-\]</div>
+\[\Delta T_{lm} \approx \frac{\Delta T_A + \Delta T_B}{2} \quad \text{(when } \Delta T_A \approx \Delta T_B \text{)}\]</div>
 </section>
 <section id="for-parallel-flow">
 <h4>For Parallel Flow<a class="headerlink" href="#for-parallel-flow" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
-\[
-\Delta T_A = T_{h,in} - T_{c,in} \quad \text{(inlet end)}
-\]</div>
+\[\Delta T_A = T_{h,in} - T_{c,in} \quad \text{(inlet end)}\]</div>
 <div class="math notranslate nohighlight">
-\[
-\Delta T_B = T_{h,out} - T_{c,out} \quad \text{(outlet end)}
-\]</div>
+\[\Delta T_B = T_{h,out} - T_{c,out} \quad \text{(outlet end)}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In parallel flow, the outlet temperature of the cold fluid can <strong>never exceed</strong> the outlet temperature of the hot fluid: <span class="math notranslate nohighlight">\(T_{c,out} &lt; T_{h,out}\)</span> always.</p>
@@ -1706,13 +1496,9 @@ q = U A \Delta T_{lm}
 <section id="for-counter-flow">
 <h4>For Counter-flow<a class="headerlink" href="#for-counter-flow" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
-\[
-\Delta T_A = T_{h,in} - T_{c,out} \quad \text{(hot inlet / cold outlet end)}
-\]</div>
+\[\Delta T_A = T_{h,in} - T_{c,out} \quad \text{(hot inlet / cold outlet end)}\]</div>
 <div class="math notranslate nohighlight">
-\[
-\Delta T_B = T_{h,out} - T_{c,in} \quad \text{(hot outlet / cold inlet end)}
-\]</div>
+\[\Delta T_B = T_{h,out} - T_{c,in} \quad \text{(hot outlet / cold inlet end)}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Counter-flow is <strong>more efficient</strong> than parallel flow because it maintains a larger average temperature difference. In counter-flow, the cold fluid outlet temperature can approach (or even theoretically exceed) the hot fluid outlet temperature.</p>
@@ -1742,48 +1528,30 @@ q = U A \Delta T_{lm}
 <p><strong>Solution:</strong></p>
 <p><strong>Step 1: Calculate Heat Transfer Rate</strong></p>
 <div class="math notranslate nohighlight">
-\[
-q = \dot{m}_{oil} c_{p,oil} (T_{oil,in} - T_{oil,out})
-\]</div>
+\[q = \dot{m}_{oil} c_{p,oil} (T_{oil,in} - T_{oil,out})\]</div>
 <div class="math notranslate nohighlight">
-\[
-q = (0.15) \times (2131) \times (100 - 60) = 0.15 \times 2131 \times 40 = 12786 \text{ W}
-\]</div>
+\[q = (0.15) \times (2131) \times (100 - 60) = 0.15 \times 2131 \times 40 = 12786 \text{ W}\]</div>
 <p><strong>Step 2: Determine Water Outlet Temperature</strong></p>
 <p>From the given outlet temperature difference:</p>
 <div class="math notranslate nohighlight">
-\[
-\Delta T_2 = T_{oil,out} - T_{water,out} = 10°C
-\]</div>
+\[\Delta T_2 = T_{oil,out} - T_{water,out} = 10°C\]</div>
 <div class="math notranslate nohighlight">
-\[
-T_{water,out} = T_{oil,out} - 10 = 60 - 10 = 50°C
-\]</div>
+\[T_{water,out} = T_{oil,out} - 10 = 60 - 10 = 50°C\]</div>
 <p><strong>Step 3: Calculate LMTD</strong></p>
 <p>Temperature differences at the ends:</p>
 <div class="math notranslate nohighlight">
-\[
-\Delta T_1 = T_{oil,in} - T_{water,in} = 100 - 25 = 75°C
-\]</div>
+\[\Delta T_1 = T_{oil,in} - T_{water,in} = 100 - 25 = 75°C\]</div>
 <div class="math notranslate nohighlight">
-\[
-\Delta T_2 = T_{oil,out} - T_{water,out} = 60 - 50 = 10°C
-\]</div>
+\[\Delta T_2 = T_{oil,out} - T_{water,out} = 60 - 50 = 10°C\]</div>
 <p>Log mean temperature difference:</p>
 <div class="math notranslate nohighlight">
-\[
-\Delta T_{lm} = \frac{\Delta T_1 - \Delta T_2}{\ln(\Delta T_1/\Delta T_2)} = \frac{75 - 10}{\ln(75/10)} = \frac{65}{\ln(7.5)} = \frac{65}{2.015} \approx 32.2°C
-\]</div>
+\[\Delta T_{lm} = \frac{\Delta T_1 - \Delta T_2}{\ln(\Delta T_1/\Delta T_2)} = \frac{75 - 10}{\ln(75/10)} = \frac{65}{\ln(7.5)} = \frac{65}{2.015} \approx 32.2°C\]</div>
 <p><strong>Step 4: Calculate Required Length</strong></p>
 <p>The heat transfer area for a tube is <span class="math notranslate nohighlight">\(A = \pi D_i L\)</span>. From <span class="math notranslate nohighlight">\(q = U A \Delta T_{lm}\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-L = \frac{q}{U \pi D_i \Delta T_{lm}}
-\]</div>
+\[L = \frac{q}{U \pi D_i \Delta T_{lm}}\]</div>
 <div class="math notranslate nohighlight">
-\[
-L = \frac{12786}{38.1 \times \pi \times 0.03 \times 32.2} = \frac{12786}{115.6} \approx 110.6 \text{ m}
-\]</div>
+\[L = \frac{12786}{38.1 \times \pi \times 0.03 \times 32.2} = \frac{12786}{115.6} \approx 110.6 \text{ m}\]</div>
 <p><strong>Final Answer:</strong> The required heat exchanger length is approximately <strong>110.6 meters</strong>.</p>
 <p><strong>Practical Note:</strong> This is quite long for a double-pipe exchanger. In practice, a more compact design (shell-and-tube or plate) would likely be preferred.</p>
 </section>
@@ -1801,23 +1569,15 @@ L = \frac{12786}{38.1 \times \pi \times 0.03 \times 32.2} = \frac{12786}{115.6} 
 <p><strong>Step 1: Set Up Energy Balance</strong></p>
 <p>For an adiabatic heat exchanger:</p>
 <div class="math notranslate nohighlight">
-\[
-\dot{m}_{oil} c_{p,oil} (T_{oil,in} - T_{oil,out}) = \dot{m}_{water} c_{p,water} (T_{water,out} - T_{water,in})
-\]</div>
+\[\dot{m}_{oil} c_{p,oil} (T_{oil,in} - T_{oil,out}) = \dot{m}_{water} c_{p,water} (T_{water,out} - T_{water,in})\]</div>
 <p><strong>Step 2: Solve for Unknown Mass Flow Rate</strong></p>
 <div class="math notranslate nohighlight">
-\[
-\dot{m}_{water} = \frac{\dot{m}_{oil} c_{p,oil} (T_{oil,in} - T_{oil,out})}{c_{p,water} (T_{water,out} - T_{water,in})}
-\]</div>
+\[\dot{m}_{water} = \frac{\dot{m}_{oil} c_{p,oil} (T_{oil,in} - T_{oil,out})}{c_{p,water} (T_{water,out} - T_{water,in})}\]</div>
 <p><strong>Step 3: Substitute Values</strong></p>
 <div class="math notranslate nohighlight">
-\[
-\dot{m}_{water} = \frac{0.1 \times 2131 \times (100 - 55)}{4178 \times (40 - 30)}
-\]</div>
+\[\dot{m}_{water} = \frac{0.1 \times 2131 \times (100 - 55)}{4178 \times (40 - 30)}\]</div>
 <div class="math notranslate nohighlight">
-\[
-\dot{m}_{water} = \frac{0.1 \times 2131 \times 45}{4178 \times 10} = \frac{9589.5}{41780} \approx 0.2295 \text{ kg/s}
-\]</div>
+\[\dot{m}_{water} = \frac{0.1 \times 2131 \times 45}{4178 \times 10} = \frac{9589.5}{41780} \approx 0.2295 \text{ kg/s}\]</div>
 <p><strong>Final Answer:</strong> The required water flow rate is approximately <strong>0.23 kg/s</strong>.</p>
 <p><strong>Step 4: Verification (Optional)</strong></p>
 <p>Check energy balance:</p>
@@ -1839,9 +1599,7 @@ L = \frac{12786}{38.1 \times \pi \times 0.03 \times 32.2} = \frac{12786}{115.6} 
 <section class="definition-content" id="proof-content">
 <p>The <strong>heat capacity rate</strong> <span class="math notranslate nohighlight">\(C\)</span> is the rate at which a fluid stream can transport thermal energy:</p>
 <div class="math notranslate nohighlight">
-\[
-C = \dot{m} c_p \quad [W/K]
-\]</div>
+\[C = \dot{m} c_p \quad [W/K]\]</div>
 <p>We identify:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(C_{min}\)</span> = minimum of <span class="math notranslate nohighlight">\(C_h\)</span> and <span class="math notranslate nohighlight">\(C_c\)</span></p></li>
@@ -1854,14 +1612,10 @@ C = \dot{m} c_p \quad [W/K]
 <section class="definition-content" id="proof-content">
 <p>The <strong>effectiveness</strong> <span class="math notranslate nohighlight">\(\epsilon\)</span> is the ratio of actual heat transfer to the maximum possible heat transfer:</p>
 <div class="math notranslate nohighlight">
-\[
-\epsilon = \frac{q_{actual}}{q_{max}}
-\]</div>
+\[\epsilon = \frac{q_{actual}}{q_{max}}\]</div>
 <p>where:</p>
 <div class="math notranslate nohighlight">
-\[
-q_{max} = C_{min}(T_{h,in} - T_{c,in})
-\]</div>
+\[q_{max} = C_{min}(T_{h,in} - T_{c,in})\]</div>
 <p>This maximum occurs in an infinitely long counter-flow exchanger where the fluid with <span class="math notranslate nohighlight">\(C_{min}\)</span> experiences the full temperature difference.</p>
 </section>
 </div><div class="proof definition admonition" id="def-ntu">
@@ -1869,9 +1623,7 @@ q_{max} = C_{min}(T_{h,in} - T_{c,in})
 <section class="definition-content" id="proof-content">
 <p>The <strong>Number of Transfer Units</strong> is a dimensionless parameter characterizing the “thermal size” of a heat exchanger:</p>
 <div class="math notranslate nohighlight">
-\[
-NTU = \frac{UA}{C_{min}}
-\]</div>
+\[NTU = \frac{UA}{C_{min}}\]</div>
 <p>Physical meaning: NTU represents the heat transfer capacity of the exchanger relative to the heat capacity rate of the limiting fluid.</p>
 </section>
 </div></section>
@@ -1880,26 +1632,18 @@ NTU = \frac{UA}{C_{min}}
 <p>The effectiveness depends on NTU, <span class="math notranslate nohighlight">\(C_r\)</span>, and flow arrangement. Common relationships:</p>
 <p><strong>Counter-flow heat exchanger:</strong></p>
 <div class="math notranslate nohighlight">
-\[
-\epsilon = \frac{1 - \exp[-NTU(1-C_r)]}{1 - C_r \exp[-NTU(1-C_r)]} \quad (C_r &lt; 1)
-\]</div>
+\[\epsilon = \frac{1 - \exp[-NTU(1-C_r)]}{1 - C_r \exp[-NTU(1-C_r)]} \quad (C_r &lt; 1)\]</div>
 <div class="math notranslate nohighlight">
-\[
-\epsilon = \frac{NTU}{1 + NTU} \quad (C_r = 1)
-\]</div>
+\[\epsilon = \frac{NTU}{1 + NTU} \quad (C_r = 1)\]</div>
 <p><strong>Parallel-flow heat exchanger:</strong></p>
 <div class="math notranslate nohighlight">
-\[
-\epsilon = \frac{1 - \exp[-NTU(1+C_r)]}{1 + C_r}
-\]</div>
+\[\epsilon = \frac{1 - \exp[-NTU(1+C_r)]}{1 + C_r}\]</div>
 <p><strong>Shell-and-tube</strong> (one shell pass, even number of tube passes):</p>
 <p>More complex; typically obtained from charts or specialized equations.</p>
 <p>For design purposes, these relationships can be inverted to find NTU given <span class="math notranslate nohighlight">\(\epsilon\)</span> and <span class="math notranslate nohighlight">\(C_r\)</span>:</p>
 <p><strong>Counter-flow:</strong></p>
 <div class="math notranslate nohighlight">
-\[
-NTU = \frac{1}{C_r - 1} \ln\left(\frac{\epsilon - 1}{\epsilon C_r - 1}\right) \quad (C_r \neq 1)
-\]</div>
+\[NTU = \frac{1}{C_r - 1} \ln\left(\frac{\epsilon - 1}{\epsilon C_r - 1}\right) \quad (C_r \neq 1)\]</div>
 </section>
 <section id="when-to-use-each-method">
 <h4>When to Use Each Method<a class="headerlink" href="#when-to-use-each-method" title="Link to this heading">#</a></h4>
@@ -1931,72 +1675,44 @@ NTU = \frac{1}{C_r - 1} \ln\left(\frac{\epsilon - 1}{\epsilon C_r - 1}\right) \q
 <p><strong>Step 1: Calculate Heat Capacity Rates</strong></p>
 <p>Cold fluid:</p>
 <div class="math notranslate nohighlight">
-\[
-C_c = \dot{m}_c c_{p,c} = 1.0 \times 4197 = 4197 \text{ W/K}
-\]</div>
+\[C_c = \dot{m}_c c_{p,c} = 1.0 \times 4197 = 4197 \text{ W/K}\]</div>
 <p>Hot fluid:</p>
 <div class="math notranslate nohighlight">
-\[
-C_h = \dot{m}_h c_{p,h} = 1.9 \times 1000 = 1900 \text{ W/K}
-\]</div>
+\[C_h = \dot{m}_h c_{p,h} = 1.9 \times 1000 = 1900 \text{ W/K}\]</div>
 <p>Therefore:</p>
 <div class="math notranslate nohighlight">
-\[
-C_{min} = C_h = 1900 \text{ W/K}
-\]</div>
+\[C_{min} = C_h = 1900 \text{ W/K}\]</div>
 <div class="math notranslate nohighlight">
-\[
-C_{max} = C_c = 4197 \text{ W/K}
-\]</div>
+\[C_{max} = C_c = 4197 \text{ W/K}\]</div>
 <div class="math notranslate nohighlight">
-\[
-C_r = \frac{C_{min}}{C_{max}} = \frac{1900}{4197} = 0.453
-\]</div>
+\[C_r = \frac{C_{min}}{C_{max}} = \frac{1900}{4197} = 0.453\]</div>
 <p><strong>Step 2: Calculate Effectiveness</strong></p>
 <p>Actual heat transfer (using hot fluid):</p>
 <div class="math notranslate nohighlight">
-\[
-q = C_h(T_{h,in} - T_{h,out}) = 1900 \times (350 - 100) = 475000 \text{ W}
-\]</div>
+\[q = C_h(T_{h,in} - T_{h,out}) = 1900 \times (350 - 100) = 475000 \text{ W}\]</div>
 <p>Maximum possible heat transfer:</p>
 <div class="math notranslate nohighlight">
-\[
-q_{max} = C_{min}(T_{h,in} - T_{c,in}) = 1900 \times (350 - 40) = 589000 \text{ W}
-\]</div>
+\[q_{max} = C_{min}(T_{h,in} - T_{c,in}) = 1900 \times (350 - 40) = 589000 \text{ W}\]</div>
 <p>Effectiveness:</p>
 <div class="math notranslate nohighlight">
-\[
-\epsilon = \frac{q}{q_{max}} = \frac{475000}{589000} = 0.806
-\]</div>
+\[\epsilon = \frac{q}{q_{max}} = \frac{475000}{589000} = 0.806\]</div>
 <p><strong>Alternative calculation</strong> (since hot fluid has <span class="math notranslate nohighlight">\(C_{min}\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[
-\epsilon = \frac{T_{h,in} - T_{h,out}}{T_{h,in} - T_{c,in}} = \frac{350 - 100}{350 - 40} = \frac{250}{310} = 0.806
-\]</div>
+\[\epsilon = \frac{T_{h,in} - T_{h,out}}{T_{h,in} - T_{c,in}} = \frac{350 - 100}{350 - 40} = \frac{250}{310} = 0.806\]</div>
 <p><strong>Step 3: Calculate NTU from Effectiveness</strong></p>
 <p>For counter-flow with <span class="math notranslate nohighlight">\(C_r \neq 1\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-NTU = \frac{1}{C_r - 1} \ln\left(\frac{\epsilon - 1}{\epsilon C_r - 1}\right)
-\]</div>
+\[NTU = \frac{1}{C_r - 1} \ln\left(\frac{\epsilon - 1}{\epsilon C_r - 1}\right)\]</div>
 <div class="math notranslate nohighlight">
-\[
-NTU = \frac{1}{0.453 - 1} \ln\left(\frac{0.806 - 1}{0.806 \times 0.453 - 1}\right)
-\]</div>
+\[NTU = \frac{1}{0.453 - 1} \ln\left(\frac{0.806 - 1}{0.806 \times 0.453 - 1}\right)\]</div>
 <div class="math notranslate nohighlight">
-\[
-NTU = \frac{1}{-0.547} \ln\left(\frac{-0.194}{-0.635}\right) = \frac{1}{-0.547} \ln(0.3055)
-\]</div>
+\[NTU = \frac{1}{-0.547} \ln\left(\frac{-0.194}{-0.635}\right) = \frac{1}{-0.547} \ln(0.3055)\]</div>
 <div class="math notranslate nohighlight">
-\[
-NTU = (-1.828) \times (-1.186) = 2.17
-\]</div>
+\[NTU = (-1.828) \times (-1.186) = 2.17\]</div>
 <p><strong>Step 4: Calculate Overall Heat Transfer Coefficient</strong></p>
 <p>From the definition of NTU:</p>
 <div class="math notranslate nohighlight">
-\[
-U = \frac{NTU \cdot C_{min}}{A} = \frac{2.17 \times 1900}{20} = \frac{4123}{20} = 206.15 \text{ W/m}^2\cdot\text{K}
-\]</div>
+\[U = \frac{NTU \cdot C_{min}}{A} = \frac{2.17 \times 1900}{20} = \frac{4123}{20} = 206.15 \text{ W/m}^2\cdot\text{K}\]</div>
 <p><strong>Final Answer:</strong> The overall heat transfer coefficient is approximately <strong>206 W/m²·K</strong>.</p>
 <p><strong>Analysis:</strong> This value of <span class="math notranslate nohighlight">\(U\)</span> is reasonable for gas-to-liquid heat transfer. The effectiveness of 0.806 (80.6%) indicates this is a well-designed heat exchanger operating efficiently.</p>
 </section>
@@ -2069,9 +1785,7 @@ U = \frac{NTU \cdot C_{min}}{A} = \frac{2.17 \times 1900}{20} = \frac{4123}{20} 
 <p>The process stops where the constant <span class="math notranslate nohighlight">\(T_{wb}\)</span> line intersects the RH = 50% curve. Mark as Point 2.</p>
 <p>From Point 2, read outlet temperature by moving vertically down to the horizontal axis:</p>
 <div class="math notranslate nohighlight">
-\[
-T_{db,2} \approx 30°C
-\]</div>
+\[T_{db,2} \approx 30°C\]</div>
 <p><strong>Step 4: Read Absolute Humidities</strong></p>
 <p>Moving horizontally from each point to the vertical axis:</p>
 <ul class="simple">
@@ -2081,23 +1795,15 @@ T_{db,2} \approx 30°C
 <p><strong>Step 5: Read Specific Volume</strong></p>
 <p>From the steeper diagonal lines at Point 1:</p>
 <div class="math notranslate nohighlight">
-\[
-v_{h,1} \approx 0.9 \text{ m}^3/\text{kg dry air}
-\]</div>
+\[v_{h,1} \approx 0.9 \text{ m}^3/\text{kg dry air}\]</div>
 <p><strong>Step 6: Calculate Mass Flow Rate of Dry Air</strong></p>
 <div class="math notranslate nohighlight">
-\[
-\dot{m}_{dry\,air} = \frac{\dot{V}_1}{v_{h,1}} = \frac{100 \text{ m}^3/\text{hr}}{0.9 \text{ m}^3/\text{kg dry air}} = 111.1 \text{ kg dry air/hr}
-\]</div>
+\[\dot{m}_{dry\,air} = \frac{\dot{V}_1}{v_{h,1}} = \frac{100 \text{ m}^3/\text{hr}}{0.9 \text{ m}^3/\text{kg dry air}} = 111.1 \text{ kg dry air/hr}\]</div>
 <p><strong>Step 7: Calculate Water Evaporation Rate</strong></p>
 <div class="math notranslate nohighlight">
-\[
-\dot{m}_{evap} = \dot{m}_{dry\,air} \times (\omega_2 - \omega_1)
-\]</div>
+\[\dot{m}_{evap} = \dot{m}_{dry\,air} \times (\omega_2 - \omega_1)\]</div>
 <div class="math notranslate nohighlight">
-\[
-\dot{m}_{evap} = 111.1 \times (0.0132 - 0.0092) = 111.1 \times 0.004 = 0.444 \text{ kg H}_2\text{O/hr}
-\]</div>
+\[\dot{m}_{evap} = 111.1 \times (0.0132 - 0.0092) = 111.1 \times 0.004 = 0.444 \text{ kg H}_2\text{O/hr}\]</div>
 <p><strong>Final Answers:</strong></p>
 <ul class="simple">
 <li><p><strong>Outlet temperature:</strong> Approximately <strong>30°C</strong></p></li>
@@ -2113,9 +1819,7 @@ v_{h,1} \approx 0.9 \text{ m}^3/\text{kg dry air}
 <h4>Clausius-Clapeyron Equation<a class="headerlink" href="#clausius-clapeyron-equation" title="Link to this heading">#</a></h4>
 <p>The integrated form (assuming constant <span class="math notranslate nohighlight">\(\Delta H_v\)</span> over a small temperature range):</p>
 <div class="math notranslate nohighlight">
-\[
-\ln(P_{sat}) = -\frac{\Delta H_v}{R} \left(\frac{1}{T}\right) + C
-\]</div>
+\[\ln(P_{sat}) = -\frac{\Delta H_v}{R} \left(\frac{1}{T}\right) + C\]</div>
 <p>This is a linear equation in the variables <span class="math notranslate nohighlight">\(\ln(P_{sat})\)</span> vs. <span class="math notranslate nohighlight">\(1/T\)</span>, with slope <span class="math notranslate nohighlight">\(m = -\Delta H_v/R\)</span>.</p>
 <p>where:</p>
 <ul class="simple">
@@ -2129,9 +1833,7 @@ v_{h,1} \approx 0.9 \text{ m}^3/\text{kg dry air}
 <h4>Antoine Equation<a class="headerlink" href="#antoine-equation" title="Link to this heading">#</a></h4>
 <p>The Antoine equation is an accurate empirical correlation for vapor pressure:</p>
 <div class="math notranslate nohighlight">
-\[
-\log_{10}(P_{sat}) = A - \frac{B}{T + C}
-\]</div>
+\[\log_{10}(P_{sat}) = A - \frac{B}{T + C}\]</div>
 <p>Constants <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span>, and <span class="math notranslate nohighlight">\(C\)</span> are substance-specific and tabulated in references.</p>
 </section>
 <section id="strategy-for-estimating-delta-h-v">
@@ -2148,31 +1850,21 @@ v_{h,1} \approx 0.9 \text{ m}^3/\text{kg dry air}
 <p>Estimate the heat of vaporization of benzene at 60°C using:</p>
 <p>Antoine equation for benzene:</p>
 <div class="math notranslate nohighlight">
-\[
-\log_{10}(P_{sat}) = 6.906 - \frac{1211}{T + 220.8}
-\]</div>
+\[\log_{10}(P_{sat}) = 6.906 - \frac{1211}{T + 220.8}\]</div>
 <p>where <span class="math notranslate nohighlight">\(T\)</span> is in °C and <span class="math notranslate nohighlight">\(P_{sat}\)</span> is in Torr.</p>
 <p><strong>Solution:</strong></p>
 <p><strong>Step 1: Generate Vapor Pressure Data</strong></p>
 <p>Choose <span class="math notranslate nohighlight">\(T_1 = 55°C\)</span> and <span class="math notranslate nohighlight">\(T_2 = 65°C\)</span> (bracketing 60°C).</p>
 <p>At <span class="math notranslate nohighlight">\(T_1 = 55°C\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-\log_{10}(P_{sat,1}) = 6.906 - \frac{1211}{55 + 220.8} = 6.906 - 4.391 = 2.515
-\]</div>
+\[\log_{10}(P_{sat,1}) = 6.906 - \frac{1211}{55 + 220.8} = 6.906 - 4.391 = 2.515\]</div>
 <div class="math notranslate nohighlight">
-\[
-P_{sat,1} = 10^{2.515} = 327.3 \text{ Torr}
-\]</div>
+\[P_{sat,1} = 10^{2.515} = 327.3 \text{ Torr}\]</div>
 <p>At <span class="math notranslate nohighlight">\(T_2 = 65°C\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-\log_{10}(P_{sat,2}) = 6.906 - \frac{1211}{65 + 220.8} = 6.906 - 4.237 = 2.669
-\]</div>
+\[\log_{10}(P_{sat,2}) = 6.906 - \frac{1211}{65 + 220.8} = 6.906 - 4.237 = 2.669\]</div>
 <div class="math notranslate nohighlight">
-\[
-P_{sat,2} = 10^{2.669} = 466.7 \text{ Torr}
-\]</div>
+\[P_{sat,2} = 10^{2.669} = 466.7 \text{ Torr}\]</div>
 <p><strong>Step 2: Convert to Clausius-Clapeyron Variables</strong></p>
 <p>Convert temperatures to Kelvin and take natural logarithm of pressures:</p>
 <p>Point 1:</p>
@@ -2187,19 +1879,13 @@ P_{sat,2} = 10^{2.669} = 466.7 \text{ Torr}
 </ul>
 <p><strong>Step 3: Calculate Slope</strong></p>
 <div class="math notranslate nohighlight">
-\[
-m = \frac{\Delta(\ln P_{sat})}{\Delta(1/T)} = \frac{6.146 - 5.791}{0.002957 - 0.003047}
-\]</div>
+\[m = \frac{\Delta(\ln P_{sat})}{\Delta(1/T)} = \frac{6.146 - 5.791}{0.002957 - 0.003047}\]</div>
 <div class="math notranslate nohighlight">
-\[
-m = \frac{0.355}{-0.00009} = -3944 \text{ K}
-\]</div>
+\[m = \frac{0.355}{-0.00009} = -3944 \text{ K}\]</div>
 <p><strong>Step 4: Calculate Heat of Vaporization</strong></p>
 <p>From <span class="math notranslate nohighlight">\(m = -\Delta H_v/R\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-\Delta H_v = -m \times R = -(-3944) \times 8.314 = 32785 \text{ J/mol}
-\]</div>
+\[\Delta H_v = -m \times R = -(-3944) \times 8.314 = 32785 \text{ J/mol}\]</div>
 <p><strong>Final Answer:</strong> The heat of vaporization of benzene at 60°C is approximately <strong>32.8 kJ/mol</strong>.</p>
 <p><strong>Note:</strong> Literature values for benzene at 60°C are around 32.5-33.0 kJ/mol, confirming our estimate is accurate.</p>
 </section>
@@ -2412,59 +2098,37 @@ m = \frac{0.355}{-0.00009} = -3944 \text{ K}
 <p><strong>Solution:</strong></p>
 <p>For cylindrical coordinates, thermal resistances are:</p>
 <div class="math notranslate nohighlight">
-\[
-R_{conv,i} = \frac{1}{h_i A_i} = \frac{1}{2\pi r_i L h_i}
-\]</div>
+\[R_{conv,i} = \frac{1}{h_i A_i} = \frac{1}{2\pi r_i L h_i}\]</div>
 <div class="math notranslate nohighlight">
-\[
-R_{cond,cyl} = \frac{\ln(r_o/r_i)}{2\pi k L}
-\]</div>
+\[R_{cond,cyl} = \frac{\ln(r_o/r_i)}{2\pi k L}\]</div>
 <p><strong>Per unit length</strong> (<span class="math notranslate nohighlight">\(L = 1\)</span> m):</p>
 <p>Inner radius: <span class="math notranslate nohighlight">\(r_1 = 0.05\)</span> m</p>
 <p>Outer radius of steel: <span class="math notranslate nohighlight">\(r_2 = 0.06\)</span> m</p>
 <p>Outer radius of insulation: <span class="math notranslate nohighlight">\(r_3 = 0.06 + 0.05 = 0.11\)</span> m</p>
 <div class="math notranslate nohighlight">
-\[
-R'_{conv,i} = \frac{1}{2\pi(0.05)(500)} = 6.37 \times 10^{-3} \text{ K·m/W}
-\]</div>
+\[R'_{conv,i} = \frac{1}{2\pi(0.05)(500)} = 6.37 \times 10^{-3} \text{ K·m/W}\]</div>
 <div class="math notranslate nohighlight">
-\[
-R'_{cond,steel} = \frac{\ln(0.06/0.05)}{2\pi(50)} = 5.82 \times 10^{-4} \text{ K·m/W}
-\]</div>
+\[R'_{cond,steel} = \frac{\ln(0.06/0.05)}{2\pi(50)} = 5.82 \times 10^{-4} \text{ K·m/W}\]</div>
 <div class="math notranslate nohighlight">
-\[
-R'_{cond,ins} = \frac{\ln(0.11/0.06)}{2\pi(0.04)} = 2.43 \text{ K·m/W}
-\]</div>
+\[R'_{cond,ins} = \frac{\ln(0.11/0.06)}{2\pi(0.04)} = 2.43 \text{ K·m/W}\]</div>
 <div class="math notranslate nohighlight">
-\[
-R'_{conv,o} = \frac{1}{2\pi(0.11)(10)} = 0.145 \text{ K·m/W}
-\]</div>
+\[R'_{conv,o} = \frac{1}{2\pi(0.11)(10)} = 0.145 \text{ K·m/W}\]</div>
 <p>Total resistance per unit length:</p>
 <div class="math notranslate nohighlight">
-\[
-R'_{total} = 6.37 \times 10^{-3} + 5.82 \times 10^{-4} + 2.43 + 0.145 = 2.58 \text{ K·m/W}
-\]</div>
+\[R'_{total} = 6.37 \times 10^{-3} + 5.82 \times 10^{-4} + 2.43 + 0.145 = 2.58 \text{ K·m/W}\]</div>
 <p><strong>Part (a): Heat loss per unit length</strong></p>
 <div class="math notranslate nohighlight">
-\[
-q' = \frac{T_{steam} - T_{amb}}{R'_{total}} = \frac{200 - 25}{2.58} = 67.8 \text{ W/m}
-\]</div>
+\[q' = \frac{T_{steam} - T_{amb}}{R'_{total}} = \frac{200 - 25}{2.58} = 67.8 \text{ W/m}\]</div>
 <p><strong>Part (b): Pipe outer surface temperature</strong></p>
 <p>The temperature drop across the steel pipe:</p>
 <div class="math notranslate nohighlight">
-\[
-\Delta T_{steel} = q' \times R'_{cond,steel} = 67.8 \times 5.82 \times 10^{-4} = 0.039 \text{ K}
-\]</div>
+\[\Delta T_{steel} = q' \times R'_{cond,steel} = 67.8 \times 5.82 \times 10^{-4} = 0.039 \text{ K}\]</div>
 <p>The temperature drop from steam to inner surface:</p>
 <div class="math notranslate nohighlight">
-\[
-\Delta T_{conv,i} = q' \times R'_{conv,i} = 67.8 \times 6.37 \times 10^{-3} = 0.43 \text{ K}
-\]</div>
+\[\Delta T_{conv,i} = q' \times R'_{conv,i} = 67.8 \times 6.37 \times 10^{-3} = 0.43 \text{ K}\]</div>
 <p>Pipe outer surface temperature:</p>
 <div class="math notranslate nohighlight">
-\[
-T_{pipe,outer} = 200 - 0.43 - 0.039 = 199.5°\text{C}
-\]</div>
+\[T_{pipe,outer} = 200 - 0.43 - 0.039 = 199.5°\text{C}\]</div>
 <p><strong>Answers:</strong></p>
 <ul class="simple">
 <li><p>Heat loss: <strong>67.8 W/m</strong></p></li>
@@ -2490,38 +2154,24 @@ T_{pipe,outer} = 200 - 0.43 - 0.039 = 199.5°\text{C}
 <p><strong>Step 1: Calculate Rayleigh Number</strong></p>
 <p>The characteristic length for a vertical plate is its height: <span class="math notranslate nohighlight">\(L = 0.5\)</span> m</p>
 <div class="math notranslate nohighlight">
-\[
-Ra_L = \frac{g\beta(T_s - T_{\infty})L^3}{\nu^2} Pr
-\]</div>
+\[Ra_L = \frac{g\beta(T_s - T_{\infty})L^3}{\nu^2} Pr\]</div>
 <div class="math notranslate nohighlight">
-\[
-Ra_L = \frac{9.81 \times 0.0031 \times (80-20) \times (0.5)^3}{(1.8 \times 10^{-5})^2} \times 0.71
-\]</div>
+\[Ra_L = \frac{9.81 \times 0.0031 \times (80-20) \times (0.5)^3}{(1.8 \times 10^{-5})^2} \times 0.71\]</div>
 <div class="math notranslate nohighlight">
-\[
-Ra_L = \frac{9.81 \times 0.0031 \times 60 \times 0.125}{3.24 \times 10^{-10}} \times 0.71 = 5.08 \times 10^8
-\]</div>
+\[Ra_L = \frac{9.81 \times 0.0031 \times 60 \times 0.125}{3.24 \times 10^{-10}} \times 0.71 = 5.08 \times 10^8\]</div>
 <p><strong>Step 2: Select Correlation</strong></p>
 <p>Since <span class="math notranslate nohighlight">\(10^4 &lt; Ra_L &lt; 10^9\)</span>, use laminar natural convection correlation:</p>
 <div class="math notranslate nohighlight">
-\[
-\overline{Nu}_L = 0.59 Ra_L^{1/4}
-\]</div>
+\[\overline{Nu}_L = 0.59 Ra_L^{1/4}\]</div>
 <div class="math notranslate nohighlight">
-\[
-\overline{Nu}_L = 0.59 \times (5.08 \times 10^8)^{0.25} = 0.59 \times 150.3 = 88.7
-\]</div>
+\[\overline{Nu}_L = 0.59 \times (5.08 \times 10^8)^{0.25} = 0.59 \times 150.3 = 88.7\]</div>
 <p><strong>Step 3: Calculate Heat Transfer Coefficient</strong></p>
 <div class="math notranslate nohighlight">
-\[
-\bar{h} = \frac{\overline{Nu}_L \times k}{L} = \frac{88.7 \times 0.028}{0.5} = 4.97 \text{ W/m}^2\cdot\text{K}
-\]</div>
+\[\bar{h} = \frac{\overline{Nu}_L \times k}{L} = \frac{88.7 \times 0.028}{0.5} = 4.97 \text{ W/m}^2\cdot\text{K}\]</div>
 <p><strong>Step 4: Calculate Heat Transfer Rate</strong></p>
 <p>Surface area: <span class="math notranslate nohighlight">\(A = 0.5 \times 0.3 = 0.15\)</span> m²</p>
 <div class="math notranslate nohighlight">
-\[
-q = \bar{h} A (T_s - T_{\infty}) = 4.97 \times 0.15 \times (80 - 20) = 44.7 \text{ W}
-\]</div>
+\[q = \bar{h} A (T_s - T_{\infty}) = 4.97 \times 0.15 \times (80 - 20) = 44.7 \text{ W}\]</div>
 <p><strong>Final Answer:</strong> The natural convection heat transfer rate is approximately <strong>45 W</strong>.</p>
 <p><strong>Note:</strong> Natural convection coefficients (typically 2-25 W/m²·K for gases) are much lower than forced convection coefficients (typically 25-250 W/m²·K for gases), explaining why fans significantly improve cooling.</p>
 </section>
@@ -2537,66 +2187,40 @@ q = \bar{h} A (T_s - T_{\infty}) = 4.97 \times 0.15 \times (80 - 20) = 44.7 \tex
 <p><strong>Method 1: Direct Formula</strong></p>
 <p>For two large parallel plates with <span class="math notranslate nohighlight">\(A_1 = A_2 = A\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[
-q_{12} = \frac{\sigma A (T_1^4 - T_2^4)}{\frac{1}{\epsilon_1} + \frac{1}{\epsilon_2} - 1}
-\]</div>
+\[q_{12} = \frac{\sigma A (T_1^4 - T_2^4)}{\frac{1}{\epsilon_1} + \frac{1}{\epsilon_2} - 1}\]</div>
 <div class="math notranslate nohighlight">
-\[
-q_{12} = \frac{5.67 \times 10^{-8} \times 2 \times (600^4 - 400^4)}{\frac{1}{0.7} + \frac{1}{0.5} - 1}
-\]</div>
+\[q_{12} = \frac{5.67 \times 10^{-8} \times 2 \times (600^4 - 400^4)}{\frac{1}{0.7} + \frac{1}{0.5} - 1}\]</div>
 <div class="math notranslate nohighlight">
-\[
-q_{12} = \frac{5.67 \times 10^{-8} \times 2 \times (129.6 \times 10^9 - 25.6 \times 10^9)}{1.429 + 2.0 - 1}
-\]</div>
+\[q_{12} = \frac{5.67 \times 10^{-8} \times 2 \times (129.6 \times 10^9 - 25.6 \times 10^9)}{1.429 + 2.0 - 1}\]</div>
 <div class="math notranslate nohighlight">
-\[
-q_{12} = \frac{1.134 \times 10^{-7} \times 104 \times 10^9}{2.429} = \frac{11794}{2.429} = 4856 \text{ W}
-\]</div>
+\[q_{12} = \frac{1.134 \times 10^{-7} \times 104 \times 10^9}{2.429} = \frac{11794}{2.429} = 4856 \text{ W}\]</div>
 <p><strong>Method 2: Resistance Network</strong></p>
 <p>Surface resistance for Plate 1:</p>
 <div class="math notranslate nohighlight">
-\[
-R_{surf,1} = \frac{1-\epsilon_1}{\epsilon_1 A_1} = \frac{1-0.7}{0.7 \times 2} = \frac{0.3}{1.4} = 0.214 \text{ K/W}
-\]</div>
+\[R_{surf,1} = \frac{1-\epsilon_1}{\epsilon_1 A_1} = \frac{1-0.7}{0.7 \times 2} = \frac{0.3}{1.4} = 0.214 \text{ K/W}\]</div>
 <p>Surface resistance for Plate 2:</p>
 <div class="math notranslate nohighlight">
-\[
-R_{surf,2} = \frac{1-\epsilon_2}{\epsilon_2 A_2} = \frac{1-0.5}{0.5 \times 2} = \frac{0.5}{1.0} = 0.5 \text{ K/W}
-\]</div>
+\[R_{surf,2} = \frac{1-\epsilon_2}{\epsilon_2 A_2} = \frac{1-0.5}{0.5 \times 2} = \frac{0.5}{1.0} = 0.5 \text{ K/W}\]</div>
 <p>Space resistance:</p>
 <div class="math notranslate nohighlight">
-\[
-R_{space} = \frac{1}{A_1 F_{12}} = \frac{1}{2 \times 1} = 0.5 \text{ K/W}
-\]</div>
+\[R_{space} = \frac{1}{A_1 F_{12}} = \frac{1}{2 \times 1} = 0.5 \text{ K/W}\]</div>
 <p>Total resistance:</p>
 <div class="math notranslate nohighlight">
-\[
-R_{total} = 0.214 + 0.5 + 0.5 = 1.214 \text{ K/W}
-\]</div>
+\[R_{total} = 0.214 + 0.5 + 0.5 = 1.214 \text{ K/W}\]</div>
 <p>Blackbody emissive powers:</p>
 <div class="math notranslate nohighlight">
-\[
-E_{b1} = \sigma T_1^4 = 5.67 \times 10^{-8} \times 600^4 = 7348 \text{ W/m}^2
-\]</div>
+\[E_{b1} = \sigma T_1^4 = 5.67 \times 10^{-8} \times 600^4 = 7348 \text{ W/m}^2\]</div>
 <div class="math notranslate nohighlight">
-\[
-E_{b2} = \sigma T_2^4 = 5.67 \times 10^{-8} \times 400^4 = 1452 \text{ W/m}^2
-\]</div>
+\[E_{b2} = \sigma T_2^4 = 5.67 \times 10^{-8} \times 400^4 = 1452 \text{ W/m}^2\]</div>
 <p>Heat transfer:</p>
 <div class="math notranslate nohighlight">
-\[
-q = \frac{A(E_{b1} - E_{b2})}{R_{total} \times A} = \frac{E_{b1} - E_{b2}}{R_{total}/A} = \frac{A(E_{b1} - E_{b2})}{R_{total}}
-\]</div>
+\[q = \frac{A(E_{b1} - E_{b2})}{R_{total} \times A} = \frac{E_{b1} - E_{b2}}{R_{total}/A} = \frac{A(E_{b1} - E_{b2})}{R_{total}}\]</div>
 <p>Wait, let me recalculate using the driving potential correctly:</p>
 <div class="math notranslate nohighlight">
-\[
-q = \frac{E_{b1} \cdot A_1 - E_{b2} \cdot A_2}{R_{total}}
-\]</div>
+\[q = \frac{E_{b1} \cdot A_1 - E_{b2} \cdot A_2}{R_{total}}\]</div>
 <p>Actually, with the resistance network, the driving force is:</p>
 <div class="math notranslate nohighlight">
-\[
-q = \frac{A_1 E_{b1} - A_2 E_{b2}}{(1-\epsilon_1)/\epsilon_1 + 1/F_{12} + (1-\epsilon_2)/\epsilon_2}
-\]</div>
+\[q = \frac{A_1 E_{b1} - A_2 E_{b2}}{(1-\epsilon_1)/\epsilon_1 + 1/F_{12} + (1-\epsilon_2)/\epsilon_2}\]</div>
 <p>This gives the same result as Method 1: <strong>4856 W</strong></p>
 <p><strong>Analysis:</strong> The net radiation heat transfer from the hot plate to the cold plate is 4.86 kW. This is significant compared to convection in many applications, especially at elevated temperatures where radiation scales as <span class="math notranslate nohighlight">\(T^4\)</span>.</p>
 </section>
@@ -2617,43 +2241,27 @@ q = \frac{A_1 E_{b1} - A_2 E_{b2}}{(1-\epsilon_1)/\epsilon_1 + 1/F_{12} + (1-\ep
 <p><strong>Step 1: Calculate Surface Area</strong></p>
 <p>For a rectangular fin, considering both sides:</p>
 <div class="math notranslate nohighlight">
-\[
-A_s = 2 \times \text{height} \times \text{width} = 2 \times 0.05 \times 1 = 0.1 \text{ m}^2
-\]</div>
+\[A_s = 2 \times \text{height} \times \text{width} = 2 \times 0.05 \times 1 = 0.1 \text{ m}^2\]</div>
 <p><strong>Step 2: Convective Heat Transfer</strong></p>
 <p>For a simple estimate (treating fin as isothermal at average temperature):</p>
 <div class="math notranslate nohighlight">
-\[
-q_{conv} = h A_s (T_{base} - T_{\infty})
-\]</div>
+\[q_{conv} = h A_s (T_{base} - T_{\infty})\]</div>
 <div class="math notranslate nohighlight">
-\[
-q_{conv} = 15 \times 0.1 \times (100 - 20) = 120 \text{ W}
-\]</div>
+\[q_{conv} = 15 \times 0.1 \times (100 - 20) = 120 \text{ W}\]</div>
 <p><strong>Step 3: Radiative Heat Transfer</strong></p>
 <p>Assuming surroundings are at air temperature (293 K):</p>
 <div class="math notranslate nohighlight">
-\[
-q_{rad} = \epsilon \sigma A_s (T_{s}^4 - T_{surr}^4)
-\]</div>
+\[q_{rad} = \epsilon \sigma A_s (T_{s}^4 - T_{surr}^4)\]</div>
 <p>Using average fin temperature (approximately 80°C = 353 K as estimate):</p>
 <div class="math notranslate nohighlight">
-\[
-q_{rad} = 0.9 \times 5.67 \times 10^{-8} \times 0.1 \times (353^4 - 293^4)
-\]</div>
+\[q_{rad} = 0.9 \times 5.67 \times 10^{-8} \times 0.1 \times (353^4 - 293^4)\]</div>
 <div class="math notranslate nohighlight">
-\[
-q_{rad} = 0.9 \times 5.67 \times 10^{-8} \times 0.1 \times (1.554 \times 10^{10} - 0.737 \times 10^{10})
-\]</div>
+\[q_{rad} = 0.9 \times 5.67 \times 10^{-8} \times 0.1 \times (1.554 \times 10^{10} - 0.737 \times 10^{10})\]</div>
 <div class="math notranslate nohighlight">
-\[
-q_{rad} = 5.1 \times 10^{-9} \times 8.17 \times 10^9 = 41.7 \text{ W}
-\]</div>
+\[q_{rad} = 5.1 \times 10^{-9} \times 8.17 \times 10^9 = 41.7 \text{ W}\]</div>
 <p><strong>Step 4: Total Heat Transfer</strong></p>
 <div class="math notranslate nohighlight">
-\[
-q_{total} = q_{conv} + q_{rad} = 120 + 41.7 = 161.7 \text{ W}
-\]</div>
+\[q_{total} = q_{conv} + q_{rad} = 120 + 41.7 = 161.7 \text{ W}\]</div>
 <p><strong>Final Answer:</strong> Total heat transfer is approximately <strong>162 W</strong>, with convection contributing 74% and radiation 26%.</p>
 <p><strong>Analysis:</strong> At these moderate temperatures, radiation is significant but not dominant. At higher temperatures, radiation becomes increasingly important (scales as <span class="math notranslate nohighlight">\(T^4\)</span>). This demonstrates why combined mode analysis is important for accurate thermal predictions.</p>
 </section>
@@ -2669,33 +2277,23 @@ q_{total} = q_{conv} + q_{rad} = 120 + 41.7 = 161.7 \text{ W}
 <p><strong>Laminar</strong> (<span class="math notranslate nohighlight">\(Re_x &lt; 5 \times 10^5\)</span>):</p>
 <p>Local:</p>
 <div class="math notranslate nohighlight">
-\[
-Nu_x = 0.332 Re_x^{1/2} Pr^{1/3}
-\]</div>
+\[Nu_x = 0.332 Re_x^{1/2} Pr^{1/3}\]</div>
 <p>Average:</p>
 <div class="math notranslate nohighlight">
-\[
-\overline{Nu}_L = 0.664 Re_L^{1/2} Pr^{1/3}
-\]</div>
+\[\overline{Nu}_L = 0.664 Re_L^{1/2} Pr^{1/3}\]</div>
 <p><strong>Turbulent</strong> (<span class="math notranslate nohighlight">\(5 \times 10^5 &lt; Re_x &lt; 10^8\)</span>):</p>
 <p>Local:</p>
 <div class="math notranslate nohighlight">
-\[
-Nu_x = 0.0296 Re_x^{4/5} Pr^{1/3}
-\]</div>
+\[Nu_x = 0.0296 Re_x^{4/5} Pr^{1/3}\]</div>
 <p>Average (mixed):</p>
 <div class="math notranslate nohighlight">
-\[
-\overline{Nu}_L = (0.037 Re_L^{4/5} - 871) Pr^{1/3}
-\]</div>
+\[\overline{Nu}_L = (0.037 Re_L^{4/5} - 871) Pr^{1/3}\]</div>
 </section>
 <section id="flow-over-cylinder">
 <h4>Flow Over Cylinder<a class="headerlink" href="#flow-over-cylinder" title="Link to this heading">#</a></h4>
 <p><strong>Average Nusselt number</strong> (Churchill-Bernstein):</p>
 <div class="math notranslate nohighlight">
-\[
-\overline{Nu}_D = 0.3 + \frac{0.62 Re_D^{1/2} Pr^{1/3}}{[1+(0.4/Pr)^{2/3}]^{1/4}} \left[1 + \left(\frac{Re_D}{282000}\right)^{5/8}\right]^{4/5}
-\]</div>
+\[\overline{Nu}_D = 0.3 + \frac{0.62 Re_D^{1/2} Pr^{1/3}}{[1+(0.4/Pr)^{2/3}]^{1/4}} \left[1 + \left(\frac{Re_D}{282000}\right)^{5/8}\right]^{4/5}\]</div>
 <p>Valid for <span class="math notranslate nohighlight">\(Re_D Pr &gt; 0.2\)</span>.</p>
 </section>
 <section id="internal-flow-in-pipes">
@@ -2707,28 +2305,20 @@ Nu_x = 0.0296 Re_x^{4/5} Pr^{1/3}
 </ul>
 <p><strong>Turbulent flow</strong> (Gnielinski equation, <span class="math notranslate nohighlight">\(3000 &lt; Re_D &lt; 5 \times 10^6\)</span>, <span class="math notranslate nohighlight">\(0.5 &lt; Pr &lt; 2000\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[
-Nu_D = \frac{(f/8)(Re_D - 1000)Pr}{1 + 12.7(f/8)^{1/2}(Pr^{2/3} - 1)}
-\]</div>
+\[Nu_D = \frac{(f/8)(Re_D - 1000)Pr}{1 + 12.7(f/8)^{1/2}(Pr^{2/3} - 1)}\]</div>
 <p>where <span class="math notranslate nohighlight">\(f = (0.790 \ln Re_D - 1.64)^{-2}\)</span> is the friction factor.</p>
 </section>
 <section id="id1">
 <h4>Natural Convection<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
 <p><strong>Vertical plate or cylinder</strong> (<span class="math notranslate nohighlight">\(10^4 &lt; Ra_L &lt; 10^9\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[
-\overline{Nu}_L = 0.59 Ra_L^{1/4}
-\]</div>
+\[\overline{Nu}_L = 0.59 Ra_L^{1/4}\]</div>
 <p><strong>Vertical plate or cylinder</strong> (<span class="math notranslate nohighlight">\(10^9 &lt; Ra_L &lt; 10^{13}\)</span>):</p>
 <div class="math notranslate nohighlight">
-\[
-\overline{Nu}_L = 0.10 Ra_L^{1/3}
-\]</div>
+\[\overline{Nu}_L = 0.10 Ra_L^{1/3}\]</div>
 <p><strong>Horizontal cylinder</strong>:</p>
 <div class="math notranslate nohighlight">
-\[
-\overline{Nu}_D = \left\{0.60 + \frac{0.387 Ra_D^{1/6}}{[1+(0.559/Pr)^{9/16}]^{8/27}}\right\}^2
-\]</div>
+\[\overline{Nu}_D = \left\{0.60 + \frac{0.387 Ra_D^{1/6}}{[1+(0.559/Pr)^{9/16}]^{8/27}}\right\}^2\]</div>
 <p>Valid for <span class="math notranslate nohighlight">\(Ra_D &lt; 10^{12}\)</span>.</p>
 </section>
 </section>
@@ -2864,9 +2454,7 @@ Nu_D = \frac{(f/8)(Re_D - 1000)Pr}{1 + 12.7(f/8)^{1/2}(Pr^{2/3} - 1)}
 <section id="id2">
 <h4>Reynolds Number<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
-\[
-Re = \frac{\rho u L}{\mu} = \frac{u L}{\nu}
-\]</div>
+\[Re = \frac{\rho u L}{\mu} = \frac{u L}{\nu}\]</div>
 <p><strong>Critical values:</strong></p>
 <ul class="simple">
 <li><p>Pipe flow: <span class="math notranslate nohighlight">\(Re_{crit} \approx 2300\)</span></p></li>
@@ -2876,17 +2464,13 @@ Re = \frac{\rho u L}{\mu} = \frac{u L}{\nu}
 <section id="id3">
 <h4>Nusselt Number<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
-\[
-Nu = \frac{h L}{k}
-\]</div>
+\[Nu = \frac{h L}{k}\]</div>
 <p>Represents ratio of convective to conductive heat transfer.</p>
 </section>
 <section id="id4">
 <h4>Prandtl Number<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
-\[
-Pr = \frac{\mu c_p}{k} = \frac{\nu}{\alpha}
-\]</div>
+\[Pr = \frac{\mu c_p}{k} = \frac{\nu}{\alpha}\]</div>
 <p>Represents ratio of momentum to thermal diffusivity.</p>
 <p><strong>Typical ranges:</strong></p>
 <ul class="simple">
@@ -2899,17 +2483,13 @@ Pr = \frac{\mu c_p}{k} = \frac{\nu}{\alpha}
 <section id="grashof-number">
 <h4>Grashof Number<a class="headerlink" href="#grashof-number" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
-\[
-Gr = \frac{g \beta (T_s - T_{\infty}) L^3}{\nu^2}
-\]</div>
+\[Gr = \frac{g \beta (T_s - T_{\infty}) L^3}{\nu^2}\]</div>
 <p>Represents ratio of buoyancy to viscous forces in natural convection.</p>
 </section>
 <section id="rayleigh-number">
 <h4>Rayleigh Number<a class="headerlink" href="#rayleigh-number" title="Link to this heading">#</a></h4>
 <div class="math notranslate nohighlight">
-\[
-Ra = Gr \cdot Pr = \frac{g \beta (T_s - T_{\infty}) L^3}{\nu \alpha}
-\]</div>
+\[Ra = Gr \cdot Pr = \frac{g \beta (T_s - T_{\infty}) L^3}{\nu \alpha}\]</div>
 <p>Combined parameter for natural convection.</p>
 <hr class="docutils" />
 <p><strong>End of Document</strong></p>

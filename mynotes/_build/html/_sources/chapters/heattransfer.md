@@ -57,7 +57,9 @@ Conduction is the transfer of thermal energy through a medium by the direct inte
 The mathematical expression of Fourier's Law in one dimension is:
 
 $$
+
 q = -k A \frac{dT}{dx}
+
 $$
 
 ```{important}
@@ -101,7 +103,9 @@ For more complex situations involving time-varying temperatures, internal heat g
 The complete heat diffusion equation in three dimensions is:
 
 $$
+
 \frac{\partial}{\partial x}\left(k \frac{\partial T}{\partial x}\right) + \frac{\partial}{\partial y}\left(k \frac{\partial T}{\partial y}\right) + \frac{\partial}{\partial z}\left(k \frac{\partial T}{\partial z}\right) + \dot{q} = \rho c_p \frac{\partial T}{\partial t}
+
 $$
 
 where:
@@ -137,13 +141,17 @@ We now derive the temperature profile and heat transfer rate for the simplest ge
 Applying the standard assumptions, the general equation reduces to:
 
 $$
+
 \frac{d}{dx}\left(k \frac{dT}{dx}\right) = 0
+
 $$
 
 For constant thermal conductivity:
 
 $$
+
 k \frac{d^2T}{dx^2} = 0 \quad \implies \quad \frac{d^2T}{dx^2} = 0
+
 $$
 
 This ordinary differential equation states that the second derivative of temperature with respect to position is zero, meaning the temperature gradient is constant.
@@ -153,7 +161,9 @@ This ordinary differential equation states that the second derivative of tempera
 Integrating once with respect to $x$:
 
 $$
+
 \frac{dT}{dx} = C_1
+
 $$
 
 This shows the temperature gradient is constant (as expected for steady, one-dimensional conduction with no heat generation).
@@ -161,7 +171,9 @@ This shows the temperature gradient is constant (as expected for steady, one-dim
 Integrating a second time:
 
 $$
+
 T(x) = C_1 x + C_2
+
 $$
 
 This is the general solution showing that temperature varies **linearly** with position. The constants $C_1$ and $C_2$ are determined from boundary conditions.
@@ -173,13 +185,17 @@ For a plane wall of thickness $L$ with known surface temperatures:
 - **Boundary Condition 1**: At $x = 0$, $T(0) = T_{s1}$
   
   $$
+
   C_1(0) + C_2 = T_{s1} \implies C_2 = T_{s1}
+
   $$
 
 - **Boundary Condition 2**: At $x = L$, $T(L) = T_{s2}$
   
   $$
+
   C_1 L + T_{s1} = T_{s2} \implies C_1 = \frac{T_{s2} - T_{s1}}{L}
+
   $$
 
 #### Step 4: Final Equations
@@ -190,13 +206,17 @@ Substituting the constants back into our expressions:
 **Temperature Profile for a Plane Wall:**
 
 $$
+
 T(x) = \frac{T_{s2} - T_{s1}}{L}x + T_{s1}
+
 $$
 
 This can also be written in dimensionless form:
 
 $$
+
 \frac{T(x) - T_{s1}}{T_{s2} - T_{s1}} = \frac{x}{L}
+
 $$
 
 **Heat Transfer Rate:**
@@ -204,14 +224,19 @@ $$
 From Fourier's Law with $\frac{dT}{dx} = C_1 = \frac{T_{s2} - T_{s1}}{L}$:
 
 $$
+
 q = -k A \frac{T_{s2} - T_{s1}}{L} = k A \frac{T_{s1} - T_{s2}}{L}
+
 $$
 
 **Heat Flux:**
 
 $$
+
 q'' = \frac{q}{A} = k \frac{T_{s1} - T_{s2}}{L}
+
 $$
+
 ```
 
 Notice the heat transfer rate is positive when $T_{s1} > T_{s2}$, confirming that heat flows from the hot surface to the cold surface.
@@ -221,25 +246,33 @@ Notice the heat transfer rate is positive when $T_{s1} > T_{s2}$, confirming tha
 By analogy with Ohm's Law for electrical circuits ($V = IR$), we can express heat transfer through a plane wall as:
 
 $$
+
 q = \frac{\Delta T}{R_{thermal}}
+
 $$
 
 where the **thermal resistance** is:
 
 $$
+
 R_{thermal} = \frac{L}{kA}
+
 $$
 
 For a thermal resistance per unit area (often more convenient):
 
 $$
+
 R'' = \frac{L}{k} \quad [m^2 \cdot K/W]
+
 $$
 
 Then:
 
 $$
+
 q = \frac{\Delta T}{R''} \cdot A
+
 $$
 
 ```{admonition} Electrical-Thermal Analogy
@@ -261,13 +294,17 @@ This analogy allows us to use circuit analysis techniques (series/parallel resis
 For walls composed of multiple layers of different materials in series, the total thermal resistance is the sum of individual resistances:
 
 $$
+
 R_{total} = R_1 + R_2 + R_3 + \cdots = \frac{L_1}{k_1 A} + \frac{L_2}{k_2 A} + \frac{L_3}{k_3 A} + \cdots
+
 $$
 
 The heat transfer rate through the composite wall is:
 
 $$
+
 q = \frac{T_{s1} - T_{sn}}{R_{total}} = \frac{T_{s1} - T_{sn}}{\sum_{i} \frac{L_i}{k_i A}}
+
 $$
 
 ```{prf:example} Three-Layer Composite Wall
@@ -285,27 +322,37 @@ The inside surface temperature is $T_{s1} = 600°C$ and the outside surface temp
 Calculate individual thermal resistances:
 
 $$
+
 R_1 = \frac{0.10}{1.0 \times 10} = 0.01 \text{ K/W}
+
 $$
 
 $$
+
 R_2 = \frac{0.15}{0.2 \times 10} = 0.075 \text{ K/W}
+
 $$
 
 $$
+
 R_3 = \frac{0.05}{0.7 \times 10} = 0.00714 \text{ K/W}
+
 $$
 
 Total resistance:
 
 $$
+
 R_{total} = 0.01 + 0.075 + 0.00714 = 0.09214 \text{ K/W}
+
 $$
 
 Heat transfer rate:
 
 $$
+
 q = \frac{600 - 50}{0.09214} = \frac{550}{0.09214} = 5970 \text{ W} \approx 6.0 \text{ kW}
+
 $$
 
 The heat loss through the furnace wall is approximately 6.0 kW.
@@ -318,7 +365,9 @@ When internal heat generation occurs (e.g., electrical resistance heating, nucle
 For steady-state, one-dimensional conduction with uniform heat generation in a plane wall:
 
 $$
+
 \frac{d^2T}{dx^2} + \frac{\dot{q}}{k} = 0
+
 $$
 
 The solution (with symmetric boundary conditions) yields a parabolic temperature profile rather than linear.
@@ -345,15 +394,21 @@ Water is heated as it flows through a thick-walled pipe. Determine the uniform v
 The heat transferred to the water equals its enthalpy change:
 
 $$
+
 q = \dot{m} c_p (T_{out} - T_{in})
+
 $$
 
 $$
+
 q = (0.3 \text{ kg/s}) \times (4178 \text{ J/kg·K}) \times (45°C - 25°C)
+
 $$
 
 $$
+
 q = 0.3 \times 4178 \times 20 = 25068 \text{ W}
+
 $$
 
 **Step 2: Calculate Pipe Wall Volume**
@@ -361,15 +416,21 @@ $$
 The volume of the hollow cylindrical pipe wall:
 
 $$
+
 V_{wall} = \frac{\pi}{4}(D_o^2 - D_i^2) \times L
+
 $$
 
 $$
+
 V_{wall} = \frac{\pi}{4}((0.030)^2 - (0.015)^2) \times 10
+
 $$
 
 $$
+
 V_{wall} = \frac{\pi}{4}(0.0009 - 0.000225) \times 10 = \frac{\pi}{4}(0.000675) \times 10 \approx 0.0053 \text{ m}^3
+
 $$
 
 **Step 3: Calculate Required Heat Generation Rate**
@@ -377,7 +438,9 @@ $$
 Since the outer surface is insulated, all generated heat goes to the water:
 
 $$
+
 \dot{q} = \frac{q}{V_{wall}} = \frac{25068}{0.0053} \approx 4.73 \times 10^6 \text{ W/m}^3
+
 $$
 
 **Final Answer:** The required uniform volumetric heat generation rate is approximately **4.73 MW/m³**.
@@ -397,7 +460,9 @@ Convection is heat transfer between a solid surface and a moving fluid. This mod
 The rate of convective heat transfer is given by Newton's Law of Cooling:
 
 $$
+
 q_{conv} = h A_s (T_s - T_{\infty})
+
 $$
 
 ```{important}
@@ -430,8 +495,11 @@ The **momentum boundary layer** ($\delta$) is the region near the surface where 
 Formally, $\delta$ is defined as the distance from the surface where:
 
 $$
+
 u(y=\delta) = 0.99 u_{\infty}
+
 $$
+
 ```
 
 ```{prf:definition} Thermal Boundary Layer
@@ -442,8 +510,11 @@ The **thermal boundary layer** ($\delta_t$) is the region near the surface where
 Formally, $\delta_t$ is defined as the distance from the surface where:
 
 $$
+
 \frac{T(y=\delta_t) - T_s}{T_{\infty} - T_s} = 0.99
+
 $$
+
 ```
 
 The relative thickness of these boundary layers is governed by the Prandtl number (discussed below). Both boundary layers grow in thickness as fluid moves along the surface.
@@ -460,7 +531,9 @@ Convection analysis relies heavily on dimensionless groups that characterize dif
 The **Reynolds number** ($Re$) is the ratio of inertial forces to viscous forces:
 
 $$
+
 Re = \frac{\rho u L_c}{\mu} = \frac{u L_c}{\nu}
+
 $$
 
 where:
@@ -480,7 +553,9 @@ where:
 For flow over a flat plate, the **local Reynolds number** at position $x$ is:
 
 $$
+
 Re_x = \frac{u_{\infty} x}{\nu}
+
 $$
 
 This increases with distance from the leading edge, causing flow to transition from laminar to turbulent at the critical Reynolds number.
@@ -493,7 +568,9 @@ This increases with distance from the leading edge, causing flow to transition f
 The **Prandtl number** ($Pr$) is the ratio of momentum diffusivity to thermal diffusivity:
 
 $$
+
 Pr = \frac{\nu}{\alpha} = \frac{\mu c_p}{k}
+
 $$
 
 where:
@@ -517,7 +594,9 @@ The Prandtl number is essentially a fluid property (depends only on fluid proper
 The **Nusselt number** ($Nu$) is the dimensionless heat transfer coefficient:
 
 $$
+
 Nu = \frac{h L_c}{k_f}
+
 $$
 
 where $k_f$ is the thermal conductivity of the fluid.
@@ -531,7 +610,9 @@ where $k_f$ is the thermal conductivity of the fluid.
 The Nusselt number is the primary dependent variable in convection correlations. Most correlations have the form:
 
 $$
+
 Nu = f(Re, Pr, \text{geometry})
+
 $$
 
 To find the heat transfer coefficient, we:
@@ -563,7 +644,9 @@ Required properties: $k_f$, $\mu$ (or $\nu$), $\rho$, $c_p$
 **Step 3: Calculate Reynolds Number**
 
 $$
+
 Re_{L_c} = \frac{\rho u L_c}{\mu} = \frac{u L_c}{\nu}
+
 $$
 
 Choose appropriate characteristic length $L_c$:
@@ -574,7 +657,9 @@ Choose appropriate characteristic length $L_c$:
 **Step 4: Calculate Prandtl Number**
 
 $$
+
 Pr = \frac{\mu c_p}{k_f} = \frac{\nu}{\alpha}
+
 $$
 
 **Step 5: Select and Apply Correlation**
@@ -582,7 +667,9 @@ $$
 Based on geometry and Reynolds number, choose the appropriate Nusselt number correlation:
 
 $$
+
 Nu = f(Re, Pr, \text{other parameters})
+
 $$
 
 Common form: $Nu = C Re^m Pr^n$
@@ -590,14 +677,19 @@ Common form: $Nu = C Re^m Pr^n$
 **Step 6: Calculate Heat Transfer Coefficient**
 
 $$
+
 h = \frac{Nu \cdot k_f}{L_c}
+
 $$
 
 **Step 7: Calculate Heat Transfer Rate**
 
 $$
+
 q_{conv} = h A_s (T_s - T_{\infty})
+
 $$
+
 ```
 
 ### Common Convection Correlations
@@ -611,13 +703,17 @@ While a complete catalog of correlations is beyond this guide's scope, here are 
 Local Nusselt number:
 
 $$
+
 Nu_x = 0.332 Re_x^{1/2} Pr^{1/3} \quad (Pr \geq 0.6)
+
 $$
 
 Average Nusselt number over length $L$:
 
 $$
+
 \overline{Nu}_L = 0.664 Re_L^{1/2} Pr^{1/3}
+
 $$
 
 **Turbulent flow** ($Re_x > 5 \times 10^5$):
@@ -625,7 +721,9 @@ $$
 Average Nusselt number (mixed laminar-turbulent):
 
 $$
+
 \overline{Nu}_L = (0.037 Re_L^{4/5} - 871) Pr^{1/3}
+
 $$
 
 valid for $0.6 \leq Pr \leq 60$ and $5 \times 10^5 < Re_L < 10^8$.
@@ -637,7 +735,9 @@ For **fully developed turbulent flow** in smooth pipes ($Re_D > 10000$):
 **Dittus-Boelter equation**:
 
 $$
+
 Nu_D = 0.023 Re_D^{4/5} Pr^n
+
 $$
 
 where:
@@ -654,7 +754,9 @@ For **laminar flow** in circular pipes ($Re_D < 2300$), fully developed:
 For natural convection from a vertical plate, the Nusselt number depends on the Rayleigh number:
 
 $$
+
 Ra_L = Gr_L \cdot Pr = \frac{g \beta (T_s - T_{\infty}) L^3}{\nu^2} \cdot Pr
+
 $$
 
 where:
@@ -665,13 +767,17 @@ where:
 **Vertical plate** (laminar, $10^4 < Ra_L < 10^9$):
 
 $$
+
 \overline{Nu}_L = 0.59 Ra_L^{1/4}
+
 $$
 
 **Vertical plate** (turbulent, $10^9 < Ra_L < 10^{13}$):
 
 $$
+
 \overline{Nu}_L = 0.10 Ra_L^{1/3}
+
 $$
 
 ```{seealso}
@@ -690,13 +796,17 @@ The heat transfer coefficient $h$ generally varies along a surface due to bounda
 **Average heat transfer coefficient** ($\bar{h}_L$): The integrated average over the entire surface of length $L$:
 
 $$
+
 \bar{h}_L = \frac{1}{L} \int_0^L h_x \, dx
+
 $$
 
 The total heat transfer from a surface uses the average coefficient:
 
 $$
+
 q_{total} = \bar{h}_L A (T_s - T_{\infty})
+
 $$
 
 ```{prf:example} Calculating Average Coefficient from Local Coefficient
@@ -705,7 +815,9 @@ $$
 The local heat transfer coefficient for flow over a 1-meter long flat plate is given by:
 
 $$
+
 h_x = 5x^{-1/3} \text{ W/m}^2\cdot\text{K}
+
 $$
 
 where $x$ is the distance from the leading edge in meters. Find the average heat transfer coefficient $\bar{h}_L$ for the entire plate.
@@ -715,17 +827,23 @@ where $x$ is the distance from the leading edge in meters. Find the average heat
 Apply the definition of average heat transfer coefficient:
 
 $$
+
 \bar{h}_L = \frac{1}{L} \int_0^L h_x \, dx = \frac{1}{1} \int_0^1 5x^{-1/3} \, dx
+
 $$
 
 Evaluate the integral:
 
 $$
+
 \int 5x^{-1/3} \, dx = 5 \cdot \frac{x^{2/3}}{2/3} = 7.5 x^{2/3}
+
 $$
 
 $$
+
 \bar{h}_L = \left[ 7.5 x^{2/3} \right]_0^1 = 7.5(1)^{2/3} - 7.5(0)^{2/3} = 7.5 \text{ W/m}^2\cdot\text{K}
+
 $$
 
 **Final Answer:** The average heat transfer coefficient is **7.5 W/m²·K**.
@@ -738,13 +856,17 @@ $$
 When heat is transferred through a composite system involving multiple modes in series (e.g., convection → conduction → convection), it's convenient to define an **overall heat transfer coefficient** $U$ that accounts for all resistances:
 
 $$
+
 q = U A \Delta T_{overall}
+
 $$
 
 For resistances in series, the overall coefficient is related to the total thermal resistance:
 
 $$
+
 U = \frac{1}{R''_{total} \cdot A} = \frac{1}{R''_{total}}
+
 $$
 
 where $R''_{total}$ is the total thermal resistance per unit area.
@@ -754,17 +876,23 @@ where $R''_{total}$ is the total thermal resistance per unit area.
 For a composite wall with convection on both sides:
 
 $$
+
 R''_{total} = R''_{conv,1} + R''_{cond,1} + R''_{cond,2} + \cdots + R''_{cond,n} + R''_{conv,2}
+
 $$
 
 $$
+
 R''_{total} = \frac{1}{h_1} + \frac{L_1}{k_1} + \frac{L_2}{k_2} + \cdots + \frac{L_n}{k_n} + \frac{1}{h_2}
+
 $$
 
 The overall heat transfer coefficient is:
 
 $$
+
 U = \left( \frac{1}{h_1} + \sum_{i=1}^n \frac{L_i}{k_i} + \frac{1}{h_2} \right)^{-1}
+
 $$
 
 ```{prf:example} Overall U for a Composite Wall
@@ -786,35 +914,49 @@ Find the overall heat transfer coefficient $U$.
 Calculate individual resistances per unit area:
 
 $$
+
 R''_{conv,1} = \frac{1}{20} = 0.050 \text{ m}^2\cdot\text{K/W}
+
 $$
 
 $$
+
 R''_{cond,1} = \frac{0.1}{1.0} = 0.100 \text{ m}^2\cdot\text{K/W}
+
 $$
 
 $$
+
 R''_{cond,2} = \frac{0.05}{0.04} = 1.250 \text{ m}^2\cdot\text{K/W}
+
 $$
 
 $$
+
 R''_{cond,3} = \frac{0.15}{0.8} = 0.188 \text{ m}^2\cdot\text{K/W}
+
 $$
 
 $$
+
 R''_{conv,2} = \frac{1}{10} = 0.100 \text{ m}^2\cdot\text{K/W}
+
 $$
 
 Total resistance:
 
 $$
+
 R''_{total} = 0.050 + 0.100 + 1.250 + 0.188 + 0.100 = 1.688 \text{ m}^2\cdot\text{K/W}
+
 $$
 
 Overall heat transfer coefficient:
 
 $$
+
 U = \frac{1}{1.688} = 0.593 \text{ W/m}^2\cdot\text{K}
+
 $$
 
 **Final Answer:** $U = 0.59$ W/m²·K
@@ -847,7 +989,9 @@ To analyze radiative heat transfer, we must understand four key radiative fluxes
 The relationship between these quantities is:
 
 $$
+
 q''_{rad} = J - G
+
 $$
 
 If $J > G$, the surface has a net heat loss by radiation. If $G > J$, the surface has a net heat gain.
@@ -866,7 +1010,9 @@ A **blackbody** is an idealized surface that:
 The emissive power of a blackbody is given by the Stefan-Boltzmann Law:
 
 $$
+
 E_b = \sigma T^4
+
 $$
 
 where:
@@ -878,14 +1024,19 @@ where:
 **Critical Reminder:** The Stefan-Boltzmann Law requires temperature in **absolute units** (Kelvin). Always convert Celsius to Kelvin:
 
 $$
+
 T[K] = T[°C] + 273.15
+
 $$
 
 For example, a surface at 25°C has $T = 298.15$ K, and its blackbody emissive power is:
 
 $$
+
 E_b = 5.67 \times 10^{-8} \times (298.15)^4 = 448 \text{ W/m}^2
+
 $$
+
 ```
 
 ### Real Surface Properties
@@ -898,7 +1049,9 @@ Real surfaces emit less radiation than a blackbody at the same temperature. This
 **Emissivity** ($\epsilon$) is the ratio of the radiation emitted by a real surface to that emitted by a blackbody at the same temperature:
 
 $$
+
 \epsilon = \frac{E}{E_b}
+
 $$
 
 where $0 \leq \epsilon \leq 1$.
@@ -907,7 +1060,9 @@ where $0 \leq \epsilon \leq 1$.
 For a real surface:
 
 $$
+
 E = \epsilon E_b = \epsilon \sigma T^4
+
 $$
 
 Typical emissivity values:
@@ -926,13 +1081,17 @@ When irradiation $G$ strikes a surface, it is:
 Energy conservation requires:
 
 $$
+
 \alpha + \rho + \tau = 1
+
 $$
 
 For **opaque** surfaces (most solids), $\tau = 0$, so:
 
 $$
+
 \alpha + \rho = 1
+
 $$
 
 ```{important}
@@ -948,7 +1107,9 @@ $$
 A **gray surface** is one whose radiative properties are independent of wavelength. For a gray surface in thermal equilibrium (Kirchhoff's Law):
 
 $$
+
 \alpha = \epsilon
+
 $$
 
 This simplification is widely used in engineering calculations and is reasonably accurate for many materials.
@@ -958,19 +1119,25 @@ This simplification is widely used in engineering calculations and is reasonably
 The **radiosity** $J$ is the total radiation leaving a surface, combining emitted and reflected components:
 
 $$
+
 J = E + \rho G
+
 $$
 
 For an opaque, gray surface with $\rho = 1 - \alpha = 1 - \epsilon$:
 
 $$
+
 J = \epsilon \sigma T^4 + (1 - \epsilon) G
+
 $$
 
 The net radiative heat flux from a surface can be written as:
 
 $$
+
 q''_{rad} = \frac{E_b - J}{(1-\epsilon)/\epsilon}
+
 $$
 
 This form suggests a resistance analogy, which leads to the radiation network method.
@@ -1001,7 +1168,9 @@ Most view factor problems can be solved using three fundamental rules:
 For an enclosure of $n$ surfaces, all radiation leaving surface $i$ must be intercepted by surfaces of the enclosure:
 
 $$
+
 \sum_{j=1}^{n} F_{ij} = F_{i1} + F_{i2} + \cdots + F_{in} = 1
+
 $$
 
 This includes the view factor from a surface to itself, $F_{ii}$:
@@ -1015,7 +1184,9 @@ This includes the view factor from a surface to itself, $F_{ii}$:
 The reciprocity relationship relates a view factor $F_{ij}$ to its inverse $F_{ji}$:
 
 $$
+
 A_i F_{ij} = A_j F_{ji}
+
 $$
 
 where $A_i$ and $A_j$ are the surface areas.
@@ -1027,7 +1198,9 @@ where $A_i$ and $A_j$ are the surface areas.
 If surface $j$ is subdivided into parts $j_1, j_2, \ldots, j_n$:
 
 $$
+
 F_{i,j} = F_{i,j_1} + F_{i,j_2} + \cdots + F_{i,j_n}
+
 $$
 
 This allows complex geometries to be analyzed by combining simpler ones.
@@ -1045,13 +1218,17 @@ Consider a long duct whose cross-section is a hemisphere. Let Surface 1 be the f
 Surface 1 (flat floor):
 
 $$
+
 A_1 = (2r) \times L
+
 $$
 
 Surface 2 (curved semi-cylinder):
 
 $$
+
 A_2 = \frac{1}{2}(2\pi r) \times L = \pi r L
+
 $$
 
 **Step 2: Find $F_{12}$ using Summation Rule**
@@ -1059,13 +1236,17 @@ $$
 For surface 1 (flat):
 
 $$
+
 F_{11} + F_{12} = 1
+
 $$
 
 Since surface 1 is flat, $F_{11} = 0$:
 
 $$
+
 F_{12} = 1
+
 $$
 
 **Physical interpretation:** All radiation leaving the flat floor must strike the curved ceiling (nowhere else to go).
@@ -1073,11 +1254,15 @@ $$
 **Step 3: Find $F_{21}$ using Reciprocity**
 
 $$
+
 A_2 F_{21} = A_1 F_{12}
+
 $$
 
 $$
+
 F_{21} = F_{12} \frac{A_1}{A_2} = 1 \times \frac{2rL}{\pi r L} = \frac{2}{\pi} \approx 0.637
+
 $$
 
 **Step 4: Find $F_{22}$ using Summation Rule**
@@ -1085,11 +1270,15 @@ $$
 For surface 2:
 
 $$
+
 F_{21} + F_{22} = 1
+
 $$
 
 $$
+
 F_{22} = 1 - F_{21} = 1 - \frac{2}{\pi} \approx 0.363
+
 $$
 
 **Physical interpretation:** About 36.3% of radiation leaving the curved ceiling strikes itself (because it's concave).
@@ -1109,13 +1298,17 @@ For an enclosure of opaque, diffuse, gray surfaces, radiation exchange can be mo
 The **surface resistance** represents the opposition to radiation leaving a surface due to non-ideal emissivity:
 
 $$
+
 R_{surf,i} = \frac{1 - \epsilon_i}{\epsilon_i A_i}
+
 $$
 
 The net heat transfer rate leaving surface $i$ is:
 
 $$
+
 q_i = \frac{E_{b,i} - J_i}{R_{surf,i}} = \frac{\sigma T_i^4 - J_i}{(1-\epsilon_i)/(\epsilon_i A_i)}
+
 $$
 
 For a blackbody ($\epsilon_i = 1$), the surface resistance is zero, and $E_{b,i} = J_i$.
@@ -1125,7 +1318,9 @@ For a blackbody ($\epsilon_i = 1$), the surface resistance is zero, and $E_{b,i}
 The **space resistance** (or geometric resistance) represents the geometric opposition to radiation between two surfaces:
 
 $$
+
 R_{space,ij} = \frac{1}{A_i F_{ij}} = \frac{1}{A_j F_{ji}}
+
 $$
 
 (The equality follows from reciprocity.)
@@ -1133,7 +1328,9 @@ $$
 The net radiation exchange between surfaces $i$ and $j$ is:
 
 $$
+
 q_{ij} = \frac{J_i - J_j}{R_{space,ij}}
+
 $$
 
 #### Constructing the Radiation Network
@@ -1157,21 +1354,28 @@ Once the network is drawn, use circuit analysis (Kirchhoff's laws, nodal analysi
 The total net heat leaving surface $i$ is:
 
 $$
+
 q_i = \frac{E_{b,i} - J_i}{R_{surf,i}} = \sum_{j=1}^{n} \frac{J_i - J_j}{R_{space,ij}}
+
 $$
 
 ```{note}
 For a **two-surface enclosure** (surfaces $i$ and $j$ completely surround each other), the net radiation exchange simplifies to:
 
 $$
+
 q_{ij} = \frac{\sigma(T_i^4 - T_j^4)}{\frac{1-\epsilon_i}{\epsilon_i A_i} + \frac{1}{A_i F_{ij}} + \frac{1-\epsilon_j}{\epsilon_j A_j}}
+
 $$
 
 If both surfaces are large and parallel ($F_{ij} = 1$, $A_i = A_j = A$):
 
 $$
+
 q_{ij} = \frac{\sigma A (T_i^4 - T_j^4)}{\frac{1}{\epsilon_i} + \frac{1}{\epsilon_j} - 1}
+
 $$
+
 ```
 
 ---
@@ -1201,7 +1405,9 @@ Heat exchangers are devices designed to efficiently transfer thermal energy from
 For a heat exchanger with no heat loss to surroundings (adiabatic):
 
 $$
+
 q = \dot{m}_h c_{p,h} (T_{h,in} - T_{h,out}) = \dot{m}_c c_{p,c} (T_{c,out} - T_{c,in})
+
 $$
 
 where subscripts $h$ and $c$ denote hot and cold fluids.
@@ -1219,7 +1425,9 @@ In a heat exchanger, the temperature difference between hot and cold fluids **va
 The total heat transfer rate is:
 
 $$
+
 q = U A \Delta T_{lm}
+
 $$
 
 where:
@@ -1232,7 +1440,9 @@ where:
 The LMTD is the logarithmic average of the temperature differences at the two ends:
 
 $$
+
 \Delta T_{lm} = \frac{\Delta T_A - \Delta T_B}{\ln(\Delta T_A / \Delta T_B)}
+
 $$
 
 where $\Delta T_A$ and $\Delta T_B$ are the temperature differences between hot and cold streams at the two ends of the exchanger.
@@ -1240,17 +1450,23 @@ where $\Delta T_A$ and $\Delta T_B$ are the temperature differences between hot 
 **Important:** When $\Delta T_A \approx \Delta T_B$ (differ by less than ~10%), the LMTD formula can give numerical errors. In this case, use the arithmetic mean:
 
 $$
+
 \Delta T_{lm} \approx \frac{\Delta T_A + \Delta T_B}{2} \quad \text{(when } \Delta T_A \approx \Delta T_B \text{)}
+
 $$
 
 #### For Parallel Flow
 
 $$
+
 \Delta T_A = T_{h,in} - T_{c,in} \quad \text{(inlet end)}
+
 $$
 
 $$
+
 \Delta T_B = T_{h,out} - T_{c,out} \quad \text{(outlet end)}
+
 $$
 
 ```{note}
@@ -1260,11 +1476,15 @@ In parallel flow, the outlet temperature of the cold fluid can **never exceed** 
 #### For Counter-flow
 
 $$
+
 \Delta T_A = T_{h,in} - T_{c,out} \quad \text{(hot inlet / cold outlet end)}
+
 $$
 
 $$
+
 \Delta T_B = T_{h,out} - T_{c,in} \quad \text{(hot outlet / cold inlet end)}
+
 $$
 
 ```{note}
@@ -1298,11 +1518,15 @@ Determine the required length $L$ of the heat exchanger.
 **Step 1: Calculate Heat Transfer Rate**
 
 $$
+
 q = \dot{m}_{oil} c_{p,oil} (T_{oil,in} - T_{oil,out})
+
 $$
 
 $$
+
 q = (0.15) \times (2131) \times (100 - 60) = 0.15 \times 2131 \times 40 = 12786 \text{ W}
+
 $$
 
 **Step 2: Determine Water Outlet Temperature**
@@ -1310,11 +1534,15 @@ $$
 From the given outlet temperature difference:
 
 $$
+
 \Delta T_2 = T_{oil,out} - T_{water,out} = 10°C
+
 $$
 
 $$
+
 T_{water,out} = T_{oil,out} - 10 = 60 - 10 = 50°C
+
 $$
 
 **Step 3: Calculate LMTD**
@@ -1322,17 +1550,23 @@ $$
 Temperature differences at the ends:
 
 $$
+
 \Delta T_1 = T_{oil,in} - T_{water,in} = 100 - 25 = 75°C
+
 $$
 
 $$
+
 \Delta T_2 = T_{oil,out} - T_{water,out} = 60 - 50 = 10°C
+
 $$
 
 Log mean temperature difference:
 
 $$
+
 \Delta T_{lm} = \frac{\Delta T_1 - \Delta T_2}{\ln(\Delta T_1/\Delta T_2)} = \frac{75 - 10}{\ln(75/10)} = \frac{65}{\ln(7.5)} = \frac{65}{2.015} \approx 32.2°C
+
 $$
 
 **Step 4: Calculate Required Length**
@@ -1340,11 +1574,15 @@ $$
 The heat transfer area for a tube is $A = \pi D_i L$. From $q = U A \Delta T_{lm}$:
 
 $$
+
 L = \frac{q}{U \pi D_i \Delta T_{lm}}
+
 $$
 
 $$
+
 L = \frac{12786}{38.1 \times \pi \times 0.03 \times 32.2} = \frac{12786}{115.6} \approx 110.6 \text{ m}
+
 $$
 
 **Final Answer:** The required heat exchanger length is approximately **110.6 meters**.
@@ -1370,23 +1608,31 @@ Determine the required mass flow rate of water.
 For an adiabatic heat exchanger:
 
 $$
+
 \dot{m}_{oil} c_{p,oil} (T_{oil,in} - T_{oil,out}) = \dot{m}_{water} c_{p,water} (T_{water,out} - T_{water,in})
+
 $$
 
 **Step 2: Solve for Unknown Mass Flow Rate**
 
 $$
+
 \dot{m}_{water} = \frac{\dot{m}_{oil} c_{p,oil} (T_{oil,in} - T_{oil,out})}{c_{p,water} (T_{water,out} - T_{water,in})}
+
 $$
 
 **Step 3: Substitute Values**
 
 $$
+
 \dot{m}_{water} = \frac{0.1 \times 2131 \times (100 - 55)}{4178 \times (40 - 30)}
+
 $$
 
 $$
+
 \dot{m}_{water} = \frac{0.1 \times 2131 \times 45}{4178 \times 10} = \frac{9589.5}{41780} \approx 0.2295 \text{ kg/s}
+
 $$
 
 **Final Answer:** The required water flow rate is approximately **0.23 kg/s**.
@@ -1412,7 +1658,9 @@ The Effectiveness-NTU method is an alternative approach particularly useful when
 The **heat capacity rate** $C$ is the rate at which a fluid stream can transport thermal energy:
 
 $$
+
 C = \dot{m} c_p \quad [W/K]
+
 $$
 
 We identify:
@@ -1427,13 +1675,17 @@ We identify:
 The **effectiveness** $\epsilon$ is the ratio of actual heat transfer to the maximum possible heat transfer:
 
 $$
+
 \epsilon = \frac{q_{actual}}{q_{max}}
+
 $$
 
 where:
 
 $$
+
 q_{max} = C_{min}(T_{h,in} - T_{c,in})
+
 $$
 
 This maximum occurs in an infinitely long counter-flow exchanger where the fluid with $C_{min}$ experiences the full temperature difference.
@@ -1445,7 +1697,9 @@ This maximum occurs in an infinitely long counter-flow exchanger where the fluid
 The **Number of Transfer Units** is a dimensionless parameter characterizing the "thermal size" of a heat exchanger:
 
 $$
+
 NTU = \frac{UA}{C_{min}}
+
 $$
 
 Physical meaning: NTU represents the heat transfer capacity of the exchanger relative to the heat capacity rate of the limiting fluid.
@@ -1458,17 +1712,23 @@ The effectiveness depends on NTU, $C_r$, and flow arrangement. Common relationsh
 **Counter-flow heat exchanger:**
 
 $$
+
 \epsilon = \frac{1 - \exp[-NTU(1-C_r)]}{1 - C_r \exp[-NTU(1-C_r)]} \quad (C_r < 1)
+
 $$
 
 $$
+
 \epsilon = \frac{NTU}{1 + NTU} \quad (C_r = 1)
+
 $$
 
 **Parallel-flow heat exchanger:**
 
 $$
+
 \epsilon = \frac{1 - \exp[-NTU(1+C_r)]}{1 + C_r}
+
 $$
 
 **Shell-and-tube** (one shell pass, even number of tube passes):
@@ -1480,7 +1740,9 @@ For design purposes, these relationships can be inverted to find NTU given $\eps
 **Counter-flow:**
 
 $$
+
 NTU = \frac{1}{C_r - 1} \ln\left(\frac{\epsilon - 1}{\epsilon C_r - 1}\right) \quad (C_r \neq 1)
+
 $$
 
 #### When to Use Each Method
@@ -1515,27 +1777,37 @@ Determine the overall heat transfer coefficient $U$.
 Cold fluid:
 
 $$
+
 C_c = \dot{m}_c c_{p,c} = 1.0 \times 4197 = 4197 \text{ W/K}
+
 $$
 
 Hot fluid:
 
 $$
+
 C_h = \dot{m}_h c_{p,h} = 1.9 \times 1000 = 1900 \text{ W/K}
+
 $$
 
 Therefore:
 
 $$
+
 C_{min} = C_h = 1900 \text{ W/K}
+
 $$
 
 $$
+
 C_{max} = C_c = 4197 \text{ W/K}
+
 $$
 
 $$
+
 C_r = \frac{C_{min}}{C_{max}} = \frac{1900}{4197} = 0.453
+
 $$
 
 **Step 2: Calculate Effectiveness**
@@ -1543,25 +1815,33 @@ $$
 Actual heat transfer (using hot fluid):
 
 $$
+
 q = C_h(T_{h,in} - T_{h,out}) = 1900 \times (350 - 100) = 475000 \text{ W}
+
 $$
 
 Maximum possible heat transfer:
 
 $$
+
 q_{max} = C_{min}(T_{h,in} - T_{c,in}) = 1900 \times (350 - 40) = 589000 \text{ W}
+
 $$
 
 Effectiveness:
 
 $$
+
 \epsilon = \frac{q}{q_{max}} = \frac{475000}{589000} = 0.806
+
 $$
 
 **Alternative calculation** (since hot fluid has $C_{min}$):
 
 $$
+
 \epsilon = \frac{T_{h,in} - T_{h,out}}{T_{h,in} - T_{c,in}} = \frac{350 - 100}{350 - 40} = \frac{250}{310} = 0.806
+
 $$
 
 **Step 3: Calculate NTU from Effectiveness**
@@ -1569,19 +1849,27 @@ $$
 For counter-flow with $C_r \neq 1$:
 
 $$
+
 NTU = \frac{1}{C_r - 1} \ln\left(\frac{\epsilon - 1}{\epsilon C_r - 1}\right)
+
 $$
 
 $$
+
 NTU = \frac{1}{0.453 - 1} \ln\left(\frac{0.806 - 1}{0.806 \times 0.453 - 1}\right)
+
 $$
 
 $$
+
 NTU = \frac{1}{-0.547} \ln\left(\frac{-0.194}{-0.635}\right) = \frac{1}{-0.547} \ln(0.3055)
+
 $$
 
 $$
+
 NTU = (-1.828) \times (-1.186) = 2.17
+
 $$
 
 **Step 4: Calculate Overall Heat Transfer Coefficient**
@@ -1589,7 +1877,9 @@ $$
 From the definition of NTU:
 
 $$
+
 U = \frac{NTU \cdot C_{min}}{A} = \frac{2.17 \times 1900}{20} = \frac{4123}{20} = 206.15 \text{ W/m}^2\cdot\text{K}
+
 $$
 
 **Final Answer:** The overall heat transfer coefficient is approximately **206 W/m²·K**.
@@ -1665,7 +1955,9 @@ The process stops where the constant $T_{wb}$ line intersects the RH = 50% curve
 From Point 2, read outlet temperature by moving vertically down to the horizontal axis:
 
 $$
+
 T_{db,2} \approx 30°C
+
 $$
 
 **Step 4: Read Absolute Humidities**
@@ -1679,23 +1971,31 @@ Moving horizontally from each point to the vertical axis:
 From the steeper diagonal lines at Point 1:
 
 $$
+
 v_{h,1} \approx 0.9 \text{ m}^3/\text{kg dry air}
+
 $$
 
 **Step 6: Calculate Mass Flow Rate of Dry Air**
 
 $$
+
 \dot{m}_{dry\,air} = \frac{\dot{V}_1}{v_{h,1}} = \frac{100 \text{ m}^3/\text{hr}}{0.9 \text{ m}^3/\text{kg dry air}} = 111.1 \text{ kg dry air/hr}
+
 $$
 
 **Step 7: Calculate Water Evaporation Rate**
 
 $$
+
 \dot{m}_{evap} = \dot{m}_{dry\,air} \times (\omega_2 - \omega_1)
+
 $$
 
 $$
+
 \dot{m}_{evap} = 111.1 \times (0.0132 - 0.0092) = 111.1 \times 0.004 = 0.444 \text{ kg H}_2\text{O/hr}
+
 $$
 
 **Final Answers:**
@@ -1714,7 +2014,9 @@ The heat of vaporization (enthalpy of vaporization) is a critical property for p
 The integrated form (assuming constant $\Delta H_v$ over a small temperature range):
 
 $$
+
 \ln(P_{sat}) = -\frac{\Delta H_v}{R} \left(\frac{1}{T}\right) + C
+
 $$
 
 This is a linear equation in the variables $\ln(P_{sat})$ vs. $1/T$, with slope $m = -\Delta H_v/R$.
@@ -1730,7 +2032,9 @@ where:
 The Antoine equation is an accurate empirical correlation for vapor pressure:
 
 $$
+
 \log_{10}(P_{sat}) = A - \frac{B}{T + C}
+
 $$
 
 Constants $A$, $B$, and $C$ are substance-specific and tabulated in references.
@@ -1750,7 +2054,9 @@ Estimate the heat of vaporization of benzene at 60°C using:
 Antoine equation for benzene:
 
 $$
+
 \log_{10}(P_{sat}) = 6.906 - \frac{1211}{T + 220.8}
+
 $$
 
 where $T$ is in °C and $P_{sat}$ is in Torr.
@@ -1764,21 +2070,29 @@ Choose $T_1 = 55°C$ and $T_2 = 65°C$ (bracketing 60°C).
 At $T_1 = 55°C$:
 
 $$
+
 \log_{10}(P_{sat,1}) = 6.906 - \frac{1211}{55 + 220.8} = 6.906 - 4.391 = 2.515
+
 $$
 
 $$
+
 P_{sat,1} = 10^{2.515} = 327.3 \text{ Torr}
+
 $$
 
 At $T_2 = 65°C$:
 
 $$
+
 \log_{10}(P_{sat,2}) = 6.906 - \frac{1211}{65 + 220.8} = 6.906 - 4.237 = 2.669
+
 $$
 
 $$
+
 P_{sat,2} = 10^{2.669} = 466.7 \text{ Torr}
+
 $$
 
 **Step 2: Convert to Clausius-Clapeyron Variables**
@@ -1796,11 +2110,15 @@ Point 2:
 **Step 3: Calculate Slope**
 
 $$
+
 m = \frac{\Delta(\ln P_{sat})}{\Delta(1/T)} = \frac{6.146 - 5.791}{0.002957 - 0.003047}
+
 $$
 
 $$
+
 m = \frac{0.355}{-0.00009} = -3944 \text{ K}
+
 $$
 
 **Step 4: Calculate Heat of Vaporization**
@@ -1808,7 +2126,9 @@ $$
 From $m = -\Delta H_v/R$:
 
 $$
+
 \Delta H_v = -m \times R = -(-3944) \times 8.314 = 32785 \text{ J/mol}
+
 $$
 
 **Final Answer:** The heat of vaporization of benzene at 60°C is approximately **32.8 kJ/mol**.
@@ -2008,11 +2328,15 @@ Find: (a) Heat loss per unit length of pipe, (b) Temperature at the pipe outer s
 For cylindrical coordinates, thermal resistances are:
 
 $$
+
 R_{conv,i} = \frac{1}{h_i A_i} = \frac{1}{2\pi r_i L h_i}
+
 $$
 
 $$
+
 R_{cond,cyl} = \frac{\ln(r_o/r_i)}{2\pi k L}
+
 $$
 
 **Per unit length** ($L = 1$ m):
@@ -2024,31 +2348,43 @@ Outer radius of steel: $r_2 = 0.06$ m
 Outer radius of insulation: $r_3 = 0.06 + 0.05 = 0.11$ m
 
 $$
+
 R'_{conv,i} = \frac{1}{2\pi(0.05)(500)} = 6.37 \times 10^{-3} \text{ K·m/W}
+
 $$
 
 $$
+
 R'_{cond,steel} = \frac{\ln(0.06/0.05)}{2\pi(50)} = 5.82 \times 10^{-4} \text{ K·m/W}
+
 $$
 
 $$
+
 R'_{cond,ins} = \frac{\ln(0.11/0.06)}{2\pi(0.04)} = 2.43 \text{ K·m/W}
+
 $$
 
 $$
+
 R'_{conv,o} = \frac{1}{2\pi(0.11)(10)} = 0.145 \text{ K·m/W}
+
 $$
 
 Total resistance per unit length:
 
 $$
+
 R'_{total} = 6.37 \times 10^{-3} + 5.82 \times 10^{-4} + 2.43 + 0.145 = 2.58 \text{ K·m/W}
+
 $$
 
 **Part (a): Heat loss per unit length**
 
 $$
+
 q' = \frac{T_{steam} - T_{amb}}{R'_{total}} = \frac{200 - 25}{2.58} = 67.8 \text{ W/m}
+
 $$
 
 **Part (b): Pipe outer surface temperature**
@@ -2056,19 +2392,25 @@ $$
 The temperature drop across the steel pipe:
 
 $$
+
 \Delta T_{steel} = q' \times R'_{cond,steel} = 67.8 \times 5.82 \times 10^{-4} = 0.039 \text{ K}
+
 $$
 
 The temperature drop from steam to inner surface:
 
 $$
+
 \Delta T_{conv,i} = q' \times R'_{conv,i} = 67.8 \times 6.37 \times 10^{-3} = 0.43 \text{ K}
+
 $$
 
 Pipe outer surface temperature:
 
 $$
+
 T_{pipe,outer} = 200 - 0.43 - 0.039 = 199.5°\text{C}
+
 $$
 
 **Answers:**
@@ -2098,15 +2440,21 @@ Air properties at film temperature $T_f = (80 + 20)/2 = 50°C = 323$ K:
 The characteristic length for a vertical plate is its height: $L = 0.5$ m
 
 $$
+
 Ra_L = \frac{g\beta(T_s - T_{\infty})L^3}{\nu^2} Pr
+
 $$
 
 $$
+
 Ra_L = \frac{9.81 \times 0.0031 \times (80-20) \times (0.5)^3}{(1.8 \times 10^{-5})^2} \times 0.71
+
 $$
 
 $$
+
 Ra_L = \frac{9.81 \times 0.0031 \times 60 \times 0.125}{3.24 \times 10^{-10}} \times 0.71 = 5.08 \times 10^8
+
 $$
 
 **Step 2: Select Correlation**
@@ -2114,17 +2462,23 @@ $$
 Since $10^4 < Ra_L < 10^9$, use laminar natural convection correlation:
 
 $$
+
 \overline{Nu}_L = 0.59 Ra_L^{1/4}
+
 $$
 
 $$
+
 \overline{Nu}_L = 0.59 \times (5.08 \times 10^8)^{0.25} = 0.59 \times 150.3 = 88.7
+
 $$
 
 **Step 3: Calculate Heat Transfer Coefficient**
 
 $$
+
 \bar{h} = \frac{\overline{Nu}_L \times k}{L} = \frac{88.7 \times 0.028}{0.5} = 4.97 \text{ W/m}^2\cdot\text{K}
+
 $$
 
 **Step 4: Calculate Heat Transfer Rate**
@@ -2132,7 +2486,9 @@ $$
 Surface area: $A = 0.5 \times 0.3 = 0.15$ m²
 
 $$
+
 q = \bar{h} A (T_s - T_{\infty}) = 4.97 \times 0.15 \times (80 - 20) = 44.7 \text{ W}
+
 $$
 
 **Final Answer:** The natural convection heat transfer rate is approximately **45 W**.
@@ -2156,19 +2512,27 @@ For large parallel plates, $F_{12} = 1$ (all radiation from one plate hits the o
 For two large parallel plates with $A_1 = A_2 = A$:
 
 $$
+
 q_{12} = \frac{\sigma A (T_1^4 - T_2^4)}{\frac{1}{\epsilon_1} + \frac{1}{\epsilon_2} - 1}
+
 $$
 
 $$
+
 q_{12} = \frac{5.67 \times 10^{-8} \times 2 \times (600^4 - 400^4)}{\frac{1}{0.7} + \frac{1}{0.5} - 1}
+
 $$
 
 $$
+
 q_{12} = \frac{5.67 \times 10^{-8} \times 2 \times (129.6 \times 10^9 - 25.6 \times 10^9)}{1.429 + 2.0 - 1}
+
 $$
 
 $$
+
 q_{12} = \frac{1.134 \times 10^{-7} \times 104 \times 10^9}{2.429} = \frac{11794}{2.429} = 4856 \text{ W}
+
 $$
 
 **Method 2: Resistance Network**
@@ -2176,53 +2540,71 @@ $$
 Surface resistance for Plate 1:
 
 $$
+
 R_{surf,1} = \frac{1-\epsilon_1}{\epsilon_1 A_1} = \frac{1-0.7}{0.7 \times 2} = \frac{0.3}{1.4} = 0.214 \text{ K/W}
+
 $$
 
 Surface resistance for Plate 2:
 
 $$
+
 R_{surf,2} = \frac{1-\epsilon_2}{\epsilon_2 A_2} = \frac{1-0.5}{0.5 \times 2} = \frac{0.5}{1.0} = 0.5 \text{ K/W}
+
 $$
 
 Space resistance:
 
 $$
+
 R_{space} = \frac{1}{A_1 F_{12}} = \frac{1}{2 \times 1} = 0.5 \text{ K/W}
+
 $$
 
 Total resistance:
 
 $$
+
 R_{total} = 0.214 + 0.5 + 0.5 = 1.214 \text{ K/W}
+
 $$
 
 Blackbody emissive powers:
 
 $$
+
 E_{b1} = \sigma T_1^4 = 5.67 \times 10^{-8} \times 600^4 = 7348 \text{ W/m}^2
+
 $$
 
 $$
+
 E_{b2} = \sigma T_2^4 = 5.67 \times 10^{-8} \times 400^4 = 1452 \text{ W/m}^2
+
 $$
 
 Heat transfer:
 
 $$
+
 q = \frac{A(E_{b1} - E_{b2})}{R_{total} \times A} = \frac{E_{b1} - E_{b2}}{R_{total}/A} = \frac{A(E_{b1} - E_{b2})}{R_{total}}
+
 $$
 
 Wait, let me recalculate using the driving potential correctly:
 
 $$
+
 q = \frac{E_{b1} \cdot A_1 - E_{b2} \cdot A_2}{R_{total}}
+
 $$
 
 Actually, with the resistance network, the driving force is:
 
 $$
+
 q = \frac{A_1 E_{b1} - A_2 E_{b2}}{(1-\epsilon_1)/\epsilon_1 + 1/F_{12} + (1-\epsilon_2)/\epsilon_2}
+
 $$
 
 This gives the same result as Method 1: **4856 W**
@@ -2249,7 +2631,9 @@ Assume:
 For a rectangular fin, considering both sides:
 
 $$
+
 A_s = 2 \times \text{height} \times \text{width} = 2 \times 0.05 \times 1 = 0.1 \text{ m}^2
+
 $$
 
 **Step 2: Convective Heat Transfer**
@@ -2257,11 +2641,15 @@ $$
 For a simple estimate (treating fin as isothermal at average temperature):
 
 $$
+
 q_{conv} = h A_s (T_{base} - T_{\infty})
+
 $$
 
 $$
+
 q_{conv} = 15 \times 0.1 \times (100 - 20) = 120 \text{ W}
+
 $$
 
 **Step 3: Radiative Heat Transfer**
@@ -2269,27 +2657,37 @@ $$
 Assuming surroundings are at air temperature (293 K):
 
 $$
+
 q_{rad} = \epsilon \sigma A_s (T_{s}^4 - T_{surr}^4)
+
 $$
 
 Using average fin temperature (approximately 80°C = 353 K as estimate):
 
 $$
+
 q_{rad} = 0.9 \times 5.67 \times 10^{-8} \times 0.1 \times (353^4 - 293^4)
+
 $$
 
 $$
+
 q_{rad} = 0.9 \times 5.67 \times 10^{-8} \times 0.1 \times (1.554 \times 10^{10} - 0.737 \times 10^{10})
+
 $$
 
 $$
+
 q_{rad} = 5.1 \times 10^{-9} \times 8.17 \times 10^9 = 41.7 \text{ W}
+
 $$
 
 **Step 4: Total Heat Transfer**
 
 $$
+
 q_{total} = q_{conv} + q_{rad} = 120 + 41.7 = 161.7 \text{ W}
+
 $$
 
 **Final Answer:** Total heat transfer is approximately **162 W**, with convection contributing 74% and radiation 26%.
@@ -2310,13 +2708,17 @@ $$
 Local:
 
 $$
+
 Nu_x = 0.332 Re_x^{1/2} Pr^{1/3}
+
 $$
 
 Average:
 
 $$
+
 \overline{Nu}_L = 0.664 Re_L^{1/2} Pr^{1/3}
+
 $$
 
 **Turbulent** ($5 \times 10^5 < Re_x < 10^8$):
@@ -2324,13 +2726,17 @@ $$
 Local:
 
 $$
+
 Nu_x = 0.0296 Re_x^{4/5} Pr^{1/3}
+
 $$
 
 Average (mixed):
 
 $$
+
 \overline{Nu}_L = (0.037 Re_L^{4/5} - 871) Pr^{1/3}
+
 $$
 
 #### Flow Over Cylinder
@@ -2338,7 +2744,9 @@ $$
 **Average Nusselt number** (Churchill-Bernstein):
 
 $$
+
 \overline{Nu}_D = 0.3 + \frac{0.62 Re_D^{1/2} Pr^{1/3}}{[1+(0.4/Pr)^{2/3}]^{1/4}} \left[1 + \left(\frac{Re_D}{282000}\right)^{5/8}\right]^{4/5}
+
 $$
 
 Valid for $Re_D Pr > 0.2$.
@@ -2352,7 +2760,9 @@ Valid for $Re_D Pr > 0.2$.
 **Turbulent flow** (Gnielinski equation, $3000 < Re_D < 5 \times 10^6$, $0.5 < Pr < 2000$):
 
 $$
+
 Nu_D = \frac{(f/8)(Re_D - 1000)Pr}{1 + 12.7(f/8)^{1/2}(Pr^{2/3} - 1)}
+
 $$
 
 where $f = (0.790 \ln Re_D - 1.64)^{-2}$ is the friction factor.
@@ -2362,19 +2772,25 @@ where $f = (0.790 \ln Re_D - 1.64)^{-2}$ is the friction factor.
 **Vertical plate or cylinder** ($10^4 < Ra_L < 10^9$):
 
 $$
+
 \overline{Nu}_L = 0.59 Ra_L^{1/4}
+
 $$
 
 **Vertical plate or cylinder** ($10^9 < Ra_L < 10^{13}$):
 
 $$
+
 \overline{Nu}_L = 0.10 Ra_L^{1/3}
+
 $$
 
 **Horizontal cylinder**:
 
 $$
+
 \overline{Nu}_D = \left\{0.60 + \frac{0.387 Ra_D^{1/6}}{[1+(0.559/Pr)^{9/16}]^{8/27}}\right\}^2
+
 $$
 
 Valid for $Ra_D < 10^{12}$.
@@ -2415,7 +2831,9 @@ Valid for $Ra_D < 10^{12}$.
 #### Reynolds Number
 
 $$
+
 Re = \frac{\rho u L}{\mu} = \frac{u L}{\nu}
+
 $$
 
 **Critical values:**
@@ -2425,7 +2843,9 @@ $$
 #### Nusselt Number
 
 $$
+
 Nu = \frac{h L}{k}
+
 $$
 
 Represents ratio of convective to conductive heat transfer.
@@ -2433,7 +2853,9 @@ Represents ratio of convective to conductive heat transfer.
 #### Prandtl Number
 
 $$
+
 Pr = \frac{\mu c_p}{k} = \frac{\nu}{\alpha}
+
 $$
 
 Represents ratio of momentum to thermal diffusivity.
@@ -2447,7 +2869,9 @@ Represents ratio of momentum to thermal diffusivity.
 #### Grashof Number
 
 $$
+
 Gr = \frac{g \beta (T_s - T_{\infty}) L^3}{\nu^2}
+
 $$
 
 Represents ratio of buoyancy to viscous forces in natural convection.
@@ -2455,7 +2879,9 @@ Represents ratio of buoyancy to viscous forces in natural convection.
 #### Rayleigh Number
 
 $$
+
 Ra = Gr \cdot Pr = \frac{g \beta (T_s - T_{\infty}) L^3}{\nu \alpha}
+
 $$
 
 Combined parameter for natural convection.
