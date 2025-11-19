@@ -3,6 +3,9 @@
 # mynotes/_build/
 # _build/
 .jupyter_cache/
+.doctrees/
+**/build/.doctrees/
+**/_build/.doctrees/
 
 # Python
 __pycache__/
