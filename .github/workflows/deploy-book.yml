@@ -36,23 +36,46 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r mynotes/requirements.txt
-          echo "=== Installed Package Versions ==="
-          pip list | grep -E "(jupyter-book|sphinx|myst)"
+          echo ""
+          echo "=== Verifying Installation ==="
+          which jupyter-book
+          jupyter-book --version
+          echo ""
+          echo "=== Key Package Versions ==="
+          pip list | grep -E "(jupyter-book|sphinx|myst)" || true
 
       - name: Build Jupyter Book
         run: |
+          echo "=== Current Directory ==="
+          pwd
+          echo ""
+          echo "=== Checking mynotes structure ==="
+          ls -la mynotes/
+          echo ""
+          echo "=== Starting Jupyter Book Build ==="
           cd mynotes
-          echo "Starting Jupyter Book build..."
-          jupyter-book build . --all 2>&1 | tee build.log
-          BUILD_EXIT_CODE=${PIPESTATUS[0]}
-          echo "Build exit code: $BUILD_EXIT_CODE"
+
+          # Run jupyter-book build with explicit error handling
+          set +e  # Don't exit on error yet
+          jupyter-book build . --all > build.log 2>&1
+          BUILD_EXIT_CODE=$?
+          set -e  # Re-enable exit on error
+
+          echo ""
+          echo "=== Build Exit Code: $BUILD_EXIT_CODE ==="
+
+          # Show the build log
+          echo "=== Build Log Contents ==="
+          cat build.log
 
           if [ $BUILD_EXIT_CODE -ne 0 ]; then
+            echo ""
             echo "❌ Jupyter Book build failed with exit code $BUILD_EXIT_CODE"
-            echo "Last 50 lines of build log:"
-            tail -50 build.log
             exit 1
           fi
+
+          echo ""
+          echo "✅ Build completed successfully"
 
       - name: Verify build output
         run: |
