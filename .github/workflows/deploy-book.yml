@@ -35,14 +35,26 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install jupyter-book>=1.0.0
-          pip install sphinx-proof sphinx-togglebutton sphinx-copybutton
-          pip install ghp-import
+          pip install -r mynotes/requirements.txt
 
       - name: Build Jupyter Book
         run: |
           cd mynotes
           jupyter-book build . --all
+
+      - name: Verify build output
+        run: |
+          if [ ! -d "mynotes/_build/html" ]; then
+            echo "❌ Error: Build directory mynotes/_build/html does not exist!"
+            echo "Listing mynotes directory:"
+            ls -la mynotes/
+            echo "Checking if _build exists:"
+            ls -la mynotes/_build/ || echo "_build directory not found"
+            exit 1
+          fi
+          echo "✅ Build directory exists"
+          echo "📁 Contents of mynotes/_build/html:"
+          ls -la mynotes/_build/html/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
