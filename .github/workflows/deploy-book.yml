@@ -1,113 +1,45 @@
-name: Deploy Jupyter Book to GitHub Pages
+name: Deploy Pre-built Jupyter Book to GitHub Pages
 
 on:
-  # Trigger on pushes to main branch
   push:
     branches:
       - main
-  # Allow manual trigger from Actions tab
   workflow_dispatch:
 
-# Sets permissions for GitHub Pages deployment
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install -r mynotes/requirements.txt
-          echo ""
-          echo "=== Verifying Installation ==="
-          which jupyter-book
-          jupyter-book --version
-          echo ""
-          echo "=== Key Package Versions ==="
-          pip list | grep -E "(jupyter-book|sphinx|myst)" || true
-
-      - name: Build Jupyter Book
-        run: |
-          echo "=== Current Directory ==="
-          pwd
-          echo ""
-          echo "=== Checking mynotes structure ==="
-          ls -la mynotes/
-          echo ""
-          echo "=== Starting Jupyter Book Build ==="
-          cd mynotes
-
-          # Run jupyter-book build with explicit error handling
-          set +e  # Don't exit on error yet
-          jupyter-book build . --all > build.log 2>&1
-          BUILD_EXIT_CODE=$?
-          set -e  # Re-enable exit on error
-
-          echo ""
-          echo "=== Build Exit Code: $BUILD_EXIT_CODE ==="
-
-          # Show the build log
-          echo "=== Build Log Contents ==="
-          cat build.log
-
-          if [ $BUILD_EXIT_CODE -ne 0 ]; then
-            echo ""
-            echo "❌ Jupyter Book build failed with exit code $BUILD_EXIT_CODE"
-            exit 1
-          fi
-
-          echo ""
-          echo "✅ Build completed successfully"
-
-      - name: Verify build output
+      - name: Verify built HTML exists
         run: |
           if [ ! -d "mynotes/_build/html" ]; then
-            echo "❌ Error: Build directory mynotes/_build/html does not exist!"
-            echo ""
-            echo "=== Directory Structure ==="
-            ls -la mynotes/
-            echo ""
-            echo "=== _build directory ==="
-            ls -la mynotes/_build/ || echo "_build directory not found"
-            echo ""
-            echo "=== Build log (last 100 lines) ==="
-            tail -100 mynotes/build.log || echo "No build.log found"
+            echo "❌ Error: Pre-built HTML not found at mynotes/_build/html"
+            echo "The site must be built locally and committed to the repository"
             exit 1
           fi
-          echo "✅ Build directory exists"
-          echo "📁 Contents of mynotes/_build/html:"
-          ls -la mynotes/_build/html/ | head -20
+          echo "✅ Found pre-built HTML"
+          ls -la mynotes/_build/html/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: 'mynotes/_build/html'
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
