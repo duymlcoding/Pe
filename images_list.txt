@@ -1,0 +1,20 @@
+Images List for Mass and Energy Balance Study Guide
+====================================================
+
+NO IMAGES FOUND
+---------------
+
+After thorough analysis of all three LaTeX source files:
+- massandenergybalance_part1.tex
+- massandenergybalance_part2.tex
+- massandenergybalance_part3.tex
+
+No \includegraphics commands or image references were found.
+
+The document contains only:
+- Text content
+- Mathematical equations
+- Tables (converted to Markdown table syntax)
+- Colored text boxes (converted to admonitions)
+
+No action needed for image files.
