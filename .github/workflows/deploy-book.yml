@@ -36,25 +36,42 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r mynotes/requirements.txt
+          echo "=== Installed Package Versions ==="
+          pip list | grep -E "(jupyter-book|sphinx|myst)"
 
       - name: Build Jupyter Book
         run: |
           cd mynotes
-          jupyter-book build . --all
+          echo "Starting Jupyter Book build..."
+          jupyter-book build . --all 2>&1 | tee build.log
+          BUILD_EXIT_CODE=${PIPESTATUS[0]}
+          echo "Build exit code: $BUILD_EXIT_CODE"
+
+          if [ $BUILD_EXIT_CODE -ne 0 ]; then
+            echo "❌ Jupyter Book build failed with exit code $BUILD_EXIT_CODE"
+            echo "Last 50 lines of build log:"
+            tail -50 build.log
+            exit 1
+          fi
 
       - name: Verify build output
         run: |
           if [ ! -d "mynotes/_build/html" ]; then
             echo "❌ Error: Build directory mynotes/_build/html does not exist!"
-            echo "Listing mynotes directory:"
+            echo ""
+            echo "=== Directory Structure ==="
             ls -la mynotes/
-            echo "Checking if _build exists:"
+            echo ""
+            echo "=== _build directory ==="
             ls -la mynotes/_build/ || echo "_build directory not found"
+            echo ""
+            echo "=== Build log (last 100 lines) ==="
+            tail -100 mynotes/build.log || echo "No build.log found"
             exit 1
           fi
           echo "✅ Build directory exists"
           echo "📁 Contents of mynotes/_build/html:"
-          ls -la mynotes/_build/html/
+          ls -la mynotes/_build/html/ | head -20
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
