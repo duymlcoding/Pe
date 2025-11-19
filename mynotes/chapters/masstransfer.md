@@ -1,7 +1,7 @@
 ---
-title: "Mass Transfer Study Guide"
-author: "PE Study Guide"
+author: PE Study Guide
 date: "2025"
+title: Mass Transfer Study Guide
 ---
 
 # Mass Transfer
@@ -12,11 +12,12 @@ Diffusion is the net movement of a substance from a region of higher concentrati
 
 ### The Governing Equation: Fick's Second Law
 
-```{note}
+```ini { note= }
 Unsteady-state diffusion is described by **Fick's Second Law**, a partial differential equation that relates the change in concentration over time to the second derivative of concentration with respect to spatial position. It describes how the concentration profile evolves over time.
+
 ```
 
-```{important}
+```sh { important= }
 For one-dimensional diffusion with a constant diffusion coefficient, the law is:
 
 $$
@@ -25,23 +26,26 @@ $$
 
 $$
 
+
 ```
 
-```{admonition} Term Definitions
+```md { admonition= }
 :class: tip
 - $C_A$: Concentration of the diffusing substance A [mol/m$^3$ or wt\%].
 - $t$: Time [s].
 - $x$: Position or distance into the solid [m].
 - $D_{AB}$: The diffusion coefficient (or diffusivity) of A in B [m$^2$/s].
+
 ```
 
 ### The Error Function Solution for a Semi-Infinite Solid
 
-```{note}
+```ini { note= }
 A common scenario involves diffusion into a solid that is thick enough to be considered **semi-infinite**. The initial concentration is uniform, and at time $t=0$, the surface concentration is suddenly changed to a new, constant value. The analytical solution for this specific case uses the mathematical **error function (erf)**.
+
 ```
 
-```{important}
+```tex { important= }
 The concentration profile is given by:
 
 $$
@@ -50,23 +54,26 @@ $$
 
 $$
 
+
 ```
 
-```{admonition} Term Definitions
+```yaml { admonition= }
 :class: tip
 - $C_A(x,t)$: The concentration at position $x$ and time $t$.
 - $C_{A0}$: The initial, uniform concentration in the solid at $t=0$.
 - $C_{As}$: The constant concentration maintained at the surface ($x=0$) for all time $t>0$.
 - $\text{erf}(z)$: The error function, whose values are found in tables or calculated by software.
+
 ```
 
 ### Example Problem: Carburization of a Steel Alloy
 
-```{prf:example} Carburization of a Steel Alloy
+```tex { prf:example= }
 A steel alloy initially has a uniform carbon concentration of 0.10 wt\%. To harden the surface, it is placed in a high-temperature furnace at 1000$^\circ$C where the carbon concentration at the surface is maintained at 1.5 wt\%. The diffusion coefficient of carbon in steel at this temperature is $D_{AB} = 2.0 \times 10^{-11}$ m$^2$/s. How long (in hours) will it take for the carbon concentration to reach 1.0 wt\% at a depth of 1.0 mm below the surface?
+
 ```
 
-```{dropdown} Solution Steps
+```tex { dropdown= }
 **Step 1: Identify Knowns and Strategy**
 The problem describes diffusion into a semi-infinite solid with constant surface concentration, matching the conditions for the error function solution. We will solve Equation 2 for time, $t$.
 - Target Concentration: $C_A(x,t) = 1.0$ wt\%
@@ -139,22 +146,24 @@ t = 116,279 \, \text{s} \times \frac{1 \, \text{h}}{3600 \, \text{s}} \approx 32
 $$
 
 The process will take approximately **32.3 hours**.
+
 ```
 
 ## McCabe-Thiele Diagrams
 
 The McCabe-Thiele method is a graphical technique used to determine the number of theoretical equilibrium stages required to separate a binary (two-component) mixture via distillation. It is a powerful visual tool that combines thermodynamic equilibrium data with material balances to model the distillation process. The entire method is built upon a key simplifying assumption.
 
-```{note}
+```js { note= }
 **Key Assumption: Constant Molar Overflow (CMO)**
 The McCabe-Thiele method assumes **Constant Molar Overflow (CMO)**. This means that for every mole of vapor that condenses on a tray, one mole of liquid vaporizes. As a result, the molar flow rates of liquid ($L$) and vapor ($V$) are considered constant throughout each section of the column (i.e., above the feed and below the feed). This simplification is reasonably accurate for ideal mixtures where the molar heats of vaporization of the two components are nearly equal.
+
 ```
 
 ### Important Equations
 
 The McCabe-Thiele diagram is constructed using several key lines, each derived from material balances around different sections of the distillation column.
 
-```{important}
+```tex { important= }
 **Key Operating and Feed Lines**
 
 **Rectifying Section Operating Line (TOL):**
@@ -184,9 +193,10 @@ y = \left(\frac{q}{q-1}\right)x - \left(\frac{z_F}{q-1}\right)
 
 $$
 
+
 ```
 
-```{admonition} Term Definitions
+```md { admonition= }
 :class: tip
 - $x, y$: Mole fraction of the more volatile component in the liquid and vapor phase, respectively.
 - $x_D, x_B, z_F$: Mole fractions in the distillate, bottoms, and feed streams.
@@ -195,33 +205,36 @@ $$
 - $D, B, F$: Molar flow rates of the distillate, bottoms, and feed streams.
 - $R$: Reflux ratio, the ratio of liquid returned to the column to liquid taken as distillate ($R=L/D$).
 - $q$: The thermal quality of the feed.
+
 ```
 
 ### The Conceptual Basis: Why "Stepping Off Stages" Works
 
-```{note}
+```md { note= }
 **Combining Balances and Equilibrium**
 A distillation column achieves separation because of two distinct physical phenomena that are represented by the two main lines on the diagram:
 1. **On a stage (tray):** The vapor and liquid phases are in intimate contact, allowing them to reach thermodynamic equilibrium. Their compositions ($x_n, y_n$) for a given stage $n$ are related by the **Vapor-Liquid Equilibrium (VLE) curve**. This is a thermodynamic relationship.
 2. **Between stages:** A vapor stream ($y_{n+1}$) rising from one stage passes a liquid stream ($x_n$) descending from the stage above. Their compositions are related by a **material balance**. This relationship is described by the **operating line**.
 
 The McCabe-Thiele "staircase" is a graphical method of alternating between these two relationships to count the number of stages needed to get from the reboiler composition to the distillate composition.
+
 ```
 
-```{note}
+```md { note= }
 **Visualizing the Stepping Process**
 The graphical procedure for stepping off stages simulates the movement of components through the column:
 1. **Start at the Distillate:** Begin at the top of the column. The liquid reflux returning to the first stage has the distillate composition, $x_D$. This is represented by the point ($x_D, x_D$) on the $y=x$ line.
 2. **Find Vapor from Stage 1 (Material Balance):** To find the composition of the vapor ($y_1$) rising from stage 1, move vertically from the starting point to the **Top Operating Line (TOL)**. This represents the material balance between the condenser and stage 1.
 3. **Find Liquid on Stage 1 (Equilibrium):** This vapor ($y_1$) is in equilibrium with the liquid on stage 1 ($x_1$). To find this liquid's composition, move horizontally from the point on the TOL to the **VLE curve**. The x-coordinate of this new point is $x_1$. This completes one "step," which represents one theoretical stage.
 4. **Repeat Down the Column:** From the point on the VLE curve, move vertically down to the operating line to find the vapor composition from the next stage ($y_2$). Then move horizontally to the VLE curve to find the corresponding liquid composition ($x_2$). This process is repeated. When the steps cross the q-line, you must switch from using the TOL to using the BOL for the vertical movements. Continue until the liquid composition $x_n$ is less than or equal to the desired bottoms composition, $x_B$.
+
 ```
 
 ### The Role of the Feed: The q-Line
 
 The condition of the feed stream when it enters the column has a significant impact on the internal liquid and vapor flow rates. The **q-line** is a graphical tool that accounts for the thermal condition and composition of the feed, and it correctly links the operating lines for the top and bottom sections of the column.
 
-```{note}
+```tex { note= }
 **Definition of Feed Quality (q)**
 The value of **q**, the feed quality, is defined as the fraction of the feed that becomes liquid in the stripping (bottom) section of the column. It can be thought of as the heat required to vaporize one mole of feed divided by the molar latent heat of vaporization of the feed.
 
@@ -231,9 +244,10 @@ q = \frac{\text{Increase in liquid flow rate below the feed tray}}{\text{Total m
 
 $$
 
+
 ```
 
-```{admonition} Term Definitions
+```tex { admonition= }
 :class: tip
 **Feed Quality (q) Classification**
 The value of $q$ precisely defines the thermal state of the feed, which in turn determines the slope of the q-line.
@@ -242,9 +256,10 @@ The value of $q$ precisely defines the thermal state of the feed, which in turn 
 - **Two-Phase Mixture ($0 < q < 1$):** The feed is a liquid-vapor mixture. The liquid fraction ($q$) flows down, and the vapor fraction ($1-q$) flows up. The q-line has a negative slope.
 - **Saturated Vapor ($q = 0$):** The feed is a vapor at its dew point. All of the feed joins the vapor stream flowing up. The q-line is horizontal.
 - **Superheated Vapor ($q < 0$):** The feed is a hot vapor. It vaporizes some of the liquid flowing down from above, resulting in less liquid in the stripping section. The q-line has a positive slope less than 1.
+
 ```
 
-```{important}
+```tex { important= }
 **q-Line Properties**
 The q-line is derived by finding the mathematical intersection of the TOL and BOL. Its equation is:
 
@@ -259,11 +274,12 @@ This line has two critical properties that are used to draw it on the diagram:
 - It always intersects the **$y=x$ line** at the feed composition, $z_F$.
 
 To construct the diagram, one draws the q-line starting from the point $(z_F, z_F)$ on the $y=x$ line with the slope $m_q$. The intersection of this q-line with the TOL defines the point through which the BOL must pass.
+
 ```
 
 ### Comprehensive Example: Acetone-Ethanol Separation
 
-```{prf:example} Acetone-Ethanol Separation
+```tex { prf:example= }
 Acetone and ethanol are to be separated in a distillation column. The column has a **partial condenser** and a **partial reboiler**, which each function as an equilibrium stage. An equimolar ($z_F=0.5$), sub-cooled liquid feed enters at 100 kmol/hr. The feed is cold enough that it condenses 1 mole of vapor inside the column for every 6 moles of feed that enters. The desired separation is a distillate **vapor** product of 95 mol\% acetone ($y_D=0.95$) and a bottoms liquid product of 5 mol\% acetone ($x_B=0.05$). The reflux returned from the condenser is a saturated liquid. The column is operated with a liquid-to-vapor flow ratio in the rectifying section of $(L/V) = 1.4 \times (L/V)_{\text{min}}$. Assume Constant Molar Overflow.
 
 **Tasks:**
@@ -271,9 +287,10 @@ Acetone and ethanol are to be separated in a distillation column. The column has
 2. Determine the total number of equilibrium stages required and the number of trays needed.
 3. Determine the optimal feed tray location.
 4. Determine the molar flow rates of the distillate (D) and bottoms (B) products, as well as the internal flow rates in the rectifying (L, V) and stripping ($\bar{L}, \bar{V}$) sections.
+
 ```
 
-```{dropdown} Solution Steps
+```tex { dropdown= }
 **Step 1: Analyze the Problem and List Knowns**
 Before beginning, it's crucial to identify all the given information and the goals.
 - **Feed (F):** Rate = 100 kmol/hr, Composition $z_F = 0.5$.
@@ -391,19 +408,21 @@ $$
 - **Product Flow Rates:** $D = 50$ kmol/hr, $B = 50$ kmol/hr.
 - **Internal Flow Rates (Rectifying):** $L = 335$ kmol/hr, $V = 385$ kmol/hr.
 - **Internal Flow Rates (Stripping):** $\bar{L} = 452$ kmol/hr, $\bar{V} = 402$ kmol/hr.
+
 ```
 
 ## Batch Column: Variable Reflux
 
-An alternative operating mode for batch distillation is to maintain a **constant distillate composition**, $x_D$. To achieve this, the **reflux ratio, R**, must be continuously increased throughout the run. As the liquid in the reboiler becomes leaner in the more volatile component, more reflux (a higher $R$) is needed to achieve the required separation and keep the distillate product on-spec.
+An alternative operating mode for batch distillation is to maintain a __constant distillate composition__, $x_D$. To achieve this, the __reflux ratio, R__, must be continuously increased throughout the run. As the liquid in the reboiler becomes leaner in the more volatile component, more reflux (a higher $R$) is needed to achieve the required separation and keep the distillate product on-spec.
 
 ### Material Balances for Constant Distillate Composition
 
-```{note}
+```csv { note= }
 When the distillate composition ($x_D$) is held constant, the complex Rayleigh integral is not needed. The process can be analyzed with simple overall and component mole balances, treating the entire process as a single system with initial and final states.
+
 ```
 
-```{important}
+```sh { important= }
 The governing equations are the overall material balances:
 
 $$
@@ -419,23 +438,26 @@ $$
 $$
 
 These two equations can be solved simultaneously for two unknowns (e.g., $D$ and $W_f$).
+
 ```
 
-```{admonition} Term Definitions
+```yaml { admonition= }
 :class: tip
 - $W_i$, $W_f$: Initial and final moles of liquid in the reboiler.
 - $D$: Total moles of distillate collected.
 - $x_{W,i}$, $x_{W,f}$: Initial and final mole fraction in the reboiler.
 - $x_D$: Constant mole fraction of the distillate.
+
 ```
 
 ### Example Problem: Variable Reflux Distillation
 
-```{prf:example} Variable Reflux Distillation
+```md { prf:example= }
 A batch still is charged with 1000 moles of an ethanol-water mixture containing 30 mole \% ethanol ($x_{W,i}=0.3$). The column has 2 equilibrium stages (including the partial reboiler). The distillation is run with a constant distillate composition of $x_D=0.6$ until the reboiler composition drops to $x_{W,f}=0.09$. How much distillate is produced, and what is the range of reflux ratios used?
+
 ```
 
-```{dropdown} Solution Steps
+```md { dropdown= }
 **Part 1: Calculate Amount of Distillate**
 
 **Step 1: Set up Balances:**
@@ -485,9 +507,10 @@ $$
 
 **Final Answer (Part 1):**
 The total amount of distillate produced is approximately **412 moles**.
+
 ```
 
-```{dropdown} Solution Steps
+```tex { dropdown= }
 **Part 2: Determine the Range of Reflux Ratios**
 
 **Step 1: Strategy:** The reflux ratio must be adjusted continuously. We find the required range by determining the reflux ratio needed at the start ($R_i$) and at the end ($R_f$) of the process using the McCabe-Thiele method. The slope of the operating line is $m = R/(R+1)$.
@@ -533,6 +556,7 @@ $$
 $$
 
 **Final Answer (Part 2):** The required reflux ratio increases from an initial value of **R = 0.14** to a final value of **R = 3.0**.
+
 ```
 
 ## Distillation – Side Stream Feed
@@ -541,19 +565,21 @@ Standard distillation columns have a single feed, creating a rectifying section 
 
 ### Constructing the Middle Operating Line
 
-```{note}
+```ml { note= }
 For a column with two feeds, a **Middle Operating Line (MOL)** must be constructed. This line represents the material balance in the section between the two feed points. The MOL is the straight line that connects two specific intersection points on the McCabe-Thiele diagram:
 1. The intersection of the **Top Operating Line (TOL)** with the **feed line for the upper feed**.
 2. The intersection of the **Bottom Operating Line (BOL)** with the **feed line for the lower feed**.
+
 ```
 
 ### Example Problem: Column with Steam Injection
 
-```{prf:example} Column with Steam Injection
+```ini { prf:example= }
 An ethanol-water distillation column has a total condenser and a partial reboiler. It is fed with a main subcooled liquid feed and a secondary feed of pure saturated steam, which enters on the first stage above the reboiler. The Top Operating Line (TOL), Bottom Operating Line (BOL), and main feed line are plotted. Determine the optimal feed plate location for the main feed and the total number of equilibrium stages required.
+
 ```
 
-```{dropdown} Solution Steps
+```md { dropdown= }
 **Step 1: Strategy:** The solution requires correctly constructing the Middle Operating Line (MOL). Once all three operating lines (TOL, MOL, BOL) are drawn, we can step off the stages from the bottom ($x_B$) to the top ($x_D$), switching operating lines as we cross the feed locations.
 
 **Step 2: Construct the Steam Feed Line:** A feed line's properties are set by its composition ($z$) and thermal quality ($q$).
@@ -574,22 +600,24 @@ Therefore, the steam feed line is a **horizontal line at y=0** (the x-axis).
 **Step 5: Determine Optimal Feed Location:** The optimal stage for a feed is where the stage composition is closest to the feed composition. Graphically, this is the stage where we switch operating lines. In this case, the switch from the MOL to the TOL occurs at **Stage 2**. Therefore, the main feed should be introduced on Stage 2.
 
 **Final Answer:** Following the procedure yields a **partial reboiler and 5 ideal stages**, for a total of 6 equilibrium contacts. The optimal location for the main feed is **Stage 2**.
+
 ```
 
 ## Single-stage Batch Distillation
 
 Single-stage batch distillation, also known as simple or differential distillation, is the most basic method of separating a finite batch of a liquid mixture. In this process, a liquid charge is placed in a heated vessel (the "still"), and the vapor generated is immediately removed and condensed.
 
-```{note}
+```java { note= }
 **The Principle of Simple Distillation**
 Simple distillation works because the vapor generated from a boiling liquid mixture is typically richer in the more volatile component (MVC) than the liquid from which it came. As this enriched vapor is continuously removed, the liquid remaining in the still becomes progressively leaner in the MVC. This means the composition of the liquid in the still, the composition of the vapor being produced, and the boiling temperature all change continuously throughout the process.
+
 ```
 
 ### Important Equations
 
 The process is inherently unsteady-state, so its analysis relies on differential mass balances that are integrated over the course of the distillation.
 
-```{important}
+```tex { important= }
 **Key Equations for Simple Distillation**
 
 **Differential Mass Balances (on the still):**
@@ -609,13 +637,14 @@ $$
 These are used to relate the initial state to the final state and the total distillate collected.
 - Total Moles: $W_0 = W + D$
 - Component Moles: $W_0 x_{W0} = W x_W + D x_{D,avg}$
+
 ```
 
 ### Derivation of the Rayleigh Equation
 
 The Rayleigh equation is derived by combining the differential balances to eliminate time, providing a direct relationship between the amount of liquid remaining and its composition.
 
-```{dropdown} Solution Steps
+```tex { dropdown= }
 **Derivation of the Rayleigh Equation**
 
 **Step 1: Start with Differential Balances:** We begin with the fundamental unsteady-state balances on the contents of the still.
@@ -680,20 +709,23 @@ $$
 
 $$
 
+
 ```
 
 ### Conceptual Example: Distillation of a System with an Azeotrope
 
-```{note}
+```json { note= }
 **Azeotropes in Distillation**
 An **azeotrope** is a liquid mixture which, at its boiling point, produces a vapor of the exact same composition as the liquid ($y=x$). Such mixtures represent a limit to separation by conventional distillation. A **minimum-boiling azeotrope** occurs when the boiling point of the azeotropic mixture is lower than that of either pure component. This azeotrope acts as an "attractor" for the vapor composition during distillation of mixtures on one side of it, and a "repeller" on the other.
+
 ```
 
-```{prf:example} Distillation of a Minimum-Boiling Azeotrope
+```json { prf:example= }
 A batch still is charged with a liquid mixture with a mole fraction of 0.2 of component 1. The T-x-y diagram shows that this system has a minimum-boiling azeotrope at a mole fraction of 0.5. With constant heating, describe how the temperature of the still and the composition of the vapor product change over time.
+
 ```
 
-```{dropdown} Solution Steps
+```java { dropdown= }
 **Analysis using the T-x-y Diagram**
 
 **Step 1: Initial Vaporization:**
@@ -709,18 +741,20 @@ This enrichment process continues, with the liquid in the still becoming more an
 
 **Step 4: Azeotropic Boiling:**
 Eventually, the liquid in the still will reach the azeotropic composition, $x_W = 0.5$. At this point, the liquid and vapor compositions are identical ($x_W = y_D = 0.5$). Any further vaporization produces vapor of that same azeotropic composition. Since the vapor being removed has the same composition as the liquid, the composition of the liquid in the still **no longer changes**. Consequently, the boiling temperature also becomes **constant** and remains at the azeotropic boiling point until all the remaining liquid is boiled away. This is the limit of separation for this starting mixture.
+
 ```
 
 ### Example Problem: Distillation using T-x-y Data
 
-```{prf:example} Distillation using T-x-y Data
+```md { prf:example= }
 A simple pot still is charged with 50 moles of an ethanol-water mixture. The distillation is started, and the initial vapor temperature (head temperature) is 84$^\circ$C. The process is stopped when the head temperature rises to 89$^\circ$C. Using the provided T-x-y diagram for the ethanol-water system, determine:
 1. The total amount of distillate collected (D).
 2. The final composition of the liquid remaining in the still (the waste).
 3. The average composition of the total collected distillate.
+
 ```
 
-```{dropdown} Solution Steps
+```tex { dropdown= }
 **Step 1: Strategy: The Rayleigh Equation with Numerical Integration**
 The governing equation for this process is the Rayleigh equation. Since this is a single-stage still, the vapor leaving ($y_D$) is in direct equilibrium with the liquid in the still ($x_W$).
 
@@ -802,11 +836,12 @@ $$
 - Final Still Composition ($x_{Wf}$): 7\% ethanol.
 - Average Distillate Composition ($x_{D,avg}$): $\approx 49\%$ ethanol.
 A sanity check confirms this is reasonable: the instantaneous vapor was richer than 49\% at the start and leaner at the end.
+
 ```
 
 ### Example Problem: Distillation using Raoult's Law
 
-```{prf:example} Distillation with Raoult's Law VLE
+```tex { prf:example= }
 A single-stage batch still is charged with 75 mol of an 82 mol\% methanol / 18 mol\% water mixture. The distillation is run until the **average** distillate concentration collected is 90.0 mol\% methanol. Assuming the mixture is an ideal solution (follows Raoult's Law) and operates at 760 mmHg:
 1. How much total distillate will be collected?
 2. How many moles will remain in the still, and what is its final methanol concentration?
@@ -814,16 +849,20 @@ A single-stage batch still is charged with 75 mol of an 82 mol\% methanol / 18 m
 The Antoine equations ($P^{\text{sat}}$ in mmHg, T in $^\circ$C) are:
 - Methanol: $\log_{10}(P_1^{\text{sat}}) = 8.081 - \frac{1582}{T + 239.7}$
 - Water: $\log_{10}(P_2^{\text{sat}}) = 8.071 - \frac{1731}{T + 233.4}$
+
 ```
 
-```{dropdown} Solution Steps
+```tex { dropdown= }
 **Step 1: Strategy: Iterative Numerical Solution**
+
 This problem is more complex for two reasons: 1) The VLE data is not given directly and must be calculated using Raoult's Law. 2) The stopping condition is based on the *average* distillate composition, which depends on the entire path of the distillation. This means we cannot solve directly and must use an iterative, "marching" solution.
 
 **Step 2: Set up the VLE Calculation Block**
+
 At any given temperature $T$, we can find the equilibrium liquid ($x_W$) and vapor ($y_D$) compositions at $P_{total} = 760$ mmHg.
 
 **VLE Calculation using Raoult's Law**
+
 For any temperature T:
 (a) Calculate the vapor pressures of methanol ($P_1^{\text{sat}}$) and water ($P_2^{\text{sat}}$) using their Antoine equations.
 (b) Find the liquid mole fraction ($x_W$) that boils at this temperature and total pressure:
@@ -845,10 +884,15 @@ $$
 This block of calculations forms the core of our iterative solution.
 
 **Step 3: Describe the Iterative "Marching" Procedure**
+
 The spreadsheet calculation proceeds by taking small steps (e.g., small increments of T or $x_W$) and updating all system properties until the target condition ($x_{D,avg}=0.90$) is met.
+
 (a) **Initialize:** Start with the initial conditions: $W_0=75$ mol, $x_{W0}=0.82$.
+
 (b) **Take a Step:** Choose a new, slightly lower liquid composition, $x_{W, new}$.
+
 (c) **Calculate VLE:** At both the old and new $x_W$, calculate the corresponding temperatures and vapor compositions ($y_D$) using the VLE block from Step 2.
+
 (d) **Update the Rayleigh Integral:** Approximate the integral over this small step using the trapezoidal rule:
 
 $$
@@ -858,36 +902,44 @@ $$
 $$
 
 The total value of the integral is the running sum of these small step changes.
+
 (e) **Update Moles in Still (W):** Use the new total value of the integral in the Rayleigh equation: $W = W_0 \exp(\text{Integral})$.
+
 (f) **Update Total Distillate (D):** Use the overall balance: $D = W_0 - W$.
+
 (g) **Update Average Composition ($x_{D,avg}$):** Use the overall component balance, solved for $x_{D,avg}$: $x_{D,avg} = (W_0 x_{W0} - W x_W) / D$.
+
 (h) **Check and Repeat:** Compare the calculated $x_{D,avg}$ to the target of 0.90. If they don't match, repeat from step (b) with another small step in $x_W$. The process is complete when $x_{D,avg} = 0.90$.
 
 **Final Answer Summary for Example 2**
+
 The iterative calculation is continued until the target is met. The results obtained from this procedure are:
 - **Total Distillate Collected (D):** $\approx 62.5$ moles.
 - **Moles Remaining in Still (W):** $\approx 12.5$ moles.
 - **Final Still Composition ($x_{Wf}$):** $\approx 42\%$ methanol.
+
 ```
 
 ## Gas Absorption Columns
 
-**Gas Absorption** is a mass transfer operation used to selectively remove one or more components (called **solutes**) from a gas stream by contacting it with a liquid **solvent**. The process works because the solute is more soluble in the liquid solvent than the other gases in the stream. A common industrial application is "sour gas sweetening," where acidic gases like H$_2$S are removed from natural gas using an amine solvent.
+__Gas Absorption__ is a mass transfer operation used to selectively remove one or more components (called __solutes__) from a gas stream by contacting it with a liquid __solvent__. The process works because the solute is more soluble in the liquid solvent than the other gases in the stream. A common industrial application is "sour gas sweetening," where acidic gases like H$_2$S are removed from natural gas using an amine solvent.
 
-```{note}
+```groovy { note= }
 **The Principle of Gas Absorption**
 The operation is typically carried out in a tower containing trays or packing where the gas stream flows upwards and the liquid solvent flows downwards. This **counter-current** flow maximizes the concentration difference (the driving force) between the gas and liquid at every point in the column, leading to the most efficient mass transfer of the solute from the gas phase to the liquid phase.
+
 ```
 
 ### Fundamental Principles and Equations
 
 The design of an absorption column involves combining thermodynamic equilibrium relationships with overall material balances.
 
-```{note}
+```rb { note= }
 **Equilibrium Relationship:** On each theoretical stage of the column, the exiting gas and liquid streams are assumed to reach thermodynamic equilibrium. For dilute solutions, this relationship is described by **Henry's Law**, which states that the partial pressure of a solute in the gas phase is proportional to its concentration in the liquid phase.
+
 ```
 
-```{important}
+```sh { important= }
 **Henry's Law and Equilibrium Constant**
 The equilibrium relationship can be expressed in terms of mole fractions:
 
@@ -905,22 +957,25 @@ H(T) = H^0 \exp\left[-\frac{E}{R}\left(\frac{1}{T} - \frac{1}{T_0}\right)\right]
 
 $$
 
+
 ```
 
-```{admonition} Term Definitions
+```yaml { admonition= }
 :class: tip
 - $y_n, x_n$: Mole fractions of the solute in the gas and liquid phases leaving stage $n$.
 - $H$: Henry's Law constant [Pressure units, e.g., atm].
 - $P$: Total pressure of the system [Pressure units].
 - $m$: The equilibrium constant ($m = H/P$) [dimensionless].
 - $L, V$: Molar flow rates of the liquid and gas (often on a solute-free basis) [mol/time].
+
 ```
 
-```{note}
+```dart { note= }
 **The Operating Line:** The relationship between a gas stream rising and a liquid stream descending *between* stages is not governed by equilibrium, but by a **material balance**. The operating line equation relates the composition of the gas entering a stage from below to the liquid entering it from above.
+
 ```
 
-```{important}
+```sh { important= }
 **The Operating Line Equation**
 A material balance for the solute from the top of the column down to an arbitrary stage $n$ gives:
 
@@ -938,70 +993,78 @@ y_{n+1} = \left(\frac{L}{V}\right)x_n + \left(y_1 - \frac{L}{V}x_0\right)
 
 $$
 
+
 ```
 
 ### Graphical Method for Stage Calculation
 
 Similar to the McCabe-Thiele method, we can use a graphical method on an x-y diagram to determine the number of theoretical stages required.
 
-```{admonition} Term Definitions
+```md { admonition= }
 :class: tip
 **Key Lines on the Absorption Diagram**
 - **Equilibrium Line:** This is a plot of the thermodynamic equilibrium relationship. For dilute systems following Henry's Law, this is a straight line through the origin with a slope of $m$, i.e., $y=mx$.
 - **Operating Line:** This is a plot of the material balance equation. It is a straight line with a slope of $L/V$ that connects the compositions at the top of the column (point $(x_0, y_1)$) with the compositions at the bottom (point $(x_N, y_{N+1})$).
+
 ```
 
-```{dropdown} Solution Steps
+```md { dropdown= }
 **Graphical Procedure for Stage Calculation**
 The number of stages is found by constructing a staircase between the operating line and the equilibrium line, typically starting from the bottom of the column.
 1. **Start at the Bottom:** Begin at the point $(x_N, y_{N+1})$ on the operating line. This represents the rich entering gas ($y_{N+1}$) and the rich exiting liquid ($x_N$).
 2. **Move to Equilibrium:** The vapor that leaves stage N ($y_N$) is in equilibrium with the liquid on stage N ($x_N$). To find its composition, move **vertically down** from the operating line to the **equilibrium line**.
 3. **Move to Operating Line:** The vapor leaving stage N ($y_N$) passes the liquid entering from the stage above ($x_{N-1}$). To find this liquid's composition, move **horizontally to the left** from the equilibrium line to the **operating line**.
 4. **Repeat:** This completes one "step" (one theoretical stage). Repeat this process—vertically to equilibrium, horizontally to the operating line—counting each step until the gas composition ($y$) is less than or equal to the desired exit gas composition, $y_1$.
+
 ```
 
 ### Effect of Operating Parameters
 
 The graphical method provides an excellent way to visualize how changing operating conditions will impact the required number of stages for a given separation.
 
-```{note}
+```md { note= }
 **Effect of Temperature (T)**
 - **What it Affects:** The **Equilibrium Line**.
 - **How:** Gas solubility in a liquid *decreases* as temperature increases. This increases the Henry's constant, $H$, and thus increases the slope of the equilibrium line ($m=H/P$).
 - **Result:** A higher temperature moves the equilibrium line **closer** to the operating line. This reduces the size of the "steps" in the graphical construction, meaning **more stages are required**.
 - **Conclusion:** Gas absorption is favored at **lower temperatures**.
+
 ```
 
-```{note}
+```md { note= }
 **Effect of Pressure (P)**
 - **What it Affects:** The **Equilibrium Line**.
 - **How:** Increasing the total system pressure $P$ increases the partial pressure of the solute, driving more of it into the liquid phase. This *decreases* the slope of the equilibrium line ($m=H/P$).
 - **Result:** A higher pressure moves the equilibrium line **further away** from the operating line. This increases the size of the steps, meaning **fewer stages are required**.
 - **Conclusion:** Gas absorption is favored at **higher pressures**.
+
 ```
 
-```{note}
+```md { note= }
 **Effect of Solvent Flow Rate (L/V Ratio)**
 - **What it Affects:** The **Operating Line**.
 - **How:** The slope of the operating line is equal to the ratio of the liquid to gas molar flow rates, $L/V$.
 - **Result:** Increasing the liquid solvent flow rate $L$ increases the slope of the operating line. This moves the operating line **further away** from the equilibrium line, meaning **fewer stages are required**.
 - **Conclusion and Trade-off:** A higher solvent flow rate requires a smaller, cheaper column (lower capital cost) but costs more to operate (pumping and regenerating more solvent, higher operating cost). Engineers must choose an optimal $L/V$ ratio that balances these costs. The theoretical **minimum L/V ratio** would require an infinite number of stages.
+
 ```
 
-```{note}
+```ml { note= }
 **Effect of Inlet and Outlet Compositions**
 - **What they Affect:** The **anchor points** of the Operating Line.
 - **How:** The operating line must connect the point representing the top of the column $(x_0, y_1)$ to the point representing the bottom $(x_N, y_{N+1})$.
 - **Result:** If a recycled solvent with some initial solute is used ($x_0 > 0$), the top of the operating line shifts to the right. If a stricter outlet gas specification is required (a lower $y_1$), the top of the operating line shifts down. Both changes move the operating line closer to the equilibrium line and **require more stages**.
+
 ```
 
 ### Example Problem: Dilute System - Chloroform Scrubbing
 
-```{prf:example} Dilute System: Chloroform Scrubbing
+```md { prf:example= }
 A laboratory process releases an air stream of 1000 kmol/hr containing 200 ppm of chloroform. To meet environmental standards, this concentration must be reduced to 10 ppm before release. An absorption column using pure water as the solvent is proposed. The system operates at 25$^\circ$C and 1.5 atm. How many theoretical equilibrium stages are required for this separation?
+
 ```
 
-```{dropdown} Solution Steps
+```tex { dropdown= }
 **Step 1: Strategy and Assumptions**
 The first step is to recognize that with solute concentrations in the parts-per-million (ppm) range, this is a **dilute system**.
 
@@ -1090,15 +1153,17 @@ $$
 
 **Final Answer Summary for Example 1**
 The Kremser equation predicts that **6.1 theoretical stages** are required. We would round up and design the column for **7 stages**. The small difference between the graphical and analytical methods is expected and acceptable.
+
 ```
 
 ### Example Problem: Concentrated System - CO$_2$ Removal
 
-```{prf:example} Concentrated System: CO$_2$ Removal
+```sql { prf:example= }
 We wish to remove 65\% of the CO$_2$ from a 100 mol/hr gas stream that is initially 8 mol\% CO$_2$ in nitrogen. The scrubbing is done with pure water at room temperature and atmospheric pressure, where the VLE relationship is approximately $y=1640x$. How many equilibrium stages are required if the solvent flow rate is 1.5 times the minimum?
+
 ```
 
-```{dropdown} Solution Steps
+```tex { dropdown= }
 **Step 1: Strategy: Analysis for a Concentrated System**
 First, we must determine if the system is dilute. A significant change in the total molar flow rate means we cannot use the simplifying assumptions of the dilute case.
 - Moles CO$_2$ entering: $100 \, \text{mol/hr} \times 0.08 = 8.0$ mol/hr.
@@ -1133,22 +1198,24 @@ We plot the curved equilibrium line and the straight operating line (slope=1740,
 
 **Final Answer Summary for Example 2**
 The graphical analysis shows that 1.9 equilibrium stages are needed. Therefore, we would design the column with **2 theoretical stages**.
+
 ```
 
 ## Stripping Columns
 
 **Stripping**, also known as desorption, is a mass transfer operation that is the reverse of absorption. Its purpose is to selectively remove a dissolved solute from a liquid stream by contacting it with a gas, known as the **stripping agent**.
 
-```{note}
+```groovy { note= }
 **The Principle of Stripping**
 Like absorption, stripping is typically carried out in a counter-current column. The solute-rich liquid enters at the top, and the clean stripping gas enters at the bottom. The counter-current flow maximizes the concentration difference at every point, providing the driving force for the solute to transfer **from the liquid phase to the gas phase**.
+
 ```
 
 ### Fundamental Principles and Equations
 
 The design equations for stripping are identical in form to those for absorption; however, the relative positions of the operating and equilibrium lines are different, and the direction of mass transfer is from liquid to gas.
 
-```{important}
+```md { important= }
 **Key Stripping Equations**
 
 **Equilibrium Relationship (Henry's Law):**
@@ -1169,68 +1236,76 @@ y_{n+1} = \left(\frac{L}{V}\right)x_n + \left(y_1 - \frac{L}{V}x_0\right)
 
 $$
 
+
 ```
 
-```{admonition} Term Definitions
+```md { admonition= }
 :class: tip
 - $x_0$: Mole fraction of solute in the **entering liquid feed** (at the top, stage 1).
 - $x_N$: Mole fraction of solute in the **exiting stripped liquid** (at the bottom, stage N).
 - $y_{N+1}$: Mole fraction of solute in the **entering stripping gas** (at the bottom). Often this is 0.
 - $y_1$: Mole fraction of solute in the **exiting solute-rich gas** (at the top).
 - $L, V$: Molar flow rates of the liquid and gas [mol/time].
+
 ```
 
 ### Graphical Method for Stripping Columns
 
-```{note}
+```md { note= }
 **Key Feature of the Stripping Diagram**
 The number of theoretical stages for a stripping column can be found graphically on an x-y diagram. The key difference from absorption is that the **operating line must lie below the equilibrium line**. This ensures that at every point in the column, the actual vapor-phase concentration ($y$) is lower than the equilibrium concentration, providing a driving force for the solute to move from the liquid to the gas phase.
+
 ```
 
-```{dropdown} Solution Steps
+```md { dropdown= }
 **Graphical Procedure for Stage Calculation**
 The number of stages is found by constructing a staircase between the equilibrium line and the operating line. It is often intuitive to start from the top of the column (stage 1).
 1. **Plot the Lines:** Draw the equilibrium line ($y=mx$) and the operating line, which is the straight line connecting the known top-of-column point $(x_0, y_1)$ and bottom-of-column point $(x_N, y_{N+1})$.
 2. **Begin at Stage 1:** The liquid entering the column is $x_0$. This liquid enters Stage 1. Find the point $(x_0, y_1)$ on the diagram. This point is on the operating line. The liquid leaving stage 1 ($x_1$) is in equilibrium with the vapor leaving stage 1 ($y_1$). To find $x_1$, start at $y_1$ and move **horizontally to the right** to the **equilibrium line**. The x-coordinate of this point is $x_1$.
 3. **Move to Stage 2:** The liquid $x_1$ flows from stage 1 to stage 2. The vapor that it passes, which is rising from stage 2, is $y_2$. Their compositions are related by the operating line. To find $y_2$, start at $x_1$ and move **vertically up** to the **operating line**. The y-coordinate is $y_2$.
 4. **Repeat:** Now find the liquid on stage 2 ($x_2$) that is in equilibrium with $y_2$ by moving **horizontally to the right** to the **equilibrium line**. This completes the step for Stage 2. Continue this process—vertically to the operating line, horizontally to the equilibrium line—counting each "triangle" as one stage, until the liquid composition $x$ is less than or equal to the desired exit liquid composition, $x_N$.
+
 ```
 
 ### Effect of Operating Parameters
 
 The performance of a stripping column is highly sensitive to the operating conditions. Understanding these effects is key to efficient design.
 
-```{note}
+```md { note= }
 **Effect of Temperature (T)**
 - **What it Affects:** The **Equilibrium Line**.
 - **How:** Increasing temperature generally *decreases* the solubility of a gas in a liquid, making it easier to strip out. This increases the Henry's constant, $H$, and thus the slope of the equilibrium line ($m=H/P$).
 - **Result:** A higher temperature moves the equilibrium line **further away** from the operating line. This increases the size of the graphical steps, meaning **fewer stages are required**.
 - **Conclusion:** Stripping is favored at **higher temperatures**.
+
 ```
 
-```{note}
+```md { note= }
 **Effect of Pressure (P)**
 - **What it Affects:** The **Equilibrium Line**.
 - **How:** The slope of the equilibrium line, $m=H/P$, is inversely proportional to the total pressure $P$.
 - **Result:** Decreasing the system pressure increases the slope of the equilibrium line, moving it further away from the operating line. This means **fewer stages are required**.
 - **Conclusion:** Stripping is favored at **lower pressures**.
+
 ```
 
-```{note}
+```md { note= }
 **Effect of Stripping Gas Flow Rate (V)**
 - **What it Affects:** The **Operating Line**.
 - **How:** The slope of the operating line is $L/V$. Increasing the stripping gas flow rate $V$ (for a fixed liquid rate $L$) *decreases* the slope of the operating line.
 - **Result:** A lower slope moves the operating line **further away** from the equilibrium line. This increases the size of the steps, meaning **fewer stages are required**.
 - **Conclusion and Trade-off:** A higher stripping gas flow rate requires a smaller, cheaper column (lower capital cost) but has a higher operating cost (compressing and supplying more gas). The theoretical **minimum stripping gas rate** corresponds to an operating line that touches the equilibrium line (a "pinch point"), which would require an infinite number of stages. Engineers must choose an optimal V that balances these costs.
+
 ```
 
 ### Example Problem: Stripping an Organic from Water
 
-```{prf:example} Single-Stage Stripping of an Organic from Water
+```csv { prf:example= }
 A single-stage stripping process is used to remove a dissolved organic compound from a water stream. The contaminated water enters the stage at 20$^\circ$C with an organic concentration of 0.05 mol\%. A stream of pure, dry air at 5 bar is contacted with the water to act as the stripping agent. The Henry's Law constant for the organic in water at this temperature is 2.5 bar. What flow rate of air (in moles of air per mole of water) is needed to reduce the amount of organic in the water by 95\%?
+
 ```
 
-```{dropdown} Solution Steps
+```tex { dropdown= }
 **Step 1: Strategy and Process Basis**
 The core of this problem is a material balance on the organic solute around the single equilibrium stage. We will relate the compositions of the exiting liquid and vapor streams using Henry's Law. Since the air flow rate is the unknown, we will solve the material balance for this quantity. Let's first establish a basis for our calculation.
 
@@ -1346,4 +1421,5 @@ Is it valid to assume the total flow rates are constant? Let's check the two eff
 
 **Final Answer Summary**
 To achieve 95\% removal of the organic compound, approximately **38 moles of air are needed per mole of water**. The high ratio of air to water is required because the organic is not highly volatile out of water.
+
 ```
