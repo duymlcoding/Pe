@@ -12,8 +12,9 @@ The Mechanical Energy Balance is a fundamental tool in fluid dynamics, derived f
 
 ### Fundamental Equations
 
-```yaml { admonition= }
+```{admonition} Term Definitions
 :class: tip
+
 - $\Delta P$: Change in pressure ($P_{out} - P_{in}$) [Pa].
 - $\rho$: Fluid density [kg/m$^3$].
 - $\Delta u^2$: Change in the square of the average fluid velocity ($u_{out}^2 - u_{in}^2$) [m$^2$/s$^2$].
@@ -25,7 +26,7 @@ The Mechanical Energy Balance is a fundamental tool in fluid dynamics, derived f
 
 ```
 
-```tex { important= }
+```{important}
 **Mechanical Energy Balance (with Friction):**
 This is the most common form used for real fluids. The term $\hat{F}$ accounts for the conversion of mechanical energy into thermal energy due to viscous dissipation (friction).
 
@@ -38,7 +39,7 @@ $$
 
 ```
 
-```sh { important= }
+```{important}
 **The Bernoulli Equation (Ideal Fluid):**
 This is a simplified form for a system with no shaft work ($\dot{W}_s=0$) and no frictional losses ($\hat{F}=0$). It applies to ideal, inviscid fluid flow.
 
@@ -55,8 +56,7 @@ $$
 
 The Mechanical Energy Balance is a practical rearrangement of the First Law of Thermodynamics for a steady-state, open system.
 
-```tex { dropdown= }
-**Derivation of the Mechanical Energy Balance**
+```{dropdown} Derivation of the Mechanical Energy Balance
 1. **Start with the General Energy Balance:** The first law for a steady-state, open system is:
 
    $$\dot{m} \left( \Delta h + \frac{\Delta u^2}{2} + g\Delta z \right) = \dot{Q} + \dot{W}_s$$
@@ -85,12 +85,12 @@ The Mechanical Energy Balance is a practical rearrangement of the First Law of T
 
 ### Example: Flow from a Coffee Urn
 
-```sh { prf:example= }
+```{prf:example} Flow from Coffee Urn
 **Question:** A 60-cm tall coffee urn is filled to the top. It dispenses coffee through a 0.7-cm diameter nozzle that is 12 cm above the table surface. How long does it take to pour a 200-mL cup of coffee?
 
 ```
 
-```tex { dropdown= }
+```{dropdown} Solution Steps
 **Step 1: Strategy and Assumptions:**
 We can model this using the Bernoulli equation, which is appropriate for low-viscosity fluids with negligible friction over short distances. We apply the equation between the top surface of the coffee (point 1) at height $z_1 = 0.60$ m and the nozzle exit (point 2) at height $z_2 = 0.12$ m. We assume no friction and no shaft work.
 
@@ -208,8 +208,9 @@ While the Mechanical Energy Balance is derived from thermodynamics (an energy ba
 
 The derivation begins with a force balance on a tiny fluid element and, after several key simplifying assumptions, results in the well-known algebraic form of the Bernoulli equation.
 
-```yaml { admonition= }
+```{admonition} Term Definitions
 :class: tip
+
 - $\nu$: Fluid velocity along a streamline [m/s]. (Note: We use $\nu$ here to distinguish it from reactor volume $V$).
 - $P$: Static pressure, the pressure you would feel if you were moving with the fluid [Pa or N/m$^2$].
 - $\rho$: Fluid density [kg/m$^3$].
@@ -221,7 +222,7 @@ The derivation begins with a force balance on a tiny fluid element and, after se
 
 ```
 
-```tex { important= }
+```{important}
 **Euler's Equation: The Equation of Motion**
 This is the differential equation resulting directly from the force balance on a fluid element, before integration. It relates the change in velocity, elevation, and pressure along a streamline.
 
@@ -234,7 +235,7 @@ $$
 
 ```
 
-```tex { important= }
+```{important}
 **The Bernoulli Equation: The Integrated Form**
 After integrating Euler's Equation and assuming the fluid is incompressible, we get the classic Bernoulli equation. It states that the sum of the pressure head, velocity head, and elevation head is constant along a single streamline for an ideal fluid.
 
@@ -251,8 +252,7 @@ $$
 
 This derivation shows how applying a simple force balance to a small fluid element leads directly to the Bernoulli equation.
 
-```tex { dropdown= }
-**Derivation from Newton's Second Law**
+```{dropdown} Derivation from Newton's Second Law
 1. **Define a Fluid Element and its Acceleration:**
    Imagine a tiny, cylindrical "packet" of fluid moving along a path called a streamline. According to Newton's second law, the sum of the forces on this element ($\sum \delta F_s$) must equal its mass ($\delta m$) times its acceleration ($a_s$) in the direction of the streamline.
    
@@ -296,12 +296,12 @@ This derivation shows how applying a simple force balance to a small fluid eleme
 
 ### Applications of the Bernoulli Equation
 
-```sh { prf:example= }
+```{prf:example} Air Flow Through Pipe and Nozzle
 **Question:** Air flows steadily through a horizontal pipe of 10 cm diameter. It exits into the atmosphere through an 8 cm diameter nozzle. The gauge pressure in the pipe is 800 Pa. Assuming air is incompressible with a density of 1.23 kg/m$^3$, what is the velocity of the air at the exit?
 
 ```
 
-```tex { dropdown= }
+```{dropdown} Solution Steps
 **Step 1: Strategy: Using Two Equations for Two Unknowns**
 This problem involves two unknown velocities: the velocity inside the pipe ($\nu_1$) and the velocity at the nozzle exit ($\nu_2$). To solve for two unknowns, we need two independent equations. We will use:
 1. The **Bernoulli Equation**, which relates pressure and velocity changes (an energy relationship).
@@ -381,12 +381,12 @@ Is it valid to treat air as incompressible? The rule of thumb is that this assum
 
 ```
 
-```sh { prf:example= }
+```{prf:example} Flow from Coffee Urn (Torricelli's Law)
 **Question:** A 60-cm tall coffee urn is filled to the top. It dispenses coffee through a 0.7-cm diameter nozzle that is 12 cm above the table surface. How long does it take to pour a 200-mL cup of coffee?
 
 ```
 
-```tex { dropdown= }
+```{dropdown} Solution Steps
 **Step 1: Strategy and Assumptions:**
 We apply the Bernoulli equation between the top surface of the coffee (point 1) at height $z_1 = 0.60$ m and the nozzle exit (point 2) at height $z_2 = 0.12$ m. We assume ideal flow: inviscid, steady, and incompressible.
 
@@ -438,12 +438,12 @@ The time required is approximately **1.7 seconds**.
 
 ```
 
-```sql { prf:example= }
+```{prf:example} Pitot Tube on Plane
 **Question:** A pitot-static tube is placed on the nose of a plane traveling 100 m/s at an elevation of 4000 m. What is the pressure difference measured by the device? Assume the density of air is 0.8194 kg/m$^3$ at this elevation.
 
 ```
 
-```tex { dropdown= }
+```{dropdown} Solution Steps
 **Step 1: Principle of the Pitot Tube:**
 A Pitot tube is a pressure-measurement instrument used to measure fluid flow velocity. It works by creating a **stagnation point**, a point in a fluid flow where the local velocity has been brought to zero. By converting the fluid's kinetic energy entirely into pressure energy at this single point, we can deduce the original velocity.
 
@@ -508,7 +508,7 @@ A **dimensionless group** (or dimensionless number) is a quantity that has no ph
 
 The most famous and fundamental dimensionless group in fluid mechanics is the Reynolds number. Its value tells us about the fundamental nature or "regime" of a fluid's flow.
 
-```sh { important= }
+```{important}
 **Reynolds Number for Flow in a Pipe**
 
 $$
@@ -520,7 +520,7 @@ $$
 
 ```
 
-```tex { note= }
+```{note}
 **Physical Meaning: A Ratio of Competing Forces**
 The Reynolds number represents the ratio of **inertial forces** to **viscous forces** acting on a fluid. You can think of it as a battle between forces promoting chaos and forces promoting order.
 
@@ -535,9 +535,10 @@ $$
 
 ```
 
-```tex { admonition= }
+```{admonition} Interpreting the Reynolds Number for Pipe Flow
 :class: tip
-**Interpreting the Reynolds Number for Pipe Flow**
+
+
 The value of the Reynolds number tells us which force is winning the "battle" and thus determines the character of the flow.
 - **$Re < 2100$ (Laminar Flow):** At low Reynolds numbers, viscous forces dominate. They are strong enough to suppress any disturbances, and the fluid flows in smooth, parallel layers (or "laminae") with no mixing between them. The flow is orderly, silent, and predictable.
 - **$Re > 4000$ (Turbulent Flow):** At high Reynolds numbers, inertial forces dominate. They overwhelm the viscous forces, and any small disturbance grows into large, chaotic eddies and swirls. The flow path of any individual particle is unpredictable. Turbulent flow is associated with high energy dissipation and efficient mixing.
@@ -547,12 +548,12 @@ The value of the Reynolds number tells us which force is winning the "battle" an
 
 ### Example: Calculating the Reynolds Number
 
-```yaml { prf:example= }
+```{prf:example} Calculating Reynolds Number for Water Flow
 **Question:** Water flows through a large pipe with a diameter of 1.0 meter at a velocity of 100 cm/s. The density of water is 1.0 g/cm$^3$ and its viscosity is 1.0 centipoise (cP). Calculate the Reynolds number and determine the flow regime.
 
 ```
 
-```tex { dropdown= }
+```{dropdown} Solution Steps
 **Step 1: Strategy: The Importance of Consistent Units**
 **The Golden Rule of Dimensionless Numbers:** The single most important step in calculating any dimensionless number is to ensure all physical parameters are expressed in a **consistent set of base units** before they are plugged into the formula. Mixing units (e.g., meters and centimeters, or different units of viscosity) is the most common source of error. You can use SI (Meter-Kilogram-Second) or CGS (Centimeter-Gram-Second) or any other consistent system, but you cannot mix them.
 
@@ -589,9 +590,10 @@ The calculated Reynolds number is $Re = 1 \times 10^6$. Since $1,000,000 > 4000$
 
 ### Other Important Dimensionless Groups in Chemical Engineering
 
-```tex { admonition= }
+```{admonition} Key Dimensionless Groups in Transport Phenomena
 :class: tip
-**Key Dimensionless Groups in Transport Phenomena**
+
+
 
 | **Name (Symbol)** | **Formula & Physical Meaning** | **Application & Significance** |
 | :--- | :--- | :--- |
@@ -610,7 +612,7 @@ One of the most fundamental concepts in fluid statics (the study of fluids at re
 
 ### The Fundamental Equation of Fluid Statics
 
-```md { note= }
+```{note}
 **Why Pressure Changes with Depth**
 Imagine a column of fluid at rest, like the water in a swimming pool. A small "packet" or element of fluid within this column is not moving, which means the net force on it must be zero (Newton's First Law). There are three vertical forces acting on this element:
 1. A downward force from the pressure of the fluid *above* it.
@@ -621,7 +623,7 @@ For the element to be stationary, the upward pressure force must perfectly balan
 
 ```
 
-```sh { important= }
+```{important}
 **The Differential Equation of Fluid Statics**
 A formal force balance on a differential fluid element yields the fundamental equation that governs all of fluid statics:
 
@@ -634,9 +636,10 @@ $$
 
 ```
 
-```md { admonition= }
+```{admonition} Variable Definitions
 :class: tip
-**Variable Definitions**
+
+
 - $P$: The absolute pressure at a given point in the fluid.
 - $z$: The vertical coordinate, or elevation. By convention, $z$ is defined as positive in the **upward** direction.
 - $\gamma$: The **specific weight** of the fluid, which is its weight per unit volume. For a fluid with density $\rho$ in a gravitational field $g$, $\gamma = \rho g$.
@@ -646,7 +649,7 @@ $$
 
 ### Case 1: The Incompressible Fluid
 
-```kt { note= }
+```{note}
 **The Incompressible Fluid Model**
 An incompressible fluid is one whose density, $\rho$, is assumed to be constant, regardless of changes in pressure. This is an excellent assumption for most **liquids** (like water or oil) and is a reasonable assumption for gases over very small changes in elevation where the pressure change is minimal.
 
@@ -662,7 +665,7 @@ $$
 
 It is often more intuitive to talk about depth. If we let point 2 be at a depth $h$ below point 1, then $h = z_1 - z_2$. The equation becomes:
 
-```md { important= }
+```{important}
 **Pressure in an Incompressible Fluid**
 
 $$
@@ -677,7 +680,7 @@ $$
 
 ### Case 2: The Compressible Fluid (Isothermal Ideal Gas)
 
-```md { note= }
+```{note}
 **The Compressible Fluid Model**
 A compressible fluid is one whose density changes significantly with pressure. All **gases** are compressible. To solve the static equation, we can no longer treat $\rho$ as a constant. We need an "equation of state" that relates density and pressure. The simplest is the Ideal Gas Law. In this first case, we will also assume the temperature is constant (**isothermal**).
 
@@ -691,7 +694,7 @@ The derivation requires separating variables before integrating:
 4. Integrate both sides from state 1 to state 2. Since we assume T is constant, all terms on the right are constant and can be taken out of the integral:
    $$ \int_{P_1}^{P_2} \frac{dP}{P} = -\frac{g}{RT} \int_{z_1}^{z_2} dz \implies \ln\left(\frac{P_2}{P_1}\right) = -\frac{g(z_2 - z_1)}{RT} $$
 
-```md { important= }
+```{important}
 **Pressure in an Isothermal Compressible Fluid**
 To solve for pressure directly, we exponentiate both sides:
 
@@ -707,14 +710,15 @@ $$
 
 ### Example: Pressure Calculation at High Altitude
 
-```sql { prf:example= }
+```{prf:example} Air Pressure at 40,000 Feet
 **Question:** Calculate the air pressure at an altitude of 40,000 feet above sea level using three different physical models: (1) incompressible, (2) compressible isothermal, and (3) compressible non-isothermal. Compare the results to the standard atmospheric value of 18.7 kPa.
 
 ```
 
-```hs { admonition= }
+```{admonition} Given Information and Constants
 :class: tip
-**Given Information and Constants**
+
+
 - **Altitude:** $z_2 = 40,000 \, \text{ft} \times \frac{0.3048 \, \text{m}}{1 \, \text{ft}} = 12,192$ m.
 - **Sea Level (Point 1):** $z_1 = 0$ m, $P_1 = 101.33$ kPa = 101,330 Pa, $T_1 = T_0 = 15^\circ\text{C} = 288.15$ K.
 - **Constants:** $g = 9.807$ m/s$^2$. Gas constant for air, $R = 286.9$ J/(kg$\cdot$K).
@@ -723,8 +727,7 @@ $$
 
 ```
 
-```tex { dropdown= }
-**Solution: Model 1 Incompressible Fluid**
+```{dropdown} Solution: Model 1 Incompressible Fluid
 This model assumes the density (and specific weight) of air remains constant at its sea-level value all the way up to 40,000 feet.
 
 **Incompressible Formula**
@@ -752,8 +755,7 @@ The result of a negative absolute pressure is **physically impossible**. This de
 
 ```
 
-```tex { dropdown= }
-**Solution: Model 2 Compressible Isothermal Fluid**
+```{dropdown} Solution: Model 2 Compressible Isothermal Fluid
 This model accounts for the fact that density changes with pressure, but assumes the temperature remains constant at its sea-level value of 15$^\circ$C.
 
 **Isothermal Compressible Formula**
@@ -785,8 +787,7 @@ This result is physically realistic—a positive pressure that is much lower tha
 
 ```
 
-```tex { dropdown= }
-**Solution: Model 3 Compressible NonIsothermal Fluid**
+```{dropdown} Solution: Model 3 Compressible NonIsothermal Fluid
 This is the most realistic model. It accounts for density changing with pressure and also models the fact that temperature decreases linearly with altitude in the troposphere. The pressure formula for a linear temperature lapse rate is:
 
 **Non-Isothermal Compressible Formula**
@@ -830,9 +831,10 @@ This result is extremely close to the standard tabulated value of 18.7 kPa. This
 
 ```
 
-```md { admonition= }
+```{admonition} Final Comparison and Key Takeaway
 :class: tip
-**Final Comparison and Key Takeaway**
+
+
 Let's summarize the results and see how they compare to the actual value.
 - **Incompressible Model:** -45.1 kPa (Physically Impossible, $>$300% error)
 - **Isothermal Model:** 23.9 kPa (Plausible, but has a 28% error)
@@ -849,12 +851,12 @@ A common and practical problem in fluid mechanics is determining the power requi
 
 ### Example: Pumping Water for a Ski Resort
 
-```md { prf:example= }
+```{prf:example} Pumping Water for Snow Making
 **Question:** A ski resort needs to pump water at 10$^\circ$C from a reservoir at an elevation of 6500 ft to a snow-making machine at 7300 ft. The water flows through 1000 ft of 2-inch diameter commercial steel pipe at a rate of 0.25 ft$^3$/s. The pressure required at the inlet of the snow machine is 20 psi (gauge). The piping system includes a sharp-edged entrance, a fully open gate valve, and two standard 90$^\circ$ elbows. Determine the horsepower that must be delivered to the water by the pump.
 
 ```
 
-```tex { dropdown= }
+```{dropdown} Solution Steps
 **Step 1: Strategy: The Extended Bernoulli Equation**
 
 **Why the Simple Bernoulli Equation Is Not Enough:** The simple Bernoulli equation ($P + \frac{1}{2}\rho\nu^2 + \rho gz = \text{constant}$) is a statement of energy conservation for an *ideal* fluid, where there is no friction and no external work being done. Our system is real, not ideal, because we are adding energy with a **pump** and losing energy to **friction** in the pipe and fittings. Therefore, we must use the **Extended Bernoulli Equation**, also known as the steady-state Mechanical Energy Balance.
@@ -1075,16 +1077,17 @@ $$
 
 ```
 
-```hs { admonition= }
+```{admonition} Important Note on Pump Efficiency and Motor Power
 :class: tip
-**Important Note on Pump Efficiency and Motor Power**
+
+
 This 31.5 hp represents the **hydraulic power** that must be delivered to the water. However, real pumps are not 100% efficient due to mechanical friction, fluid leakage, and other losses. If the pump operates at 80% efficiency (typical for centrifugal pumps), the required shaft power would be: $31.5 / 0.80 = 39.4$ hp. Additionally, the electric motor driving the pump also has efficiency losses (typically 85-95%). If the motor efficiency is 90%, the required electrical power would be: $39.4 / 0.90 = 43.8$ hp. Therefore, while the theoretical minimum power to move the water is 31.5 hp, the actual electrical power consumption would likely be 40-45 hp in a real system.
 
 ```
 
 ## Air Flow Through a Constriction
 
-```tex { note= }
+```{note}
 **The Venturi Effect: High Velocity Means Low Pressure**
 A classic application of the Bernoulli equation is analyzing flow through a constriction, such as a Venturi meter. This setup demonstrates a fundamental and often counter-intuitive principle:
 1. **Continuity:** For a fluid of constant density, the mass flow rate ($\dot{m} = \rho A \nu$) must be constant. Where the pipe area $A$ gets smaller (in the "throat"), the velocity $\nu$ *must increase* to maintain the same flow rate.
@@ -1096,12 +1099,12 @@ This phenomenon, where the pressure in the constricted section is lower than in 
 
 ### Example: Velocity in a Constriction (Venturi Effect)
 
-```md { prf:example= }
+```{prf:example} Velocity in a Constriction (Venturi Effect)
 **Question:** Air with a density of 1.0 kg/m$^3$ flows steadily and incompressibly through a horizontal constriction. The pressure at the wide entrance (point 1) is 10 kPa greater than the pressure at the narrow throat (point 2). The cross-sectional area at the entrance is five times the area at the throat ($A_1 = 5A_2$). What is the air speed at the throat ($\nu_2$)?
 
 ```
 
-```tex { dropdown= }
+```{dropdown} Solution Steps
 **Step 1: Strategy: Two Equations, Two Unknowns**
 We have two unknown velocities, $\nu_1$ and $\nu_2$. We can solve for them by setting up a system of two equations: the Bernoulli equation and the continuity equation.
 1. The **Bernoulli Equation**, which relates pressure and velocity changes (an energy relationship).
@@ -1197,7 +1200,7 @@ Manometry is the science of measuring pressure using liquid columns in tubes. A 
 
 The operation of every manometer is based on the principle of **hydrostatic pressure**, which is the pressure exerted by a fluid at rest due to the force of gravity.
 
-```sql { note= }
+```{note}
 **Origin of Pressure in a Fluid Column**
 Imagine a stationary column of water in a glass. The water has mass, and due to gravity, it has weight. This weight exerts a downward force on the bottom of the glass. The pressure at the bottom is simply this total downward force distributed over the bottom area. The deeper you go, the more water is above you, the greater the weight, and therefore the higher the pressure.
 
@@ -1213,7 +1216,7 @@ We can derive a simple formula for this pressure with a few logical steps:
 
 The area ($A$) of the column cancels out, leaving the fundamental hydrostatic pressure equation:
 
-```sh { important= }
+```{important}
 **Hydrostatic Pressure Equation**
 
 $$
@@ -1227,7 +1230,7 @@ $$
 
 This important result tells us that the pressure exerted by a fluid column depends only on its density ($\rho$), height ($h$), and gravity ($g$)—not on the shape of the container or the total amount of fluid. The term $\rho g$ is also known as the **specific weight**, $\gamma$. So, the equation is often written as $P = \gamma h$.
 
-```ml { note= }
+```{note}
 **The Fundamental Rule of Manometry**
 The analysis of any manometer, no matter how complex, relies on one simple, crucial rule:
 *The pressure at any two points at the same horizontal level in a single, continuous fluid at rest is the same.*
@@ -1240,7 +1243,7 @@ Why is this true? Imagine if the pressure at point A was higher than at point B 
 
 The most common type of manometer is a U-shaped tube containing a dense liquid (often mercury or colored water), known as the manometer fluid.
 
-```tex { note= }
+```{note}
 **Measuring the Gauge Pressure of a Gas**
 Consider a U-tube manometer with one end connected to a tank of pressurized gas and the other end open to the atmosphere. The gas pushes the manometer fluid down on the left side and up on the right side. To find the pressure of the gas, we apply our fundamental rule at the lowest fluid interface (we'll call this our datum line).
 $P_{\text{left at datum}} = P_{\text{right at datum}}$
@@ -1253,7 +1256,7 @@ So, $P_{\text{right}} = P_{atm} + \rho_{\text{fluid}} g h$.
 
 Equating the two sides gives the absolute pressure of the gas: $P_{gas} = P_{atm} + \rho g h$. More often, we are interested in the __gauge pressure__.
 
-```sh { important= }
+```{important}
 **U-Tube Manometer Gauge Pressure**
 
 $$
@@ -1267,7 +1270,7 @@ $$
 
 ### Applying Manometry Equations from First Principles
 
-```sh { note= }
+```{note}
 **The "Walking" Method: A Universal Approach**
 Instead of memorizing a different formula for every type of manometer, it is much more powerful to use a single, universal method. We call this the "walking" method:
 1. Start at a point of known (or desired) pressure.
@@ -1276,18 +1279,20 @@ Instead of memorizing a different formula for every type of manometer, it is muc
 
 ```
 
-```md { admonition= }
+```{admonition} Piezometer Tube
 :class: tip
-**Piezometer Tube**
+
+
 This is the simplest manometer: a single vertical tube attached to a container of liquid.
 - **Equation:** $P_{A,gauge} = \gamma_1 h_1 = \rho_1 g h_1$.
 - **Explanation:** Start at the surface of the liquid in the tube, which is at atmospheric pressure ($P_{atm}$). Walk *down* a height $h_1$ through the fluid to point A. This means we add pressure: $P_A = P_{atm} + \gamma_1 h_1$. The gauge pressure is therefore just $\gamma_1 h_1$. This only works for measuring liquid pressures that are greater than atmospheric.
 
 ```
 
-```tex { admonition= }
+```{admonition} Inclined Manometer
 :class: tip
-**Inclined Manometer**
+
+
 This is a variation of the differential manometer designed for measuring very small pressure differences with high precision.
 
 **The Principle of Amplification:** The analysis is identical to the differential manometer, with one key difference. The vertical height of the manometer fluid column, $h_2$, is not measured directly. Instead, we measure the much larger displacement, $l_2$, along the inclined tube. From trigonometry, the vertical height is simply:
@@ -1302,9 +1307,10 @@ $$P_A - P_B = \gamma_2 l_2 \sin(\theta) + \gamma_3 h_3 - \gamma_1 h_1$$
 
 ```
 
-```md { admonition= }
+```{admonition} Differential U-Tube Manometer
 :class: tip
-**Differential U-Tube Manometer**
+
+
 This device is extremely useful as it measures the pressure **difference** between two points, A and B, which might both be at high pressure.
 
 **Formula:**
@@ -1323,12 +1329,12 @@ $$P_A - P_B = \gamma_2 h_2 + \gamma_3 h_3 - \gamma_1 h_1$$
 
 ### Example: Hydrostatic Balance in an Inclined Manometer
 
-```java { prf:example= }
+```{prf:example} Hydrostatic Balance in an Inclined Manometer
 **Question:** An inclined manometer contains water, oil (SG=0.85), and mercury (SG=13.6). The left vertical tube has an inner diameter (ID) of 2 cm, and the inclined right tube has an ID of 1 cm. Initially, the system is at equilibrium. Then, the pressure $P_1$ is increased by 50 mm of mercury. What is the change in the reading along the inclined scale ($y$)? The angle of inclination is 30$^\circ$.
 
 ```
 
-```tex { dropdown= }
+```{dropdown} Solution Steps
 **Step 1: Strategy: Hydrostatic and Volume Balances**
 
 This is a hydrostatic problem, but because the fluid levels change, we must also consider a volume (or mass) balance. The plan is:
@@ -1384,7 +1390,7 @@ Viscosity is arguably the most important property of a fluid when it comes to an
 
 ### Fundamental Equations and Definitions
 
-```html { important= }
+```{important}
 **Newton's Law of Viscosity**
 For many common fluids, the relationship between the internal "smearing" force (shear stress) and the rate of fluid deformation is linear. This relationship is known as Newton's Law of Viscosity:
 
@@ -1397,9 +1403,10 @@ $$
 
 ```
 
-```yaml { admonition= }
+```{admonition} Variable Definitions
 :class: tip
-**Variable Definitions**
+
+
 - $\tau$: **Shear Stress** - This is the force per unit area that acts *parallel* (tangential) to a surface. Imagine spreading honey on toast; the force you apply with the knife parallel to the bread creates a shear stress in the honey. Its units are Pascals (Pa) or Newtons per square meter (N/m$^2$).
 - $\mu$: **Dynamic Viscosity** - This is a fluid property that measures its intrinsic resistance to flow. Honey has a high viscosity; water has a low viscosity. Its units are Pascal-seconds (Pa$\cdot$s).
 - $\frac{du}{dy}$: **Velocity Gradient** (or Rate of Shearing Strain) - This term describes how quickly the fluid velocity changes as you move away from a surface. A steep gradient means the velocity changes rapidly over a short distance. Its units are inverse seconds (s$^{-1}$).
@@ -1408,13 +1415,13 @@ $$
 
 ### Conceptual Framework
 
-```sql { note= }
+```{note}
 **What is Shear Stress?**
 A fluid, by definition, is a substance that deforms continuously when a shear stress is applied, no matter how small. A shear stress is created when a force acts tangentially on a surface. The classic way to visualize this is to consider a fluid contained between two parallel plates. If we pull the top plate sideways, we are applying a shear stress to the fluid.
 
 ```
 
-```tex { note= }
+```{note}
 **The No-Slip Condition and the Velocity Gradient**
 The scenario in Figure 1 illustrates two of the most important concepts in fluid mechanics:
 1. **The No-Slip Condition:** This is an empirical observation that a fluid in direct contact with a solid surface will "stick" to it and have the exact same velocity as that surface. In Figure 1, the fluid touching the bottom plate ($y=0$) has zero velocity, and the fluid touching the top plate ($y=H$) moves with the plate's velocity, $U$.
@@ -1426,13 +1433,13 @@ The scenario in Figure 1 illustrates two of the most important concepts in fluid
 
 The relationship between shear stress ($\tau$) and the rate of strain ($\frac{du}{dy}$) defines the type of fluid.
 
-```md { note= }
+```{note}
 **Newtonian Fluids**
 A fluid is **Newtonian** if the shear stress is linearly proportional to the rate of shearing strain. For these fluids, viscosity ($\mu$) is a constant property that only depends on temperature and pressure, not on how fast the fluid is being sheared. This simple relationship, $\tau = \mu \frac{du}{dy}$, holds true for many common fluids like water, oil, gasoline, and air.
 
 ```
 
-```md { note= }
+```{note}
 **Non-Newtonian Fluids**
 Many important fluids do not follow this simple linear relationship. Their "apparent viscosity" changes depending on the applied shear rate.
 - **Shear Thinning (Pseudoplastic):** Apparent viscosity *decreases* as the shear rate increases. They get "thinner" the faster you stir them. This is the most common non-Newtonian behavior. Examples: paint, blood, latex.
@@ -1443,7 +1450,7 @@ Many important fluids do not follow this simple linear relationship. Their "appa
 
 ### Example: Film Flow Down an Inclined Surface
 
-```sh { prf:example= }
+```{prf:example} Film Flow Down an Inclined Surface
 **Question:** Crude oil with a specific gravity of 0.85 flows steadily in a thin film down a wide surface inclined 30$^\circ$ below the horizontal. The film has a thickness of 0.125 inches. The velocity profile is given by the equation:
 
 $$
@@ -1456,7 +1463,7 @@ where $y$ is the distance perpendicular to the surface. Determine the magnitude 
 
 ```
 
-```tex { dropdown= }
+```{dropdown} Solution Steps
 **Step 1: Strategy: Apply Newton's Law of Viscosity**
 Our goal is to find the shear stress, $\tau$, at the solid surface ($y=0$). The governing equation is $\tau = \mu \frac{du}{dy}$. The plan is to:
 1. Differentiate the given velocity profile $u(y)$ to find the velocity gradient, $\frac{du}{dy}$.
