@@ -4,7 +4,7 @@ Comprehensive study materials for the Chemical Engineering PE exam, covering all
 
 ## 🌐 Live Website
 
-**Visit:** https://duymlcoding.github.io/Pe/
+**Visit:** https://duymlcoding.github.io/Professional-Engineering-Exams-Chemical/
 
 Interactive Jupyter Book with:
 - Searchable content
